@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    El editor incomprendido <> Cheat-sheets.tk
+    
+  </title>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="canonical" href="http://cheat-sheets.tk/Vim-incomprendido">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" media="screen" href="/css/toc.css">
+    <link rel="stylesheet" media="screen" href="/css/select2.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.grey.min.css">
+
+    <script src="/scripts/jquery-2.1.4.min.js"></script>
+    
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet"> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script> -->
+    
+    <script src="/scripts/jquery.tablesorter.min.js"></script>
+    <script src="/scripts/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/widget-filter-formatter-select2.min.js"></script>
+    <script src="/scripts/jquery.tocLight.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+          $.toc.clickHideButton();
+        });
+  </script>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+</head>
+
+
+
+  <body>
+    <div class="container content">
+        <header class="site-header">
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/"> 
+          <span class="main-title">
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
+                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+                    
+          </span>
+      </a>
+
+      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+
+  </div>
+    <!-- <style> -->
+    <!--     /* The default background color is #c00 */ -->
+    <!--     .right-bottom .github-fork-ribbon { -->
+    <!--         background-color: #2A7AE2; -->
+    <!--     } -->
+
+    <!--     .right .github-fork-ribbon { -->
+    <!--         background-color: #f80; -->
+    <!--     } -->
+
+    <!--     .left-bottom .github-fork-ribbon { -->
+    <!--         background-color: #333; -->
+    <!--     } -->
+    <!-- </style> -->
+    
+    <!-- <div class="github-fork-ribbon-wrapper right-bottom"> -->
+    <!--     <div class="github-fork-ribbon"> -->
+    <!--         <a href="https://github.com/johgh/johgh.io-source">Fork me on GitHub</a> -->
+    <!--     </div> -->
+    <!-- </div> -->
+</header>
+
+      <header class="masthead">
+      </header>
+      <main>
+        <h6 style="margin: 1rem 0 0 0"><a href="/" class="goback" ><i class="fa fa-arrow-left"></i>  Go back</a></h6>
+<div class="blog">
+
+<article class="blog">
+    <time datetime="2015-08-16T16:30:15+00:00" class="page-date">16 Aug 2015</time>
+    <h1 class="post-title">El editor incomprendido</h1>
+        <blockquote>
+  <p><strong>¿Por qué alguien querría usar un editor en el que hay que pelearse solamente para empezar a escribir texto? ¿O incluso para
+salir del mismo, una vez nos hemos percatado de que no es el editor que esperabamos?</strong></p>
+</blockquote>
+
+<p>Quizás el hecho de que Vi venga instalado de serie en cualquier sistema tipo Unix le haya hecho un flaco favor a su hijo pródigo, el editor Vim.
+Muchos se han visto obligados a usarlo y la mayoría no guarda el mejor recuerdo de él.</p>
+
+<p>Frecuentemente la potencia de Vim se confunde con falta de usabilidad. Lo cierto es que si hay alguna cosa comparable a
+la potencia de este editor, esa es su curva de aprendizaje —o como algunos apuntan, <a href="https://pascalprecht.github.io/2014/03/18/why-i-use-vim/#figure-1"><em>muro de aprendizaje</em></a>.
+<br /></p>
+
+<p class="center"><img src="/lsi-adm3a-full-keyboard.jpg" alt="Software models" title="Teclado original del ADM-3A, donde se programó Vi" /></p>
+
+<div class="center">Teclado original del ADM-3A, donde se programó Vi, el "progenitor" de Vim</div>
+<p><br /></p>
+
+<h1 id="modo-normal">Modo normal</h1>
+
+<p>Nos topamos con la primera piedra en el camino. El usuario no habitual de Vim tiende a evitar el <em>modo normal</em> como si
+fuera territorio comanche. Para ello memoriza únicamente 2 comandos:</p>
+
+<ul>
+  <li><code>Escape</code>, para salir al <em>modo normal</em>. Desde aquí únicamente ejecuta 2 comandos: <code>:w</code> para guardar y <code>:q</code> para
+salir.</li>
+  <li><code>i</code>, para entrar al <em>modo inserción</em>. Aquí hace uso de los cursores para desplazarse,
+evitando el peligro del <em>modo normal</em>, y también toda su potencia.</li>
+</ul>
+
+<p>Para sacar todo el partido a Vim primero deberíamos comprender su filosofía de edición. Mientras en un editor
+convencional se usan los cursores, <code>Shift</code>, <code>Control</code>,
+<code>AvPág</code>, <code>RePág</code>, <code>Inicio</code> y <code>Fin</code> para editar texto rápidamente, en Vim se usan las mismas teclas que utilizamos
+para introducir texto. De ahí la necesidad de un modo superpuesto al <em>modo inserción</em> de texto: el <em>modo normal</em>.</p>
+
+<p>El <em>modo normal</em> nos proporciona un metalenguaje mediante el cual podemos ejecutar comandos con “parámetros” (siempre a
+partir de la posición actual del cursor).</p>
+
+<p>Un comando del <em>modo normal</em> se corresponde con un carácter del alfabeto:</p>
+
+<ul>
+  <li><code>r</code> es <em>replace</em> (insert en un editor convencional)</li>
+  <li><code>i</code> es <em>insert</em> (cambio a <em>modo inserción</em> de texto)</li>
+  <li><code>o</code> es <em>open</em> (abrir una nueva línea debajo de la actual en <em>modo inserción</em>)</li>
+  <li><code>y</code> es <em>yank</em> (copiar en un editor convencional)</li>
+  <li><code>c</code> es <em>change</em> (cambiar texto, y la razón porque en Vim no se copia texto si no que se hace <em>yank</em>).</li>
+</ul>
+
+<p>Además algunos comandos tienen “variantes” del comando original en su forma mayúscula. Entre otros:</p>
+
+<ul>
+  <li><code>I</code> inserta al principio de una línea</li>
+  <li><code>O</code> abre una línea sobre la actual</li>
+  <li><code>C</code> cambia texto desde donde se encuenre el cursor</li>
+</ul>
+
+<p>El principal problema del <em>modo normal</em> visto desde los ojos de un usuario no habitual de Vim, es lo “farragoso” de tener que
+cambiar entre este y el <em>modo inserción</em> todo el tiempo. Sin embargo con la práctica esto deja de ser una desventaja
+para convertirse en todo lo contrario, ya que nos permite mantener las manos todo el tiempo en la posición “natural” del teclado (sin tener que
+utilizar los cursores ni el ratón).</p>
+
+<p>Al anterior error “conceptual” se le unen además 2 obstáculos igualmente importantes:</p>
+
+<ul>
+  <li>
+    <p>La tecla <code>Escape</code>, que es la designada por defecto para el cambio al <em>modo normal</em>, se encuentra demasiado lejos para una operación
+que debemos realizar constantemente (si te preguntas porque se eligió esta tecla, echa un vistazo a la imagen del
+teclado que hay debajo del título). La solución a este problema es evitar su uso utilizando <code>Control</code>+<code>c</code> u otra tecla configurada a tal
+efecto.</p>
+  </li>
+  <li>
+    <p>El desconocimiento por parte del usuario inexperto de los comandos que nos facilitan el retorno al modo inserción:</p>
+  </li>
+</ul>
+
+<blockquote>
+
+  <ul>
+    <li><code>i</code>: entra al <em>modo inserción</em> en la posición actual</li>
+    <li><code>a</code>: entra al <em>modo inserción</em> en la siguiente posición a la que nos encontrabamos</li>
+    <li><code>s</code>: entra al <em>modo inserción</em> sustituyendo el carácter actual</li>
+    <li><code>I</code>: entra al <em>modo inserción</em> en el primer carácter de la línea</li>
+    <li><code>A</code>: entra al <em>modo inserción</em> en el último carácter de la línea</li>
+    <li><code>o</code>: entra al <em>modo inserción</em> después de insertar una nueva línea debajo de la actual</li>
+    <li><code>O</code>: entra al <em>modo inserción</em> después de insertar una nueva línea encima de la actual</li>
+    <li><code>cc</code>: entra al <em>modo inserción</em> borrando toda la línea actual</li>
+    <li><code>C</code>: entra al <em>modo inserción</em> desde el carácter actual borrando todo lo que quede en la línea</li>
+  </ul>
+</blockquote>
+
+<p>Finalmente, como decía al principio, ciertos comandos requieren de parámetros para ser ejecutados. Es lo que se conoce como <em>operator pending
+mode</em>. De ahí que no hablemos de atajos (como en cualquier editor convencional),
+sino de comandos (o <em>operadores</em>, según el manual de Vim) que pueden realizar diferentes acciones según los parámetros utilizados.</p>
+
+<blockquote>
+
+  <dl>
+    <dt>Comandos que hacen uso de parámetros (<em>operator pending mode</em>)</dt>
+    <dd><code>y</code>, <code>d</code>, <code>c</code>, <code>f</code>(find)</dd>
+  </dl>
+</blockquote>
+
+<blockquote>
+
+  <dl>
+    <dt>Comandos sin parámetros</dt>
+    <dd><code>u</code> (undo), <code>x</code>, <code>s</code>, <code>p</code>/<code>P</code> (pegar/pegar antes del cursor), <code>o</code>/<code>O</code>, <code>i</code>/<code>I</code>, <code>a</code>/<code>A</code></dd>
+  </dl>
+</blockquote>
+
+<p>Las 2 clases de comandos que vemos arriba soportan además un número (o <em>counter</em>), que especifica el número de veces que se debe ejecutar el
+comando. Los comandos con parámetros aceptan al menos 1 parámetro que corresponda bien a un <code>motion</code> o a un <code>text
+object</code>. Para más información sobre el formato de estos parámetros ver <a href="/vim/#tocAnchor-1-1">aquí</a>.</p>
+
+<dl>
+  <dt>Sintáxis de un comando del modo normal</dt>
+  <dd><code>counter</code> + <code>comando</code> + [<code>text object</code> / <code>motion</code>] + [&lt;parámetro adicional&gt;]</dd>
+</dl>
+
+<h1 id="el-factor-repeticin">El factor repetición</h1>
+
+<p>Pero para entender realmente la potencia del <em>modo normal</em>, debemos tener en cuenta el factor repetición. Cualquier
+cambio realizado en el <em>modo inserción</em> queda guardado automáticamente y listo para ser repetido mediante el comando <code>.</code></p>
+
+<p>Además la granularidad de
+los cambios en Vim (uno puede cambiar una letra con <code>s</code>, 2 <a href="/vim/#standard-vim-words"><em>palabras</em></a> con
+<code>2cw</code>o todo lo que aparezca hasta una determinada palabra con <code>c/palabra</code>) permiten la repetición de estos mediante el
+citado comando <code>.</code> o mediante la creación de macros y otros comandos que no serían posibles en un editor convencional
+(en ocasiones se puede suplir con el uso de un diálogo de búsqueda y reemplazo)</p>
+
+<h1 id="el-portapapeles">El portapapeles</h1>
+
+<p>Otro gran desconocido para el usuario no habitual de Vim suele ser el uso del —o más bien <em>los</em>— portapapeles. El
+desconocimiento de que comandos copian texto al portapapeles es objeto de frustración en el momento de recuperar texto
+de éste, ya que el texto que habíamos copiado cuidosamente mediante el comando <em>yank</em> parece haber desaparecido misteriosamente.
+Concretamente, estos son los comandos que copian texto al portapapeles:</p>
+
+<blockquote>
+
+  <ul>
+    <li><code>y</code>: sólo copia texto. Registros afectados: registro <code>0</code> y registro por defecto (<code>"</code>)</li>
+    <li><code>d</code>: borra texto (y copia). Registros afectados: registro <code>1</code>/<code>-</code> y registro por defecto (<code>"</code>)</li>
+    <li><code>c</code>: cambia texto (y copia). Registros afectados: registro <code>1</code>/<code>-</code> y registro por defecto (<code>"</code>)</li>
+    <li><code>x</code>: borra carácter (y copia). Registros afectados: registro <code>1</code>/<code>-</code> y registro por defecto (<code>"</code>)</li>
+    <li><code>s</code>: sustituye carácter (y copia). Registros afectados: registro <code>1</code>/<code>-</code> y registro por defecto (<code>"</code>)</li>
+  </ul>
+</blockquote>
+
+<p>A la hora de recuper texto del portapapeles mediante el comando <code>p</code>/<code>P</code> debemos tener en cuenta que estos comandos
+recuperan el texto almacenado en el registro por defecto (<code>"</code>). Por tanto si queremos recuperar el texto
+que hemos copiado mediante <em>yank</em> tendremos 2 opciones dependiendo del modo en que nos encontremos:</p>
+
+<ul>
+  <li>Desde el <em>modo inserción</em>: <code>Control</code>+<code>r</code> seguido del símbolo de nuestro registro (en este caso <code>0</code>)</li>
+  <li>Desde el <em>modo normal</em>: usando el comando <code>"0p</code>/<code>"0P</code></li>
+</ul>
+
+<p>Un poco más <a href="/Vim-incomprendido/#personalizando-vim">abajo</a> podemos ver algunas maneras de hacer más
+accesible la gestión del portapapeles.</p>
+
+<p>Particularmente interesante es integrar el portapapeles de Vim con el del sistema, utilizando el registro <em>unnamed plus</em>
+(<code>"+</code>) como registro por defecto. Este registro engloba tanto al registro por defecto de Vim (<code>""</code>) como el portapapeles de
+nuestro sistema operativo (<code>"*</code>)</p>
+
+<h1 id="la-prctica">La práctica</h1>
+<p>Ciertamente la potencia de edición de Vim puede aturdir al principio, la misma cosa se puede hacer de muchas maneras,
+pero ¿cual es la mejor manera?</p>
+
+<p>Está claro que ni utilizar el <a href="http://www.vimgolf.com/">menor número de pulsaciones</a> en cada momento, ni usar Vim de la forma más
+“perezosa” posible (como si se tratara de un editor convencional) debe ser nuestro objetivo. La
+<a href="https://pragprog.com/book/dnvim/practical-vim">práctica</a> será nuestra mejor
+consejera, y en poco tiempo comenzaremos a memorizar algunas secuencias de teclas recurrentes. He aquí algunos ejemplos:</p>
+
+<dl>
+  <dt>Cambiar palabra (sin espacio posterior)</dt>
+  <dd><code>c[i]w</code></dd>
+</dl>
+
+<blockquote>
+  <p>La <em>i</em> (inner) será necesaria siempre que no nos encontremos a principio de palabra y queramos cambiar la palabra entera</p>
+</blockquote>
+
+<dl>
+  <dt>Borrar palabra y espacio posterior</dt>
+  <dd><code>d[a]w</code></dd>
+</dl>
+
+<blockquote>
+  <p>La <em>a</em> será necesaria siempre que no nos encontremos a principio de palabra y queramos cambiar la palabra entera y el
+espacio (usar i si no queremos borrar el espacio) Ver <a href="/vim/#tocAnchor-1-1-3">text objects</a> para saber más</p>
+</blockquote>
+
+<dl>
+  <dt>Cambiar el valor de un string delimitado por ‘</dt>
+  <dd><code>ci'</code></dd>
+  <dt>Duplicar un párrafo y posicionarse al principio del segundo</dt>
+  <dd><code>yap</code> + <code>gP</code></dd>
+  <dt>Reemplazar el argumento de una función de C con lo que tengamos en el portapapeles</dt>
+  <dd><code>vt,</code> + <code>p</code></dd>
+</dl>
+
+<p>¿Pero cómo se puede pensar en lo que se está escribiendo al mismo tiempo que
+se piensa en el comando que conviene ejecutar en el momento?</p>
+
+<p>La respuesta es que no se puede. Aprender Vim como cualquier cosa requiere
+tiempo y dedicación. Si somos persistentes pronto nos daremos cuenta de que comenzamos a utilizar comandos sin
+pensar en lo que estamos haciendo. Ese es precisamente el objetivo, que la memoria muscular haga el trabajo por nosotros
+para que sólo tengamos que pensar en lo que queremos escribir.</p>
+
+<h1 id="personalizando-vim">Personalizando Vim</h1>
+
+<p>Vim fue diseñado con el objetivo de ser extremadamente potente y flexible. Y eso es bueno, pero tiene un precio que a
+veces nos gustaría evitar pagar: complejidad.</p>
+
+<p>A medida que interiorizamos los comandos de Vim nos damos cuenta que repetimos determinadas acciones todo el tiempo, que
+nos hacen perder tiempo, o incluso peor, nos desconcentran levemente de nuestra labor. Es el momento de dejar de
+adaptarnos a Vim y comenzar a adaptar el editor a nuestras necesidades y preferencias.</p>
+
+<p>He aquí algunas de <a href="https://github.com/johgh/vim">mis personalizaciones</a>, que quizás puedan ser de inspiración para
+solucionar algunos “problemas” comunes. El código incluído se debe añadir al fichero <em>.vimrc</em></p>
+
+<dl>
+  <dt>Añadir línea y salir salir del <em>modo inserción</em> (tanto desde el <em>modo inserción</em> como desde del <em>modo normal</em>)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="nb">nnoremap</span> <span class="p">&lt;</span>A<span class="p">-</span><span class="k">o</span><span class="p">&gt;</span> <span class="k">o</span><span class="p">&lt;</span>esc<span class="p">&gt;</span>
+<span class="nb">nnoremap</span> <span class="p">&lt;</span>A<span class="p">-</span>O<span class="p">&gt;</span> O<span class="p">&lt;</span>esc<span class="p">&gt;</span>
+<span class="nb">inoremap</span> <span class="p">&lt;</span>A<span class="p">-</span><span class="k">o</span><span class="p">&gt;</span> <span class="p">&lt;</span>esc<span class="p">&gt;</span><span class="k">o</span><span class="p">&lt;</span>esc<span class="p">&gt;</span>
+<span class="nb">inoremap</span> <span class="p">&lt;</span>A<span class="p">-</span>O<span class="p">&gt;</span> <span class="p">&lt;</span>esc<span class="p">&gt;</span>O<span class="p">&lt;</span>esc<span class="p">&gt;</span></code></pre></div>
+  </dd>
+  <dt>Permitir pegar múltiples veces lo mismo después de pegar desde <em>modo visual</em></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="nb">vnoremap</span> <span class="k">p</span> pgvy</code></pre></div>
+  </dd>
+  <dt>No copiar al portapapeles texto sobre el que se ejecuta comando change</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="nb">nnoremap</span> <span class="k">c</span> <span class="c">&quot;_c</span>
+<span class="nb">nnoremap</span> C <span class="c">&quot;_C</span></code></pre></div>
+  </dd>
+  <dt>Usar registro unnamedplus como portapapeles por defecto</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="k">set</span> <span class="nb">clipboard</span><span class="p">=</span>unnamedplus</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Integración del portapapeles de Vim con el del sistema.</p>
+</blockquote>
+
+<dl>
+  <dt>Permitir el uso del atajo <code>Control</code>+<code>v</code> para pegar en <em>modo inserción</em>/comando</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="nb">inoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">v</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">r</span><span class="p">&gt;+</span>
+cnoremap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">v</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">r</span><span class="p">&gt;+</span></code></pre></div>
+  </dd>
+  <dt>Alternar entre registro por defecto y auxiliar (@p)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="nb">nnoremap</span> <span class="p">&lt;</span>F11<span class="p">&gt;</span> :<span class="k">let</span> @<span class="k">h</span><span class="p">=</span>@<span class="p">+</span> \<span class="p">|</span> <span class="k">let</span> @<span class="p">+=</span>@<span class="k">p</span> \<span class="p">|</span> <span class="k">let</span> @<span class="k">p</span><span class="p">=</span>@<span class="k">h</span> <span class="p">&lt;</span>CR<span class="p">&gt;</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>De esta forma podemos dejar guardado en un registro auxiliar lo que tenemos en el portapapeles, y trabajar siempre con
+el registro principal con los comandos <code>y</code> y <code>p</code>, cuando hemos terminado volver a recuperar lo que teníamos
+anteriormente en el portapapeles</p>
+</blockquote>
+
+<dl>
+  <dt>Facilita la adición (append) de texto al portapapeles</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> gy :<span class="k">let</span> @<span class="k">h</span><span class="p">=</span>@<span class="p">+&lt;</span>CR<span class="p">&gt;</span>&quot;Hyy:<span class="k">let</span> @<span class="p">+=</span>@<span class="k">h</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">vnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> gy :normal gy<span class="p">&lt;</span>CR<span class="p">&gt;</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>utilizamos yy para copiar la primera línea,  gy desde el <em>modo normal</em> o <em>visual</em> para añadir una línea o varias y p para
+pegar finalmente el texto. (la forma estándar sería: “ayy -&gt; “Ayy -&gt; “ap)</p>
+</blockquote>
+
+<dl>
+  <dt>Permitir el uso de macros y del comando . sobre una selección visual</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="nb">vnoremap</span> @@ :normal @@<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">vnoremap</span> @<span class="k">a</span> :normal @<span class="k">a</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">vnoremap</span> . :normal .<span class="p">&lt;</span>CR<span class="p">&gt;</span></code></pre></div>
+  </dd>
+  <dt>Búsqueda literal, deshabilitando expresiones regulares</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="nb">nnoremap</span> <span class="sr">/ /</span>\V</code></pre></div>
+  </dd>
+  <dt>Cerrar <em>buffer</em> pero no salir de Vim</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim">map <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">q</span> :<span class="k">only</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>:<span class="k">bd</span><span class="p">&lt;</span>CR<span class="p">&gt;</span></code></pre></div>
+  </dd>
+  <dt>Ir al <em>buffer</em> visitado anteriormente</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim">nmap <span class="p">&lt;</span>leader<span class="p">&gt;&lt;</span>space<span class="p">&gt;</span> :<span class="k">b</span>#<span class="p">&lt;</span>CR<span class="p">&gt;</span></code></pre></div>
+  </dd>
+  <dt>Cerrar quicklist y limpiar</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim">map <span class="p">&lt;</span>Leader<span class="p">&gt;</span>Z :<span class="k">cex</span> []<span class="p">&lt;</span>CR<span class="p">&gt;</span>:<span class="k">ccl</span><span class="p">&lt;</span>CR<span class="p">&gt;</span></code></pre></div>
+  </dd>
+  <dt>Guardar con <code>Control</code>+<code>s</code> desde cualquier modo y salir a <em>modo normal</em></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim">map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">s</span><span class="p">&gt;</span> :<span class="k">w</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+vmap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">s</span><span class="p">&gt;</span> <span class="p">&lt;</span>esc<span class="p">&gt;</span>:<span class="k">w</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>gv
+<span class="nb">inoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">s</span><span class="p">&gt;</span> <span class="p">&lt;</span>esc<span class="p">&gt;</span>:<span class="k">w</span><span class="p">&lt;</span>CR<span class="p">&gt;</span></code></pre></div>
+  </dd>
+  <dt>Permitir guardar fichero mediante <em>sudo</em></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim">cmap <span class="k">w</span><span class="p">!!</span> <span class="k">w</span> <span class="p">!</span>sudo tee % <span class="p">&gt;</span><span class="sr">/dev/</span>null</code></pre></div>
+  </dd>
+  <dt>Subir y bajar rápidamente presionando <code>Control</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim">map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> <span class="m">4</span>j
+map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> <span class="m">4</span>k</code></pre></div>
+  </dd>
+  <dt>Navegar en el mode comando con <code>Control</code>+<code>n</code>/<code>p</code> en lugar de con los cursores</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim">cnoremap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">n</span><span class="p">&gt;</span> <span class="p">&lt;</span>down<span class="p">&gt;</span>
+cnoremap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">p</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">up</span><span class="p">&gt;</span></code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="vim-como-ide">Vim como <em>IDE</em></h1>
+
+<p>Una vez dominados los <a href="/vim/#tocAnchor-1-21">comandos de gestión de ficheros</a> que proporciona Vim por defecto (así como el
+concepto de <em>buffer</em> y <em>ventana</em>), si realmente queremos utilizar Vim como nuestro <em>IDE</em> es posible que echemos en falta un buscador de
+ficheros y un árbol de directorios. Además querremos de alguna forma poder realizar acciones por proyecto (como buscar
+un texto por ejemplo)… en este caso la solución viene de la mano de plugins.</p>
+
+<ul>
+  <li><a href="https://github.com/airblade/vim-rooter">Vim-rooter</a>: sitúa el path del <em>buffer</em> actual en el la raíz del proyecto del mismo</li>
+  <li><a href="https://github.com/scrooloose/nerdtree">NERDTree</a>: árbol de directorios</li>
+  <li><a href="https://github.com/ctrlpvim/ctrlp.vim">CtrlP</a>: permite buscar ficheros dentro de un proyecto así como los últimos <em>buffers</em> abiertos y los <em>buffers</em> actuales</li>
+  <li><a href="https://github.com/rking/ag.vim">Ag</a>: grep más rápido, permite excepciones dentro del proyecto e incluye atajos
+útiles para <em>quicklist</em></li>
+  <li><a href="https://github.com/majutsushi/tagbar">Tagbar</a>: vista de <em>outline</em> de nuestras clases</li>
+</ul>
+
+<p>En ocasiones necesitaremos el path donde se encuentra nuestro fichero, en mi caso escribo simplemente <code>~~</code> haciendo uso del mecanismo de expansión de
+Vim. También puede ser útil especificar un directorio de inicio por defecto:</p>
+
+<dl>
+  <dt>Expansión de rutas en <em>modo comando</em></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim">cnoremap <span class="p">&lt;</span>expr<span class="p">&gt;</span> <span class="p">~~</span> getcmdtype<span class="p">()</span> <span class="p">==</span> <span class="s1">&#39;:&#39;</span> ? expand<span class="p">(</span><span class="s1">&#39;%:h&#39;</span><span class="p">)</span>.<span class="s1">&#39;/&#39;</span> : <span class="s1">&#39;~~&#39;</span>
+cnoremap <span class="p">&lt;</span>expr<span class="p">&gt;</span> <span class="p">~</span> getcmdtype<span class="p">()</span> <span class="p">==</span> <span class="s1">&#39;:&#39;</span> ? expand<span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">)</span>.<span class="s1">&#39;/&#39;</span> : <span class="s1">&#39;~&#39;</span></code></pre></div>
+  </dd>
+  <dt>Directorio de inicio por defecto</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="k">if</span> <span class="p">!</span>empty<span class="p">(</span>glob<span class="p">(</span><span class="s2">&quot;$HOME/workspace/&quot;</span><span class="p">))</span>
+<span class="k">cd</span> $HOME<span class="sr">/workspace/</span>
+<span class="k">endif</span></code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="ms-all-del-modo-normal">Más allá del <em>modo normal</em></h1>
+
+<p>A continuación se listan algunas de las características más interesantes que no se suelen encontrar en otros editores o
+entornos de programación:</p>
+
+<ul>
+  <li>Posibilidad de navegación por donde hemos pasado (<code>:jumps</code>) y por donde hemos realizado cambios (<code>:changes</code>)</li>
+  <li>Creación de macros (incluyendo los comandos de cualquier modo) y la posibilidad de edición de las mismas</li>
+  <li><a href="/vim/#tocAnchor-1-13"><em>Modo comando</em></a> que permite la ejecución de comandos sobre rangos de líneas o sobre múltiples rangos mediante el comando
+global</li>
+  <li>Repetición de búsquedas, <a href="/vim/#tocAnchor-1-13-4">comandos</a>, macros y cambios realizados en el <em>modo normal</em> sobre cualquier <em>buffer</em></li>
+  <li>La inclusión de los “comandos” del <em>modo normal</em> dentro del comando :normal</li>
+  <li><em>Modo visual</em> (<code>v</code>/<code>V</code>) y <em>submodos de bloque</em> (<code>Control</code>+<code>v</code>) que permiten la ejecución de ciertos comandos de una forma más intuitiva para el usuario</li>
+  <li>Árbol de cambios que permite deshacer y rehacer cambios que se pierden en editores convencionales (para ver árbol
+gráficamente es necesario es uso del plugin <a href="https://github.com/sjl/gundo.vim">gundo</a>)</li>
+  <li>Uso de múltiples portapapeles</li>
+  <li>Personalización total del editor mediante la configuración, el lenguaje Vimscript y plugins</li>
+</ul>
+
+<h1 id="preguntas-y-respuestas">Preguntas y respuestas</h1>
+
+<p><strong>¿De verdad merece la pena invertir nuestro tiempo en aprender a utilizar un editor de texto?</strong></p>
+
+<p>No hay una respuesta simple a esa pregunta, Vim no es para todo el mundo, cada cual debe valorar que le aporta el uso
+del editor. Eso sí, si damos el paso es vital dedicarle el tiempo suficente para que sea la memoria muscular, y no
+nuestra cabeza, la que tome el control.</p>
+
+<p><strong>¿Quién mantiene Vim?</strong></p>
+
+<p>Vim es software libre. El desarrollo ha sido llevado a cabo casi exclusivamente por un desarrollador
+desde 1991, y tratando de ser retrocompatible con el editor Vi originalmente escrito en 1976, ha heredado algunos
+ajustes por defecto poco afortunados, que hacen que sea casi obligatorio configurarlo inicialmente a <a href="/vimrc/">nuestra
+medida</a>.</p>
+
+<p><strong>¿Cuál será el futuro del editor?</strong></p>
+
+<p>Aunque un editor que se mantiene activo desde hace más de 40 años tiene que tener una fuerte comunidad
+detrás, son incluso más importantes los conceptos que subyacen del mismo. Así como Vim reemplazó al Vi original no
+sería de extrañar que <a href="http://neovim.io/">otro editor</a> pudiera reemplazar al actual y continuar así con su
+<a href="https://medium.com/@mkozlows/why-atom-cant-replace-vim-433852f4b4d1">legado</a>.</p>
+
+<p class="center"><img src="/vi-gang-sign.gif" alt="Software models" title="Vi gang sign" /></p>
+
+<p class="center"><a href="http://www.homebrew.net/visign/">La seña de Vi (“Vi gang sign”)</a></p>
+
+    </article>
+
+      </main>
+     <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+          <!-- <h2 class="footer-heading"> <a href="https://github.com/johgh/johgh.io-source"> <i class="fa fa-github"></i> Cheat-Sheets</a></h2> -->
+        <ul class="contact-list">
+          <li><a href="mailto:"></a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<a href="#0" class="cd-top">Top</a>
+<script src="/scripts/backtotop.js"></script>
+
+<script>
+$(function() {
+  $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+
+  /*
+  $(document).on('click', '.back', function(e){
+    e.preventDefault()
+  });
+  */
+});
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66389589-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+
+  </body>
+</html>

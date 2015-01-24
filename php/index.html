@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    PHP <> Cheat-sheets.tk
+    
+  </title>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="canonical" href="http://cheat-sheets.tk/php">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" media="screen" href="/css/toc.css">
+    <link rel="stylesheet" media="screen" href="/css/select2.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.grey.min.css">
+
+    <script src="/scripts/jquery-2.1.4.min.js"></script>
+    
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet"> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script> -->
+    
+    <script src="/scripts/jquery.tablesorter.min.js"></script>
+    <script src="/scripts/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/widget-filter-formatter-select2.min.js"></script>
+    <script src="/scripts/jquery.tocLight.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+          $.toc.clickHideButton();
+        });
+  </script>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+</head>
+
+
+
+  <body>
+    <div class="container content">
+        <header class="site-header">
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/"> 
+          <span class="main-title">
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
+                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+                    
+          </span>
+      </a>
+
+      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+
+  </div>
+    <!-- <style> -->
+    <!--     /* The default background color is #c00 */ -->
+    <!--     .right-bottom .github-fork-ribbon { -->
+    <!--         background-color: #2A7AE2; -->
+    <!--     } -->
+
+    <!--     .right .github-fork-ribbon { -->
+    <!--         background-color: #f80; -->
+    <!--     } -->
+
+    <!--     .left-bottom .github-fork-ribbon { -->
+    <!--         background-color: #333; -->
+    <!--     } -->
+    <!-- </style> -->
+    
+    <!-- <div class="github-fork-ribbon-wrapper right-bottom"> -->
+    <!--     <div class="github-fork-ribbon"> -->
+    <!--         <a href="https://github.com/johgh/johgh.io-source">Fork me on GitHub</a> -->
+    <!--     </div> -->
+    <!-- </div> -->
+</header>
+
+      <header class="masthead">
+      </header>
+      <main>
+        <div class="post">
+
+<br />
+<article class="post">
+  <h1 class="post-title"><a href="/webdev" class="back"><i class="fa fa-arrow-left"></i></a> PHP</h1>
+  <br />
+  <div id="toc-container">
+   <table class="toc" id="toc">
+      <tbody>
+         <tr>
+            <td>
+               <div id="toctitle">
+                  <h2>Contents</h2>
+                  <span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">hide</a>]</span>
+               </div>
+               <ul>
+                  <li class="toc_level-1 toc_section-1">
+                     <a href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">Quick reference</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-2">
+                           <a href="#tocAnchor-1-1-1"><span class="tocnumber">1.1</span> <span class="toctext">Arrays</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-3">
+                           <a href="#tocAnchor-1-1-2"><span class="tocnumber">1.2</span> <span class="toctext">Date and Time</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-4">
+                           <a href="#tocAnchor-1-1-3"><span class="tocnumber">1.3</span> <span class="toctext">Filesystem</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-5">
+                           <a href="#tocAnchor-1-1-4"><span class="tocnumber">1.4</span> <span class="toctext">Headers</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-6">
+                           <a href="#tocAnchor-1-1-5"><span class="tocnumber">1.5</span> <span class="toctext">Numbers</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-7">
+                           <a href="#tocAnchor-1-1-6"><span class="tocnumber">1.6</span> <span class="toctext">PHP Options</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-8">
+                           <a href="#tocAnchor-1-1-7"><span class="tocnumber">1.7</span> <span class="toctext">Regex</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-9">
+                           <a href="#tocAnchor-1-1-8"><span class="tocnumber">1.8</span> <span class="toctext">Sessions</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-10">
+                           <a href="#tocAnchor-1-1-9"><span class="tocnumber">1.9</span> <span class="toctext">Strings</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-11">
+                           <a href="#tocAnchor-1-1-10"><span class="tocnumber">1.10</span> <span class="toctext">URLs</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-12">
+                           <a href="#tocAnchor-1-1-11"><span class="tocnumber">1.11</span> <span class="toctext">Variables</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-13">
+                           <a href="#tocAnchor-1-1-12"><span class="tocnumber">1.12</span> <span class="toctext">Miscellaneous</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-14">
+                           <a href="#tocAnchor-1-1-13"><span class="tocnumber">1.13</span> <span class="toctext">SuperGlobals</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-15">
+                           <a href="#tocAnchor-1-1-14"><span class="tocnumber">1.14</span> <span class="toctext">External classes</span></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc_level-1 toc_section-16">
+                     <a href="#tocAnchor-1-16"><span class="tocnumber">2</span> <span class="toctext">Visor de logs de PHP</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-17">
+                     <a href="#tocAnchor-1-17"><span class="tocnumber">3</span> <span class="toctext">PHP Profiler</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-18">
+                     <a href="#tocAnchor-1-18"><span class="tocnumber">4</span> <span class="toctext">Refrescar navegador</span></a>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div><h1 id="tocAnchor-1-1">Quick reference</h1>
+
+<h2 id="tocAnchor-1-1-1">Arrays</h2>
+<dl>
+  <dt><a href="http://php.net/manual/en/function.array-intersect.php">array_intersect</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">array</span> <span class="nb">array_intersect</span> <span class="p">(</span> <span class="k">array</span> <span class="nv">$array1</span> <span class="p">,</span> <span class="k">array</span> <span class="nv">$array2</span> <span class="p">[,</span> <span class="k">array</span> <span class="err">$</span><span class="o">...</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.array-merge.php">array_merge</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">array</span> <span class="nb">array_merge</span> <span class="p">(</span> <span class="k">array</span> <span class="nv">$array1</span> <span class="p">[,</span> <span class="k">array</span> <span class="err">$</span><span class="o">...</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.array-pop.php">array_pop</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">mixed</span> <span class="nb">array_pop</span> <span class="p">(</span> <span class="k">array</span> <span class="o">&amp;</span><span class="nv">$array</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.array-reverse.php">array_reverse</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">array</span> <span class="nb">array_reverse</span> <span class="p">(</span> <span class="k">array</span> <span class="nv">$array</span> <span class="p">[,</span> <span class="nx">bool</span> <span class="nv">$preserve_keys</span> <span class="o">=</span> <span class="k">false</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.array-walk.php">array_walk</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">array_walk</span> <span class="p">(</span> <span class="k">array</span> <span class="o">&amp;</span><span class="nv">$array</span> <span class="p">,</span> <span class="nx">callable</span> <span class="nv">$callback</span> <span class="p">[,</span> <span class="nx">mixed</span> <span class="nv">$userdata</span> <span class="o">=</span> <span class="k">NULL</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.count.php">count</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">int</span> <span class="nb">count</span> <span class="p">(</span> <span class="nx">mixed</span> <span class="nv">$array_or_countable</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$mode</span> <span class="o">=</span> <span class="nx">COUNT_NORMAL</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.in-array.php">in_array</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">in_array</span> <span class="p">(</span> <span class="nx">mixed</span> <span class="nv">$needle</span> <span class="p">,</span> <span class="k">array</span> <span class="nv">$haystack</span> <span class="p">[,</span> <span class="nx">bool</span> <span class="nv">$strict</span> <span class="o">=</span> <span class="k">FALSE</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<h2 id="tocAnchor-1-1-2">Date and Time</h2>
+<dl>
+  <dt><a href="http://php.net/manual/en/function.date.php">date</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">date</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$format</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$timestamp</span> <span class="o">=</span> <span class="nb">time</span><span class="p">()</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.mktime.php">mktime</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">int</span> <span class="nb">mktime</span> <span class="p">([</span> <span class="nx">int</span> <span class="nv">$hour</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s2">"H"</span><span class="p">)</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$minute</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s2">"i"</span><span class="p">)</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$second</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s2">"s"</span><span class="p">)</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$month</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s2">"n"</span><span class="p">)</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$day</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s2">"j"</span><span class="p">)</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$year</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s2">"Y"</span><span class="p">)</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$is_dst</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">]]]]]]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.strtotime.php">strtotime</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">int</span> <span class="nb">strtotime</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$time</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$now</span> <span class="o">=</span> <span class="nb">time</span><span class="p">()</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.time.php">time</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">int</span> <span class="nb">time</span> <span class="p">(</span> <span class="nx">void</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/datetime.createfromformat.php">date_create_from_format</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">DateTime</span> <span class="nb">date_create_from_format</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$format</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$time</span> <span class="p">[,</span> <span class="nx">DateTimeZone</span> <span class="nv">$timezone</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/datetime.format.php">date_format</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">date_format</span> <span class="p">(</span> <span class="nx">DateTimeInterface</span> <span class="nv">$object</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$format</span> <span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Localization class: <a href="http://php.net/manual/en/class.intldateformatter.php">IntlDateFormatter</a></p>
+</blockquote>
+
+<h2 id="tocAnchor-1-1-3">Filesystem</h2>
+<dl>
+  <dt><a href="http://php.net/manual/en/function.copy.php">copy</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">copy</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$source</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$dest</span> <span class="p">[,</span> <span class="nx">resource</span> <span class="nv">$context</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.fclose.php">fclose</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">fclose</span> <span class="p">(</span> <span class="nx">resource</span> <span class="nv">$handle</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.fgets.php">fgets</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">fgets</span> <span class="p">(</span> <span class="nx">resource</span> <span class="nv">$handle</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$length</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.file.php">file</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">array</span> <span class="nb">file</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$filename</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$flags</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">[,</span> <span class="nx">resource</span> <span class="nv">$context</span> <span class="p">]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.file-exists.php">file_exists</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">file_exists</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$filename</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.file-get-contents.php">file_get_contents</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">file_get_contents</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$filename</span> <span class="p">[,</span> <span class="nx">bool</span> <span class="nv">$use_include_path</span> <span class="o">=</span> <span class="k">false</span> <span class="p">[,</span> <span class="nx">resource</span> <span class="nv">$context</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$offset</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$maxlen</span> <span class="p">]]]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.file-put-contents.php">file_put_contents</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">int</span> <span class="nb">file_put_contents</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$filename</span> <span class="p">,</span> <span class="nx">mixed</span> <span class="nv">$data</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$flags</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">[,</span> <span class="nx">resource</span> <span class="nv">$context</span> <span class="p">]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.filemtime.php">filemtime</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">int</span> <span class="nb">filemtime</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$filename</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.filesize.php">filesize</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">int</span> <span class="nb">filesize</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$filename</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.fopen.php">fopen</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">resource</span> <span class="nb">fopen</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$filename</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$mode</span> <span class="p">[,</span> <span class="nx">bool</span> <span class="nv">$use_include_path</span> <span class="o">=</span> <span class="k">false</span> <span class="p">[,</span> <span class="nx">resource</span> <span class="nv">$context</span> <span class="p">]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.glob.php">glob</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">array</span> <span class="nb">glob</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$pattern</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$flags</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.is-dir.php">is_dir</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">is_dir</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$filename</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.is-file.php">is_file</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">is_file</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$filename</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.is-writable.php">is_writable</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">is_writable</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$filename</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.readfile.php">readfile</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">int</span> <span class="nb">readfile</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$filename</span> <span class="p">[,</span> <span class="nx">bool</span> <span class="nv">$use_include_path</span> <span class="o">=</span> <span class="k">false</span> <span class="p">[,</span> <span class="nx">resource</span> <span class="nv">$context</span> <span class="p">]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<h2 id="tocAnchor-1-1-4">Headers</h2>
+<dl>
+  <dt><a href="http://php.net/manual/en/function.header.php">header</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">void</span> <span class="nb">header</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$string</span> <span class="p">[,</span> <span class="nx">bool</span> <span class="nv">$replace</span> <span class="o">=</span> <span class="k">true</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$http_response_code</span> <span class="p">]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.setcookie.php">setcookie</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">setcookie</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$name</span> <span class="p">[,</span> <span class="nx">string</span> <span class="nv">$value</span> <span class="o">=</span> <span class="s2">""</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$expire</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">[,</span> <span class="nx">string</span> <span class="nv">$path</span> <span class="o">=</span> <span class="s2">""</span> <span class="p">[,</span> <span class="nx">string</span> <span class="nv">$domain</span> <span class="o">=</span> <span class="s2">""</span> <span class="p">[,</span> <span class="nx">bool</span> <span class="nv">$secure</span> <span class="o">=</span> <span class="k">false</span> <span class="p">[,</span> <span class="nx">bool</span> <span class="nv">$httponly</span> <span class="o">=</span> <span class="k">false</span> <span class="p">]]]]]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<h2 id="tocAnchor-1-1-5">Numbers</h2>
+<dl>
+  <dt><a href="http://php.net/manual/en/function.ceil.php">ceil</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">float</span> <span class="nb">ceil</span> <span class="p">(</span> <span class="nx">float</span> <span class="nv">$value</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.floor.php">floor</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">mixed</span> <span class="nb">floor</span> <span class="p">(</span> <span class="nx">float</span> <span class="nv">$value</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.number-format.php">number_format</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">number_format</span> <span class="p">(</span> <span class="nx">float</span> <span class="nv">$number</span> <span class="p">,</span> <span class="nx">int</span> <span class="nv">$decimals</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$dec_point</span> <span class="o">=</span> <span class="s2">"."</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$thousands_sep</span> <span class="o">=</span> <span class="s2">","</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.round.php">round</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">float</span> <span class="nb">round</span> <span class="p">(</span> <span class="nx">float</span> <span class="nv">$val</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$precision</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$mode</span> <span class="o">=</span> <span class="nx">PHP_ROUND_HALF_UP</span> <span class="p">]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Localization class: <a href="http://php.net/manual/en/class.numberformatter.php">NumberFormatter</a></p>
+</blockquote>
+
+<blockquote>
+  <p>Big numbers functions: <a href="http://php.net/manual/en/ref.bc.php">BC Math Functions</a></p>
+</blockquote>
+
+<h2 id="tocAnchor-1-1-6">PHP Options</h2>
+<dl>
+  <dt><a href="http://php.net/manual/en/function.ini-restore.php">ini_restore</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">void</span> <span class="nb">ini_restore</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$varname</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.ini-set.php">ini_set</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">ini_set</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$varname</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$newvalue</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.phpinfo.php">phpinfo</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">phpinfo</span> <span class="p">([</span> <span class="nx">int</span> <span class="nv">$what</span> <span class="o">=</span> <span class="nx">INFO_ALL</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<h2 id="tocAnchor-1-1-7">Regex</h2>
+<dl>
+  <dt><a href="http://php.net/manual/en/function.preg-match.php">preg_match</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">int</span> <span class="nb">preg_match</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$pattern</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$subject</span> <span class="p">[,</span> <span class="k">array</span> <span class="o">&amp;</span><span class="nv">$matches</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$flags</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$offset</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">]]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.preg-match-all.php">preg_match_all</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">int</span> <span class="nb">preg_match_all</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$pattern</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$subject</span> <span class="p">[,</span> <span class="k">array</span> <span class="o">&amp;</span><span class="nv">$matches</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$flags</span> <span class="o">=</span> <span class="nx">PREG_PATTERN_ORDER</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$offset</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">]]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.preg-replace.php">preg_replace</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">mixed</span> <span class="nb">preg_replace</span> <span class="p">(</span> <span class="nx">mixed</span> <span class="nv">$pattern</span> <span class="p">,</span> <span class="nx">mixed</span> <span class="nv">$replacement</span> <span class="p">,</span> <span class="nx">mixed</span> <span class="nv">$subject</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$limit</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">[,</span> <span class="nx">int</span> <span class="o">&amp;</span><span class="nv">$count</span> <span class="p">]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.preg-split.php">preg_split</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">array</span> <span class="nb">preg_split</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$pattern</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$subject</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$limit</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$flags</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<h2 id="tocAnchor-1-1-8">Sessions</h2>
+<dl>
+  <dt><a href="http://php.net/manual/en/function.session-destroy.php">session_destroy</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">session_destroy</span> <span class="p">(</span> <span class="nx">void</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.session-id.php">session_id</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">session_id</span> <span class="p">([</span> <span class="nx">string</span> <span class="nv">$id</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.session-start.php">session_start</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">session_start</span> <span class="p">([</span> <span class="k">array</span> <span class="nv">$options</span> <span class="o">=</span> <span class="p">[]</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<h2 id="tocAnchor-1-1-9">Strings</h2>
+<dl>
+  <dt><a href="http://php.net/manual/en/function.addslashes.php">addslashes</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">addslashes</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$str</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.crypt.php">crypt</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">crypt</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$str</span> <span class="p">[,</span> <span class="nx">string</span> <span class="nv">$salt</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.echo.php">echo</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">void</span> <span class="k">echo</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$arg1</span> <span class="p">[,</span> <span class="nx">string</span> <span class="err">$</span><span class="o">...</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.explode.php">explode</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">array</span> <span class="nb">explode</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$delimiter</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$string</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$limit</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.implode.php">implode</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">implode</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$glue</span> <span class="p">,</span> <span class="k">array</span> <span class="nv">$pieces</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.md5.php">md5</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">md5</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$str</span> <span class="p">[,</span> <span class="nx">bool</span> <span class="nv">$raw_output</span> <span class="o">=</span> <span class="k">false</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.nl2br.php">nl2br</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">nl2br</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$string</span> <span class="p">[,</span> <span class="nx">bool</span> <span class="nv">$is_xhtml</span> <span class="o">=</span> <span class="k">true</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.sprintf.php">sprintf</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">sprintf</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$format</span> <span class="p">[,</span> <span class="nx">mixed</span> <span class="nv">$args</span> <span class="p">[,</span> <span class="nx">mixed</span> <span class="err">$</span><span class="o">...</span> <span class="p">]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.strip-tags.php">strip_tags</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">strip_tags</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$str</span> <span class="p">[,</span> <span class="nx">string</span> <span class="nv">$allowable_tags</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.stripslashes.php">stripslashes</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">stripslashes</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$str</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.str-pad.php">str_pad</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">str_pad</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$input</span> <span class="p">,</span> <span class="nx">int</span> <span class="nv">$pad_length</span> <span class="p">[,</span> <span class="nx">string</span> <span class="nv">$pad_string</span> <span class="o">=</span> <span class="s2">" "</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$pad_type</span> <span class="o">=</span> <span class="nx">STR_PAD_RIGHT</span> <span class="p">]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.strstr.php">strstr</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">strstr</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$haystack</span> <span class="p">,</span> <span class="nx">mixed</span> <span class="nv">$needle</span> <span class="p">[,</span> <span class="nx">bool</span> <span class="nv">$before_needle</span> <span class="o">=</span> <span class="k">false</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.strpos.php">strpos</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">mixed</span> <span class="nb">strpos</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$haystack</span> <span class="p">,</span> <span class="nx">mixed</span> <span class="nv">$needle</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$offset</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.strrev.php">strrev</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">strrev</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$string</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.str-replace.php">str_replace</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">mixed</span> <span class="nb">str_replace</span> <span class="p">(</span> <span class="nx">mixed</span> <span class="nv">$search</span> <span class="p">,</span> <span class="nx">mixed</span> <span class="nv">$replace</span> <span class="p">,</span> <span class="nx">mixed</span> <span class="nv">$subject</span> <span class="p">[,</span> <span class="nx">int</span> <span class="o">&amp;</span><span class="nv">$count</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.strtolower.php">strtolower</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">strtolower</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$string</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.strtoupper.php">strtoupper</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">strtoupper</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$string</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.substr.php">substr</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">substr</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$string</span> <span class="p">,</span> <span class="nx">int</span> <span class="nv">$start</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$length</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.trim.php">trim</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">trim</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$str</span> <span class="p">[,</span> <span class="nx">string</span> <span class="nv">$character_mask</span> <span class="o">=</span> <span class="s2">" </span><span class="se">\t\n\r\0\x0B</span><span class="s2">"</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.ucfirst.php">ucfirst</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">ucfirst</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$str</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.ucwords.php">ucwords</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">ucwords</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$str</span> <span class="p">[,</span> <span class="nx">string</span> <span class="nv">$delimiters</span> <span class="o">=</span> <span class="s2">" </span><span class="se">\t\r\n</span><span class="s2">\f\v"</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<h2 id="tocAnchor-1-1-10">URLs</h2>
+<dl>
+  <dt><a href="http://php.net/manual/en/function.urldecode.php">urldecode</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">urldecode</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$str</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.urlencode.php">urlencode</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">urlencode</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$str</span> <span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<h2 id="tocAnchor-1-1-11">Variables</h2>
+<dl>
+  <dt><a href="http://php.net/manual/en/function.empty.php">empty</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="k">empty</span> <span class="p">(</span> <span class="nx">mixed</span> <span class="nv">$var</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.is-array.php">is_array</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">is_array</span> <span class="p">(</span> <span class="nx">mixed</span> <span class="nv">$var</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.is-int.php">is_int</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">is_int</span> <span class="p">(</span> <span class="nx">mixed</span> <span class="nv">$var</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.is-null.php">is_null</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">is_null</span> <span class="p">(</span> <span class="nx">mixed</span> <span class="nv">$var</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.is-numeric.php">is_numeric</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">is_numeric</span> <span class="p">(</span> <span class="nx">mixed</span> <span class="nv">$var</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.is-object.php">is_object</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">is_object</span> <span class="p">(</span> <span class="nx">mixed</span> <span class="nv">$var</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.isset.php">isset</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">isset</span> <span class="p">(</span> <span class="nx">mixed</span> <span class="nv">$var</span> <span class="p">[,</span> <span class="nx">mixed</span> <span class="err">$</span><span class="o">...</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.serialize.php">serialize</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">serialize</span> <span class="p">(</span> <span class="nx">mixed</span> <span class="nv">$value</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.unserialize.php">unserialize</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">mixed</span> <span class="nb">unserialize</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$str</span> <span class="p">[,</span> <span class="k">array</span> <span class="nv">$options</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<h2 id="tocAnchor-1-1-12">Miscellaneous</h2>
+<dl>
+  <dt><a href="http://php.net/manual/en/function.mail.php">mail</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">mail</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$to</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$subject</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$message</span> <span class="p">[,</span> <span class="nx">string</span> <span class="nv">$additional_headers</span> <span class="p">[,</span> <span class="nx">string</span> <span class="nv">$additional_parameters</span> <span class="p">]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.fsockopen.php">fsockopen</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">resource</span> <span class="nb">fsockopen</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$hostname</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$port</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">[,</span> <span class="nx">int</span> <span class="o">&amp;</span><span class="nv">$errno</span> <span class="p">[,</span> <span class="nx">string</span> <span class="o">&amp;</span><span class="nv">$errstr</span> <span class="p">[,</span> <span class="nx">float</span> <span class="nv">$timeout</span> <span class="o">=</span> <span class="nb">ini_get</span><span class="p">(</span><span class="s2">"default_socket_timeout"</span><span class="p">)</span> <span class="p">]]]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.exec.php">exec</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">string</span> <span class="nb">exec</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$command</span> <span class="p">[,</span> <span class="k">array</span> <span class="o">&amp;</span><span class="nv">$output</span> <span class="p">[,</span> <span class="nx">int</span> <span class="o">&amp;</span><span class="nv">$return_var</span> <span class="p">]]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.define.php">define</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">bool</span> <span class="nb">define</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$name</span> <span class="p">,</span> <span class="nx">mixed</span> <span class="nv">$value</span> <span class="p">[,</span> <span class="nx">bool</span> <span class="nv">$case_insensitive</span> <span class="o">=</span> <span class="k">false</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.eval.php">eval</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">mixed</span> <span class="k">eval</span> <span class="p">(</span> <span class="nx">string</span> <span class="nv">$code</span> <span class="p">)</span></code></pre></div>
+  </dd>
+  <dt><a href="http://php.net/manual/en/function.exit.php">exit</a></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">void</span> <span class="k">exit</span> <span class="p">([</span> <span class="nx">string</span> <span class="nv">$status</span> <span class="p">]</span> <span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<h2 id="tocAnchor-1-1-13">SuperGlobals</h2>
+<ul>
+  <li><a href="http://php.net/manual/en/reserved.variables.environment.php">$_ENV</a></li>
+  <li><a href="http://php.net/manual/en/reserved.variables.get.php">$_GET</a></li>
+  <li><a href="http://php.net/manual/en/reserved.variables.post.php">$_POST</a></li>
+  <li><a href="http://php.net/manual/en/reserved.variables.cookies.php">$_COOKIE</a></li>
+  <li><a href="http://php.net/manual/en/reserved.variables.session.php">$_SESSION</a></li>
+  <li><a href="http://php.net/manual/en/reserved.variables.server.php">$_SERVER</a></li>
+  <li><a href="http://php.net/manual/en/reserved.variables.files.php">$_FILES</a></li>
+  <li><a href="http://php.net/manual/en/reserved.variables.request.php">$_REQUEST</a></li>
+  <li><a href="http://php.net/manual/en/reserved.variables.globals.php">$GLOBALS</a></li>
+</ul>
+
+<h2 id="tocAnchor-1-1-14">External classes</h2>
+
+<blockquote>
+  <p>pdf library: <a href="http://www.fpdf.org/">fpdf</a></p>
+</blockquote>
+
+<p>
+   <br />
+</p>
+
+<hr />
+<p>
+   <br />
+</p>
+
+<h1 id="tocAnchor-1-16">Visor de logs de PHP</h1>
+
+<ol>
+  <li>
+    <dl>
+      <dt>Añadir la siguiente línea en <code>php.ini</code> para separar los logs de php en su propio fichero de logs:</dt>
+      <dd>
+        <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">error_log</span> <span class="o">=</span> /var/log/phplog</code></pre></div>
+      </dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt>Dar permisos al fichero de log:</dt>
+      <dd>
+        <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo touch /var/log/phplog
+<span class="nv">$ </span>sudo chown www-data:www-data /var/log/phplog</code></pre></div>
+      </dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt>Reiniciar Apache para que coja la configuración correctamente:</dt>
+      <dd>
+        <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo /etc/init.d/apache2 restart</code></pre></div>
+      </dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt>Instalar <code>guake</code> o similar (consola tipo quake):</dt>
+      <dd>
+        <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apt-get install guake</code></pre></div>
+      </dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt>Crear script notifyphplog.sh</dt>
+      <dd>
+        <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
+<span class="k">while</span> inotifywait -e close_write /var/log/phplog<span class="p">;</span> <span class="k">do</span> guake -s 0<span class="p">;</span> guake --show<span class="p">;</span> <span class="k">done</span> &gt; /dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span></code></pre></div>
+      </dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt>Ejecutar script anterior y guake en el arranque</dt>
+      <dd>
+        <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cp /usr/share/applications/guake.desktop ~/.config/autostart/
+<span class="nv">$ </span>cp ~/bin/notifyphplog.sh ~/.config/autostart/</code></pre></div>
+      </dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt>Ejecutar <code>tail</code> + <code>ccze</code> para obtener la salida con colores y en tiempo real:</dt>
+      <dd>
+        <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>tail -f phplog <span class="p">|</span> ccze</code></pre></div>
+      </dd>
+    </dl>
+  </li>
+</ol>
+
+<p>
+   <br />
+</p>
+
+<hr />
+<p>
+   <br />
+</p>
+
+<h1 id="tocAnchor-1-17">PHP Profiler</h1>
+
+<ol>
+  <li>
+    <p>Activar profiler de xdebug (desactivar siempre en producción). Añadir la siguiente línea en <code>xdebug.ini</code> (<code>$ locate xdebug.ini</code>) y reiniciar apache:</p>
+
+    <p><code>xdebug.profiler_enable=on</code></p>
+  </li>
+  <li>
+    <p>Instalar visor de los dumps del profiler (ficheros <code>cachegrind.out.*</code> que se generan automáticamente en <code>/tmp</code>):</p>
+
+    <p><code>sudo apt-get install kcachegrind</code></p>
+  </li>
+</ol>
+
+<p>
+   <br />
+</p>
+
+<hr />
+<p>
+   <br />
+</p>
+
+<h1 id="tocAnchor-1-18">Refrescar navegador</h1>
+
+<h3 id="recargar-al-guardar-cualquier-fichero-en-homeworkspace">Recargar al guardar cualquier fichero en $HOME/workspace</h3>
+
+<dl>
+  <dt>Instalar paquetes</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apt-get install xdotool inotify-tools</code></pre></div>
+  </dd>
+  <dt>Crear y ejecutar el siguiente script</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
+<span class="k">while</span> inotifywait -e close_write -r <span class="nv">$HOME</span>/workspace<span class="p">;</span> <span class="k">do</span>
+<span class="nv">WID</span><span class="o">=</span><span class="sb">`</span>xdotool search --title <span class="s2">"Mozilla Firefox"</span> <span class="p">|</span> head -1<span class="sb">`</span>
+xdotool windowactivate <span class="nv">$WID</span>
+xdotool key F5
+<span class="k">done</span> &gt; /dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span></code></pre></div>
+  </dd>
+</dl>
+
+<h3 id="recargar-desde-vim">Recargar desde Vim</h3>
+<dl>
+  <dt>Añadir la siguiente línea al fichero $HOME/.vimrc</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-vim" data-lang="vim">map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">f</span> :<span class="k">silent</span> <span class="p">!</span>WID<span class="p">=</span>`xdotool search <span class="p">--</span>name <span class="s2">"Mozilla Firefox"</span> \<span class="p">|</span> head <span class="m">-1</span>`; xdotool windowactivate $WID <span class="p">&gt;</span> <span class="sr">/dev/</span>null <span class="m">2</span><span class="p">&gt;</span>&amp;<span class="m">1</span> ; xdotool <span class="nb">key</span> F5 <span class="p">&gt;</span> <span class="sr">/dev/</span>null <span class="m">2</span><span class="p">&gt;</span>&amp;<span class="m">1</span><span class="p">&lt;</span>CR<span class="p">&gt;</span> \ <span class="p">|</span> execute <span class="s1">':redraw!'</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>requiere paquete <code>xdotool</code></p>
+</blockquote>
+
+
+  <br />
+  <blockquote>
+      <p><strong>Last updated: <time datetime="2016-09-01T21:34:33+00:00" class="page-date">01 Sep 2016</time></strong></p>
+  </blockquote>
+</article>
+
+<aside class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+         
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/bdchanges">
+                            Scripts de actualización de cambios de Base de Datos
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/symfony">
+                            Symfony 2 (Quick Reference)
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/jquery">
+                            Jquery
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/bootstrap">
+                            Bootstrap
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/apache">
+                            Apache
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/twig">
+                            Twig
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/mysql">
+                            Mysql
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/doctrinedbal">
+                            Doctrine DBAL
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/apuntesphp">
+                            PHP. Apuntes
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+            
+        
+        
+
+        
+            
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+        
+        
+  </ul>
+</aside>
+
+
+      </main>
+     <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+          <!-- <h2 class="footer-heading"> <a href="https://github.com/johgh/johgh.io-source"> <i class="fa fa-github"></i> Cheat-Sheets</a></h2> -->
+        <ul class="contact-list">
+          <li><a href="mailto:"></a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<a href="#0" class="cd-top">Top</a>
+<script src="/scripts/backtotop.js"></script>
+
+<script>
+$(function() {
+  $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+
+  /*
+  $(document).on('click', '.back', function(e){
+    e.preventDefault()
+  });
+  */
+});
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66389589-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+
+  </body>
+</html>

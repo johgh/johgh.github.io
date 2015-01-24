@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    Symfony 2 (Quick Reference) <> Cheat-sheets.tk
+    
+  </title>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="canonical" href="http://cheat-sheets.tk/symfony">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" media="screen" href="/css/toc.css">
+    <link rel="stylesheet" media="screen" href="/css/select2.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.grey.min.css">
+
+    <script src="/scripts/jquery-2.1.4.min.js"></script>
+    
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet"> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script> -->
+    
+    <script src="/scripts/jquery.tablesorter.min.js"></script>
+    <script src="/scripts/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/widget-filter-formatter-select2.min.js"></script>
+    <script src="/scripts/jquery.tocLight.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+          $.toc.clickHideButton();
+        });
+  </script>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+</head>
+
+
+
+  <body>
+    <div class="container content">
+        <header class="site-header">
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/"> 
+          <span class="main-title">
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
+                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+                    
+          </span>
+      </a>
+
+      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+
+  </div>
+    <!-- <style> -->
+    <!--     /* The default background color is #c00 */ -->
+    <!--     .right-bottom .github-fork-ribbon { -->
+    <!--         background-color: #2A7AE2; -->
+    <!--     } -->
+
+    <!--     .right .github-fork-ribbon { -->
+    <!--         background-color: #f80; -->
+    <!--     } -->
+
+    <!--     .left-bottom .github-fork-ribbon { -->
+    <!--         background-color: #333; -->
+    <!--     } -->
+    <!-- </style> -->
+    
+    <!-- <div class="github-fork-ribbon-wrapper right-bottom"> -->
+    <!--     <div class="github-fork-ribbon"> -->
+    <!--         <a href="https://github.com/johgh/johgh.io-source">Fork me on GitHub</a> -->
+    <!--     </div> -->
+    <!-- </div> -->
+</header>
+
+      <header class="masthead">
+      </header>
+      <main>
+        <div class="post">
+
+<br />
+<article class="post">
+  <h1 class="post-title"><a href="/quick guides" class="back"><i class="fa fa-arrow-left"></i></a> Symfony 2 (Quick Reference)</h1>
+  <br />
+  <div id="toc-container">
+   <table class="toc" id="toc">
+      <tbody>
+         <tr>
+            <td>
+               <div id="toctitle">
+                  <h2>Contents</h2>
+                  <span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">hide</a>]</span>
+               </div>
+               <ul>
+                  <li class="toc_level-1 toc_section-1">
+                     <a href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">Installation</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-2">
+                     <a href="#tocAnchor-1-2"><span class="tocnumber">2</span> <span class="toctext">Quick Guide</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-3">
+                           <a href="#tocAnchor-1-2-1"><span class="tocnumber">2.1</span> <span class="toctext">Directory tree</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-4">
+                           <a href="#tocAnchor-1-2-2"><span class="tocnumber">2.2</span> <span class="toctext">Bundles and overriding</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-5">
+                           <a href="#tocAnchor-1-2-3"><span class="tocnumber">2.3</span> <span class="toctext">Routing</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-6">
+                           <a href="#tocAnchor-1-2-4"><span class="tocnumber">2.4</span> <span class="toctext">Controllers</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-7">
+                           <a href="#tocAnchor-1-2-5"><span class="tocnumber">2.5</span> <span class="toctext">Templates</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-8">
+                           <a href="#tocAnchor-1-2-6"><span class="tocnumber">2.6</span> <span class="toctext">Translations</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-9">
+                           <a href="#tocAnchor-1-2-7"><span class="tocnumber">2.7</span> <span class="toctext">Forms and validation</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-10">
+                           <a href="#tocAnchor-1-2-8"><span class="tocnumber">2.8</span> <span class="toctext">Session management</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-11">
+                           <a href="#tocAnchor-1-2-9"><span class="tocnumber">2.9</span> <span class="toctext">Configuration</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-12">
+                           <a href="#tocAnchor-1-2-10"><span class="tocnumber">2.10</span> <span class="toctext">Services</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-13">
+                           <a href="#tocAnchor-1-2-11"><span class="tocnumber">2.11</span> <span class="toctext">Console commands</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-14">
+                           <a href="#tocAnchor-1-2-12"><span class="tocnumber">2.12</span> <span class="toctext">Third party bundles</span></a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div><h1 id="tocAnchor-1-1">Installation</h1>
+
+<blockquote>
+  <p>Installation tested on Ubuntu 14.04 (Symfony 2.7)</p>
+</blockquote>
+
+<dl>
+  <dt>Download installer</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># instead of curl, you can download from browser and move to /usr/local/bin/symfony</span>
+<span class="nv">$ </span>sudo curl -LsS http://symfony.com/installer -o /usr/local/bin/symfony
+<span class="nv">$ </span>sudo chmod a+x /usr/local/bin/symfony</code></pre></div>
+  </dd>
+  <dt>Create new project</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd</span> ~/workspace
+<span class="nv">$ </span>symfony new my_project_name
+<span class="c"># create symlink to web server</span>
+<span class="nv">$ </span>sudo ln -s ~/workspace/my_project_name/web /var/www/my_project_name</code></pre></div>
+  </dd>
+  <dt>Meet Symfony Requirements (if needed)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># put these lines on /etc/php5/cli/php.ini and /etc/php5/apache2/php.ini</span>
+date.timezone <span class="o">=</span> Europe/Madrid
+xdebug.max_nesting_level<span class="o">=</span>250
+<span class="c"># recheck requirements</span>
+<span class="nv">$ </span>php my_project_name/app/check.php</code></pre></div>
+  </dd>
+  <dt>Set permissions (set acls cli + web server)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo setfacl -R -m u:<span class="s2">"www-data"</span>:rwX -m u:<span class="sb">`</span>whoami<span class="sb">`</span>:rwX app/cache app/logs
+<span class="nv">$ </span>sudo setfacl -dR -m u:<span class="s2">"www-data"</span>:rwX -m u:<span class="sb">`</span>whoami<span class="sb">`</span>:rwX app/cache app/logs</code></pre></div>
+  </dd>
+  <dt>Configure app from Web</dt>
+  <dd>Go to <a href="http://localhost/my_project_name/config.php">http://localhost/my_project_name/config.php</a></dd>
+</dl>
+
+<blockquote>
+  <p>You will need to <code>chmod o+w app/config/parameters.yml</code> and restore permissions with <code>o-w</code> once the web config is done</p>
+</blockquote>
+
+<blockquote>
+  <p>You can also edit the yaml config file: <code>app/config/parameters.yml</code> directly </p>
+</blockquote>
+
+<dl>
+  <dt>Access app from php server (with debug info)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Run server</span>
+<span class="nv">$ </span><span class="nb">cd</span> ~/workspace/my_project_name
+<span class="nv">$ </span>php app/console server:run
+<span class="c"># Now you can access app on localhost:8000</span></code></pre></div>
+  </dd>
+  <dt>Install Composer</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -sS https://getcomposer.org/installer <span class="p">|</span> php
+<span class="nv">$ </span>sudo mv composer.phar /usr/local/bin/composer</code></pre></div>
+  </dd>
+  <dt>Updating project (vendor directory)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd</span> ~/workspace/my_project_name
+<span class="nv">$ </span>composer update
+<span class="c"># to check vulnerabilities</span>
+<span class="nv">$ </span>php app/console security:check</code></pre></div>
+  </dd>
+  <dt>Removing Acme bundle (demo bundle that comes with Symfony Standard Edition)</dt>
+  <dd>Read <a href="https://symfony.com/doc/current/cookbook/bundles/remove.html">this</a></dd>
+  <dt>Download Symfony Demo</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apt-get install php5-sqlite
+<span class="nv">$ </span>symfony demo</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <dl>
+    <dt>Documentation</dt>
+    <dd>
+      <ul>
+        <li><a href="http://symfony.com/doc/2.7/book/installation.html">symfony 2.7 installation doc</a></li>
+      </ul>
+    </dd>
+  </dl>
+</blockquote>
+
+<hr />
+
+<h1 id="tocAnchor-1-2">Quick Guide</h1>
+
+<h2 id="tocAnchor-1-2-1">Directory tree</h2>
+
+<dl>
+  <dt>Important dirs</dt>
+  <dd>
+    <ul>
+      <li>Application resources: <code>app/Resources</code></li>
+      <li>Bundle PHP code: <code>src/path/to/bundle</code></li>
+      <li>Third party libraries: <code>vendor/</code></li>
+      <li>Public files: <code>web/</code></li>
+      <li>Bundle resources: <code>src/path/to/bundle/Resources</code> </li>
+    </ul>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Bundle resources are overridden by App resources seen above (except translations and validation metadata!)</p>
+</blockquote>
+
+<blockquote>
+  <p>Routing and config Bundle resources files can be imported from App resources, and will be overridden (or not) depending on the order they are load</p>
+</blockquote>
+
+<dl>
+  <dt>Important files</dt>
+  <dd>
+    <ul>
+      <li>Routing file: <code>app/config/routing.yml</code></li>
+      <li>Services file: <code>app/config/services.yml</code></li>
+      <li>Infrastructure config file: <code>app/config/parameters.yml</code></li>
+      <li>Application config files: <code>app/config/config.yml</code>, <code>app/config/config_prod.yml</code>, <code>app/config/config_dev.yml</code></li>
+      <li>Development front controller: <code>web/app_dev.php</code></li>
+      <li>Production front controller: <code>web/app.php</code></li>
+      <li>Enable new bundles: <code>app/AppKernel.php</code></li>
+    </ul>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>For config options: <code>$ app/console config:dump-reference &lt;something&gt;</code> or see <a href="https://symfony.com/doc/current/reference/index.html">config reference</a></p>
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt>Documentation</dt>
+    <dd>
+      <ul>
+        <li><a href="https://symfony.com/doc/current/book/page_creation.html#exploring-the-project">Directory tree</a></li>
+      </ul>
+    </dd>
+  </dl>
+</blockquote>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-2">Bundles and overriding</h2>
+
+<h3 id="bundles-and-app-overriding">Bundles and “app” overriding</h3>
+<ul>
+  <li><a href="http://symfony.com/doc/current/book/bundles.html">How to create a bundle and dir structure</a></li>
+  <li><a href="http://symfony.com/doc/current/book/templating.html#overriding-bundle-templates">Template overriding</a></li>
+</ul>
+
+<h3 id="bundle-inheritance">Bundle inheritance</h3>
+<ul>
+  <li><a href="http://symfony.com/doc/current/cookbook/bundles/inheritance.html">Bundle inheritance</a></li>
+  <li><a href="http://symfony.com/doc/current/cookbook/bundles/override.html">How to override bundles</a></li>
+  <li><a href="http://symfony.com/doc/current/cookbook/bundles/override.html#translations">Translation overriding</a></li>
+</ul>
+
+<h3 id="advanced">Advanced</h3>
+<ul>
+  <li><a href="http://symfony.com/doc/current/cookbook/bundles/prepend_extension.html">Prepending config to a bundle</a></li>
+  <li><a href="http://symfony.com/doc/current/cookbook/bundles/extension.html">Service config per bundle</a></li>
+  <li><a href="http://symfony.com/doc/current/cookbook/bundles/configuration.html">Advanced config per bundle</a></li>
+</ul>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-3">Routing</h2>
+
+<h3 id="routing-generation">Routing generation</h3>
+
+<dl>
+  <dt>Routing file syntax (<code>app/config/routing.yml</code>)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># imports the routing from a routing.yml file from some bundle</span>
+<span class="l-Scalar-Plain">acme</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">resource</span><span class="p-Indicator">:</span> <span class="s">"@AcmeBundle/Resources/config/routing.yml"</span>
+    <span class="l-Scalar-Plain">prefix</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">/</span>
+<span class="c1"># imports routing from the anotations of another bundle</span>
+<span class="l-Scalar-Plain">app</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">resource</span><span class="p-Indicator">:</span> <span class="s">"@AppBundle/Controller/"</span>
+    <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span>     <span class="l-Scalar-Plain">annotation</span>
+<span class="l-Scalar-Plain">blog</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">/blog/{page}</span>
+    <span class="l-Scalar-Plain">defaults</span><span class="p-Indicator">:</span>  <span class="p-Indicator">{</span> <span class="nv">_controller</span><span class="p-Indicator">:</span> <span class="nv">AppBundle</span><span class="p-Indicator">:</span><span class="nv">Blog</span><span class="p-Indicator">:</span><span class="nv">index</span><span class="p-Indicator">,</span> <span class="nv">page</span><span class="p-Indicator">:</span> <span class="nv">1</span> <span class="p-Indicator">}</span>
+    <span class="l-Scalar-Plain">requirements</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">page</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">\d+</span>
+<span class="l-Scalar-Plain">blog_show</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">/blog/{slug}</span>
+    <span class="l-Scalar-Plain">defaults</span><span class="p-Indicator">:</span>  <span class="p-Indicator">{</span> <span class="nv">_controller</span><span class="p-Indicator">:</span> <span class="nv">AppBundle</span><span class="p-Indicator">:</span><span class="nv">Blog</span><span class="p-Indicator">:</span><span class="nv">show</span> <span class="p-Indicator">}</span>
+<span class="l-Scalar-Plain">contact</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>     <span class="l-Scalar-Plain">/{_locale}/contact</span>
+    <span class="l-Scalar-Plain">defaults</span><span class="p-Indicator">:</span> <span class="p-Indicator">{</span> <span class="nv">_controller</span><span class="p-Indicator">:</span> <span class="nv">AppBundle</span><span class="p-Indicator">:</span><span class="nv">Main</span><span class="p-Indicator">:</span><span class="nv">contact</span> <span class="p-Indicator">}</span>
+    <span class="l-Scalar-Plain">requirements</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">_locale</span><span class="p-Indicator">:</span> <span class="s">"%app.locales%"</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>routes are evaluated in the order they are present in the file (for example this is relevant for <code>blog</code> and <code>blog_show</code> routes seen above)</p>
+</blockquote>
+
+<dl>
+  <dt>Controller arguments available (to use as constructor arguments)</dt>
+  <dd>
+    <ul>
+      <li>$_locale</li>
+      <li>$_format</li>
+      <li>$_controller</li>
+      <li>$_route</li>
+      <li>Any value set in defaults or routing path</li>
+    </ul>
+  </dd>
+  <dt>Prefixing paths</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># app/config/routing.yml</span>
+<span class="l-Scalar-Plain">app</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">resource</span><span class="p-Indicator">:</span> <span class="s">"@AppBundle/Controller/"</span>
+    <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span>     <span class="l-Scalar-Plain">annotation</span>
+    <span class="l-Scalar-Plain">prefix</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">/site</span></code></pre></div>
+  </dd>
+</dl>
+
+<h3 id="routing-from-controllers">Routing from controllers</h3>
+
+<dl>
+  <dt>Redirecting to route</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">if</span> <span class="p">(</span><span class="nv">$redirect</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirectToRoute</span><span class="p">(</span><span class="s1">'homepage'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">'page'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">));</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// forwarding to another controller (no routing id is needed)</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">forward</span><span class="p">(</span><span class="s1">'AppBundle:Something:fancy'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">'name'</span>  <span class="o">=&gt;</span> <span class="nv">$name</span><span class="p">,</span>
+            <span class="s1">'color'</span> <span class="o">=&gt;</span> <span class="s1">'green'</span><span class="p">,</span>
+        <span class="p">));</span>
+    <span class="p">}</span></code></pre></div>
+  </dd>
+  <dt>Redirecting to route using redirect() and generateUrl() methods together</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirect</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">generateUrl</span><span class="p">(</span><span class="s1">'homepage'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">'page'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">)),</span> <span class="mi">301</span><span class="p">);</span>
+    <span class="c1">// you can also provide an external url:</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirect</span><span class="p">(</span><span class="s1">'http://symfony.com/doc'</span><span class="p">);</span></code></pre></div>
+  </dd>
+  <dt>Generating an absolute url</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">use</span> <span class="nx">Symfony\Component\Routing\Generator\UrlGeneratorInterface</span><span class="p">;</span>
+<span class="c1">// second parameter is optional</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">generateUrl</span><span class="p">(</span><span class="s1">'blog_show'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">'slug'</span> <span class="o">=&gt;</span> <span class="s1">'my-blog-post'</span><span class="p">),</span> <span class="nx">UrlGeneratorInterface</span><span class="o">::</span><span class="na">ABSOLUTE_URL</span><span class="p">);</span></code></pre></div>
+  </dd>
+</dl>
+
+<h3 id="routing-from-templates">Routing from templates</h3>
+
+<dl>
+  <dt>Controller url reference</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="x">&lt;a href="</span><span class="cp">{{</span> <span class="nv">path</span><span class="o">(</span><span class="s1">'_welcome'</span><span class="o">)</span> <span class="cp">}}</span><span class="x">"&gt;Home&lt;/a&gt;</span></code></pre></div>
+  </dd>
+  <dt>Generate url with dynamic parameter</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="cp">{%</span> <span class="k">for</span> <span class="nv">article</span> <span class="k">in</span> <span class="nv">articles</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;a href="</span><span class="cp">{{</span> <span class="nv">path</span><span class="o">(</span><span class="s1">'article_show'</span><span class="o">,</span> <span class="o">{</span><span class="s1">'slug'</span><span class="o">:</span> <span class="nv">article.slug</span><span class="o">})</span> <span class="cp">}}</span><span class="x">"&gt;</span>
+<span class="x">        </span><span class="cp">{{</span> <span class="nv">article.title</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">    &lt;/a&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span></code></pre></div>
+  </dd>
+  <dt>Absolute url generation</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="x">&lt;a href="</span><span class="cp">{{</span> <span class="nv">url</span><span class="o">(</span><span class="s1">'_welcome'</span><span class="o">)</span> <span class="cp">}}</span><span class="x">"&gt;Home&lt;/a&gt;</span></code></pre></div>
+  </dd>
+</dl>
+
+<h3 id="routing-from-javascript">Routing from javascript</h3>
+
+<dl>
+  <dt>Relative url generation</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Routing</span><span class="p">.</span><span class="nx">generate</span><span class="p">(</span><span class="s1">'my_route_to_expose_with_defaults'</span><span class="p">,</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">foo</span><span class="o">:</span> <span class="s2">"bar"</span> <span class="p">});</span></code></pre></div>
+  </dd>
+  <dt>Absolute url generation</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Routing</span><span class="p">.</span><span class="nx">generate</span><span class="p">(</span><span class="s1">'route_id'</span><span class="p">,</span> <span class="cm">/* your params */</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>You will need to install <a href="https://github.com/FriendsOfSymfony/FOSJsRoutingBundle/blob/master/Resources/doc/index.md">this bundle</a></p>
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt>Documentation</dt>
+    <dd>
+      <ul>
+        <li><a href="http://symfony.com/doc/current/book/routing.html">symfony 2.7 routing doc</a></li>
+      </ul>
+    </dd>
+  </dl>
+</blockquote>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-4">Controllers</h2>
+
+<dl>
+  <dt>Request object</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Request</span><span class="p">;</span>
+<span class="sd">/**</span>
+<span class="sd"> * @Route("/hello/{firstName}/{lastName}", name="hello")</span>
+<span class="sd"> */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">,</span> <span class="nv">$firstName</span><span class="p">,</span> <span class="nv">$lastName</span> <span class="o">=</span> <span class="s1">'default'</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">isXmlHttpRequest</span><span class="p">();</span> <span class="c1">// is it an Ajax request?</span>
+    <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getPreferredLanguage</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">'en'</span><span class="p">,</span> <span class="s1">'fr'</span><span class="p">));</span>
+    <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">query</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'page'</span><span class="p">);</span> <span class="c1">// get a $_GET parameter</span>
+    <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'page'</span><span class="p">);</span> <span class="c1">// get a $_POST parameter</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span></code></pre></div>
+  </dd>
+  <dt>Response object</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\JsonResponse</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">LuckyController</span>
+<span class="p">{</span>
+<span class="sd">/**</span>
+<span class="sd">* @Route("/api/lucky/number")</span>
+<span class="sd">*/</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="c1">// calls json_encode and sets the Content-Type header</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">JsonResponse</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+
+    <span class="c1">// above is the same as:</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span>
+        <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$data</span><span class="p">),</span>
+        <span class="nx">Response</span><span class="o">::</span><span class="na">HTTP_OK</span><span class="p">,</span>
+        <span class="k">array</span><span class="p">(</span><span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span><span class="p">)</span>
+    <span class="p">);</span>
+    <span class="c1">// and:</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="nv">$data</span><span class="p">));</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">headers</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="s1">'Content-Type'</span><span class="p">,</span> <span class="s1">'application/json'</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+  </dd>
+  <dt>Sessions</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Request</span><span class="p">;</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">indexAction</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$session</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getSession</span><span class="p">();</span>
+
+    <span class="c1">// store an attribute for reuse during a later user request</span>
+    <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">);</span>
+        
+    <span class="c1">// unset session var</span>
+    <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">remove</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">);</span>
+
+    <span class="c1">// get the attribute set by another controller in another request</span>
+    <span class="nv">$foobar</span> <span class="o">=</span> <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'foobar'</span><span class="p">);</span>
+
+    <span class="c1">// use a default value if the attribute doesn't exist</span>
+    <span class="nv">$filters</span> <span class="o">=</span> <span class="nv">$session</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'filters'</span><span class="p">,</span> <span class="k">array</span><span class="p">());</span>
+<span class="p">}</span></code></pre></div>
+  </dd>
+  <dt>Flash messages</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">this</span><span class="o">-&gt;</span><span class="na">addFlash</span><span class="p">(</span>
+<span class="s1">'notice'</span><span class="p">,</span>
+<span class="s1">'Your changes were saved!'</span>
+<span class="p">);</span>
+<span class="c1">// $this-&gt;addFlash is equivalent to:</span>
+<span class="cm">/* $this-&gt;get('session')-&gt;getFlashBag()-&gt;add */</span>
+<span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">redirectToRoute</span><span class="p">(</span><span class="o">...</span><span class="p">);</span></code></pre></div>
+  </dd>
+  <dt>Exceptions</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="c1">// 404 response code (page not found)</span>
+<span class="k">throw</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createNotFoundException</span><span class="p">(</span><span class="s1">'The product does not exist'</span><span class="p">);</span>
+    
+<span class="c1">// 403 response code (access denied)</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException</span><span class="p">;</span>
+<span class="k">throw</span> <span class="k">new</span> <span class="nx">AccessDeniedHttpException</span><span class="p">();</span>
+    
+<span class="c1">// 500 response code (server error)</span>
+<span class="k">throw</span> <span class="k">new</span> <span class="nx">\Exception</span><span class="p">(</span><span class="s1">'Something went wrong!'</span><span class="p">);</span></code></pre></div>
+  </dd>
+  <dt>Services</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="c1">// src/AppBundle/Controller/HelloController.php</span>
+<span class="k">namespace</span> <span class="nx">AppBundle\Controller</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Bundle\FrameworkBundle\Controller\Controller</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">HelloController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="c1">// container services</span>
+    <span class="nv">$router</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'router'</span><span class="p">);</span>
+    <span class="nv">$mailer</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'mailer'</span><span class="p">);</span>
+
+    <span class="nv">$html</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">container</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'templating'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span>
+        <span class="s1">'lucky/number.html.twig'</span><span class="p">,</span>
+        <span class="k">array</span><span class="p">(</span><span class="s1">'luckyNumberList'</span> <span class="o">=&gt;</span> <span class="nv">$numbersList</span><span class="p">)</span>
+    <span class="p">);</span>
+            
+    <span class="c1">// shortcut for template rendering</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span>
+    <span class="s1">'lucky/number.html.twig'</span><span class="p">,</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">'luckyNumberList'</span> <span class="o">=&gt;</span> <span class="nv">$numbersList</span><span class="p">)</span>
+    <span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Services are called from a container instance that is available from all controllers =&gt; classes that extend from Controller class</p>
+</blockquote>
+
+<blockquote>
+  <p>The base Controller class provides helper methods and access to services through the container. See helper methods <a href="https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">here</a></p>
+</blockquote>
+
+<blockquote>
+  <p><code>$this-&gt;get()</code> is just a shortcut to <code>$this-&gt;container-&gt;get()</code></p>
+</blockquote>
+
+<blockquote>
+  <p>to list all available services: <code>$ app/console debug:container</code> </p>
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt>Documentation</dt>
+    <dd>
+      <ul>
+        <li><a href="http://symfony.com/doc/2.7/book/controller.html">symfony 2.7 controllers doc</a></li>
+      </ul>
+    </dd>
+  </dl>
+</blockquote>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-5">Templates</h2>
+
+<h3 id="three-level-inheritance-best-practice">Three-level Inheritance (best practice)</h3>
+<dl>
+  <dt>Base template</dt>
+  <dd><code>base.html.twig</code></dd>
+  <dt>Section specific</dt>
+  <dd><code>section/layout.html.twig</code>: extends from base.html.twig</dd>
+  <dt>Page specific</dt>
+  <dd><code>section/index.html.twig</code>: extends from layout.html.twig</dd>
+</dl>
+
+<h3 id="referencing-templates">Referencing templates</h3>
+
+<dl>
+  <dt>Application views (<code>app/Resources/views</code>)</dt>
+  <dd>
+    <ul>
+      <li><code>base.html.twig</code></li>
+      <li><code>layout.html.twig</code> (default global layout)</li>
+      <li><code>section/layout.html.twig</code> (specific section layout)</li>
+      <li><code>section/index.html.twig</code> (specific page)</li>
+    </ul>
+  </dd>
+  <dt>Bundle views (<code>path/to/bundle/Resources/views/</code>)</dt>
+  <dd>
+    <ul>
+      <li><code>AcmeBundle:section:index.html.twig</code></li>
+      <li><code>AcmeBundle::layout.html.twig</code></li>
+    </ul>
+  </dd>
+  <dt>Examples</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">'base.html.twig'</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">extends</span> <span class="s1">'blog/layout.html.twig'</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">include</span><span class="o">(</span><span class="s1">'section/index.html.twig'</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">include</span><span class="o">(</span><span class="nv">AcmeBundle</span><span class="o">:</span><span class="nv">section</span><span class="o">:</span><span class="nv">index.html.twig</span><span class="err">'</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span></code></pre></div>
+  </dd>
+</dl>
+
+<h3 id="embedding-controllers">Embedding controllers</h3>
+
+<dl>
+  <dt>Embedded controller</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="x">&lt;div id="sidebar"&gt;</span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nv">render</span><span class="o">(</span><span class="nv">controller</span><span class="o">(</span>
+    <span class="s1">'AppBundle:Article:recentArticles'</span><span class="o">,</span>
+    <span class="o">{</span> <span class="s1">'max'</span><span class="o">:</span> <span class="m">3</span> <span class="o">}</span>
+<span class="o">))</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">&lt;/div&gt;</span></code></pre></div>
+  </dd>
+  <dt>Asynchronous embedded controller</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="cp">{{</span> <span class="nv">render_hinclude</span><span class="o">(</span><span class="nv">controller</span><span class="o">(</span><span class="s1">'...'</span><span class="o">),</span>  <span class="o">{</span>
+<span class="s1">'default'</span><span class="o">:</span> <span class="s1">'default/content.html.twig'</span>
+<span class="o">})</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">render_hinclude</span><span class="o">(</span><span class="nv">controller</span><span class="o">(</span><span class="s1">'...'</span><span class="o">),</span> <span class="o">{</span><span class="s1">'default'</span><span class="o">:</span> <span class="s1">'Loading...'</span><span class="o">})</span> <span class="cp">}}</span><span class="x"></span></code></pre></div>
+  </dd>
+  <dt>Default globals</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># app/config/config.yml</span>
+<span class="l-Scalar-Plain">framework</span><span class="p-Indicator">:</span>
+<span class="c1"># ...</span>
+<span class="l-Scalar-Plain">templating</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">hinclude_default_template</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">hinclude.html.twig</span></code></pre></div>
+  </dd>
+  <dt>Assets</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="cp">{%</span> <span class="k">block</span> <span class="nv">stylesheets</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;link href="</span><span class="cp">{{</span> <span class="nv">asset</span><span class="o">(</span><span class="s1">'css/main.css'</span><span class="o">)</span> <span class="cp">}}</span><span class="x">" rel="stylesheet" /&gt;</span>
+<span class="x">    &lt;link href="</span><span class="cp">{{</span> <span class="nv">asset</span><span class="o">(</span><span class="s1">'bundles/acmedemo/css/contact.css'</span><span class="o">)</span> <span class="cp">}}</span><span class="x">" rel="stylesheet" /&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">javascripts</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;script src="</span><span class="cp">{{</span> <span class="nv">asset</span><span class="o">(</span><span class="s1">'js/main.js'</span><span class="o">)</span> <span class="cp">}}</span><span class="x">"&gt;&lt;/script&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Install assets with with: <code>app/console assets:install --symlink --relative</code></p>
+</blockquote>
+
+<dl>
+  <dt>Request from templates</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="c">{# get #}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">app.request.query.get</span><span class="o">(</span><span class="s1">'page'</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+<span class="c">{# post #}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">app.request.request.get</span><span class="o">(</span><span class="s1">'page'</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span></code></pre></div>
+  </dd>
+  <dt>Flash messages</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="cp">{%</span> <span class="k">for</span> <span class="nv">flashMessage</span> <span class="k">in</span> <span class="nv">app.session.flashbag.get</span><span class="o">(</span><span class="s1">'notice'</span><span class="o">)</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;div class="flash-notice"&gt;</span>
+<span class="x">        </span><span class="cp">{{</span> <span class="nv">flashMessage</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">    &lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span></code></pre></div>
+  </dd>
+</dl>
+
+<h3 id="global-variables">Global variables</h3>
+
+<dl>
+  <dt>app.security</dt>
+  <dd>The security context.</dd>
+  <dt>app.user</dt>
+  <dd>The current user object.</dd>
+  <dt>app.request</dt>
+  <dd>The request object.</dd>
+  <dt>app.session</dt>
+  <dd>The session object.</dd>
+  <dt>app.environment</dt>
+  <dd>The current environment (dev, prod, etc).</dd>
+  <dt>app.debug</dt>
+  <dd>True if in debug mode. False otherwise. </dd>
+</dl>
+
+<blockquote>
+  <p>Global variables can be added from config file (see <a href="/symfony/#controllertwig-parameters">App parameters</a>)</p>
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt>Documentation</dt>
+    <dd>
+      <ul>
+        <li><a href="http://symfony.com/doc/2.7/book/templating.html">symfony 2.7 templating doc</a></li>
+        <li>For twig specific reference see <a href="/twig/">this</a> or <a href="http://twig.sensiolabs.org/documentation#reference">the twig doc</a></li>
+        <li>For symfony specific extensions see <a href="http://symfony.com/doc/current/reference/twig_reference.html">this</a></li>
+        <li>To add your own twig extensions see <a href="http://symfony.com/doc/current/cookbook/templating/twig_extension.html">this</a></li>
+      </ul>
+    </dd>
+  </dl>
+</blockquote>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-6">Translations</h2>
+
+<h3 id="translation-data">Translation data</h3>
+
+<dl>
+  <dt>Translation file <code>app/Resources/translations/messages.en.yml</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">symfony</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">great</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Symfony is great</span>
+    <span class="l-Scalar-Plain">amazing</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Symfony is amazing</span>
+<span class="l-Scalar-Plain">user</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">login</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Login</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>If the message is located in the catalog, the translation is returned. If not, the translator returns the original message.</p>
+</blockquote>
+
+<blockquote>
+  <p>It is possible to define multiple domains/files (default domain is <code>messages</code>, read <a href="http://symfony.com/doc/current/components/translation/introduction.html#using-message-domains">more</a>)</p>
+</blockquote>
+
+<blockquote>
+  <p>After adding a new translation file, cleaning cache is required: <code>php app/console cache:clear</code></p>
+</blockquote>
+
+<dl>
+  <dt>Transchoice string (pluralization)</dt>
+  <dd><code>
+'{0} There are no apples|[20,Inf[ There are too much apples|singular: There is one apple|plural: There are %count% apples'
+</code></dd>
+</dl>
+
+<blockquote>
+  <p>Each locale has its own rules. For example, the above transchoice string would be useful for languages as spanish or english, but not others.</p>
+</blockquote>
+
+<blockquote>
+  <p>Tags like <code>singular:</code> or <code>plural:</code> are only hints for the developer/translator</p>
+</blockquote>
+
+<h3 id="using-translation-functions-from-the-controller">Using translation functions from the controller</h3>
+
+<dl>
+  <dt>Trans and transchoice functions</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$translator</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'translator'</span><span class="p">);</span>
+<span class="c1">// the optional param 'admin' is the domain of the translation</span>
+<span class="nv">$translator</span><span class="o">-&gt;</span><span class="na">trans</span><span class="p">(</span><span class="s1">'Symfony is great'</span><span class="p">,</span> <span class="k">array</span><span class="p">(),</span> <span class="s1">'admin'</span><span class="p">);</span>
+<span class="nv">$translator</span><span class="o">-&gt;</span><span class="na">transChoice</span><span class="p">(</span>
+    <span class="s1">'{0} There are no apples|[20,Inf[ There are too much apples|singular: There is one apple|plural: There are %count% apples'</span><span class="p">,</span>
+    <span class="mi">10</span><span class="p">,</span>
+    <span class="k">array</span><span class="p">(</span><span class="s1">'%count%'</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="p">);</span></code></pre></div>
+  </dd>
+</dl>
+
+<h3 id="using-translation-functions-from-templates">Using translation functions from templates</h3>
+
+<dl>
+  <dt>Trans and transchoice functions</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="cp">{%</span> <span class="k">trans</span> <span class="cp">%}</span><span class="x">Hello %name%</span><span class="cp">{%</span> <span class="k">endtrans</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">transchoice</span> <span class="nv">count</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    {0} There are no apples|[20,Inf[ There are too much apples|singular: There is one apple|plural: There are %count% apples</span>
+<span class="cp">{%</span> <span class="k">endtranschoice</span> <span class="cp">%}</span><span class="x"></span></code></pre></div>
+  </dd>
+  <dt>Trans and transchoice with additional params</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="cp">{%</span> <span class="k">trans</span> <span class="k">with</span> <span class="o">{</span><span class="s1">'%name%'</span><span class="o">:</span> <span class="s1">'Fabien'</span><span class="o">}</span> <span class="nv">from</span> <span class="s2">"app"</span> <span class="nv">into</span> <span class="s2">"fr"</span> <span class="cp">%}</span><span class="x">Hello %name%</span><span class="cp">{%</span> <span class="k">endtrans</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">transchoice</span> <span class="nv">count</span> <span class="k">with</span> <span class="o">{</span><span class="s1">'%name%'</span><span class="o">:</span> <span class="s1">'Fabien'</span><span class="o">}</span> <span class="nv">from</span> <span class="s2">"app"</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    {0} %name%, there are no apples|{1} %name%, there is one apple|]1,Inf[ %name%, there are %count% apples</span>
+<span class="cp">{%</span> <span class="k">endtranschoice</span> <span class="cp">%}</span><span class="x"></span></code></pre></div>
+  </dd>
+  <dt>Trans and transchoice as filters</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="cp">{{</span> <span class="nv">message</span><span class="o">|</span><span class="nf">trans</span><span class="o">({</span><span class="s1">'%name%'</span><span class="o">:</span> <span class="s1">'Fabien'</span><span class="o">},</span> <span class="s2">"app"</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">message</span><span class="o">|</span><span class="nf">transchoice</span><span class="o">(</span><span class="m">5</span><span class="o">,</span> <span class="o">{</span><span class="s1">'%name%'</span><span class="o">:</span> <span class="s1">'Fabien'</span><span class="o">},</span> <span class="s1">'app'</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span></code></pre></div>
+  </dd>
+  <dt>Define default domain (instead of “messages”) for all translations on template</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="cp">{%</span> <span class="k">trans_default_domain</span> <span class="s2">"domain"</span> <span class="cp">%}</span><span class="x"></span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <dl>
+    <dt>Documentation</dt>
+    <dd>
+      <ul>
+        <li><a href="http://symfony.com/doc/current/book/translation.html#configuration">Configuration</a></li>
+        <li><a href="http://symfony.com/doc/current/book/translation.html#debugging-translations">Debugging translations</a></li>
+      </ul>
+    </dd>
+  </dl>
+</blockquote>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-7">Forms and validation</h2>
+
+<h3 id="validation">Validation</h3>
+<ul>
+  <li><a href="http://symfony.com/doc/current/book/validation.html">The validator service</a></li>
+</ul>
+
+<h3 id="forms">Forms</h3>
+<ul>
+  <li><a href="http://symfony.com/doc/current/book/forms.html">Forms doc</a></li>
+  <li><a href="http://symfony.com/doc/current/best_practices">Best practices</a></li>
+  <li><a href="http://symfony.com/doc/current/cookbook/form">Form cookbook</a></li>
+  <li><a href="http://symfony.com/doc/current/book/forms.html#form-validation">Form validation</a></li>
+  <li><a href="http://symfony.com/doc/current/book/forms.html#creating-form-classes">Create a separate Form class</a></li>
+  <li><a href="http://codemonkeys.be/2013/01/ajaxify-your-symfony2-forms-with-jquery/">Forms with ajax (not tested)</a></li>
+</ul>
+
+<h4 id="form-data">Form data</h4>
+
+<ul>
+  <li><a href="http://symfony.com/doc/current/book/forms.html#creating-a-simple-form">Form data object</a></li>
+  <li><a href="http://symfony.com/doc/current/book/forms.html#embedded-forms">Embedded Form data objects</a></li>
+  <li><a href="http://symfony.com/doc/current/book/forms.html#using-a-form-without-a-class">Form without Form data object</a></li>
+</ul>
+
+<h4 id="form-rendering">Form rendering</h4>
+<ul>
+  <li><a href="http://symfony.com/doc/current/book/forms.html#rendering-a-form-in-a-template">Render Form manually</a></li>
+  <li><a href="http://symfony.com/doc/current/book/forms.html#form-theming">Form theming</a></li>
+</ul>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-8">Session management</h2>
+
+<dl>
+  <dt>Initializing the session</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$session</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Session</span><span class="p">();</span>
+<span class="nv">$myAttributeBag</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AttributeBag</span><span class="p">(</span><span class="nv">$appName</span><span class="p">);</span>
+<span class="c1">// $myAttributeBag-&gt;setName('some_descriptive_name');</span>
+<span class="nv">$session</span><span class="o">-&gt;</span><span class="na">registerBag</span><span class="p">(</span><span class="nv">$myAttributeBag</span><span class="p">);</span>
+<span class="nv">$session</span><span class="o">-&gt;</span><span class="na">start</span><span class="p">();</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <dl>
+    <dt>Documentation</dt>
+    <dd>
+      <ul>
+        <li><a href="http://symfony.com/doc/current/components/http_foundation/sessions.html">Session management reference</a></li>
+        <li><a href="http://gnugat.github.io/2014/04/23/sf2-sessions-introduction.html">Sessions example code</a></li>
+      </ul>
+    </dd>
+  </dl>
+</blockquote>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-9">Configuration</h2>
+
+<h3 id="configuration-files">Configuration files</h3>
+
+<dl>
+  <dt>Infrastructure related</dt>
+  <dd>Files: <code>app/config/parameters.yml</code></dd>
+</dl>
+
+<blockquote>
+  <p>This file is unique per server (infrastructure), this file should be only on prod environment, not on version control.</p>
+</blockquote>
+
+<dl>
+  <dt>Canonical parameters</dt>
+  <dd>Files: <code>app/config/parameters.yml.dist</code></dd>
+</dl>
+
+<blockquote>
+  <p>This file defines the parameters needed on previous file, should be on version control.</p>
+</blockquote>
+
+<dl>
+  <dt>Application-Related</dt>
+  <dd>Files: <code>app/config/config_dev.yml</code>, <code>app/config/config_prod.yml</code>, <code>app/config/config.yml</code></dd>
+</dl>
+
+<blockquote>
+  <p>Symfony configuration. <code>config_dev.yml</code> and <code>config_prod.yml</code> files can override <code>config.yml</code> settings.</p>
+</blockquote>
+
+<h3 id="controllertwig-parameters">Controller/twig parameters</h3>
+
+<dl>
+  <dt>Config file</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">parameters</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">app.version</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">00.00.01</span>
+<span class="c1"># make app.version value accesible for twig templates</span>
+<span class="l-Scalar-Plain">twig</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">globals</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">version</span><span class="p-Indicator">:</span> <span class="err">%</span><span class="l-Scalar-Plain">app.version%</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>This parameters could be on any config file or in a separate file (for example: app_parameters.yml) imported from <code>config_dev.yml</code>, <code>config_prod.yml</code>, <code>config.yml</code>, using <code>import</code> parameter from top of the file</p>
+</blockquote>
+
+<dl>
+  <dt>App parameter from controller</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$container</span><span class="o">-&gt;</span><span class="na">getParameter</span><span class="p">(</span><span class="s1">'app.version'</span><span class="p">);</span>
+<span class="nv">$container</span><span class="o">-&gt;</span><span class="na">setParameter</span><span class="p">(</span><span class="s1">'app.version'</span><span class="p">,</span> <span class="s1">'00.00.02'</span><span class="p">);</span></code></pre></div>
+  </dd>
+  <dt>App parameter from twig</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-jinja" data-lang="jinja"><span class="cp">{{</span> <span class="nv">version</span> <span class="cp">}}</span><span class="x"></span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <dl>
+    <dt>Documentation</dt>
+    <dd>
+      <ul>
+        <li><a href="http://symfony.com/doc/current/best_practices/configuration.html">Best practices</a></li>
+        <li><a href="http://symfony.com/doc/current/components/dependency_injection/parameters.html">Parameters</a></li>
+        <li><a href="http://symfony.com/doc/current/cookbook/configuration/external_parameters.html">External parameters</a></li>
+      </ul>
+    </dd>
+  </dl>
+</blockquote>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-10">Services</h2>
+
+<dl>
+  <dt>Service class</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">namespace</span> <span class="nx">AppBundle\Lib</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Bundle\FrameworkBundle\Templating\EngineInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">MyService</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$templating</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nx">EngineInterface</span> <span class="nv">$templating</span><span class="p">,</span> <span class="nv">$appName</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">templating</span> <span class="o">=</span> <span class="nv">$templating</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+  </dd>
+  <dt>Configuration</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># app/config/services.yml</span>
+<span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">my_service</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">class</span><span class="p-Indicator">:</span>     <span class="l-Scalar-Plain">AppBundle\Lib\MyService</span>
+        <span class="l-Scalar-Plain">arguments</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="s">"@templating"</span><span class="p-Indicator">,</span> <span class="s">"%appName%"</span><span class="p-Indicator">]</span></code></pre></div>
+  </dd>
+  <dt>Instantiation</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$myService</span> <span class="o">=</span> <span class="nv">$container</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'my_service'</span><span class="p">);</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <dl>
+    <dt>Documentation</dt>
+    <dd>
+      <ul>
+        <li><a href="http://symfony.com/doc/2.7/book/controller.html">symfony 2.7 services doc</a></li>
+        <li><a href="http://symfony.com/doc/current/cookbook/controller/service.html">Controller as a service</a></li>
+      </ul>
+    </dd>
+  </dl>
+</blockquote>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-11">Console commands</h2>
+
+<dl>
+  <dt>List commands</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>app/console --list</code></pre></div>
+  </dd>
+  <dt>Show help for some command</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>app/console --help &lt;some_command&gt;</code></pre></div>
+  </dd>
+  <dt>Create a new bundle</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>app/console generate:bundle --namespace<span class="o">=</span>Vendor/Bundle</code></pre></div>
+  </dd>
+  <dt>Install assets</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>php app/console assets:install --symlink --relative</code></pre></div>
+  </dd>
+  <dt>Clear cache</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>app/console cache:clear --env<span class="o">=</span>prod
+<span class="nv">$ </span>app/console cache:clear --env<span class="o">=</span>dev</code></pre></div>
+  </dd>
+  <dt>Show config</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># show bundles</span>
+<span class="nv">$ </span>app/console config:dump-reference
+<span class="c"># show current extension config</span>
+<span class="nv">$ </span>app/console config:dump-reference &lt;bundle_alias&gt;</code></pre></div>
+  </dd>
+  <dt>Show services</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># list all services</span>
+<span class="nv">$ </span>app/console debug:container
+<span class="c"># show info for a service</span>
+<span class="nv">$ </span>app/console debug:container &lt;service_name&gt;</code></pre></div>
+  </dd>
+</dl>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-12">Third party bundles</h2>
+
+<blockquote>
+  <dl>
+    <dt>Useful symfony bundles</dt>
+    <dd>
+      <ul>
+        <li><a href="https://github.com/FriendsOfSymfony/FOSJsRoutingBundle">Routing functions from javascript</a></li>
+        <li><a href="https://github.com/willdurand/BazingaJsTranslationBundle">Translation functions from javascript</a></li>
+        <li><a href="https://github.com/KnpLabs/KnpPaginatorBundle">Pagination from array, ORM query, etc</a></li>
+        <li><a href="https://github.com/phiamo/MopaBootstrapBundle">Symfony Bootsrap integration</a> (see <a href="/bootstrap/#how-to-install-bootstrap-sass-compass">this</a> if you only want bootstrap-sass)</li>
+        <li><a href="http://symfony.com/doc/current/bundles/FOSRestBundle">REST API</a> / FOSRestBundle <a href="https://github.com/liip/LiipHelloBundle/blob/master/Controller/RestController.php">controller example</a> / RESTful <a href="http://stackoverflow.com/questions/671118/what-exactly-is-restful-programming">concept</a></li>
+      </ul>
+    </dd>
+  </dl>
+</blockquote>
+
+<blockquote>
+  <p>Complete list of Symfony Bundles <a href="http://knpbundles.com/">here</a></p>
+</blockquote>
+
+<dl>
+  <dt>Uninstall bundle installed with composer</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>composer remove &lt;vendor&gt;/&lt;bundle&gt; --update-with-dependencies</code></pre></div>
+  </dd>
+</dl>
+
+
+  <br />
+  <blockquote>
+      <p><strong>Last updated: <time datetime="2016-09-01T21:34:33+00:00" class="page-date">01 Sep 2016</time></strong></p>
+  </blockquote>
+</article>
+
+<aside class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+         
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/bdchanges">
+                            Scripts de actualización de cambios de Base de Datos
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/jquery">
+                            Jquery
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/bootstrap">
+                            Bootstrap
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/apache">
+                            Apache
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/twig">
+                            Twig
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/mysql">
+                            Mysql
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/doctrinedbal">
+                            Doctrine DBAL
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/php">
+                            PHP
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/apuntesphp">
+                            PHP. Apuntes
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+            
+        
+        
+
+        
+            
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+        
+        
+  </ul>
+</aside>
+
+
+      </main>
+     <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+          <!-- <h2 class="footer-heading"> <a href="https://github.com/johgh/johgh.io-source"> <i class="fa fa-github"></i> Cheat-Sheets</a></h2> -->
+        <ul class="contact-list">
+          <li><a href="mailto:"></a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<a href="#0" class="cd-top">Top</a>
+<script src="/scripts/backtotop.js"></script>
+
+<script>
+$(function() {
+  $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+
+  /*
+  $(document).on('click', '.back', function(e){
+    e.preventDefault()
+  });
+  */
+});
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66389589-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+
+  </body>
+</html>

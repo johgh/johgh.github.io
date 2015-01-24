@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    Scripts de actualización de cambios de Base de Datos <> Cheat-sheets.tk
+    
+  </title>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="canonical" href="http://cheat-sheets.tk/bdchanges">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" media="screen" href="/css/toc.css">
+    <link rel="stylesheet" media="screen" href="/css/select2.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.grey.min.css">
+
+    <script src="/scripts/jquery-2.1.4.min.js"></script>
+    
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet"> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script> -->
+    
+    <script src="/scripts/jquery.tablesorter.min.js"></script>
+    <script src="/scripts/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/widget-filter-formatter-select2.min.js"></script>
+    <script src="/scripts/jquery.tocLight.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+          $.toc.clickHideButton();
+        });
+  </script>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+</head>
+
+
+
+  <body>
+    <div class="container content">
+        <header class="site-header">
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/"> 
+          <span class="main-title">
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
+                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+                    
+          </span>
+      </a>
+
+      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+
+  </div>
+    <!-- <style> -->
+    <!--     /* The default background color is #c00 */ -->
+    <!--     .right-bottom .github-fork-ribbon { -->
+    <!--         background-color: #2A7AE2; -->
+    <!--     } -->
+
+    <!--     .right .github-fork-ribbon { -->
+    <!--         background-color: #f80; -->
+    <!--     } -->
+
+    <!--     .left-bottom .github-fork-ribbon { -->
+    <!--         background-color: #333; -->
+    <!--     } -->
+    <!-- </style> -->
+    
+    <!-- <div class="github-fork-ribbon-wrapper right-bottom"> -->
+    <!--     <div class="github-fork-ribbon"> -->
+    <!--         <a href="https://github.com/johgh/johgh.io-source">Fork me on GitHub</a> -->
+    <!--     </div> -->
+    <!-- </div> -->
+</header>
+
+      <header class="masthead">
+      </header>
+      <main>
+        <h6 style="margin: 1rem 0 0 0"><a href="/" class="goback" ><i class="fa fa-arrow-left"></i>  Go back</a></h6>
+<div class="blog">
+
+<article class="blog">
+    <time datetime="2015-10-01T00:00:01+00:00" class="page-date">01 Oct 2015</time>
+    <h1 class="post-title">Scripts de actualización de cambios de Base de Datos</h1>
+        <div id="toc-container">
+   <table class="toc" id="toc">
+      <tbody>
+         <tr>
+            <td>
+               <div id="toctitle">
+                  <h2>Contents</h2>
+                  <span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">hide</a>]</span>
+               </div>
+               <ul>
+                  <li class="toc_level-1 toc_section-1">
+                     <a href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">Proceso de actualización automatizado</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-2">
+                     <a href="#tocAnchor-1-2"><span class="tocnumber">2</span> <span class="toctext">Un fichero por objeto</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-3">
+                     <a href="#tocAnchor-1-3"><span class="tocnumber">3</span> <span class="toctext">Subida a producción</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-4">
+                     <a href="#tocAnchor-1-4"><span class="tocnumber">4</span> <span class="toctext">Enlaces de interés</span></a>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div><p>La naturaleza del código de BD no es la misma que la de cualquier otro código:</p>
+
+<ul>
+  <li>Para realizar cambios solo podemos hacerlo mediante la ejecución de scripts de cambios, no basta con modificar el código</li>
+  <li>No podemos aplicar cualquier tipo de cambio (sin perder datos, se entiende)</li>
+</ul>
+
+<p>Por ello, no es suficiente un sistema de control de versiones tradicional para mantener un control de los cambios en BD.</p>
+
+<h1 id="tocAnchor-1-1">Proceso de actualización automatizado</h1>
+<ul>
+  <li>Inicialmente podemos crear un solo fichero de cambios para cada release</li>
+  <li>Al principio del script se inserta un registro en la tabla <schema>changeLogDB con:</schema></li>
+</ul>
+
+<div class="highlight">
+   <pre>
+      <code class="language-bash" data-lang="bash">id <span class="p">|</span> version <span class="o">(</span>XX.XX.XX<span class="o">)</span> <span class="p">|</span> file <span class="p">|</span> execution_date</code>
+   </pre>
+</div>
+
+<ul>
+  <li>Para actualizar la base de datos deberemos ejecutar un script upgrade.sh:</li>
+</ul>
+
+<div class="highlight">
+   <pre>
+      <code class="language-bash" data-lang="bash"><span class="nv">$ </span>upgradeDB.sh &lt;schema&gt; &lt;version_hasta_donde_actualizar&gt;</code>
+   </pre>
+</div>
+
+<p>Este script ejecuta las actualizaciones que no se encuentran registradas en la base de datos destino, de forma secuencial. Si el fichero de actualización con el id más pequeño no es consecutivo al registro con el id más grande, la BD no podrá ser actualizada.</p>
+
+<h1 id="tocAnchor-1-2">Un fichero por objeto</h1>
+<ul>
+  <li>
+    <p>Por cada objeto creamos un fichero. Cada objeto debe comprobar inicialmente si ya existe (para ser borrado) y finalmente asignar sus permisos. (Otra posibilidad es crear un fichero por cada grupo de cambios relacionados)</p>
+  </li>
+  <li>
+    <p>Cada fichero debe tener como prefijo el orden en el que debe ser ejecutado (prioridad).</p>
+  </li>
+</ul>
+
+<p>Si ocurre un error al ejecutar las actualizaciones sabremos exactamente qué codigo ha fallado al mirar el último registro de la tabla <schema>changeLogDB.</schema></p>
+
+<h1 id="tocAnchor-1-3">Subida a producción</h1>
+
+<p>Nuestro objetivo es asegurarnos de que los cambios realizados en desarrollo quedan guardados correctamente en un fichero/s de cambios para ser ejecutados en PRODUCCIÓN sin problemas. Para ello:</p>
+
+<ol>
+  <li>
+    <p>Obtenemos los cambios entre desarrollo y PRODUCCIÓN.</p>
+  </li>
+  <li>
+    <p>Generamos nuestros ficheros de cambio con el insert de nuestro cambio a <schema>changeLogDB en el inicio de cada fichero.</schema></p>
+  </li>
+  <li>
+    <p>Ejecutamos upgradeDB.sh <schema> en entorno de PREPRODUCCION (copia de nuestro entorno de desarrollo antes de aplicar ningun cambio de BD) para comprobar que el script funciona correctamente</schema></p>
+  </li>
+  <li>
+    <p>Si todo ha ido bien, sabemos que el script no fallará en el entorno de PRODUCCIÓN</p>
+  </li>
+  <li>
+    <p>Cabe la posibilidad de que nos hayamos dejado cambios a aplicar, así que siempre deberíamos hacer un testeo general apuntando al entorno de PREPRODUCCION antes de subir finalmente a PRODUCCIÓN</p>
+  </li>
+  <li>
+    <p>Si todo está bien, ejecutamos upgradeDB.sh <schema> en el entorno de PRODUCCIÓN</schema></p>
+  </li>
+</ol>
+
+<h1 id="tocAnchor-1-4">Enlaces de interés</h1>
+
+<ul>
+  <li><a href="http://c2.com/cgi/wiki?DatabaseBestPractices">http://c2.com/cgi/wiki?DatabaseBestPractices</a></li>
+  <li><a href="http://thedailywtf.com/articles/Database-Changes-Done-Right">http://thedailywtf.com/articles/Database-Changes-Done-Right</a></li>
+</ul>
+
+
+    </article>
+
+      </main>
+     <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+          <!-- <h2 class="footer-heading"> <a href="https://github.com/johgh/johgh.io-source"> <i class="fa fa-github"></i> Cheat-Sheets</a></h2> -->
+        <ul class="contact-list">
+          <li><a href="mailto:"></a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<a href="#0" class="cd-top">Top</a>
+<script src="/scripts/backtotop.js"></script>
+
+<script>
+$(function() {
+  $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+
+  /*
+  $(document).on('click', '.back', function(e){
+    e.preventDefault()
+  });
+  */
+});
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66389589-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+
+  </body>
+</html>

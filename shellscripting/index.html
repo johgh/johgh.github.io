@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    Shell-scripting snippets <> Cheat-sheets.tk
+    
+  </title>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="canonical" href="http://cheat-sheets.tk/shellscripting">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" media="screen" href="/css/toc.css">
+    <link rel="stylesheet" media="screen" href="/css/select2.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.grey.min.css">
+
+    <script src="/scripts/jquery-2.1.4.min.js"></script>
+    
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet"> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script> -->
+    
+    <script src="/scripts/jquery.tablesorter.min.js"></script>
+    <script src="/scripts/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/widget-filter-formatter-select2.min.js"></script>
+    <script src="/scripts/jquery.tocLight.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+          $.toc.clickHideButton();
+        });
+  </script>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+</head>
+
+
+
+  <body>
+    <div class="container content">
+        <header class="site-header">
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/"> 
+          <span class="main-title">
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
+                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+                    
+          </span>
+      </a>
+
+      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+
+  </div>
+    <!-- <style> -->
+    <!--     /* The default background color is #c00 */ -->
+    <!--     .right-bottom .github-fork-ribbon { -->
+    <!--         background-color: #2A7AE2; -->
+    <!--     } -->
+
+    <!--     .right .github-fork-ribbon { -->
+    <!--         background-color: #f80; -->
+    <!--     } -->
+
+    <!--     .left-bottom .github-fork-ribbon { -->
+    <!--         background-color: #333; -->
+    <!--     } -->
+    <!-- </style> -->
+    
+    <!-- <div class="github-fork-ribbon-wrapper right-bottom"> -->
+    <!--     <div class="github-fork-ribbon"> -->
+    <!--         <a href="https://github.com/johgh/johgh.io-source">Fork me on GitHub</a> -->
+    <!--     </div> -->
+    <!-- </div> -->
+</header>
+
+      <header class="masthead">
+      </header>
+      <main>
+        <div class="post">
+
+<br />
+<article class="post">
+  <h1 class="post-title"><a href="/terminal" class="back"><i class="fa fa-arrow-left"></i></a> Shell-scripting snippets</h1>
+  <br />
+  <div id="toc-container">
+   <table class="toc" id="toc">
+      <tbody>
+         <tr>
+            <td>
+               <div id="toctitle">
+                  <h2>Contents</h2>
+                  <span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">hide</a>]</span>
+               </div>
+               <ul>
+                  <li class="toc_level-1 toc_section-1">
+                     <a href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">Snippets</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-2">
+                     <a href="#tocAnchor-1-2"><span class="tocnumber">2</span> <span class="toctext">Resources</span></a>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div><h1 id="tocAnchor-1-1">Snippets</h1>
+
+<dl>
+  <dt>Save and display any value on a variable (including \n \0)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ var</span><span class="o">=</span><span class="s2">"`ls -1`\n"</span>
+<span class="nv">$ </span><span class="nb">echo</span> -e <span class="nv">$var</span></code></pre></div>
+  </dd>
+  <dt>Parse file with delim into array</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">IN</span><span class="o">=</span><span class="s2">"bla@some.com;john@home.com"</span>
+<span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span><span class="s1">';'</span> <span class="nb">read</span> -ra ADDR<span class="p">;</span> <span class="k">do</span>
+    <span class="k">for</span> i in <span class="s2">"${ADDR[@]}"</span><span class="p">;</span> <span class="k">do</span>
+        <span class="c"># process "$i"</span>
+    <span class="k">done</span>
+<span class="k">done</span> <span class="o">&lt;&lt;&lt;</span> <span class="s2">"$IN"</span></code></pre></div>
+  </dd>
+  <dt>Ternary logic: test empty directory</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span> <span class="s2">"$(ls -A /path/to/directory)"</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"Not Empty"</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"Empty"</span></code></pre></div>
+  </dd>
+  <dt>Bash flags</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="nv">$@</span>
+<span class="nb">shift</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span>-ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> ...
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> ...
+<span class="k">if</span> <span class="o">[</span> -f <span class="s2">"$NEWFILE"</span> <span class="o">]</span> <span class="k">then</span> ...
+<span class="k">if</span> <span class="o">[</span> -d /media/11C0-0BF1/ <span class="o">]</span>
+<span class="k">if</span> <span class="o">[</span> ! -z <span class="nv">$empty</span> <span class="o">]</span></code></pre></div>
+  </dd>
+  <dt>Constants (-r), arrays (-a)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">declare</span> -a -r <span class="nv">LANGLST</span><span class="o">=(</span> eng spa fre ger ita<span class="o">)</span></code></pre></div>
+  </dd>
+  <dt>Iterate through array</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> opt in <span class="k">${</span><span class="nv">LANGLST</span><span class="p">[@]</span><span class="k">}</span><span class="p">;</span> <span class="k">do</span></code></pre></div>
+  </dd>
+  <dt>Read standard input</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">read</span> -n1 -p <span class="s2">"Add language [$opt] [y/N]?"</span><span class="p">;</span> <span class="nb">echo</span> <span class="s2">""</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$REPLY</span> <span class="o">=</span> <span class="s2">"y"</span> -o <span class="nv">$REPLY</span> <span class="o">=</span> <span class="s2">"Y"</span> <span class="o">]</span></code></pre></div>
+  </dd>
+  <dt>Get number of elements in the array</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">ELEMENTS</span><span class="o">=</span><span class="k">${#</span><span class="nv">ARRAY</span><span class="p">[@]</span><span class="k">}</span></code></pre></div>
+  </dd>
+  <dt>For loop</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> <span class="o">((</span> <span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i&lt;<span class="nv">$ELEMENTS</span><span class="p">;</span>i++<span class="o">))</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="k">${</span><span class="nv">ARRAY</span><span class="p">[</span><span class="k">${</span><span class="nv">i</span><span class="k">}</span><span class="p">]</span><span class="k">}</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
+  </dd>
+  <dt>While with pipe</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash">ls <span class="p">|</span> <span class="k">while</span> <span class="nb">read </span>var<span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="nv">$var</span><span class="p">;</span> <span class="k">done</span><span class="p">;</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>only useful if we don’t care about the values of the loop variables after exiting the loop</p>
+</blockquote>
+
+<dl>
+  <dt>While loop + workaround pipe parallel process</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">while</span> <span class="nb">read </span>i<span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="s2">"$i"</span><span class="p">;</span> <span class="k">done</span> &lt; &lt;<span class="o">(</span>ls<span class="o">)</span>  <span class="c">#this is called bash process substitution</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>useful when some post-processing is needed after the loop</p>
+</blockquote>
+
+<dl>
+  <dt>Diff of 2 dirs with bash process substitution (see above)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash">diff &lt;<span class="o">(</span>ls <span class="nv">$first_directory</span><span class="o">)</span> &lt;<span class="o">(</span>ls <span class="nv">$second_directory</span><span class="o">)</span></code></pre></div>
+  </dd>
+  <dt>Evaluating math expressions</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">((</span> index++ <span class="o">))</span>
+<span class="o">((</span> <span class="m">8</span> + <span class="m">4</span> <span class="o">))</span>
+<span class="o">((</span> <span class="nv">5</span> <span class="o">==</span> <span class="m">5</span> <span class="o">))</span></code></pre></div>
+  </dd>
+  <dt>[[ ]] if there are ANDS</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">if</span> <span class="o">[[</span> <span class="nv">$FLAG_INPUT</span> <span class="o">==</span> <span class="s2">"0"</span> <span class="o">&amp;&amp;</span> <span class="nv">$FLAG_STDIN</span> <span class="o">==</span> <span class="s2">"1"</span> <span class="o">]]</span></code></pre></div>
+  </dd>
+  <dt>Ask password (-s: silent)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">read</span> -s -n <span class="m">1</span> -p <span class="s2">""</span> option<span class="p">;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span></code></pre></div>
+  </dd>
+  <dt>Some awk and sed</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">newname</span><span class="o">=</span><span class="s2">"`echo "</span><span class="nv">$1</span><span class="s2">" | sed 's/\[\+[^\[]*\]\+\ *//g' | sed 's/\ [\.]*/\./g' | sed 's/^[_-=\.]*//g'`"</span>
+<span class="nv">title</span><span class="o">=</span><span class="sb">`</span>cat /tmp/filminfo.tmp <span class="p">|</span> grep title <span class="p">|</span> awk -F<span class="s2">"title: "</span> <span class="s1">'{print $2}'</span> <span class="p">|</span> sed <span class="s1">'s/\ /./g'</span><span class="sb">`</span></code></pre></div>
+  </dd>
+  <dt>Getopts</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash">usage<span class="o">()</span> <span class="o">{</span> <span class="nb">echo</span> <span class="s2">"Usage: $0 [-s &lt;45|90&gt;] [-p &lt;string&gt;]"</span> 1&gt;<span class="p">&amp;</span>2<span class="p">;</span> <span class="nb">exit </span>1<span class="p">;</span> <span class="o">}</span>
+<span class="k">while</span> <span class="nb">getopts</span> <span class="s2">":s:p:"</span> o<span class="p">;</span> <span class="k">do</span>
+<span class="k">case</span> <span class="s2">"${o}"</span> in
+    s<span class="o">)</span>
+        <span class="nv">s</span><span class="o">=</span><span class="k">${</span><span class="nv">OPTARG</span><span class="k">}</span>
+        <span class="o">((</span><span class="nv">s</span> <span class="o">==</span> <span class="m">45</span> <span class="o">||</span> <span class="nv">s</span> <span class="o">==</span> 90<span class="o">))</span> <span class="o">||</span> usage
+        <span class="p">;;</span>
+    p<span class="o">)</span>
+        <span class="nv">p</span><span class="o">=</span><span class="k">${</span><span class="nv">OPTARG</span><span class="k">}</span>
+        <span class="p">;;</span>
+    *<span class="o">)</span>
+        usage
+        <span class="p">;;</span>
+<span class="k">esac</span>
+<span class="k">done</span>
+<span class="nb">shift</span> <span class="k">$((</span>OPTIND-1<span class="k">))</span>
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">"${s}"</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> -z <span class="s2">"${p}"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+usage
+<span class="k">fi</span>
+<span class="nb">echo</span> <span class="s2">"s = ${s}"</span>
+<span class="nb">echo</span> <span class="s2">"p = ${p}"</span></code></pre></div>
+  </dd>
+  <dt>Rsync (n=simulation)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash">rsync -rltDvun --exclude<span class="o">=</span><span class="s1">'*.flac'</span> <span class="nv">$orig_path</span> <span class="nv">$dest_path</span>/Música <span class="p">|</span> tee -a <span class="nv">$log_file</span></code></pre></div>
+  </dd>
+  <dt>Useful commands for shell scripting</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash">basename, dirname, wc -l, tail -n+2, . <span class="o">(</span>include<span class="o">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="tocAnchor-1-2">Resources</h1>
+
+<blockquote>
+  <p>For complete shell scripting reference go <a href="http://www.tldp.org/LDP/abs/html/">here</a></p>
+</blockquote>
+
+<blockquote>
+  <p>Bash and shell scripting guides <a href="http://wiki.bash-hackers.org">here</a></p>
+</blockquote>
+
+
+  <br />
+  <blockquote>
+      <p><strong>Last updated: <time datetime="2016-09-01T21:34:33+00:00" class="page-date">01 Sep 2016</time></strong></p>
+  </blockquote>
+</article>
+
+<aside class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+         
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/apps">
+                            Packages
+                            <small><time datetime="2016-10-08T14:13:58+00:00">08 Oct 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/repos">
+                            Repositories
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/linuxcommands">
+                            Desktop/general commands
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/git">
+                            Git (Quick Guide)
+                            <small><time datetime="2016-09-14T12:12:38+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/zsh">
+                            Zsh setup
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/tmux">
+                            Tmux basics
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/my scripts">
+                            Useful scripts
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/gitconfig">
+                            My Git configuration
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/bash commands">
+                            Bash/UNIX commands
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+        
+        
+  </ul>
+</aside>
+
+
+      </main>
+     <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+          <!-- <h2 class="footer-heading"> <a href="https://github.com/johgh/johgh.io-source"> <i class="fa fa-github"></i> Cheat-Sheets</a></h2> -->
+        <ul class="contact-list">
+          <li><a href="mailto:"></a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<a href="#0" class="cd-top">Top</a>
+<script src="/scripts/backtotop.js"></script>
+
+<script>
+$(function() {
+  $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+
+  /*
+  $(document).on('click', '.back', function(e){
+    e.preventDefault()
+  });
+  */
+});
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66389589-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+
+  </body>
+</html>

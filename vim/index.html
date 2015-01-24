@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    Vim (Quick Reference) <> Cheat-sheets.tk
+    
+  </title>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="canonical" href="http://cheat-sheets.tk/vim">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" media="screen" href="/css/toc.css">
+    <link rel="stylesheet" media="screen" href="/css/select2.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.grey.min.css">
+
+    <script src="/scripts/jquery-2.1.4.min.js"></script>
+    
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet"> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script> -->
+    
+    <script src="/scripts/jquery.tablesorter.min.js"></script>
+    <script src="/scripts/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/widget-filter-formatter-select2.min.js"></script>
+    <script src="/scripts/jquery.tocLight.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+          $.toc.clickHideButton();
+        });
+  </script>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+</head>
+
+
+
+  <body>
+    <div class="container content">
+        <header class="site-header">
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/"> 
+          <span class="main-title">
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
+                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+                    
+          </span>
+      </a>
+
+      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+
+  </div>
+    <!-- <style> -->
+    <!--     /* The default background color is #c00 */ -->
+    <!--     .right-bottom .github-fork-ribbon { -->
+    <!--         background-color: #2A7AE2; -->
+    <!--     } -->
+
+    <!--     .right .github-fork-ribbon { -->
+    <!--         background-color: #f80; -->
+    <!--     } -->
+
+    <!--     .left-bottom .github-fork-ribbon { -->
+    <!--         background-color: #333; -->
+    <!--     } -->
+    <!-- </style> -->
+    
+    <!-- <div class="github-fork-ribbon-wrapper right-bottom"> -->
+    <!--     <div class="github-fork-ribbon"> -->
+    <!--         <a href="https://github.com/johgh/johgh.io-source">Fork me on GitHub</a> -->
+    <!--     </div> -->
+    <!-- </div> -->
+</header>
+
+      <header class="masthead">
+      </header>
+      <main>
+        <div class="post">
+
+<br />
+<article class="post">
+  <h1 class="post-title"><a href="/quick guides" class="back"><i class="fa fa-arrow-left"></i></a> Vim (Quick Reference)</h1>
+  <br />
+  <div id="toc-container">
+   <table class="toc" id="toc">
+      <tbody>
+         <tr>
+            <td>
+               <div id="toctitle">
+                  <h2>Contents</h2>
+                  <span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">hide</a>]</span>
+               </div>
+               <ul>
+                  <li class="toc_level-1 toc_section-1">
+                     <a href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">Operator pending mode</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-2">
+                           <a href="#tocAnchor-1-1-1"><span class="tocnumber">1.1</span> <span class="toctext">Words</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-3">
+                           <a href="#tocAnchor-1-1-2"><span class="tocnumber">1.2</span> <span class="toctext">Word motions</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-4">
+                           <a href="#tocAnchor-1-1-3"><span class="tocnumber">1.3</span> <span class="toctext">Text objects</span></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc_level-1 toc_section-5">
+                     <a href="#tocAnchor-1-5"><span class="tocnumber">2</span> <span class="toctext">Normal mode plugins</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-6">
+                           <a href="#tocAnchor-1-5-1"><span class="tocnumber">2.1</span> <span class="toctext">Surround</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-7">
+                           <a href="#tocAnchor-1-5-2"><span class="tocnumber">2.2</span> <span class="toctext">Multiple cursors</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-8">
+                           <a href="#tocAnchor-1-5-3"><span class="tocnumber">2.3</span> <span class="toctext">Expand Region</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-9">
+                           <a href="#tocAnchor-1-5-4"><span class="tocnumber">2.4</span> <span class="toctext">Commentary</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-10">
+                           <a href="#tocAnchor-1-5-5"><span class="tocnumber">2.5</span> <span class="toctext">Exchange</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-11">
+                           <a href="#tocAnchor-1-5-6"><span class="tocnumber">2.6</span> <span class="toctext">DelimitMate</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-12">
+                           <a href="#tocAnchor-1-5-7"><span class="tocnumber">2.7</span> <span class="toctext">Utilsnips</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-13">
+                           <a href="#tocAnchor-1-5-8"><span class="tocnumber">2.8</span> <span class="toctext">PhpDocumentor (PDV)</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-14">
+                           <a href="#tocAnchor-1-5-9"><span class="tocnumber">2.9</span> <span class="toctext">Abolish</span></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc_level-1 toc_section-15">
+                     <a href="#tocAnchor-1-15"><span class="tocnumber">3</span> <span class="toctext">Command Mode</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-16">
+                           <a href="#tocAnchor-1-15-1"><span class="tocnumber">3.1</span> <span class="toctext">Syntax</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-17">
+                           <a href="#tocAnchor-1-15-2"><span class="tocnumber">3.2</span> <span class="toctext">Text Editing With Ex Commands</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-18">
+                           <a href="#tocAnchor-1-15-3"><span class="tocnumber">3.3</span> <span class="toctext">Command Line Edition</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-19">
+                           <a href="#tocAnchor-1-15-4"><span class="tocnumber">3.4</span> <span class="toctext">Repeat last command</span></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc_level-1 toc_section-20">
+                     <a href="#tocAnchor-1-20"><span class="tocnumber">4</span> <span class="toctext">Vimdiff</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-21">
+                           <a href="#tocAnchor-1-20-1"><span class="tocnumber">4.1</span> <span class="toctext">2-way diff</span></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc_level-1 toc_section-22">
+                     <a href="#tocAnchor-1-22"><span class="tocnumber">5</span> <span class="toctext">Fugitive (plugin)</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-23">
+                           <a href="#tocAnchor-1-22-1"><span class="tocnumber">5.1</span> <span class="toctext">Commiting changes</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-24">
+                           <a href="#tocAnchor-1-22-2"><span class="tocnumber">5.2</span> <span class="toctext">Reviewing changes</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-25">
+                           <a href="#tocAnchor-1-22-3"><span class="tocnumber">5.3</span> <span class="toctext">Resolving conflicts</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-26">
+                           <a href="#tocAnchor-1-22-4"><span class="tocnumber">5.4</span> <span class="toctext">Fugitive diffs</span></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc_level-1 toc_section-27">
+                     <a href="#tocAnchor-1-27"><span class="tocnumber">6</span> <span class="toctext">Buffer and window management</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-28">
+                           <a href="#tocAnchor-1-27-1"><span class="tocnumber">6.1</span> <span class="toctext">Buffers</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-29">
+                           <a href="#tocAnchor-1-27-2"><span class="tocnumber">6.2</span> <span class="toctext">Windows</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-30">
+                           <a href="#tocAnchor-1-27-3"><span class="tocnumber">6.3</span> <span class="toctext">Ctrl-space (plugin)</span></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc_level-1 toc_section-31">
+                     <a href="#tocAnchor-1-31"><span class="tocnumber">7</span> <span class="toctext">VIM quick reference</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-32">
+                           <a href="#tocAnchor-1-31-1"><span class="tocnumber">7.1</span> <span class="toctext">Basic movement</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-33">
+                           <a href="#tocAnchor-1-31-2"><span class="tocnumber">7.2</span> <span class="toctext">Insertion &amp; replace → insert mode</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-34">
+                           <a href="#tocAnchor-1-31-3"><span class="tocnumber">7.3</span> <span class="toctext">Deletion</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-35">
+                           <a href="#tocAnchor-1-31-4"><span class="tocnumber">7.4</span> <span class="toctext">Insert mode</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-36">
+                           <a href="#tocAnchor-1-31-5"><span class="tocnumber">7.5</span> <span class="toctext">Copying</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-37">
+                           <a href="#tocAnchor-1-31-6"><span class="tocnumber">7.6</span> <span class="toctext">Advanced insertion</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-38">
+                           <a href="#tocAnchor-1-31-7"><span class="tocnumber">7.7</span> <span class="toctext">Visual mode</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-39">
+                           <a href="#tocAnchor-1-31-8"><span class="tocnumber">7.8</span> <span class="toctext">Undoing, repeating &amp; registers</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-40">
+                           <a href="#tocAnchor-1-31-9"><span class="tocnumber">7.9</span> <span class="toctext">Complex movement</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-41">
+                           <a href="#tocAnchor-1-31-10"><span class="tocnumber">7.10</span> <span class="toctext">Search &amp; substitution</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-42">
+                           <a href="#tocAnchor-1-31-11"><span class="tocnumber">7.11</span> <span class="toctext">Special characters in search patterns</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-43">
+                           <a href="#tocAnchor-1-31-12"><span class="tocnumber">7.12</span> <span class="toctext">Offsets in search commands</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-44">
+                           <a href="#tocAnchor-1-31-13"><span class="tocnumber">7.13</span> <span class="toctext">Marks and motions</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-45">
+                           <a href="#tocAnchor-1-31-14"><span class="tocnumber">7.14</span> <span class="toctext">Key mapping &amp; abbreviations</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-46">
+                           <a href="#tocAnchor-1-31-15"><span class="tocnumber">7.15</span> <span class="toctext">Tags</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-47">
+                           <a href="#tocAnchor-1-31-16"><span class="tocnumber">7.16</span> <span class="toctext">Scrolling &amp; multi-windowing</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-48">
+                           <a href="#tocAnchor-1-31-17"><span class="tocnumber">7.17</span> <span class="toctext">Ex commands (↵)</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-49">
+                           <a href="#tocAnchor-1-31-18"><span class="tocnumber">7.18</span> <span class="toctext">Ex ranges</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-50">
+                           <a href="#tocAnchor-1-31-19"><span class="tocnumber">7.19</span> <span class="toctext">Folding</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-51">
+                           <a href="#tocAnchor-1-31-20"><span class="tocnumber">7.20</span> <span class="toctext">Miscellaneous</span></a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div><h1 id="tocAnchor-1-1">Operator pending mode</h1>
+<dl>
+  <dt>Operator pending mode command</dt>
+  <dd><code>counter</code> + <code>operator</code> + <code>text_object</code> or <code>motion</code></dd>
+</dl>
+
+<h2 id="tocAnchor-1-1-1">Words</h2>
+
+<h3 id="builtin-words">Builtin Words</h3>
+
+<h4 id="standard-vim-words">Standard Vim words</h4>
+<p>A word can be of any of these:</p>
+
+<ul>
+  <li>a sequence of letters, digits and underscores</li>
+  <li>a sequence of any other char not being letters, digits, underscores or blank characters (space, tab, end of line)</li>
+  <li>an empty line</li>
+</ul>
+
+<blockquote>
+  <dl>
+    <dt>Motions</dt>
+    <dd><code>w</code> go to the next word<br />
+<code>e</code> go to the end of the currend word<br />
+<code>b</code> go to the previous word<br />
+<code>ge</code> go to the end of the previous word<br /></dd>
+  </dl>
+</blockquote>
+
+<h4 id="words-1">WORDS</h4>
+<p>A WORD can be of any of these:</p>
+
+<ul>
+  <li>a sequence of non-blank characters, separated with blank characters</li>
+  <li>an empty line</li>
+</ul>
+
+<blockquote>
+  <dl>
+    <dt>Motions</dt>
+    <dd><code>W</code> go to the next WORD<br />
+<code>E</code> go to the end of the current WORD<br />
+<code>B</code> go to the previous WORD<br />
+<code>gE</code> go to the end of the previous WORD<br /></dd>
+  </dl>
+</blockquote>
+
+<h3 id="plugin-words">Plugin Words</h3>
+
+<h4 id="smart-words">Smart-words</h4>
+<p>A smart-word is a sequence of letters, digits and underscores</p>
+
+<blockquote>
+  <dl>
+    <dt>Motion mappings</dt>
+    <dd>map <code>key_to_map</code> &lt;Plug&gt;(smartword-w)<br />
+map <code>key_to_map</code> &lt;Plug&gt;(smartword-b)<br />
+map <code>key_to_map</code> &lt;Plug&gt;(smartword-e)<br />
+map <code>key_to_map</code> &lt;Plug&gt;(smartword-ge)<br /></dd>
+  </dl>
+</blockquote>
+
+<h4 id="camelcasemotion">CamelCaseMotion</h4>
+<p>A CamelCaseMotion can be any of these:</p>
+
+<ul>
+  <li>a standard vim word motion<br /></li>
+  <li>the start of a segment of camelCased letters or an underscore<br /></li>
+</ul>
+
+<blockquote>
+  <dl>
+    <dt>Motions</dt>
+    <dd><code>&lt;Leader&gt;w</code> go to the next camelCase word<br />
+<code>&lt;Leader&gt;b</code>  go to the previous camelCase word<br /></dd>
+  </dl>
+</blockquote>
+
+<h2 id="tocAnchor-1-1-2">Word motions</h2>
+<blockquote>
+  <p>All motion commands have a range of action starting at the current cursor position</p>
+</blockquote>
+
+<dl>
+  <dt><code>dw</code> <code>yw</code> <code>vw</code></dt>
+  <dd>delete/yank/visual selection including adjacent space</dd>
+  <dt><code>de</code> <code>ye</code> <code>ve</code></dt>
+  <dd>delete/yank/visual word without adjacent space</dd>
+  <dt><code>cf&lt;space&gt;</code></dt>
+  <dd>change including adjacent space</dd>
+  <dt><code>cw</code> <code>ysw'</code></dt>
+  <dd>change without adjacent space / surround plugin</dd>
+</dl>
+
+<blockquote>
+  <p>all <code>word</code> motions listed above can be used with all type of words described aboved</p>
+</blockquote>
+
+<h2 id="tocAnchor-1-1-3">Text objects</h2>
+<blockquote>
+  <p>All text object commands have a range of action that takes the entire current object (the current cursor position determines the object)</p>
+</blockquote>
+
+<dl>
+  <dt><code>a</code> + <code>text_object</code></dt>
+  <dd><i>A object</i>. Object including surrounding spaces</dd>
+  <dt><code>i</code> + <code>text_object</code></dt>
+  <dd><i>Inner object</i>. Object without surrounding spaces</dd>
+</dl>
+
+<h3 id="word-based-text-objects">Word-based text-objects</h3>
+
+<dl>
+  <dt><code>daw</code> <code>yaw</code> <code>vaw</code></dt>
+  <dd>delete/yank/visual including adjacent space</dd>
+  <dt><code>diw</code> <code>yiw</code> <code>viw</code></dt>
+  <dd>delete/yank/visual word without adjacent space</dd>
+  <dt><code>caw</code></dt>
+  <dd>change including adjacent space</dd>
+  <dt><code>ciw</code> <code>ysiw'</code></dt>
+  <dd>change without adjacent space / surround plugin</dd>
+</dl>
+
+<h3 id="more-builtin-vim-text-objects">More builtin vim text objects</h3>
+<dl>
+  <dt><code>s</code> (sentence)</dt>
+  <dd>From dot to dot (or paragraph if there aren’t no dots). Motion equivalent: <code>(</code> <code>)</code></dd>
+  <dt><code>p</code> (paragraph)</dt>
+  <dd>Paragraph. From blank line to blank line. Motion equivalent: <code>{</code> <code>}</code></dd>
+</dl>
+
+<blockquote>
+  <p>Ipmotion plugin changes the boundaries of a paragraph adding lines with only white spaces also as a boundary of paragraph (motion and text object)</p>
+</blockquote>
+
+<dl>
+  <dt><code>)</code>|<code>b</code> (parentheses)</dt>
+  <dd>Parentheses block. <i>Matchit</i> provides finding matching parentheses with %, but only at same position</dd>
+  <dt><code>}</code>|<code>B</code> (braces)</dt>
+  <dd>Braces block. <i>Matchit</i> provides finding matching braces with %, but only at same position</dd>
+  <dt><code>t</code> (tag block)</dt>
+  <dd>block between the matching tags</dd>
+  <dt><code>&gt;</code> (single tag)</dt>
+  <dd>block between brackets of a single tag</dd>
+</dl>
+
+<blockquote>
+  <p>see more builtin text objects <a href="http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/">here</a> or in vim manual</p>
+</blockquote>
+
+<h3 id="plugin-text-objects">Plugin text objects</h3>
+<dl>
+  <dt><code>/</code> (vim-textobj-lastpat)</dt>
+  <dd>for the region of the last pattern searched. (As of vim 7.4 you can use cgn/dgn/gUgn instead, see <code>:h gn</code>)</dd>
+  <dt><code>j</code> (vim-textobj-brace)</dt>
+  <dd>for the closest region between any of <code>()</code> <code>[]</code> <code>{}</code> <code>&lt;&gt;</code></dd>
+  <dt><code>l</code> (vim-textobj-line)</dt>
+  <dd>for the current line</dd>
+  <dt><code>a</code> (argtextobj)</dt>
+  <dd>for an argument to a function</dd>
+  <dt><code>q</code> (vim-textobj-quotes)</dt>
+  <dd>for the closest pairs of quotes of any type</dd>
+  <dt><code>e</code> (vim-textobj-entire)</dt>
+  <dd>for the entire region of the current buffer</dd>
+  <dt><code>v</code> (vim-textobj-variable-segment)</dt>
+  <dd>for a region between either underscore or camelCaseVariables (equivalent to camelCase motion)</dd>
+  <dt><code>i</code>|<code>I</code> (vim-textobj-indent)</dt>
+  <dd>ai/ii for a block of similarly indented lines / aI/iI for a block of lines with the same indentation</dd>
+  <dt><code>c</code> (vim-textobj-comment)</dt>
+  <dd>for a comment</dd>
+  <dt><code>f</code>|<code>F</code> (vim-textobj-function)</dt>
+  <dd>af/if and aF/iF for a function / extensible for any language</dd>
+  <dt><code>_</code> (vim-textobj-underscore)</dt>
+  <dd>for a region between _s such as bar in foo_bar_baz</dd>
+  <dt><code>x</code> (vim-textobj-xmlattr)</dt>
+  <dd>for XML/HTML attributes</dd>
+  <dt><code>f</code>{x} (vim-textobj-between)</dt>
+  <dd>for a region between any {char}</dd>
+  <dt><code>z</code> (vim-textobj-fold)</dt>
+  <dd>for a block of folded lines</dd>
+</dl>
+
+<h1 id="tocAnchor-1-5">Normal mode plugins</h1>
+<blockquote>
+  <p>Some of the mappings under this section need to be <a href="https://github.com/johgh/vim/blob/master/vimrc">customized</a></p>
+</blockquote>
+
+<h2 id="tocAnchor-1-5-1">Surround</h2>
+<blockquote>
+  <p><a href="https://github.com/tpope/vim-surround"><i class="fa fa-external-link"></i> Github project</a></p>
+</blockquote>
+
+<dl>
+  <dt>add surrounding</dt>
+  <dd><code>ys</code> + <code>text_object/motion</code> + <code>surrounding_char</code></dd>
+  <dt>add surrounding on a line of its own, indented</dt>
+  <dd><code>yS</code> + <code>text_object/motion</code> + <code>surrounding_char</code></dd>
+  <dt>change/delete surrounding</dt>
+  <dd><code>[c/d]s</code> + <code>target_char</code> + <code>surrounding_char</code></dd>
+  <dt>add surrounding in visual mode, blockwise (add on each line), linewise (add on a line of its own)</dt>
+  <dd><code>[v/V][...]S</code> + <code>surrounding_char</code></dd>
+</dl>
+
+<blockquote>
+  <p>where surrounding_char could be any char, an html tag, or an open/close block char (in this case open block char <code>({&lt;</code> adds/deletes spaces)</p>
+</blockquote>
+
+<h2 id="tocAnchor-1-5-2">Multiple cursors</h2>
+<blockquote>
+  <p><a href="https://github.com/terryma/vim-multiple-cursors"><i class="fa fa-external-link"></i> Github project</a></p>
+</blockquote>
+
+<dl>
+  <dt>enter multiple line mode</dt>
+  <dd><code>&lt;C-v&gt;</code> or <code>V</code> (<code>V</code> will put the cursor at the beginnig of all lines), and press <code>&lt;C-n&gt;</code></dd>
+</dl>
+
+<blockquote>
+  <p>You will enter at multiple cursor <code>normal</code> mode, see changing between modes below</p>
+</blockquote>
+
+<dl>
+  <dt>enter multiple “selection” mode</dt>
+  <dd>Put cursor at word and press <code>&lt;C-n&gt;</code> / Select word in visual mode and press <code>&lt;C-n&gt;</code></dd>
+</dl>
+
+<blockquote>
+  <p>You will enter at multiple cursor <code>visual</code> mode, see changing between modes below</p>
+</blockquote>
+
+<dl>
+  <dt>go to previous cursor</dt>
+  <dd><code>&lt;C-p&gt;</code></dd>
+  <dt>skip current cursor</dt>
+  <dd><code>&lt;C-x&gt;</code></dd>
+</dl>
+
+<h3 id="changing-between-multiple-cursor-modes">Changing between multiple cursor modes</h3>
+
+<dl>
+  <dt>change between visual and normal mode</dt>
+  <dd><code>v</code></dd>
+  <dt>enter insert mode from normal mode</dt>
+  <dd><code>i</code></dd>
+  <dt>enter normal mode from insert mode</dt>
+  <dd><code>&lt;C-c&gt;</code></dd>
+  <dt>exit all multiple cursor modes</dt>
+  <dd><code>&lt;esc&gt;</code></dd>
+</dl>
+
+<h2 id="tocAnchor-1-5-3">Expand Region</h2>
+<blockquote>
+  <p><a href="https://github.com/terryma/vim-expand-region"><i class="fa fa-external-link"></i> Github project</a></p>
+</blockquote>
+
+<dl>
+  <dt>expand visual selection</dt>
+  <dd><code>+</code></dd>
+  <dt>shrink visual selection</dt>
+  <dd><code>&lt;C-+&gt;</code> (default mapping is <code>_</code>)</dd>
+</dl>
+
+<h2 id="tocAnchor-1-5-4">Commentary</h2>
+<blockquote>
+  <p><a href="https://github.com/tpope/vim-commentary"><i class="fa fa-external-link"></i> Github project</a></p>
+</blockquote>
+
+<dl>
+  <dt><code>gc+motion/text_object</code></dt>
+  <dd>Comment selected text</dd>
+  <dt><code>visual+gc</code></dt>
+  <dd>Comment selected text</dd>
+  <dt><code>gcc</code></dt>
+  <dd>Comment current line</dd>
+  <dt><code>gcu</code></dt>
+  <dd>uncomment contiguous commented lines under cursor</dd>
+</dl>
+
+<h2 id="tocAnchor-1-5-5">Exchange</h2>
+<blockquote>
+  <p><a href="https://github.com/tommcdo/vim-exchange"><i class="fa fa-external-link"></i> Github project</a></p>
+</blockquote>
+
+<dl>
+  <dt><code>cx+motion/text_object</code></dt>
+  <dd>Select/exchange text</dd>
+  <dt><code>cxx</code></dt>
+  <dd>Select/exchange current line</dd>
+  <dt><code>cxc</code></dt>
+  <dd>Clear current exchange selection</dd>
+</dl>
+
+<h2 id="tocAnchor-1-5-6">DelimitMate</h2>
+<blockquote>
+  <p><a href="https://github.com/Raimondi/delimitMate"><i class="fa fa-external-link"></i> Github project</a></p>
+</blockquote>
+
+<dl>
+  <dt><code>&lt;Leader&gt;,</code></dt>
+  <dd>Jump delimiter</dd>
+  <dt><code>&lt;Leader&gt;.</code></dt>
+  <dd>Jump all delimiters</dd>
+</dl>
+
+<h2 id="tocAnchor-1-5-7">Utilsnips</h2>
+<blockquote>
+  <p><a href="https://github.com/SirVer/ultisnips"><i class="fa fa-external-link"></i> Github project</a></p>
+</blockquote>
+
+<dl>
+  <dt><code>A-e</code></dt>
+  <dd>expand current snippet</dd>
+  <dt><code>A-n</code></dt>
+  <dd>go to next snippet</dd>
+  <dt><code>A-p</code></dt>
+  <dd>go to previous snippet</dd>
+</dl>
+
+<h2 id="tocAnchor-1-5-8">PhpDocumentor (PDV)</h2>
+<blockquote>
+  <p><a href="https://github.com/tobyS/pdv"><i class="fa fa-external-link"></i> Github project</a></p>
+</blockquote>
+
+<dl>
+  <dt><code>&lt;leader&gt;c</code></dt>
+  <dd>call PDV snippet to doc function</dd>
+</dl>
+
+<h2 id="tocAnchor-1-5-9">Abolish</h2>
+<blockquote>
+  <p><a href="https://github.com/tpope/vim-abolish"><i class="fa fa-external-link"></i> Github project</a></p>
+</blockquote>
+
+<dl>
+  <dt><code>crm</code></dt>
+  <dd>Convert to MixedCase</dd>
+  <dt><code>crc</code></dt>
+  <dd>Convert to camelCase</dd>
+  <dt><code>crs</code></dt>
+  <dd>Convert to snake_case</dd>
+  <dt><code>cru</code></dt>
+  <dd>Convert to UPPER_CASE</dd>
+</dl>
+
+<h1 id="tocAnchor-1-15">Command Mode</h1>
+
+<h2 id="tocAnchor-1-15-1">Syntax</h2>
+
+<p>
+   <code>:[range]command {argument/s}</code>
+</p>
+
+<blockquote>
+  <p>view complete list at <code>:h ex-cmd-index</code></p>
+</blockquote>
+
+<dl>
+  <dt>Range Syntax</dt>
+  <dd><code>{start}[+n|-n],{end}[+n|-n]</code></dd>
+</dl>
+
+<blockquote>
+  <dl>
+    <dt>where {start} and {end} are one of the folowing:</dt>
+    <dd><code>/pattern/</code> Pattern to match<br />
+<code>1</code> First line of the file<br />
+<code>$</code> Last line of the file<br />
+<code>0</code> Virtual line above first line of the file<br />
+<code>.</code> Line where the cursor is placed<br />
+<code>'m</code> Line containing mark m<br />
+<code>'&lt;</code> Start of visual selection<br />
+<code>'&gt;</code> End of visual selection<br />
+<code>%</code> The entire file (shorthand for :1,$ )<br /></dd>
+  </dl>
+</blockquote>
+
+<h2 id="tocAnchor-1-15-2">Text Editing With Ex Commands</h2>
+
+<blockquote>
+  <p>If no range is specified, the below ex Commands take the current line as its range (<code>.</code>)</p>
+</blockquote>
+
+<blockquote>
+  <p>The global command is an exception, which takes the entire file as its range (<code>%</code>)</p>
+</blockquote>
+
+<dl>
+  <dt>Delete specified lines [into register x]</dt>
+  <dd><code>:[range]delete [x]</code></dd>
+  <dt>Yank specified lines [into register x]</dt>
+  <dd><code>:[range]yank [x]</code></dd>
+  <dt>Put the text from register x after the specified line</dt>
+  <dd><code>:[line]put [x]</code></dd>
+  <dt>Copy the specified lines to below the line specified by {address}</dt>
+  <dd><code>:[range]copy {address}</code></dd>
+  <dt>Move the specified lines to below the line specified by {address}</dt>
+  <dd><code>:[range]move {address}</code></dd>
+  <dt>Join the specified lines</dt>
+  <dd><code>:[range]join</code></dd>
+  <dt>Execute Normal mode {commands} on each specified line</dt>
+  <dd><code>:[range]normal {commands}</code></dd>
+</dl>
+
+<blockquote>
+  <p>Normal ex command allow the use of normal mode commands with a range</p>
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt>Some useful mappings that make use of <code>normal</code></dt>
+    <dd>
+      <div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="c">" Allow using the repeat operator with a visual selection</span>
+<span class="nb">vnoremap</span> . :normal .<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="c">" Allow using macro 'a' with visual selection</span>
+<span class="nb">vnoremap</span> @@ :normal @@<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">vnoremap</span> @<span class="k">a</span> :normal @<span class="k">a</span><span class="p">&lt;</span>CR<span class="p">&gt;</span></code></pre></div>
+    </dd>
+  </dl>
+</blockquote>
+
+<dl>
+  <dt>Replace {pattern} with {string} on range</dt>
+  <dd><code>:[range]s[ubstitute]/{pattern}/{replacement}/[flags]</code></dd>
+</dl>
+
+<blockquote>
+  <dl>
+    <dt>where replacement string can contain :h sub-replace-special</dt>
+    <dd><code>\r</code> Insert a carriage return<br />
+<code>\t</code> Insert a tab character<br />
+<code>\\</code> Insert a single backslash<br />
+<code>\1</code> Insert the first submatch<br />
+<code>\2</code> Insert the second submatch (and so on, up to \9 )<br />
+<code>\0</code> Insert the entire matched pattern<br />
+<code>&amp;</code> Insert the entire matched pattern<br />
+<code>~</code> Use {string} from the previous invocation of :substitute<br />
+<code>\={Vim script}</code> Evaluate {Vim script} expression; use result as replacement {string}<br /></dd>
+  </dl>
+</blockquote>
+
+<dl>
+  <dt>Execute the Ex command [cmd] on all specified lines where the {pattern} matches</dt>
+  <dd><code>:[range][v]g[lobal]/{pattern}/[cmd]</code></dd>
+</dl>
+
+<blockquote>
+  <p>vglobal executes the ex command on all unmatched lines</p>
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt>the command can also has its own range as in the example below:</dt>
+    <dd><code>:g/{/ .+1,/}/-1 sort</code></dd>
+  </dl>
+</blockquote>
+
+<dl>
+  <dt>Quick abbreviation (available through Abolish plugin)</dt>
+  <dd><code>:%Abolish {despa,sepe}rat{e,es,ed,ing,ely,ion,ions,or}  {despe,sepa}rat{}</code></dd>
+  <dt>Quick substitution (available through Abolish plugin)</dt>
+  <dd><code>:%S[ubvert]/child{,ren}/adult{,s}/g</code></dd>
+</dl>
+
+<blockquote>
+  <p>For swapping two words you can do:
+<code>:%S/{man,dog}/{dog,man}/g</code></p>
+</blockquote>
+
+<blockquote>
+  <p>Both <code>Subvert</code> and <code>Abolish</code> commands take care of case sensitive variants, so in the above command ‘man’, ‘Man’ and ‘MAN’ would be swapped with its correspondent counterparts</p>
+</blockquote>
+
+<h2 id="tocAnchor-1-15-3">Command Line Edition</h2>
+
+<dl>
+  <dt>Custom mappings for quick navigation in command line (to set in .vimrc)</dt>
+  <dd><code>cnoremap &lt;C-n&gt; &lt;down&gt;</code><br />
+<code>cnoremap &lt;C-p&gt; &lt;up&gt;</code><br />
+<code>cnoremap &lt;C-b&gt;  &lt;Home&gt;</code><br />
+<code>cnoremap &lt;C-e&gt;  &lt;End&gt;</code><br />
+<code>cnoremap &lt;M-j&gt;  &lt;Left&gt;</code><br />
+<code>cnoremap &lt;M-k&gt;  &lt;Right&gt;</code><br />
+<code>cnoremap &lt;M-b&gt;  &lt;S-Left&gt;</code><br />
+<code>cnoremap &lt;M-f&gt;  &lt;S-Right&gt;</code><br />
+<code>cnoremap &lt;C-k&gt;  &lt;S-right&gt;&lt;C-w&gt;</code><br /></dd>
+  <dt>Search or replace current expression on search register <code>@/</code></dt>
+  <dd><code>/</code> or <code>s//{replacement}/g</code></dd>
+  <dt>Open command window from normal mode</dt>
+  <dd><code>q:</code> or <code>q/</code></dd>
+  <dt>Open command window from command line mantaining current command</dt>
+  <dd><code>&lt;C-f&gt;</code></dd>
+  <dt>Put word on command line from under current buffer cursor</dt>
+  <dd><code>&lt;C-r&gt;&lt;C-w&gt;</code></dd>
+  <dt>Custom command line expansion of current file path (to set in .vimrc)</dt>
+  <dd><code>cnoremap &lt;expr&gt; ~~ getcmdtype() == ':' ? expand('%:h').'/' : '~~'</code></dd>
+</dl>
+
+<h2 id="tocAnchor-1-15-4">Repeat last command</h2>
+<dl>
+  <dt>Repeat last Ex command</dt>
+  <dd><code>@:</code></dd>
+  <dt>Repeat last executed command</dt>
+  <dd><code>@@</code></dd>
+</dl>
+
+<blockquote>
+  <p>The above is useful to repeat commands like <code>cnext</code>, to go back jump with <code>C-o</code></p>
+</blockquote>
+
+<dl>
+  <dt>Repeat last substitution with Ex command</dt>
+  <dd><code>:{range}&amp;&amp;</code></dd>
+  <dt>Repeat last substitution in normal and visual mode</dt>
+  <dd><code>&amp;</code></dd>
+</dl>
+
+<blockquote>
+  <dl>
+    <dt>mapings below are required to perform subsitution with same flags as the original with <code>&amp;</code></dt>
+    <dd>
+      <div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="nb">nnoremap</span> &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</span></code></pre></div>
+    </dd>
+  </dl>
+</blockquote>
+
+<dl>
+  <dt>Repeat last substitution on the entire file in normal mode</dt>
+  <dd><code>g&amp;</code></dd>
+</dl>
+
+<h1 id="tocAnchor-1-20">Vimdiff</h1>
+
+<h2 id="tocAnchor-1-20-1">2-way diff</h2>
+<dl>
+  <dt>]c</dt>
+  <dd>next difference</dd>
+  <dt>[c</dt>
+  <dd>previous difference</dd>
+  <dt>do</dt>
+  <dd>diff obtain</dd>
+  <dt>dp</dt>
+  <dd>diff put</dd>
+  <dt>zm</dt>
+  <dd>more folding level</dd>
+  <dt>zr</dt>
+  <dd>reduce folding level</dd>
+  <dt>:diffupdate</dt>
+  <dd>re-scan the files for differences</dd>
+</dl>
+
+<h1 id="tocAnchor-1-22">Fugitive (plugin)</h1>
+
+<blockquote>
+  <p>Fugitive plugin integrates Git into Vim, allowing committing and resolving conflicts within Vim</p>
+</blockquote>
+
+<h2 id="tocAnchor-1-22-1">Commiting changes</h2>
+
+<dl>
+  <dt>Add files to stage</dt>
+  <dd><code>:Gstatus</code> and press <code>-</code> over the files to stage</dd>
+  <dt>Commit staged files</dt>
+  <dd><code>:Gstatus</code> and press <code>C</code>, enter a message and save (or leave a blank message to abort)</dd>
+  <dt>Stage a file partially (equivalent to <code>git add -p</code>)</dt>
+  <dd><code>:Gdiff</code> and put selected changes to the left pane (<code>index</code>) and save, see 2-way diff <a href="/vim/#tocAnchor-1-18">above</a></dd>
+</dl>
+
+<h2 id="tocAnchor-1-22-2">Reviewing changes</h2>
+<dl>
+  <dt>Review changes from staged/unstaged files</dt>
+  <dd><code>:Gstatus</code> and press <code>D</code> over the files to see changes </dd>
+  <dt>See commited files of a specific commit</dt>
+  <dd><code>:Gedit &lt;commit_hash&gt;</code>, or <code>:Gedit HEAD~0</code> to see current commited files. Press enter on a file to see changes from last commit on a 2-way diff</dd>
+</dl>
+
+<h2 id="tocAnchor-1-22-3">Resolving conflicts</h2>
+
+<dl>
+  <dt>1) Retrieve conflicting files</dt>
+  <dd><code>:Gmerge</code> and press <code>&lt;CR&gt;</code> in quickfix window</dd>
+  <dt>2) Open diff window to resolve conflicts</dt>
+  <dd><code>:Gdiff</code></dd>
+  <dt>3) Resolve conflicts</dt>
+  <dd>Resolve manually “conflict” blocks that cannot auto-merge, see 3-way diff <a href="/vim/#way-diff-2">below</a></dd>
+  <dt>4) Save the <code>index</code> pane (center) and add to stage to mark as resolved</dt>
+  <dd><code>:w</code> + <code>:only</code> + <code>:Gstatus</code> and press <code>-</code> over the conflicted files to stage</dd>
+  <dt>5) Finally, “merge” (with <code>merge</code> or <code>rebase</code>)</dt>
+  <dd>Execute <code>git commit</code> or <code>rebase --continue</code> (or do neither if you were resolving a stash conflict)</dd>
+</dl>
+
+<h2 id="tocAnchor-1-22-4">Fugitive diffs</h2>
+
+<h3 id="way-diff-1">2-way diff</h3>
+
+<blockquote>
+  <p>Left pane corresponds to <code>index</code> and <code>right</code> pane to <code>working tree</code>. Use normal vimdiff commands from <a href="/vim/#tocAnchor-1-18">above</a>, to navigate, put/obtain changes</p>
+</blockquote>
+
+<dl>
+  <dt>:Gread</dt>
+  <dd>obtain all changes from the other side on the current pane</dd>
+</dl>
+
+<blockquote>
+  <p>From the left pane: <code>checkout</code>, from the right pane: <code>reset</code></p>
+</blockquote>
+
+<dl>
+  <dt>:Gwrite</dt>
+  <dd>put all changes from the current pane on the other side.</dd>
+</dl>
+
+<blockquote>
+  <p>From the left pane: <code>reset</code>, from the right pane: <code>checkout</code></p>
+</blockquote>
+
+<h3 id="way-diff-2">3-way diff</h3>
+
+<blockquote>
+  <p>Center pane corresponds to the <code>working tree</code>. Vimdiff commands from <a href="/vim/#tocAnchor-1-18">above</a> can be used except <code>do</code> (diff-obtain), since it is necessary to specify from which pane to obtain the changes. So use:</p>
+</blockquote>
+
+<dl>
+  <dt>dp</dt>
+  <dd>put the change from the current pane (right/left) into the <code>working tree</code> (center)</dd>
+  <dt>:diffget //2</dt>
+  <dd>fetches the hunk from the left</dd>
+  <dt>:diffget //3</dt>
+  <dd>fetches the hunk from the right</dd>
+  <dt>:Gwrite[!]</dt>
+  <dd>write the entire current file (right or left) to the <code>working tree</code> (center)</dd>
+</dl>
+
+<h1 id="tocAnchor-1-27">Buffer and window management</h1>
+
+<h2 id="tocAnchor-1-27-1">Buffers</h2>
+
+<dl>
+  <dt>Edit buffer in the buffer list</dt>
+  <dd><code>:b &lt;tab&gt; </code></dd>
+  <dt>Edit first buffer</dt>
+  <dd><code>:bfirst</code></dd>
+  <dt>Edit last buffer</dt>
+  <dd><code>:blast</code></dd>
+  <dt>Edit next buffer</dt>
+  <dd><code>:bn</code></dd>
+  <dt>Edit previous buffer</dt>
+  <dd><code>:bp</code></dd>
+  <dt>Show all buffers, including unnamed ones</dt>
+  <dd><code>ls!</code></dd>
+  <dt>Edit buffer N (including unnamed buffers)</dt>
+  <dd><code>:bN</code></dd>
+  <dt>Edit alternate buffer (previous buffer visited)</dt>
+  <dd><code>:b#</code></dd>
+  <dt>Delete/wipe current buffer (or specified one)</dt>
+  <dd><code>:bd &lt;tab&gt;</code> / <code>:bw &lt;tab&gt;</code></dd>
+  <dt>Edit file</dt>
+  <dd><code>:e &lt;tab&gt;</code></dd>
+  <dt>Reload current file</dt>
+  <dd><code>:e!</code></dd>
+  <dt>Edit new file</dt>
+  <dd><code>:enew</code></dd>
+  <dt>Execute macro on register A on each opened buffer</dt>
+  <dd><code>tags execute "normal! @a"</code></dd>
+  <dt>Save all buffers</dt>
+  <dd><code>:wa</code></dd>
+</dl>
+
+<h2 id="tocAnchor-1-27-2">Windows</h2>
+
+<dl>
+  <dt>Create vertical window</dt>
+  <dd><code>&lt;C-w&gt; v</code></dd>
+  <dt>Create horizontal window</dt>
+  <dd><code>&lt;C-w&gt; s</code></dd>
+  <dt>Show only buffer on current window</dt>
+  <dd><code>:only</code></dd>
+  <dt>Unhide buffers (create window for every buffer)</dt>
+  <dd><code>:unhide</code></dd>
+  <dt>Quit all windows</dt>
+  <dd><code>:qa</code></dd>
+</dl>
+
+<h2 id="tocAnchor-1-27-3">Ctrl-space (plugin)</h2>
+
+<h3 id="buffers--files">Buffers / Files</h3>
+
+<dl>
+  <dt>enter buffer list mode (default mode)</dt>
+  <dd><code>&lt;C-space&gt;</code></dd>
+</dl>
+
+<blockquote>
+  <p>all commands below only work after entering <code>&lt;C-space&gt;</code> mode, <code>q</code> exits</p>
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt>buffer list submodes</dt>
+    <dd><code>a</code> / <code>A</code> all tabs mode / in search mode <br />
+<code>z</code> zoom (preview mode)<br />
+<code>backspace</code> return to single (current tab) mode<br />
+<code>*</code> visible mode<br /></dd>
+  </dl>
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt>visible mode is useful to jump to windows easily</dt>
+    <dd><code>tab</code> jump to window<br />
+<code>S-tab</code> jump to window, continue in <c-space> mode<br /></c-space></dd>
+  </dl>
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt>buffer list actions</dt>
+    <dd><code>x</code> close the window containig selected buffer<br />
+<code>x</code> close the window containig selected buffer<br />
+<code>X</code> close all the windows except the one containig selected buffer<br />
+<code>d</code> delete selected buffer<br />
+<code>D</code> delete all noname buffers<br />
+<code>f</code> delete selected buffer only from current tab<br />
+<code>g</code> / <code>G</code> go to next/previous selected buffer tab (really useful when in “all tabs” mode)<br />
+<code>e</code> open new file from selected directory buffer<br />
+<code>&lt;ctrl-t&gt;</code> starts blank tab (same as <code>:tabe</code>)<br />
+<code>C</code> close current tab<br />
+<code>=</code> rename current tab<br /></dd>
+  </dl>
+</blockquote>
+
+<dl>
+  <dt>enter current project files list mode / in search mode</dt>
+  <dd><code>o</code> / <code>O</code></dd>
+</dl>
+
+<h3 id="tabs">Tabs</h3>
+
+<dl>
+  <dt>enter tabs list mode / in search mode</dt>
+  <dd><code>l</code> / <code>L</code></dd>
+</dl>
+
+<blockquote>
+  <dl>
+    <dt>tab actions</dt>
+    <dd><code>t</code> starts blank tab (same as <code>:tabe</code>)<br />
+<code>c</code> close selected tab<br />
+<code>=</code> rename selected tab<br /></dd>
+  </dl>
+</blockquote>
+
+<h3 id="workspaces-sessions">Workspaces (sessions)</h3>
+
+<dl>
+  <dt>enter workspace mode</dt>
+  <dd><code>w</code></dd>
+</dl>
+
+<blockquote>
+  <dl>
+    <dt>Session actions</dt>
+    <dd><code>&lt;c-s&gt;</code> save workspace<br />
+<code>&lt;c-l&gt;</code> load last session<br />
+<code>a</code> append selected workspace instead of load a new one<br />
+<code>N</code> close all buffers, start from blank workspace<br /></dd>
+  </dl>
+</blockquote>
+
+<h3 id="bookmarks">Bookmarks</h3>
+
+<dl>
+  <dt>enter bookmark project mode</dt>
+  <dd><code>b</code></dd>
+</dl>
+
+<blockquote>
+  <p><code>a</code> saves path of project (same as if we cd on the root of a project). A project has its own workspaces and file list</p>
+</blockquote>
+
+<h3 id="common-actions">Common actions</h3>
+<dl>
+  <dt>enter search mode</dt>
+  <dd><code>/</code></dd>
+  <dt>previous / next search</dt>
+  <dd><code>&lt;c-p&gt;</code> / <code>&lt;c-n&gt;</code></dd>
+  <dt>go back. return from search mode (if in search mode) / return to buffer list mode</dt>
+  <dd><code>&lt;backspace&gt;</code></dd>
+  <dt>up / down / top / bottom (in all list modes)</dt>
+  <dd><code>k</code> / <code>j</code> / <code>K</code> / <code>J</code></dd>
+  <dt>quit Vim</dt>
+  <dd><code>Q</code></dd>
+</dl>
+
+<blockquote>
+  <dl>
+    <dt>buffer and tab mode only</dt>
+    <dd><code>-</code> / <code>+</code> move tab left/right<br />
+<code>[</code> / <code>]</code> go to tab left/right<br /></dd>
+  </dl>
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt>buffer and file list mode only</dt>
+    <dd><code>&lt;CR&gt; / &lt;space&gt;</code> open selected buffer / and continue in mode<br />
+<code>v</code> / <code>V</code> open in vertical split window / and continue in mode<br />
+<code>s</code> / <code>S</code> open in horizontal split window / and continue in mode<br />
+<code>t</code> / <code>T</code> open in new tab / and continue in mode<br /></dd>
+  </dl>
+</blockquote>
+
+<h1 id="tocAnchor-1-31">VIM quick reference</h1>
+
+<blockquote>
+  <p>This was copied from <a href="http://tnerual.eriogerg.free.fr/vim.html">here</a>. Go there for pdf format and more!</p>
+</blockquote>
+
+<h2 id="tocAnchor-1-31-1">Basic movement</h2>
+
+<table>
+<tr><td><code>h l k j</code></td><td>character left, right; line up, down</td></tr>
+<tr><td><code>b w</code></td><td>word/token left, right</td></tr>
+<tr><td><code>ge e</code></td><td>end of word/token left, right</td></tr>
+<tr><td><code>{  }</code></td><td>beginning of previous, next paragraph</td></tr>
+<tr><td><code>( )</code></td><td>beginning of previous, next sentence</td></tr>
+<tr><td><code>0 gm</code></td><td>beginning, middle of line</td></tr>
+<tr><td><code>^  $</code></td><td>first, last character of line</td></tr>
+<tr><td><code><font color="red"><i>n</i></font>G <font color="red"><i>n</i></font>gg</code></td><td>line <font color="red"><i>n</i></font>, default the last, first</td></tr>
+<tr><td><code><font color="red"><i>n</i></font>%</code></td><td>percentage <font color="red"><i>n</i></font> of the file <i>(<font color="red"><i>n</i></font> must be provided)</i></td></tr>
+<tr><td><code><font color="red"><i>n|</i></font></code></td><td>column <font color="red"><i>n</i></font> of current line</td></tr>
+<tr><td><code>%</code></td><td>match of next brace, bracket, comment, <tt>#define</tt></td></tr>
+<tr><td><code><font color="red"><i>n</i></font>H <font color="red"><i>n</i></font>L</code></td><td>line <font color="red"><i>n</i></font> from start, bottom of window</td></tr>
+<tr><td><code>M</code></td><td>middle line of window</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-2">Insertion &amp; replace <font color="red"><i><font color="black">→</font></i></font> insert mode</h2>
+
+<table>
+<tr><td><code>i a</code></td><td>insert before, after cursor</td></tr>
+<tr><td><code>I A</code></td><td>insert at beginning, end of line</td></tr>
+<tr><td><code>gI</code></td><td>insert text in first column</td></tr>
+<tr><td><code>o O</code></td><td>open a new line below, above the current line</td></tr>
+<tr><td><code>r<font color="red"><i>c</i></font></code></td><td>replace character under cursor with <font color="red"><i>c</i></font></td></tr>
+<tr><td><code>gr<font color="red"><i>c</i></font></code></td><td>like <tt> r</tt>, but without affecting layout</td></tr>
+<tr><td><code>R</code></td><td>replace characters starting at the cursor</td></tr>
+<tr><td><code>gR</code></td><td>like <tt> R</tt>, but without affecting layout</td></tr>
+<tr><td><code>c<font color="red"><i>m</i></font></code></td><td>change text of movement command <font color="red"><i>m</i></font></td></tr>
+<tr><td><code>cc <font size="-1">or</font> S</code></td><td>change current line</td></tr>
+<tr><td><code>C</code></td><td>change to the end of line</td></tr>
+<tr><td><code>s</code></td><td>change one character and insert</td></tr>
+<tr><td><code>~</code></td><td>switch case and advance cursor</td></tr>
+<tr><td><code>g~<font color="red"><i>m</i></font></code></td><td>switch case of movement command <font color="red"><i>m</i></font></td></tr>
+<tr><td><code>gu<font color="red"><i>m</i></font> gU<font color="red"><i>m</i></font></code></td><td>lowercase, uppercase text of movement <font color="red"><i>m</i></font></td></tr>
+<tr><td><code><font color="red"><i>&lt;</i></font><font color="red"><i>m</i></font> <font color="red"><i>&gt;</i></font><font color="red"><i>m</i></font></code></td><td>shift left, right text of movement <font color="red"><i>m</i></font></td></tr>
+<tr><td><code><font color="red"><i>n</i></font><font color="red"><i>&lt;</i></font><font color="red"><i>&lt;</i></font> <font color="red"><i>n</i></font><font color="red"><i>&gt;</i></font><font color="red"><i>&gt;</i></font></code></td><td>shift <font color="red"><i>n</i></font> lines left, right</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-3">Deletion</h2>
+
+<table>
+<tr><td><code>x X</code></td><td>delete character under, before cursor</td></tr>
+<tr><td><code>d<font color="red"><i>m</i></font></code></td><td>delete text of movement command <font color="red"><i>m</i></font></td></tr>
+<tr><td><code>dd D</code></td><td>delete current line, to the end of line</td></tr>
+<tr><td><code>J gJ</code></td><td>join current line with next, without space</td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>d<font size="+1">↵</font></code></td><td>delete range <font color="red"><i>r</i></font> lines</td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>d<font color="red"><i>x</i></font><font size="+1">↵</font></code></td><td>delete range <font color="red"><i>r</i></font> lines into register <font color="red"><i>x</i></font></td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-4">Insert mode</h2>
+
+<table>
+<tr><td><code>^V<font color="red"><i>c</i></font> ^V<font color="red"><i>n</i></font></code></td><td>insert char <font color="red"><i>c</i></font> literally, decimal value <font color="red"><i>n</i></font></td></tr>
+<tr><td><code>^A</code></td><td>insert previously inserted text</td></tr>
+<tr><td><code>^@</code></td><td>same as <tt>^A</tt> and stop insert <font color="red"><i><font color="black">→</font></i></font> command mode</td></tr>
+<tr><td><code>^R<font color="red"><i>x</i></font> ^R^R<font color="red"><i>x</i></font></code></td><td>insert content of register <font color="red"><i>x</i></font>, literally</td></tr>
+<tr><td><code>^N ^P</code></td><td>text completion before, after cursor</td></tr>
+<tr><td><code>^W</code></td><td>delete word before cursor</td></tr>
+<tr><td><code>^U</code></td><td>delete all inserted character in current line</td></tr>
+<tr><td><code>^D ^T</code></td><td>shift left, right one shift width</td></tr>
+<tr><td><code>^K<font color="red"><i>c<font size="-2">1</font></i></font><font color="red"><i>c<font size="-2">2</font></i></font> <font size="-1">or</font> <font color="red"><i>c<font size="-2">1</font></i></font><font size="+1">←</font><font color="red"><i>c<font size="-2">2</font></i></font></code></td><td>enter digraph <font color="red"><i>\c<font size="-2">1</font>,c<font size="-2">2</font>\</i></font></td></tr>
+<tr><td><code>^O<font color="red"><i>c</i></font></code></td><td>execute <font color="red"><i>c</i></font> in temporary command mode</td></tr>
+<tr><td><code>^X^E ^X^Y</code></td><td>scroll up, down</td></tr>
+<tr><td><code><font size="-1" color="blue">&lt;esc&gt;</font> <font size="-1">or</font> ^[</code></td><td>abandon edition <font color="red"><i><font color="black">→</font></i></font> command mode</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-5">Copying</h2>
+
+<table>
+<tr><td><code>"<font color="red"><i>x</i></font></code></td><td>use register <font color="red"><i>x</i></font> for next delete, yank, put</td></tr>
+<tr><td><code>:reg<font size="+1">↵</font></code></td><td>show the content of all registers</td></tr>
+<tr><td><code>:reg <font color="red"><i>x</i></font><font size="+1">↵</font></code></td><td>show the content of registers <font color="red"><i>x</i></font></td></tr>
+<tr><td><code>y<font color="red"><i>m</i></font></code></td><td>yank the text of movement command <font color="red"><i>m</i></font></td></tr>
+<tr><td><code>yy <font size="-1">or</font> Y</code></td><td>yank current line into register</td></tr>
+<tr><td><code>p P</code></td><td>put register after, before cursor position</td></tr>
+<tr><td><code>]p [p</code></td><td>like <tt> p</tt>, <tt> P</tt> with indent adjusted</td></tr>
+<tr><td><code>gp gP</code></td><td>like <tt> p</tt>, <tt> P</tt> leaving cursor after new text</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-6">Advanced insertion</h2>
+
+<table>
+<tr><td><code>g?<font color="red"><i>m</i></font></code></td><td>perform rot13 encoding on movement <font color="red"><i>m</i></font></td></tr>
+<tr><td><code><font color="red"><i>n</i></font>^A <font color="red"><i>n</i></font>^X</code></td><td><font color="red"><i>+n</i></font>, <font color="red"><i>-n</i></font> to number under cursor</td></tr>
+<tr><td><code>gq<font color="red"><i>m</i></font></code></td><td>format lines of movement <font color="red"><i>m</i></font> to fixed width</td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>ce <font color="red"><i>w</i></font><font size="+1">↵</font></code></td><td>center lines in range <font color="red"><i>r</i></font> to width <font color="red"><i>w</i></font></td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>le <font color="red"><i>i</i></font><font size="+1">↵</font></code></td><td>left align lines in range <font color="red"><i>r</i></font> with indent <font color="red"><i>i</i></font></td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>ri <font color="red"><i>w</i></font><font size="+1">↵</font></code></td><td>right align lines in range <font color="red"><i>r</i></font> to width <font color="red"><i>w</i></font></td></tr>
+<tr><td><code>!<font color="red"><i>m</i></font><font color="red"><i>c</i></font><font size="+1">↵</font></code></td><td>filter lines of movement <font color="red"><i>m</i></font> through command <font color="red"><i>c</i></font></td></tr>
+<tr><td><code><font color="red"><i>n</i></font>!!<font color="red"><i>c</i></font><font size="+1">↵</font></code></td><td>filter <font color="red"><i>n</i></font> lines through command <font color="red"><i>c</i></font></td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>!<font color="red"><i>c</i></font><font size="+1">↵</font></code></td><td>filter range <font color="red"><i>r</i></font> lines through command <font color="red"><i>c</i></font></td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-7">Visual mode</h2>
+
+<table>
+<tr><td><code>v V ^V</code></td><td>start/stop highlighting characters, lines, block</td></tr>
+<tr><td><code>o</code></td><td>exchange cursor position with start of highlighting</td></tr>
+<tr><td><code>gv</code></td><td>start highlighting on previous visual area</td></tr>
+<tr><td><code>aw as ap</code></td><td>select a word, a sentence, a paragraph</td></tr>
+<tr><td><code>ab aB</code></td><td>select a block ( ), a block <tt>{</tt> <tt>}</tt></td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-8">Undoing, repeating &amp; registers</h2>
+
+<table>
+<tr><td><code>u U</code></td><td>undo last command, restore last changed line</td></tr>
+<tr><td><code>.  ^R</code></td><td>repeat last changes, redo last undo</td></tr>
+<tr><td><code><font color="red"><i>n</i></font>.  </code></td><td>repeat last changes with count replaced by <font color="red"><i>n</i></font></td></tr>
+<tr><td><code>q<font color="red"><i>c</i></font> q<font color="red"><i>C</i></font></code></td><td>record, append typed characters in register <font color="red"><i>c</i></font></td></tr>
+<tr><td><code>q</code></td><td>stop recording</td></tr>
+<tr><td><code>@<font color="red"><i>c</i></font></code></td><td>execute the content of register <font color="red"><i>c</i></font></td></tr>
+<tr><td><code>@@</code></td><td>repeat previous <tt> @</tt> command</td></tr>
+<tr><td><code>:@<font color="red"><i>c</i></font><font size="+1">↵</font></code></td><td>execute register <font color="red"><i>c</i></font> as an <i> Ex</i> command</td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>g/<font color="red"><i>p</i></font>/<font color="red"><i>c</i></font><font size="+1">↵</font></code></td><td>execute <i> Ex</i> command <font color="red"><i>c</i></font> on range <font color="red"><i>r</i></font></td></tr>
+<tr><td></td><td>where pattern <font color="red"><i>p</i></font> matches</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-9">Complex movement</h2>
+
+<table>
+<tr><td><code>- +</code></td><td>line up, down on first non-blank character</td></tr>
+<tr><td><code>B W</code></td><td>space-separated word left, right</td></tr>
+<tr><td><code>gE E</code></td><td>end of space-separated word left, right</td></tr>
+<tr><td><code><font color="red"><i>n</i></font>_</code></td><td>down <font color="red"><i>n-1</i></font> line on first non-blank character</td></tr>
+<tr><td><code>g0</code></td><td>beginning of <i> screen</i> line</td></tr>
+<tr><td><code>g^  g$</code></td><td>first, last character of <i> screen</i> line</td></tr>
+<tr><td><code>gk gj</code></td><td><i> screen</i> line up, down</td></tr>
+<tr><td><code>f<font color="red"><i>c</i></font> F<font color="red"><i>c</i></font></code></td><td>next, previous occurence of character <font color="red"><i>c</i></font></td></tr>
+<tr><td><code>t<font color="red"><i>c</i></font> T<font color="red"><i>c</i></font></code></td><td>before next, previous occurence of <font color="red"><i>c</i></font></td></tr>
+<tr><td><code>; ,</code></td><td>repeat last <tt> fFtT</tt>, in opposite direction</td></tr>
+<tr><td><code>[[ ]]</code></td><td>start of section backward, forward</td></tr>
+<tr><td><code>[] ][</code></td><td>end of section backward, forward</td></tr>
+<tr><td><code>[( ])</code></td><td>unclosed (, ) backward, forward</td></tr>
+<tr><td><code>[{  ]}</code></td><td>unclosed <tt>{</tt>, <tt>}</tt> backward, forward</td></tr>
+<tr><td><code>[m ]m</code></td><td>start of backward, forward <i> Java</i> method</td></tr>
+<tr><td><code>[# ]#</code></td><td>unclosed <tt>#if</tt>, <tt>#else</tt>, <tt>#endif</tt> backward, forward</td></tr>
+<tr><td><code>[* ]*</code></td><td>start, end of <tt>/* */</tt> backward, forward</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-10">Search &amp; substitution</h2>
+
+<table>
+<tr><td><code>/<font color="red"><i>s</i></font><font size="+1">↵</font>  ?<font color="red"><i>s</i></font><font size="+1">↵</font></code></td><td>search forward, backward for <font color="red"><i>s</i></font></td></tr>
+<tr><td><code>/<font color="red"><i>s</i></font>/<font color="red"><i>o</i></font><font size="+1">↵</font>  ?<font color="red"><i>s</i></font>?<font color="red"><i>o</i></font><font size="+1">↵</font></code></td><td>search fwd, bwd for <font color="red"><i>s</i></font> with offset <font color="red"><i>o</i></font></td></tr>
+<tr><td><code>n <font size="-1">or</font> /<font size="+1">↵</font></code></td><td>repeat forward last search</td></tr>
+<tr><td><code>N <font size="-1">or</font> ?<font size="+1">↵</font></code></td><td>repeat backward last search</td></tr>
+<tr><td><code># *</code></td><td>search backward, forward for word under cursor</td></tr>
+<tr><td><code>g# g*</code></td><td>same, but also find partial matches</td></tr>
+<tr><td><code>gd gD</code></td><td>local, global definition of symbol under cursor</td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>s/<font color="red"><i>f</i></font>/<font color="red"><i>t</i></font>/<font color="red"><i>x</i></font><font size="+1">↵</font></code></td><td>substitute <font color="red"><i>f</i></font> by <font color="red"><i>t</i></font> in range <font color="red"><i>r</i></font></td></tr>
+<tr><td></td><td><font color="red"><i>x:</i></font> <tt> g</tt>-all occurrences, <tt> c</tt>-confirm changes</td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>s <font color="red"><i>x</i></font><font size="+1">↵</font></code></td><td>repeat substitution with new <font color="red"><i>r</i></font> &amp; <font color="red"><i>x</i></font></td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-11">Special characters in search patterns</h2>
+
+<table>
+<tr><td><code>.   ^  $</code></td><td>any single character, start, end of line</td></tr>
+<tr><td><code>\<font color="red"><i>&lt;</i></font> \<font color="red"><i>&gt;</i></font></code></td><td>start, end of word</td></tr>
+<tr><td><code>[<font color="red"><i>c<font size="-2">1</font></i></font>-<font color="red"><i>c<font size="-2">2</font></i></font>]</code></td><td>a single character in range <font color="red"><i>c<font size="-2">1</font>..c<font size="-2">2</font></i></font></td></tr>
+<tr><td><code>[^<font color="red"><i>c<font size="-2">1</font></i></font>-<font color="red"><i>c<font size="-2">2</font></i></font>]</code></td><td>a single character not in range</td></tr>
+<tr><td><code>\i \k \I \K</code></td><td>an identifier, keyword; excl. digits</td></tr>
+<tr><td><code>\f \p \F \P</code></td><td>a file name, printable char.; excl. digits</td></tr>
+<tr><td><code>\s \S</code></td><td>a white space, a non-white space</td></tr>
+<tr><td><code>\e \t \r \b</code></td><td><font size="-1" color="blue">&lt;esc&gt;</font>, <font size="-1" color="blue">&lt;tab&gt;</font>, <font size="-1" color="blue">&lt;<font size="+1">↵</font>&gt;</font>, <font size="-1" color="blue">&lt;<font color="red"><i><font size="+1">←</font></i></font>&gt;</font></td></tr>
+<tr><td><code>\= * \+</code></td><td>match <font color="red"><i>0..1</i></font>, <font color="red"><i>0..<font size="+1">∞</font></i></font>, <font color="red"><i>1..<font size="+1">∞</font></i></font> of preceding atoms</td></tr>
+<tr><td><code>\<font color="red"><i>|</i></font></code></td><td>separate two branches (<font color="red"><i> <font size="+1">≡</font></i></font> <i> or</i>)</td></tr>
+<tr><td><code>\( \)</code></td><td>group patterns into an atom</td></tr>
+<tr><td><code>\&amp; \<font color="red"><i>n</i></font></code></td><td>the whole matched pattern, <font color="red"><i>n<font size="-2">th</font></i></font> <tt>()</tt> group</td></tr>
+<tr><td><code>\u \l</code></td><td>next character made upper, lowercase</td></tr>
+<tr><td><code>\c \C</code></td><td>ignore, match case on next pattern</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-12">Offsets in search commands</h2>
+
+<table>
+<tr><td><code><font color="red"><i>n</i></font> <font size="-1">or</font> +<font color="red"><i>n</i></font></code></td><td><font color="red"><i>n</i></font> line downward in column 1</td></tr>
+<tr><td><code>-<font color="red"><i>n</i></font></code></td><td><font color="red"><i>n</i></font> line upward in column 1</td></tr>
+<tr><td><code>e+<font color="red"><i>n</i></font> e-<font color="red"><i>n</i></font></code></td><td><font color="red"><i>n</i></font> characters right, left to end of match</td></tr>
+<tr><td><code>s+<font color="red"><i>n</i></font> s-<font color="red"><i>n</i></font></code></td><td><font color="red"><i>n</i></font> characters right, left to start of match</td></tr>
+<tr><td><code>;<font color="red"><i>sc</i></font></code></td><td>execute search command <font color="red"><i>sc</i></font> next</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-13">Marks and motions</h2>
+
+<table>
+<tr><td><code>m<font color="red"><i>c</i></font></code></td><td>mark current position with mark <font color="red"><i>c <font size="+1">∈</font>[a..Z]</i></font></td></tr>
+<tr><td><code>`<font color="red"><i>c</i></font> `<font color="red"><i>C</i></font></code></td><td>go to mark <font color="red"><i>c</i></font> in current, <font color="red"><i>C</i></font> in any file</td></tr>
+<tr><td><code>`<font color="red"><i>0..9</i></font></code></td><td>go to last exit position</td></tr>
+<tr><td><code>``  `"</code></td><td>go to position before jump, at last edit</td></tr>
+<tr><td><code>`[ `]</code></td><td>go to start, end of previously operated text</td></tr>
+<tr><td><code>:marks<font size="+1">↵</font></code></td><td>print the active marks list</td></tr>
+<tr><td><code>:jumps<font size="+1">↵</font></code></td><td>print the jump list</td></tr>
+<tr><td><code><font color="red"><i>n</i></font>^O</code></td><td>go to <font color="red"><i>n<font size="-2">th</font></i></font> older position in jump list</td></tr>
+<tr><td><code><font color="red"><i>n</i></font>^I</code></td><td>go to <font color="red"><i>n<font size="-2">th</font></i></font> newer position in jump list</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-14">Key mapping &amp; abbreviations</h2>
+
+<table>
+<tr><td><code>:map <font color="red"><i>c</i></font> <font color="red"><i>e</i></font><font size="+1">↵</font></code></td><td>map <font color="red"><i>c <font size="+1">↦</font> e</i></font> in normal &amp; visual mode</td></tr>
+<tr><td><code>:map!  <font color="red"><i>c</i></font> <font color="red"><i>e</i></font><font size="+1">↵</font></code></td><td>map <font color="red"><i>c <font size="+1">↦</font> e</i></font> in insert &amp; cmd-line mode</td></tr>
+<tr><td><code>:unmap <font color="red"><i>c</i></font><font size="+1">↵</font>  :unmap!  <font color="red"><i>c</i></font><font size="+1">↵</font></code></td><td>remove mapping <font color="red"><i>c</i></font></td></tr>
+<tr><td><code>:mk <font color="red"><i>f</i></font><font size="+1">↵</font></code></td><td>write current mappings, settings... to file <font color="red"><i>f</i></font></td></tr>
+<tr><td><code>:ab <font color="red"><i>c</i></font> <font color="red"><i>e</i></font><font size="+1">↵</font></code></td><td>add abbreviation for <font color="red"><i>c <font size="+1">↦</font> e</i></font></td></tr>
+<tr><td><code>:ab <font color="red"><i>c</i></font><font size="+1">↵</font></code></td><td>show abbreviations starting with <font color="red"><i>c</i></font></td></tr>
+<tr><td><code>:una <font color="red"><i>c</i></font><font size="+1">↵</font></code></td><td>remove abbreviation <font color="red"><i>c</i></font></td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-15">Tags</h2>
+
+<table>
+<tr><td><code>:ta <font color="red"><i>t</i></font><font size="+1">↵</font></code></td><td>jump to tag <font color="red"><i>t</i></font></td></tr>
+<tr><td><code>:<font color="red"><i>n</i></font>ta<font size="+1">↵</font></code></td><td>jump to <font color="red"><i>n<font size="-2">th</font></i></font> newer tag in list</td></tr>
+<tr><td><code>^] ^T</code></td><td>jump to the tag under cursor, return from tag</td></tr>
+<tr><td><code>:ts <font color="red"><i>t</i></font><font size="+1">↵</font></code></td><td>list matching tags and select one for jump</td></tr>
+<tr><td><code>:tj <font color="red"><i>t</i></font><font size="+1">↵</font></code></td><td>jump to tag or select one if multiple matches</td></tr>
+<tr><td><code>:tags<font size="+1">↵</font></code></td><td>print tag list</td></tr>
+<tr><td><code>:<font color="red"><i>n</i></font>po<font size="+1">↵</font>  :<font color="red"><i>n</i></font>^T<font size="+1">↵</font></code></td><td>jump back from, to <font color="red"><i>n<font size="-2">th</font></i></font> older tag</td></tr>
+<tr><td><code>:tl<font size="+1">↵</font></code></td><td>jump to last matching tag</td></tr>
+<tr><td><code>^W}  :pt <font color="red"><i>t</i></font><font size="+1">↵</font></code></td><td>preview tag under cursor, tag <font color="red"><i>t</i></font></td></tr>
+<tr><td><code>^W]</code></td><td>split window and show tag under cursor</td></tr>
+<tr><td><code>^Wz <font size="-1">or</font> :pc<font size="+1">↵</font></code></td><td>close tag preview window</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-16">Scrolling &amp; multi-windowing</h2>
+
+<table>
+<tr><td><code>^E ^Y</code></td><td>scroll line up, down</td></tr>
+<tr><td><code>^D ^U</code></td><td>scroll half a page up, down</td></tr>
+<tr><td><code>^F ^B</code></td><td>scroll page up, down</td></tr>
+<tr><td><code>zt <font size="-1">or</font> z<font size="+1">↵</font></code></td><td>set current line at top of window</td></tr>
+<tr><td><code>zz <font size="-1">or</font> z.  </code></td><td>set current line at center of window</td></tr>
+<tr><td><code>zb <font size="-1">or</font> z-</code></td><td>set current line at bottom of window</td></tr>
+<tr><td><code>zh zl</code></td><td>scroll one character to the right, left</td></tr>
+<tr><td><code>zH zL</code></td><td>scroll half a screen to the right, left</td></tr>
+<tr><td><code>^Ws <font size="-1">or</font> :split<font size="+1">↵</font></code></td><td>split window in two</td></tr>
+<tr><td><code>^Wn <font size="-1">or</font> :new<font size="+1">↵</font></code></td><td>create new empty window</td></tr>
+<tr><td><code>^Wo <font size="-1">or</font> :on<font size="+1">↵</font></code></td><td>make current window one on screen</td></tr>
+<tr><td><code>^Wj ^Wk</code></td><td>move to window below, above</td></tr>
+<tr><td><code>^Ww ^W^W</code></td><td>move to window below, above (wrap)</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-17">Ex commands (<font size="+1">↵</font>)</h2>
+
+<table>
+<tr><td><code>:e <font color="red"><i>f</i></font></code></td><td>edit file <font color="red"><i>f</i></font>, unless changes have been made</td></tr>
+<tr><td><code>:e!  <font color="red"><i>f</i></font></code></td><td>edit file <font color="red"><i>f</i></font> always (by default reload current)</td></tr>
+<tr><td><code>:wn :wN</code></td><td>write file and edit next, previous one</td></tr>
+<tr><td><code>:n :N</code></td><td>edit next, previous file in list</td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>w</code></td><td>write range <font color="red"><i>r</i></font> to current file</td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>w <font color="red"><i>f</i></font></code></td><td>write range <font color="red"><i>r</i></font> to file <font color="red"><i>f</i></font></td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>w<font color="red"><i>&gt;</i></font><font color="red"><i>&gt;</i></font><font color="red"><i>f</i></font></code></td><td>append range <font color="red"><i>r</i></font> to file <font color="red"><i>f</i></font></td></tr>
+<tr><td><code>:q :q!</code></td><td>quit and confirm, quit and discard changes</td></tr>
+<tr><td><code>:wq <font size="-1">or</font> :x <font size="-1">or</font> ZZ</code></td><td>write to current file and exit</td></tr>
+<tr><td><code><font size="-1" color="blue">&lt;up&gt;</font> <font size="-1" color="blue">&lt;down&gt;</font></code></td><td>recall commands starting with current</td></tr>
+<tr><td><code>:r <font color="red"><i>f</i></font></code></td><td>insert content of file <font color="red"><i>f</i></font> below cursor</td></tr>
+<tr><td><code>:r!  <font color="red"><i>c</i></font></code></td><td>insert output of command <font color="red"><i>c</i></font> below cursor</td></tr>
+<tr><td><code>:args</code></td><td>display the argument list</td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>co  <font color="red"><i>a</i></font> :<font color="red"><i>r</i></font>m  <font color="red"><i>a</i></font></code></td><td>copy, move range <font color="red"><i>r</i></font> below line <font color="red"><i>a</i></font></td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-18">Ex ranges</h2>
+
+<table>
+<tr><td><code>, ;  </code></td><td>separates two lines numbers, set to first line</td></tr>
+<tr><td><code><font color="red"><i>n</i></font></code></td><td>an absolute line number <font color="red"><i>n</i></font></td></tr>
+<tr><td><code>.   $</code></td><td>the current line, the last line in file</td></tr>
+<tr><td><code>% *</code></td><td>entire file, visual area</td></tr>
+<tr><td><code>'<font color="red"><i>t</i></font></code></td><td>position of mark <font color="red"><i>t</i></font></td></tr>
+<tr><td><code>/<font color="red"><i>p</i></font>/ ?<font color="red"><i>p</i></font>?</code></td><td>the next, previous line where <font color="red"><i>p</i></font> matches</td></tr>
+<tr><td><code>+<font color="red"><i>n</i></font> -<font color="red"><i>n</i></font></code></td><td><font color="red"><i>+n</i></font>, <font color="red"><i>-n</i></font> to the preceding line number</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-19">Folding</h2>
+
+<table>
+<tr><td><code>zf<font color="red"><i>m</i></font></code></td><td>create fold of movement <font color="red"><i>m</i></font></td></tr>
+<tr><td><code>:<font color="red"><i>r</i></font>fo</code></td><td>create fold for range <font color="red"><i>r</i></font></td></tr>
+<tr><td><code>zd zE</code></td><td>delete fold at cursor, all in window</td></tr>
+<tr><td><code>zo zc zO zC</code></td><td>open, close one fold; recursively</td></tr>
+<tr><td><code>[z ]z</code></td><td>move to start, end of current open fold</td></tr>
+<tr><td><code>zj zk</code></td><td>move down, up to start, end of next fold</td></tr>
+</table>
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-31-20">Miscellaneous</h2>
+
+<table>
+<tr><td><code>:sh<font size="+1">↵</font>  :!<font color="red"><i>c</i></font><font size="+1">↵</font></code></td><td>start shell, execute command <font color="red"><i>c</i></font> in shell</td></tr>
+<tr><td><code>K</code></td><td>lookup keyword under cursor with <tt> man</tt></td></tr>
+<tr><td><code>:make<font size="+1">↵</font></code></td><td>start <tt> make</tt>, read errors and jump to first</td></tr>
+<tr><td><code>:cn<font size="+1">↵</font>  :cp<font size="+1">↵</font></code></td><td>display the next, previous error</td></tr>
+<tr><td><code>:cl<font size="+1">↵</font>  :cf<font size="+1">↵</font></code></td><td>list all errors, read errors from file</td></tr>
+<tr><td><code>^L ^G</code></td><td>redraw screen, show filename and position</td></tr>
+<tr><td><code>g^G</code></td><td>show cursor column, line, and character position</td></tr>
+<tr><td><code>ga</code></td><td>show ASCII value of character under cursor</td></tr>
+<tr><td><code>gf</code></td><td>open file which filename is under cursor</td></tr>
+<tr><td><code>:redir<font color="red"><i>&gt;</i></font><font color="red"><i>f</i></font><font size="+1">↵</font></code></td><td>redirect output to file <font color="red"><i>f</i></font></td></tr>
+<tr><td><code>:mkview <font color="red"><i>[f]</i></font></code></td><td>save view configuration [to file <font color="red"><i>f</i></font>]</td></tr>
+<tr><td><code>:loadview <font color="red"><i>[f]</i></font></code></td><td>load view configuration [from file <font color="red"><i>f</i></font>]</td></tr>
+<tr><td><code>^@ ^K ^_  \  F<font color="red"><i>n</i></font> ^F<font color="red"><i>n</i></font></code></td><td>unmapped keys</td></tr>
+</table>
+
+
+  <br />
+  <blockquote>
+      <p><strong>Last updated: <time datetime="2016-09-01T21:34:33+00:00" class="page-date">01 Sep 2016</time></strong></p>
+  </blockquote>
+</article>
+
+<aside class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+         
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/Vim-incomprendido">
+                            El editor incomprendido
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/vimrc">
+                            My Vim setup
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/my scripts">
+                            Useful scripts
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+        
+        
+  </ul>
+</aside>
+
+
+      </main>
+     <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+          <!-- <h2 class="footer-heading"> <a href="https://github.com/johgh/johgh.io-source"> <i class="fa fa-github"></i> Cheat-Sheets</a></h2> -->
+        <ul class="contact-list">
+          <li><a href="mailto:"></a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<a href="#0" class="cd-top">Top</a>
+<script src="/scripts/backtotop.js"></script>
+
+<script>
+$(function() {
+  $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+
+  /*
+  $(document).on('click', '.back', function(e){
+    e.preventDefault()
+  });
+  */
+});
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66389589-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+
+  </body>
+</html>

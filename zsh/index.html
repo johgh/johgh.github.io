@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    Zsh setup <> Cheat-sheets.tk
+    
+  </title>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="canonical" href="http://cheat-sheets.tk/zsh">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" media="screen" href="/css/toc.css">
+    <link rel="stylesheet" media="screen" href="/css/select2.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.grey.min.css">
+
+    <script src="/scripts/jquery-2.1.4.min.js"></script>
+    
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet"> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script> -->
+    
+    <script src="/scripts/jquery.tablesorter.min.js"></script>
+    <script src="/scripts/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/widget-filter-formatter-select2.min.js"></script>
+    <script src="/scripts/jquery.tocLight.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+          $.toc.clickHideButton();
+        });
+  </script>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+</head>
+
+
+
+  <body>
+    <div class="container content">
+        <header class="site-header">
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/"> 
+          <span class="main-title">
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
+                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+                    
+          </span>
+      </a>
+
+      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+
+  </div>
+    <!-- <style> -->
+    <!--     /* The default background color is #c00 */ -->
+    <!--     .right-bottom .github-fork-ribbon { -->
+    <!--         background-color: #2A7AE2; -->
+    <!--     } -->
+
+    <!--     .right .github-fork-ribbon { -->
+    <!--         background-color: #f80; -->
+    <!--     } -->
+
+    <!--     .left-bottom .github-fork-ribbon { -->
+    <!--         background-color: #333; -->
+    <!--     } -->
+    <!-- </style> -->
+    
+    <!-- <div class="github-fork-ribbon-wrapper right-bottom"> -->
+    <!--     <div class="github-fork-ribbon"> -->
+    <!--         <a href="https://github.com/johgh/johgh.io-source">Fork me on GitHub</a> -->
+    <!--     </div> -->
+    <!-- </div> -->
+</header>
+
+      <header class="masthead">
+      </header>
+      <main>
+        <div class="post">
+
+<br />
+<article class="post">
+  <h1 class="post-title"><a href="/terminal" class="back"><i class="fa fa-arrow-left"></i></a> Zsh setup</h1>
+  <br />
+  <div id="toc-container">
+   <table class="toc" id="toc">
+      <tbody>
+         <tr>
+            <td>
+               <div id="toctitle">
+                  <h2>Contents</h2>
+                  <span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">hide</a>]</span>
+               </div>
+               <ul>
+                  <li class="toc_level-1 toc_section-1">
+                     <a href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">Installation</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-2">
+                     <a href="#tocAnchor-1-2"><span class="tocnumber">2</span> <span class="toctext">Customize Zsh</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-3">
+                     <a href="#tocAnchor-1-3"><span class="tocnumber">3</span> <span class="toctext">Autopushd</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-4">
+                     <a href="#tocAnchor-1-4"><span class="tocnumber">4</span> <span class="toctext">Vi + Bash bindings</span></a>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div><h1 id="tocAnchor-1-1">Installation</h1>
+<dl>
+  <dt>Install zsh and set as default shell</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apt-get install zsh
+<span class="nv">$ </span>sudo chsh -s /bin/zsh</code></pre></div>
+  </dd>
+  <dt>Install Oh My Zsh</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd</span> <span class="nv">$HOME</span>
+<span class="nv">$ </span>git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+<span class="nv">$ </span>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="tocAnchor-1-2">Customize Zsh</h1>
+<dl>
+  <dt>Customize zsh config in $HOME/.zshrc</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># set bash as default shell for compatibility with shellscripts</span>
+<span class="nb">export </span><span class="nv">SHELL</span><span class="o">=</span>/bin/bash
+<span class="c"># add user bin directory to the path</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/bin
+<span class="c"># enable some oh-my-zsh plugins</span>
+<span class="nv">plugins</span><span class="o">=(</span>git github git-extras <span class="nb">command</span>-not-found vim-interaction <span class="nb">history</span>-substring-search cp <span class="nb">history</span><span class="o">)</span>
+<span class="c"># custom aliases</span>
+openapp<span class="o">(){</span> nohup xdg-open <span class="nv">$1</span> &gt; /dev/null 2&gt; /dev/null <span class="o">}</span><span class="p">;</span> <span class="nb">alias </span><span class="nv">o</span><span class="o">=</span>openapp</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>See some alias to include <a href="http://localhost:4000/bash%20commands/#tocAnchor-1-2">here</a></p>
+</blockquote>
+
+<dl>
+  <dt>Reload .zshrc</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">source</span> ~/.zshrc</code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="tocAnchor-1-3">Autopushd</h1>
+<dl>
+  <dt>Put this on your .zshrc file</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># set cd as an alias to pushd (every visited directory is saved in a stack)</span>
+setopt autopushd</code></pre></div>
+  </dd>
+  <dt>Change dir and save new specified dir in a stack of dirs</dt>
+  <dd><code>cd DIR</code></dd>
+</dl>
+
+<blockquote>
+  <p>if no dir specified cd goes to $HOME as usual</p>
+</blockquote>
+
+<dl>
+  <dt>Go to last visited directory</dt>
+  <dd><code>cd -</code></dd>
+</dl>
+
+<blockquote>
+  <p>as a side effect this command swaps (in the stack) your current directory with the last one visited</p>
+</blockquote>
+
+<dl>
+  <dt>Go to directory from stack specified by index</dt>
+  <dd><code>cd -↹INDEX</code></dd>
+</dl>
+
+<blockquote>
+  <p>as a side effect this command swaps your current directory with the one specified from the stack</p>
+</blockquote>
+
+<blockquote>
+  <p><code>cd -↹↹</code> provides autocompletion</p>
+</blockquote>
+
+<dl>
+  <dt>Specify path including subpath from stacked dir</dt>
+  <dd><code>cd ~-↹INDEX</code></dd>
+</dl>
+
+<blockquote>
+  <p><code>cd ~-↹↹</code> provides autocompletion</p>
+</blockquote>
+
+<dl>
+  <dt>Deletes directory from stack</dt>
+  <dd><code>popd -↹INDEX</code></dd>
+</dl>
+
+<blockquote>
+  <p><code>popd -↹↹</code> provides autocompletion</p>
+</blockquote>
+
+<dl>
+  <dt>Clear all saved directories from stack</dt>
+  <dd><code>dirs -c</code></dd>
+</dl>
+
+<h1 id="tocAnchor-1-4">Vi + Bash bindings</h1>
+
+<dl>
+  <dt>Put this on your .zshrc file</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># free &lt;C-S&gt; so we can use it in vim</span>
+stty -ixon -ixoff
+<span class="c"># vi mappings</span>
+bindkey -v
+<span class="c"># C-S instead of ESC to enter Vi normal mode</span>
+bindkey <span class="s1">'^S'</span> vi-cmd-mode
+<span class="c">## some standard bash keys so we can use it with vim mappings enabled</span>
+<span class="c"># navigation</span>
+bindkey <span class="s1">'^[b'</span> backward-word
+bindkey <span class="s1">'^[f'</span> forward-word
+<span class="c"># delete from cursor to beginning of line</span>
+bindkey <span class="s1">'^U'</span> backward-kill-line
+<span class="c"># delete from cursor to end of line</span>
+bindkey <span class="s1">'^K'</span> <span class="nb">kill</span>-line
+<span class="c"># delete previous word</span>
+bindkey <span class="s1">'^w'</span> backward-kill-word
+<span class="c"># delete next word</span>
+bindkey <span class="s1">'^[d'</span> <span class="nb">kill</span>-word
+<span class="c"># backspace</span>
+bindkey <span class="s1">'^h'</span> backward-delete-char
+<span class="c"># uppercase word starting from cursor</span>
+bindkey <span class="s1">'^[u'</span> up-case-word
+<span class="c"># we keep up-history and down-history bindings for the plugin history-substring-search</span>
+bindkey <span class="s1">'^P'</span> <span class="nb">history</span>-substring-search-up
+bindkey <span class="s1">'^N'</span> <span class="nb">history</span>-substring-search-down
+<span class="c"># go to beginning of line (^A is used by tmux)</span>
+bindkey <span class="s1">'^B'</span> beginning-of-line
+<span class="c"># go to end of line</span>
+bindkey <span class="s1">'^E'</span> end-of-line
+<span class="c"># incremental search backward</span>
+bindkey <span class="s1">'^r'</span> <span class="nb">history</span>-incremental-search-backward</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Complete list of zsh bindings <a href="http://www.bash2zsh.com/zsh_refcard/refcard.pdf">here</a></p>
+</blockquote>
+
+<blockquote>
+  <p>Bash standard bindings <a href="http://www.scribd.com/doc/88404386/Bash-Cheat-Sheet">here</a></p>
+</blockquote>
+
+  <br />
+  <blockquote>
+      <p><strong>Last updated: <time datetime="2016-09-01T21:34:33+00:00" class="page-date">01 Sep 2016</time></strong></p>
+  </blockquote>
+</article>
+
+<aside class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+         
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/apps">
+                            Packages
+                            <small><time datetime="2016-10-08T14:13:58+00:00">08 Oct 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/repos">
+                            Repositories
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/linuxcommands">
+                            Desktop/general commands
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/git">
+                            Git (Quick Guide)
+                            <small><time datetime="2016-09-14T12:12:38+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/shellscripting">
+                            Shell-scripting snippets
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/tmux">
+                            Tmux basics
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/my scripts">
+                            Useful scripts
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/gitconfig">
+                            My Git configuration
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/bash commands">
+                            Bash/UNIX commands
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+        
+        
+  </ul>
+</aside>
+
+
+      </main>
+     <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+          <!-- <h2 class="footer-heading"> <a href="https://github.com/johgh/johgh.io-source"> <i class="fa fa-github"></i> Cheat-Sheets</a></h2> -->
+        <ul class="contact-list">
+          <li><a href="mailto:"></a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<a href="#0" class="cd-top">Top</a>
+<script src="/scripts/backtotop.js"></script>
+
+<script>
+$(function() {
+  $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+
+  /*
+  $(document).on('click', '.back', function(e){
+    e.preventDefault()
+  });
+  */
+});
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66389589-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+
+  </body>
+</html>

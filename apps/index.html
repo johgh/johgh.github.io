@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    Packages <> Cheat-sheets.tk
+    
+  </title>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="canonical" href="http://cheat-sheets.tk/apps">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" media="screen" href="/css/toc.css">
+    <link rel="stylesheet" media="screen" href="/css/select2.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.grey.min.css">
+
+    <script src="/scripts/jquery-2.1.4.min.js"></script>
+    
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet"> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script> -->
+    
+    <script src="/scripts/jquery.tablesorter.min.js"></script>
+    <script src="/scripts/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/widget-filter-formatter-select2.min.js"></script>
+    <script src="/scripts/jquery.tocLight.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+          $.toc.clickHideButton();
+        });
+  </script>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+</head>
+
+
+
+  <body>
+    <div class="container content">
+        <header class="site-header">
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/"> 
+          <span class="main-title">
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
+                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+                    
+          </span>
+      </a>
+
+      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+
+  </div>
+    <!-- <style> -->
+    <!--     /* The default background color is #c00 */ -->
+    <!--     .right-bottom .github-fork-ribbon { -->
+    <!--         background-color: #2A7AE2; -->
+    <!--     } -->
+
+    <!--     .right .github-fork-ribbon { -->
+    <!--         background-color: #f80; -->
+    <!--     } -->
+
+    <!--     .left-bottom .github-fork-ribbon { -->
+    <!--         background-color: #333; -->
+    <!--     } -->
+    <!-- </style> -->
+    
+    <!-- <div class="github-fork-ribbon-wrapper right-bottom"> -->
+    <!--     <div class="github-fork-ribbon"> -->
+    <!--         <a href="https://github.com/johgh/johgh.io-source">Fork me on GitHub</a> -->
+    <!--     </div> -->
+    <!-- </div> -->
+</header>
+
+      <header class="masthead">
+      </header>
+      <main>
+        <div class="post">
+
+<br />
+<article class="post">
+  <h1 class="post-title"><a href="/gnu/linux" class="back"><i class="fa fa-arrow-left"></i></a> Packages</h1>
+  <br />
+  <div id="toc-container">
+   <table class="toc" id="toc">
+      <tbody>
+         <tr>
+            <td>
+               <div id="toctitle">
+                  <h2>Contents</h2>
+                  <span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">hide</a>]</span>
+               </div>
+               <ul>
+                  <li class="toc_level-1 toc_section-1">
+                     <a href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">Package installer</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-2">
+                     <a href="#tocAnchor-1-2"><span class="tocnumber">2</span> <span class="toctext">Other sources</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-3">
+                           <a href="#tocAnchor-1-2-1"><span class="tocnumber">2.1</span> <span class="toctext">Installing Mariadb 5.5 (Debian)</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-4">
+                           <a href="#tocAnchor-1-2-2"><span class="tocnumber">2.2</span> <span class="toctext">Direct download software</span></a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div><h1 id="tocAnchor-1-1">Package installer</h1>
+
+<div id="selectText" style="font-family: monospace; font-weight: bold; font-size:14px; border-style: dashed; border-color: #A0A0A0; padding:&#10;6px; border-width: 2px;"> No packages selected </div>
+<div style="float:right" id="numPackages"></div>
+<div> <button class="selectButton" data-id="#selectText" style="display:none" type="button"> Select text </button> </div>
+<p><br />
+<!--<a href="#" id="selectAll">Select all packages</a> / <a href="#" id="unselectAll">Unselect all packages</a>
+<br />-->
+<a href="#" id="selectSection">Select current filtered packages</a>
+<br />
+ <a href="#" id="unselectSection">Unselect current filtered packages</a>
+<br /></p>
+<div> <button class="reset" type="button"> Clear all filters </button> </div>
+<p>
+   <br />
+</p>
+
+<table id="pkgTable">
+  <thead>
+    <tr>
+      <th style="text-align: left">Package</th>
+      <th style="text-align: left">PPA</th>
+      <th style="text-align: center">Section</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">apache2</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">apt-file</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ardour</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">avidemux</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">banshee</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">bleachbit</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">bless</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">boot-repair</td>
+      <td style="text-align: left">ppa:yannubuntu/boot-repair</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">brasero</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">calibre</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ccze</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">checkinstall</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">cheese</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">comix</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">command-not-found</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">conky-manager</td>
+      <td style="text-align: left">ppa:teejee2008/ppa</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">curl</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dconf-editor</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">deluge</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">deluged</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dropbox</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">empathy</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">encfs</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">exfat-fuse</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">exfat-utils</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">expect</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">exuberant-ctags</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">faac</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">faad</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">faience-azur-dark</td>
+      <td style="text-align: left">ppa:webupd8team/themes</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">faience-icon-theme</td>
+      <td style="text-align: left">ppa:webupd8team/themes</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">faience-theme</td>
+      <td style="text-align: left">ppa:webupd8team/themes</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">fancontrol</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">firefox</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">flac</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">fluid-soundfont-gm</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">fluidsynth</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">fluxgui</td>
+      <td style="text-align: left">ppa:kilian/f.lux</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">freshplayerplugin</td>
+      <td style="text-align: left">ppa:nilarimogard/webupd8</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ftp</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gconf-editor</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">geany</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gimp</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">git</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">git-cola</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">git-crypt</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gitg</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gnome-nettool</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gnome-panel</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gnome-shell</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gnome-shell-extensions</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gnome-subtitles</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gnome-tweak-tool</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">google-chrome-stable</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gparted</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gprename</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">grep</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">grub-customizer</td>
+      <td style="text-align: left">ppa:danielrichter2007/grub-customizer</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gtk-recordmydesktop</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">guake</td>
+      <td style="text-align: left">ppa:webupd8team/unstable</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">handbrake</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">hardinfo</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">htop</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">imagemagick</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">inotify-tools</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">jdownloader</td>
+      <td style="text-align: left">ppa:jd-team/jdownloader</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">k3b</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">lame</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">less</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">libreoffice-common</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">lm-sensors</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">lyx</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mdadm</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">meld</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mencoder</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mkvtoolnix</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mkvtoolnix-gui</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mpv</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mtp-tools</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mtpfs</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mysql-client-core-5.5</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mysql-common</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nautilus-open-terminal</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nautilus-sendto</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nmap</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">noip-2.1.9</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ntfs-3g</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">numix-gtk-theme</td>
+      <td style="text-align: left">ppa:numix/ppa</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">openshot</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">oracle-java8-installer</td>
+      <td style="text-align: left">ppa:webupd8team/java</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">owncloud</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">p7zip-full</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pdfjam</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pgadmin3</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php-codecoverage</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php-codesniffer</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-apcu</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-cli</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-common</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-curl</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-gd</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-imagick</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-intl</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-json</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-ldap</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-mcrypt</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-mysql</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-oauth</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-pgsql</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-readline</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-sybase</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-tidy</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-xdebug</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">php5-xsl</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">picard</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">playonlinux</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ppa-purge</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">psutils</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">qjackctl</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">qsynth</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">seahorse</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">sed</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">shotwell</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">silversearcher-ag</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">simple-scan</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">sopcast-player</td>
+      <td style="text-align: left">ppa:lyc256/sopcast-player</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">sound-juicer</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">soundconverter</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">sp-auth</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">subdownloader</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">synaptic</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">thunderbird</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">time</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">timidity</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">tmux</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">tuxguitar</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ubuntu-restricted-extras</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">unison-all-gtk</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">unity-tweak-tool</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">usb-creator-gtk</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">vagrant</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">vim</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">vim-gnome</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">virtualbox</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">virtualbox-guest-additions-iso</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Development</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">vlc</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">vorbis-tools</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">wget</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">wine</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">wmctrl</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">x-tile</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">Desktop</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">xclip</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">xdotool</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">y-ppa-manager</td>
+      <td style="text-align: left">ppa:webupd8team/y-ppa-manager</td>
+      <td style="text-align: center">System</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">zsh</td>
+      <td style="text-align: left">Distro</td>
+      <td style="text-align: center">CLI</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Above packages were installed under Ubuntu 14.04, but are usually found on any other Debian based distribution (sometimes under a similar name)</p>
+</blockquote>
+
+<hr />
+
+<h1 id="tocAnchor-1-2">Other sources</h1>
+
+<h2 id="tocAnchor-1-2-1">Installing Mariadb 5.5 (Debian)</h2>
+
+<dl>
+  <dt>Add repo to sources.list</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash">deb http://tedeco.fi.upm.es/mirror/mariadb/repo/5.5/debian squeeze main</code></pre></div>
+  </dd>
+  <dt>Add the repository GPG key</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db</code></pre></div>
+  </dd>
+  <dt>Install Mariadb</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apt-get purge mysql-common
+<span class="nv">$ </span>sudo apt-get update
+<span class="nv">$ </span>sudo apt-get install mariadb-server
+<span class="c"># if php connector is required:</span>
+<span class="nv">$ </span>sudo apt-get install php5-mysql</code></pre></div>
+  </dd>
+</dl>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-2">Direct download software</h2>
+
+<ul>
+  <li><a href="http://dbeaver.jkiss.org/download/">Dbeaver</a></li>
+  <li><a href="http://brackets.io/">Brackets</a></li>
+  <li><a href="https://thomas101.github.io/wmail/download">Wmail</a></li>
+  <li><a href="http://download.virtualbox.org/virtualbox/">Virtual Box + extension pack</a></li>
+</ul>
+
+<script src="/scripts/apps.js"></script>
+
+<script src="/scripts/selecttext.js"></script>
+
+
+  <br />
+  <blockquote>
+      <p><strong>Last updated: <time datetime="2016-10-08T14:13:58+00:00" class="page-date">08 Oct 2016</time></strong></p>
+  </blockquote>
+</article>
+
+<aside class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+         
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/repos">
+                            Repositories
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/linuxcommands">
+                            Desktop/general commands
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/git">
+                            Git (Quick Guide)
+                            <small><time datetime="2016-09-14T12:12:38+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/shellscripting">
+                            Shell-scripting snippets
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/zsh">
+                            Zsh setup
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/tmux">
+                            Tmux basics
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/my scripts">
+                            Useful scripts
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/gitconfig">
+                            My Git configuration
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/bash commands">
+                            Bash/UNIX commands
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+        
+        
+  </ul>
+</aside>
+
+
+      </main>
+     <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+          <!-- <h2 class="footer-heading"> <a href="https://github.com/johgh/johgh.io-source"> <i class="fa fa-github"></i> Cheat-Sheets</a></h2> -->
+        <ul class="contact-list">
+          <li><a href="mailto:"></a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<a href="#0" class="cd-top">Top</a>
+<script src="/scripts/backtotop.js"></script>
+
+<script>
+$(function() {
+  $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+
+  /*
+  $(document).on('click', '.back', function(e){
+    e.preventDefault()
+  });
+  */
+});
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66389589-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+
+  </body>
+</html>

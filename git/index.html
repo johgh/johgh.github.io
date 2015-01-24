@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    Git (Quick Guide) <> Cheat-sheets.tk
+    
+  </title>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="canonical" href="http://cheat-sheets.tk/git">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" media="screen" href="/css/toc.css">
+    <link rel="stylesheet" media="screen" href="/css/select2.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.grey.min.css">
+
+    <script src="/scripts/jquery-2.1.4.min.js"></script>
+    
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet"> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script> -->
+    
+    <script src="/scripts/jquery.tablesorter.min.js"></script>
+    <script src="/scripts/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/widget-filter-formatter-select2.min.js"></script>
+    <script src="/scripts/jquery.tocLight.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+          $.toc.clickHideButton();
+        });
+  </script>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+</head>
+
+
+
+  <body>
+    <div class="container content">
+        <header class="site-header">
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/"> 
+          <span class="main-title">
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
+                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+                    
+          </span>
+      </a>
+
+      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+
+  </div>
+    <!-- <style> -->
+    <!--     /* The default background color is #c00 */ -->
+    <!--     .right-bottom .github-fork-ribbon { -->
+    <!--         background-color: #2A7AE2; -->
+    <!--     } -->
+
+    <!--     .right .github-fork-ribbon { -->
+    <!--         background-color: #f80; -->
+    <!--     } -->
+
+    <!--     .left-bottom .github-fork-ribbon { -->
+    <!--         background-color: #333; -->
+    <!--     } -->
+    <!-- </style> -->
+    
+    <!-- <div class="github-fork-ribbon-wrapper right-bottom"> -->
+    <!--     <div class="github-fork-ribbon"> -->
+    <!--         <a href="https://github.com/johgh/johgh.io-source">Fork me on GitHub</a> -->
+    <!--     </div> -->
+    <!-- </div> -->
+</header>
+
+      <header class="masthead">
+      </header>
+      <main>
+        <div class="post">
+
+<br />
+<article class="post">
+  <h1 class="post-title"><a href="/quick guides" class="back"><i class="fa fa-arrow-left"></i></a> Git (Quick Guide)</h1>
+  <br />
+  <div id="toc-container">
+   <table class="toc" id="toc">
+      <tbody>
+         <tr>
+            <td>
+               <div id="toctitle">
+                  <h2>Contents</h2>
+                  <span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">hide</a>]</span>
+               </div>
+               <ul>
+                  <li class="toc_level-1 toc_section-1">
+                     <a href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">Terminología</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-2">
+                     <a href="#tocAnchor-1-2"><span class="tocnumber">2</span> <span class="toctext">Workflows</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-3">
+                           <a href="#tocAnchor-1-2-1"><span class="tocnumber">2.1</span> <span class="toctext">Workflow centralizado</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-4">
+                           <a href="#tocAnchor-1-2-2"><span class="tocnumber">2.2</span> <span class="toctext">Feature Branch Workflow</span></a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc_level-1 toc_section-5">
+                     <a href="#tocAnchor-1-5"><span class="tocnumber">3</span> <span class="toctext">Guía rápida</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-6">
+                           <a href="#tocAnchor-1-5-1"><span class="tocnumber">3.1</span> <span class="toctext">Configuración</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-7">
+                           <a href="#tocAnchor-1-5-2"><span class="tocnumber">3.2</span> <span class="toctext">Creación de un repositorio</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-8">
+                           <a href="#tocAnchor-1-5-3"><span class="tocnumber">3.3</span> <span class="toctext">Operaciones con Index</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-9">
+                           <a href="#tocAnchor-1-5-4"><span class="tocnumber">3.4</span> <span class="toctext">Operaciones con HEAD</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-10">
+                           <a href="#tocAnchor-1-5-5"><span class="tocnumber">3.5</span> <span class="toctext">Ramas</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-11">
+                           <a href="#tocAnchor-1-5-6"><span class="tocnumber">3.6</span> <span class="toctext">Comparación de ficheros</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-12">
+                           <a href="#tocAnchor-1-5-7"><span class="tocnumber">3.7</span> <span class="toctext">Stash</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-13">
+                           <a href="#tocAnchor-1-5-8"><span class="tocnumber">3.8</span> <span class="toctext">Tags</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-14">
+                           <a href="#tocAnchor-1-5-9"><span class="tocnumber">3.9</span> <span class="toctext">Submodules</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-15">
+                           <a href="#tocAnchor-1-5-10"><span class="tocnumber">3.10</span> <span class="toctext">Ignorar ficheros</span></a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div><h1 id="tocAnchor-1-1">Terminología</h1>
+
+<dl>
+  <dt><code>Working Tree</code></dt>
+  <dd>Ficheros que tenemos en el workspace</dd>
+  <dt><code>Index</code></dt>
+  <dd>También conocido como “staging”. Es el snapshot que será traspasado a nuestro repositorio local al ejecutar <code>git commit</code>. Cada vez que ejecutamos <code>git add</code> los ficheros se añaden tal cual están en ese momento, si luego se hacen más cambios sobre los mismos ficheros se deberá volver a ejecutar <code>git add</code>.</dd>
+</dl>
+
+<blockquote>
+  <p>Para saber que hemos subido desde el <code>Working Tree</code> al <code>Index</code> en cada momento y ver las diferencias con el repositorio local ver los comandos <code>git difftool</code> y <code>git difftool --staged</code> explicados abajo.</p>
+</blockquote>
+
+<dl>
+  <dt><code>HEAD</code></dt>
+  <dd>Puntero al último commit de nuestro <em>repositorio local</em></dd>
+  <dt><code>master</code></dt>
+  <dd>Rama de desarrollo por defecto (trunk)</dd>
+  <dt><code>origin</code></dt>
+  <dd><em>Repositorio remoto</em> por defecto</dd>
+</dl>
+
+<p class="center">
+   <img src="/git_commands.png" alt="Git workflow" title="Git workflow" />
+</p>
+
+<div class="center">Workflow de git donde se puede ver <code>Working Tree</code>, <code>Index</code>, <code>HEAD</code> y <code>origin</code> (remoto)</div>
+<p>
+   <br />
+</p>
+
+<blockquote>
+  <p><a href="https://www.kernel.org/pub/software/scm/git/docs/gitglossary.html">Ver glosario de términos</a></p>
+</blockquote>
+
+<hr />
+
+<h1 id="tocAnchor-1-2">Workflows</h1>
+
+<h2 id="tocAnchor-1-2-1">Workflow centralizado</h2>
+
+<blockquote>
+  <p>El workflow centralizado utiliza una única rama, <code>master</code>, para trabajar en local. El código se actualizará sobre nuestra propia rama de trabajo mediante <code>git pull</code>.</p>
+</blockquote>
+
+<p>Al hacer <code>git pull</code> sobre <code>master</code> nos encontraremos con 3 posibles casos:</p>
+
+<h3 id="se-realiza-pull-sin-problemas">1. Se realiza <code>pull</code> sin problemas</h3>
+
+<blockquote>
+  <p>Esto sucede cuando no existen nuevos commits en remoto o no hay commits sin publicar en local. En ese último caso <code>git pull</code> hará <code>fast-forward</code> sin problemas siempre que los cambios del <code>Working Tree</code> no coincidan con los cambios de remoto.</p>
+</blockquote>
+
+<p>Para publicar nuestros commits locales solo hay que hacer:</p>
+
+<dl>
+  <dt>1) Añadir ficheros al <code>Index</code> para poder hacer commit:</dt>
+  <dd><code>git add . [--all]</code> o <code>git add file1 [file2] [file3] [...]</code></dd>
+  <dt>2) Hacer commit de los ficheros que hayamos añadido al <code>Index</code>:</dt>
+  <dd><code>git commit</code></dd>
+  <dt>3) Publicar los cambios en remoto:</dt>
+  <dd><code>git push</code></dd>
+</dl>
+
+<h3 id="no-es-posible-realizar-pull">2. No es posible realizar <code>pull</code></h3>
+
+<blockquote>
+  <p>Esto puede ocurrir bien porque hay commits tanto en local como en remoto o bien porque hay cambios en los ficheros del <code>Working Tree</code> que coinciden con los nuevos commits de remoto.</p>
+</blockquote>
+
+<p>En ambos casos para poder hacer <code>pull</code> deberemos limpiar primero el <code>Index</code> y el <code>Working Tree</code> mediante una de estas opciones:</p>
+
+<dl>
+  <dt>a) Realizar <code>commit</code> para luego mergearlo con el remoto, al hacer <code>git pull</code> (ver <a href="#caso-3-se-ejecuta-merge-o-rebase-para-mezclar-los-cambios-de-remoto-con-los-de-nuestra-rama-local">punto 3</a>)</dt>
+  <dd><code>git add . --all</code> + <code>git commit</code></dd>
+  <dt>b) Realizar <code>stash</code> para apartar nuestros cambios de local y que <code>git pull</code> continúe sin problemas (ver <a href="#caso-1-se-realiza-pull-sin-problemas">punto 1</a>)</dt>
+  <dd><code>git stash</code></dd>
+</dl>
+
+<p>En este último caso, después de hacer <code>git pull</code> podremos volver a aplicar nuestros cambios locales con <code>git stash apply</code></p>
+
+<p>Si no queremos todos los cambios del stash podremos hacer <code>checkout</code> o <code>diff</code> de los ficheros que queramos posteriormente (<code>stash apply</code> solo actúa sobre el <code>Working Tree</code>)</p>
+
+<h3 id="se-ejecuta-merge-o-rebase-para-mezclar-los-cambios-de-remoto-con-los-de-nuestra-rama-local">3. Se ejecuta merge (o rebase) para mezclar los cambios de remoto con los de nuestra rama local</h3>
+
+<p>En este punto nos encontramos con 2 posibles casos:</p>
+
+<dl>
+  <dt>No hay conflicto</dt>
+  <dd>Se produce un automerge commit (o si utilizamos el parámetro <code>--rebase</code> los nuevos commits quedan simplemente añadidos al final)</dd>
+  <dt>Hay conflicto </dt>
+  <dd>Resolvemos con <code>git mergetool</code> y ejecutamos <code>git commit</code> (o <code>git rebase --continue</code>, de haber realizado <code>pull</code> con <code>rebase</code>)</dd>
+</dl>
+
+<blockquote>
+  <p>Al ejecutar <code>git rebase --continue</code> es posible que siga existiendo conflicto debido a que rebase soluciona los conflictos por etapas (ya que nuestro commit local debe ser desplazado paso a paso hasta el último commit de remoto). En tal caso deberemos volver al paso anterior para solucionar los sucesivos conflictos con <code>git mergetool</code> + <code>git rebase --continue</code></p>
+</blockquote>
+
+<p>Finalmente, comprobaremos que los conflictos estén resueltos y publicaremos los cambios:</p>
+
+<dl>
+  <dt>Miramos que los conflictos estén marcados como resueltos:</dt>
+  <dd><code>git status</code></dd>
+</dl>
+
+<blockquote>
+  <p>Si continúan apareciendo ficheros como ‘unmerged’, habiendo ya resuelto los conflictos, los podemos añadir con <code>git add</code> para marcarlos como resueltos manualmente</p>
+</blockquote>
+
+<dl>
+  <dt>Publicamos los cambios:</dt>
+  <dd><code>git push</code></dd>
+</dl>
+
+<blockquote>
+  <p>Si no se permite esta operación, deberemos volver a obtener los cambios de remoto y resolver los posibles conflictos: <code>git pull</code> + [resolución de conflictos] + <code>git push</code></p>
+</blockquote>
+
+<h3 id="abortando-git-pull">Abortando git pull</h3>
+
+<p>Es posible volver al estado anterior antes de ejecutar <code>git pull</code> siempre y cuando no hayamos realizado todavía el merge commit o ejecutado <code>rebase --continue</code>:</p>
+
+<dl>
+  <dt>Para abortar git pull con merge</dt>
+  <dd><code>git merge --abort</code></dd>
+  <dt>Para abortar git pull con rebase</dt>
+  <dd><code>git rebase --abort</code></dd>
+  <dt>Si ya hemos finalizado el pull, deberemos volver atrás mirando nuestro log local (git log -g):</dt>
+  <dd><code>git reset &lt;commit_local&gt;</code></dd>
+</dl>
+
+<blockquote>
+  <p>Sin la opción <code>--hard</code>, <code>git reset</code> vuelve hasta el commit indicado dejando los cambios propios del commit en el <code>Working Tree</code></p>
+</blockquote>
+
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-2-2">Feature Branch Workflow</h2>
+
+<p>El objetivo de este workflow es que la rama <code>master</code> siempre esté a punto para obtener o publicar código.</p>
+
+<p>La rama <code>master</code> nunca debe tener código “inestable”. El código en estado de desarrollo se encontrará en ramas <em>feature</em> con nombres descriptivos, que serán validadas antes de subirse a la rama pública <code>master</code>, tras realizarse un <em>pull request</em>.</p>
+
+<h3 id="configuracin-inicial-pull-con-rebase">Configuración inicial (pull con rebase)</h3>
+
+<dl>
+  <dt>Configurar git para hacer rebase en lugar de merge al hacer <code>pull</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git config --global branch.master.rebase yes
+<span class="c"># también podemos configurarlo para todas las ramas</span>
+<span class="nv">$ </span>git config --global branch.autosetuprebase always</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Este paso es opcional pero nos permite mantener limpio el historial de commits al hacer pull, de forma que solo veamos <code>merge commit</code> en los puntos donde se realice la integración de la rama <code>feature</code> con <code>master</code></p>
+</blockquote>
+
+<h3 id="fases-del-workflow">Fases del workflow</h3>
+
+<blockquote>
+  <ul>
+    <li>Creación de la rama <code>feature</code>, correspondiente a 1 <em>historia</em></li>
+    <li>Trabajar con rama privada <code>feature</code>, 1 commit corresponde a 1 <em>tarea</em></li>
+    <li>Hacer pública la rama <code>feature</code></li>
+    <li>Trabajar en equipo con la rama pública</li>
+    <li>Petición de code review (<em>pull request</em>)</li>
+    <li>Deploy en <code>master</code> cuando se acepte el código como válido finalmente</li>
+  </ul>
+</blockquote>
+
+<dl>
+  <dt>Crear rama <code>feature</code> y publicarla en remoto</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout -b feature master
+<span class="nv">$ </span>git push -u origin feature</code></pre></div>
+  </dd>
+  <dt>Comitear (opcionalmente, editar el historial de commits de la rama con <code>rebase -i</code>)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git add .<span class="p">;</span> git commit -m <span class="s1">'primer commit'</span><span class="p">;</span> <span class="c"># ...</span>
+<span class="c"># podemos hacer rebase -i hasta la base de la rama</span>
+<span class="nv">$ </span>git rebase -i <span class="sb">`</span>git merge-base feature master<span class="sb">`</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p><strong><em>Únicamente se debe hacer <code>rebase -i</code> de commits que no hayan sido publicados.</em></strong> </p>
+</blockquote>
+
+<dl>
+  <dt><em>Pull request</em> (petición de code review antes de integrar la rama en <code>master</code>)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git push origin feature
+<span class="c"># se puede crear hook que envíe mail con el nombre del feature a validar</span></code></pre></div>
+  </dd>
+  <dt>Code review: ver cambios introducidos en la rama <code>feature</code> respecto a <code>master</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git difftool <span class="sb">`</span>git merge-base feature master<span class="sb">`</span></code></pre></div>
+  </dd>
+  <dt>Deploy de la rama <code>feature</code> a <code>master</code> (<em>merge commit</em> forzado para no perder la trazabilidad de la rama)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout master
+<span class="nv">$ </span>git pull
+<span class="c"># el parámetro --no-ff fuerza a que se cree un merge commit en master</span>
+<span class="nv">$ </span>git merge --no-ff feature
+<span class="nv">$ </span>git branch -d feature
+<span class="nv">$ </span>git push</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Es posible forzar que ningún merge haga <code>fast-forward</code> (evitando tener que pasar el parámetro –no-ff) mediante la siguiente configuración: <code>git config --global --bool merge.ff false</code></p>
+</blockquote>
+
+<blockquote>
+  <p>En ese caso para forzar un merge con <code>fast-forward</code> se puede usar <code>git merge</code> con el parámetro <code>--ff-only</code></p>
+</blockquote>
+
+<h3 id="propagacin-de-cambios-entre-ramas">Propagación de cambios entre ramas</h3>
+
+<dl>
+  <dt>Propagar último commit de una rama a otra</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># después de hacer commit en master (por ejemplo)</span>
+<span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git cherry-pick master</code></pre></div>
+  </dd>
+  <dt>Propagar commit mediante hash de una rama a otra</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git cherry-pick &lt;hash_commit&gt;</code></pre></div>
+  </dd>
+  <dt>Propagar cambios de <code>master</code> a <code>feature</code> (rebase)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># primero actualizamos la rama master</span>
+<span class="nv">$ </span>git checkout master
+<span class="nv">$ </span>git pull
+<span class="c"># propagamos los cambios a feature</span>
+<span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git rebase master
+<span class="c"># opcional: podemos elegir que cambios de master queremos en nuestra rama </span>
+<span class="nv">$ </span>git rebase -i</code></pre></div>
+  </dd>
+  <dt>Obtener directamente cambios desde origin/master (remoto)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git pull origin master</code></pre></div>
+  </dd>
+  <dt>Reintegrar en <code>master</code> los cambios de una rama (ver advertencia abajo)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># obtenemos en feature los cambios de master</span>
+<span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git rebase master
+<span class="c"># obtenemos en master todos los cambios de feature</span>
+<span class="nv">$ </span>git checkout master
+<span class="nv">$ </span>git merge --ff-only feature <span class="c"># fast-forward merge</span>
+<span class="nv">$ </span>git branch -d feature</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p><strong><em>Al realizar el merge <code>fast-forward</code> se pierde la trazabilidad de la rama que se ha integrado: <code>master</code> absorbe todos los commits que pertenecían a la rama y no se añade ningún merge commit que indique fusión de ramas</em></strong> </p>
+</blockquote>
+
+<hr />
+
+<h1 id="tocAnchor-1-5">Guía rápida</h1>
+
+<h2 id="tocAnchor-1-5-1">Configuración</h2>
+
+<dl>
+  <dt>Ver configuración global (o del repositorio actual)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git config -l</code></pre></div>
+  </dd>
+  <dt>Setear valores de la configuración global (fichero ~/.gitconfig)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git config --global user.name <span class="s2">"John Doe"</span></code></pre></div>
+  </dd>
+  <dt>Guardar passwords con Gnome keyring (sólo para https, no ssh)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Probado en Ubuntu 14.04</span>
+sudo apt-get install libgnome-keyring-dev
+<span class="nb">cd</span> <span class="s2">"`dirname $(locate git-credential-gnome-keyring)`"</span>
+make
+git config --global credential.helper <span class="s2">"`dirname $(locate git-credential-gnome-keyring)`"</span>/git-credential-gnome-keyring</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p><a href="/gitconfig">Ejemplo de configuración completa (alias incluídos)</a></p>
+</blockquote>
+
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-5-2">Creación de un repositorio</h2>
+
+<dl>
+  <dt>Crear repositorio <code>origin</code> (<code>--bare</code>), sin <code>Working Tree</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>ssh ares@mars.example.com
+ares&gt; git init --bare foo
+Initialized empty Git repository in /u/ares/foo/.git</code></pre></div>
+  </dd>
+  <dt>Clonar el repositorio y hacer checkout  de la rama <code>HEAD</code> (normalmente master)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git clone ares@mars.example.com:foo</code></pre></div>
+  </dd>
+  <dt>Conectar directorio con contenido a un nuevo remoto (<code>origin</code>)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span><span class="nb">cd </span>foo
+<span class="nv">$ </span>git init
+<span class="nv">$ </span>git remote add origin ares@mars.example.com:foo
+<span class="nv">$ </span>git add .
+<span class="nv">$ </span>git commit -m <span class="s1">'initial commit'</span>
+<span class="nv">$ </span>git push -u origin master</code></pre></div>
+  </dd>
+  <dt>A partir de ahí se puede hacer simplemente</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git push</code></pre></div>
+  </dd>
+  <dt>Crear repositorio referencia (para tener varias ramas en checkout, ver p. 82)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git clone --bare http://foo/bar.git refrep
+<span class="nv">$ </span>git clone --reference refrep http://foo/bar.git
+<span class="nv">$ </span>git fetch --all <span class="o">(</span>se deben hacer pulls periódicamente!!<span class="o">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-5-3">Operaciones con Index</h2>
+
+<dl>
+  <dt>Añadir al <code>Index</code> cambios parciales de ficheros (se eligen de forma interactiva)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git add -p</code></pre></div>
+  </dd>
+  <dt>Añadir todos los ficheros excepto nuevos (incluye modificados y eliminados)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git add -u</code></pre></div>
+  </dd>
+  <dt><code>git commit -a</code> equivale a:</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git add -u<span class="p">;</span> git commit<span class="p">;</span></code></pre></div>
+  </dd>
+  <dt>Añadir todo (incluyendo ficheros nuevos, untracked)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git add -A</code></pre></div>
+  </dd>
+  <dt>Borrar/mover fichero de <code>Working Tree</code> y del <code>Index</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git rm &lt;filename&gt;
+<span class="nv">$ </span>git mv &lt;filename&gt;</code></pre></div>
+  </dd>
+  <dt>Unstage de todos los cambios subidos al <code>Index</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git reset</code></pre></div>
+  </dd>
+  <dt>Borrar un fichero del <code>Index</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git reset &lt;fichero&gt;</code></pre></div>
+  </dd>
+  <dt>Borrar cambios parciales (opuesto a git add -p)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git reset --patch</code></pre></div>
+  </dd>
+</dl>
+
+<p class="center">
+   <img src="/file_lifecycle.png" alt="Git workflow" title="File lifecycle" />
+</p>
+
+<div class="center">Ciclo de estados de un fichero</div>
+<p>
+   <br />
+</p>
+
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-5-4">Operaciones con HEAD</h2>
+
+<h3 id="commits">Commits</h3>
+
+<dl>
+  <dt>Ver árbol de commits de todas las ramas</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git log --graph --oneline --decorate --all</code></pre></div>
+  </dd>
+  <dt>Ver donde apunta <code>HEAD</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git show-ref</code></pre></div>
+  </dd>
+  <dt>Commit incluyendo mensaje de commit</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git commit -m &lt;mensaje&gt;</code></pre></div>
+  </dd>
+  <dt>Comitear un directorio vacío</dt>
+  <dd>En git solo se puede hacer commit de ficheros.
+Workaround: subir un directorio con un único fichero <code>.gitignore</code> en su interior</dd>
+</dl>
+
+<p>
+   <br />
+</p>
+
+<h3 id="descartar-cambios">Descartar cambios</h3>
+
+<dl>
+  <dt>Descartar todos los cambios del <code>Working Tree</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git reset --hard
+<span class="c"># o lo que es lo mismo:</span>
+<span class="nv">$ </span>git checkout -f</code></pre></div>
+  </dd>
+  <dt>Checkout de <code>HEAD</code> al <code>Working Tree</code> de un fichero específico</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span><span class="o">[</span>git reset HEAD &lt;filename&gt;<span class="o">]</span> <span class="p">;</span> git checkout <span class="o">[</span>--<span class="o">]</span> &lt;filename&gt;</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>“–” no es necesario siempre y cuando no exista una rama con el mismo nombre</p>
+</blockquote>
+
+<dl>
+  <dt>Volver temporalmente a un commit antiguo (detached HEAD mode)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout &lt;commit&gt;
+<span class="c"># para volver al commit/rama actual</span>
+<span class="nv">$ </span>git checkout master</code></pre></div>
+  </dd>
+  <dt>Descartar los cambios locales hasta cierto commit</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git reset --hard &lt;commit&gt;</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Esto solo es aconsejable si no se han publicado los commits mediante push, en caso contrario se aconseja usar el comando <code>git revert</code> (ver más abajo), que no modifica la historia sino que tan solo añade nuevos commits a modo de <em>patch</em>.</p>
+</blockquote>
+
+<blockquote>
+  <p>Si de todas formas queremos forzar la sincronización con el repositorio remoto, borrando incluso commits, deberemos utilizar <code>git push -f origin master</code></p>
+</blockquote>
+
+<dl>
+  <dt>Descartar los cambios hasta el último commit publicado</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git fetch <span class="o">[</span>origin master<span class="o">]</span>
+<span class="nv">$ </span>git reset --hard FETCH_HEAD
+<span class="nv">$ </span><span class="o">[</span>git clean -df<span class="o">]</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Obtenemos la referencia del último commit en remoto <code>FETCH_HEAD</code> para luego descartar los cambios mediante <code>get reset --hard</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code>git clean -df</code> elimina los ficheros untracked, para obtener un repositorio limpio tal y como lo encontraríamos tras hacer <code>git clone</code></p>
+</blockquote>
+
+<dl>
+  <dt>Recuperar commit anterior después de hacer <code>git reset --hard</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># buscamos en el reflog (commit de nuestra rama) el commit en cuestión</span>
+<span class="nv">$ </span>git log -g
+<span class="nv">$ </span>git checkout &lt;id_commit_anterior&gt;</code></pre></div>
+  </dd>
+</dl>
+
+<p>
+   <br />
+</p>
+
+<h3 id="merge">Merge</h3>
+
+<dl>
+  <dt>Cambiar a la rama donde realizar merge</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout &lt;rama&gt;</code></pre></div>
+  </dd>
+  <dt>Realizar merge</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git merge &lt;rama_a_mezclar_con_nuestra_rama&gt;</code></pre></div>
+  </dd>
+  <dt>Realizar merge pero no dejar constancia del mismo en el grafo de commits (aparecerá como un commit más de nuestra rama, no tendrá 2 padres)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git merge --squash</code></pre></div>
+  </dd>
+  <dt>Abortar el merge si hay conflictos y no queremos continuar</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git merge --abort</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p><code>git pull</code> y <code>git push</code> son 2 casos especiales de merge. En el primero se hace merge de una rama remota sobre una local. En el segundo se hace a la inversa, <strong><em>siempre y cuando el merge sea <code>fast-forward</code></em></strong> (de lo contrario se para la ejecución)</p>
+</blockquote>
+
+<dl>
+  <dt>Forzar push sobre remoto (¡muy peligroso!)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git push --force</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Útil cuando se necesita subir lo que tenemos en local a remoto pero <code>git push</code> no nos deja porque las ramas local y remoto tienen divergencias. Peligro: ¡Se sobreescribirá todo lo que haya en remoto!</p>
+</blockquote>
+
+<dl>
+  <dt>Forzar pull sobre local (¡muy peligroso!)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git fetch --all
+<span class="nv">$ </span>git reset --hard origin/master
+<span class="nv">$ </span>git checkout master</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Esto es útil cuando se ha hecho push –force anteriormente y necesitemos recuperar exactamente lo que tengamos en remoto. Peligro: ¡Se sobreescribirá todo lo que haya en local!</p>
+</blockquote>
+
+<p class="center">
+   <img src="/merge.png" alt="Merge" title="Merge" />
+</p>
+
+<div class="center">Merge de la rama feature con master</div>
+<p>
+   <br />
+</p>
+
+<p>
+   <br />
+</p>
+
+<h3 id="rebase-y-pull-con-rebase">Rebase y Pull con rebase</h3>
+
+<blockquote>
+  <p>Se hace <code>git pull --rebase</code> para evitar merges “innecesarios” (aquellos que no estén mezclando líneas de trabajo distintas sino que sean simplemente producto de “timing” al hacer commit varios desarrolladores)</p>
+</blockquote>
+
+<dl>
+  <dt>Hacer “merge” de nuestra rama con <code>master</code> sin realizar un nuevo commit (merge commit)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git rebase master</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Para que esto sea posible nuestros commits se desplazan al final de la rama master, que se usa como base de nuestra rama.</p>
+</blockquote>
+
+<blockquote>
+  <p>El hecho de que la historia de nuestra rama continúe siendo lineal (sin merge commit) permite hacer merge con <code>fast-forward</code> sobre <code>master</code>.</p>
+</blockquote>
+
+<blockquote>
+  <p>Esto no solo nos permite integrar de forma lineal los cambios de cualquier rama con master, sino que también nos permite hacer lo mismo con <code>master</code> y su rama remota (la instrucción <code>git push</code> no es más que un “atajo” para hacer merge <code>fast-forward</code> con la rama remota).</p>
+</blockquote>
+
+<dl>
+  <dt>Obtener cambios de remoto e incorporar nuestros commits encima del resto de commits obtenidos</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git pull --rebase
+<span class="c"># lo anterior equivale a:</span>
+<span class="nv">$ </span>git fetch origin master
+<span class="nv">$ </span>git rebase origin/master</code></pre></div>
+  </dd>
+  <dt>Continuar con el <code>rebase</code> una vez solucionados los conflictos con <code>git mergetool</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git rebase --continue</code></pre></div>
+  </dd>
+  <dt>Abortar el <code>rebase</code> y volver a antes de su ejecución</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git rebase --abort</code></pre></div>
+  </dd>
+  <dt>Configurar <code>pull --rebase</code> por defecto para una rama específica</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git config branch.branch-name.rebase yes</code></pre></div>
+  </dd>
+  <dt>Configurar <code>pull --rebase</code> por defecto para ramas nuevas</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git config --global branch.autosetuprebase remote<span class="p">|</span><span class="nb">local</span><span class="p">|</span>always</code></pre></div>
+  </dd>
+</dl>
+
+<p class="center">
+   <img src="/rebase.png" alt="Rebase" title="Rebase" />
+</p>
+
+<div class="center">Rebase de la rama feature con master</div>
+<p>
+   <br />
+</p>
+
+<p>
+   <br />
+</p>
+
+<h3 id="edicin-de-commits">Edición de commits</h3>
+<blockquote>
+  <p>Idealmente cada commit debe tener un objetivo específico al subirlo a remoto. Mientras se trabaja se pueden subir commits temporales, pero antes de hacer push se deberían editar (corregir mensajes, unir commits, etc.)</p>
+</blockquote>
+
+<dl>
+  <dt>Cambiar el último commit borrando el commit anterior</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git commit --amend</code></pre></div>
+  </dd>
+  <dt>Rehacer el último commit borrado por accidente con amend</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git log -g
+<span class="nv">$ </span>git checkout &lt;commit_encontrado_con_historial_operaciones&gt;</code></pre></div>
+  </dd>
+  <dt>Deshechar los últimos n commits (p.61)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git log -g
+<span class="nv">$ </span>git reset HEAD~<span class="o">[</span>n<span class="o">]</span></code></pre></div>
+  </dd>
+  <dt>Deshacer commit añadiendo un nuevo commit, para que quede constancia en la historia (p.62)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git revert &lt;hash_commit&gt;</code></pre></div>
+  </dd>
+  <dt>Rehacer la historia de commits (reordenar, split, join, etc)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git rebase -i HEAD~n <span class="o">(</span>p.64<span class="o">)</span></code></pre></div>
+  </dd>
+  <dt>Aplicar commit específico como commit actual</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git cherry-pick <span class="o">(</span>p.181<span class="o">)</span></code></pre></div>
+  </dd>
+</dl>
+
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-5-5">Ramas</h2>
+
+<dl>
+  <dt>Crear una nueva rama que apunta al commit actual y cambiar a esta</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout -b &lt;nueva_rama&gt;</code></pre></div>
+  </dd>
+  <dt>O lo que es lo mismo</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git branch &lt;nueva_rama&gt;
+<span class="nv">$ </span>git checkout &lt;nueva_rama&gt;</code></pre></div>
+  </dd>
+  <dt>Crear una rama que comience en un commit particular y cambiar a esta</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout -b &lt;nueva_rama&gt; &lt;hash_commit&gt;</code></pre></div>
+  </dd>
+  <dt>O lo que es lo mismo</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout &lt;hash_commit&gt; <span class="o">(</span>detached HEAD mode, no existe ninguna rama apuntando a este commit<span class="o">)</span> <span class="o">(</span>p.74<span class="o">)</span>
+<span class="nv">$ </span>git checkout -b &lt;nueva_rama&gt;</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Si las ramas no difieren (cuando creamos una rama nueva o después de hacer un merge entre 2 ramas), git no machacará los cambios no comitados. Los mantendrá para que los podamos aplicarlos en la nueva rama.</p>
+</blockquote>
+
+<blockquote>
+  <p>Si las ramas difieren nos avisará para que realicemos commit o stash, o utilizar git checkout –merge para mezclar a 3, dejando el resultado en el <code>Working Tree</code> de la rama nueva (p.74)</p>
+</blockquote>
+
+<dl>
+  <dt>Borrar una rama</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git branch -d &lt;nombre_rama&gt;</code></pre></div>
+  </dd>
+  <dt>Forzar el borrado de una rama que no está completamente mergeada (p. 75)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git branch -D &lt;nombre_rama&gt;</code></pre></div>
+  </dd>
+  <dt>Ver rama upstream asociada a cada rama de nuestro repositorio</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git branch -vv <span class="o">(</span>muestra el estado desde el último fetch<span class="o">)</span>
+<span class="nv">$ </span>git remote show origin <span class="o">(</span>contactando con el remoto, más información<span class="o">)</span></code></pre></div>
+  </dd>
+  <dt>Subir una rama al repositorio remoto</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh">git push -u origin &lt;branch&gt;</code></pre></div>
+  </dd>
+  <dt>Borrar rama del repositorio remoto</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git push origin :rama_remoto</code></pre></div>
+  </dd>
+  <dt>Forzar borrado en el repositorio local de las ramas borradas mediante el comando anterior en el remoto (es decir, actualizar el borrado en local)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git fetch --prune</code></pre></div>
+  </dd>
+  <dt>Visualizar gráficamente el historial de las ramas</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo apt-get install gitg
+<span class="nv">$ </span>gitg</code></pre></div>
+  </dd>
+</dl>
+
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-5-6">Comparación de ficheros</h2>
+
+<h3 id="comparacin-entre-ramas">Comparación entre “ramas”</h3>
+
+<dl>
+  <dt>Comparación entre <code>Working Tree</code> y <code>Index</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git difftool</code></pre></div>
+  </dd>
+  <dt>Comparación entre <code>Index</code> y <code>HEAD</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git difftool --staged</code></pre></div>
+  </dd>
+  <dt>Comparación entre <code>Working Tree</code> y <code>HEAD</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git difftool HEAD</code></pre></div>
+  </dd>
+  <dt>Comparación entre <code>Working Tree</code> y remoto</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git difftool origin/master</code></pre></div>
+  </dd>
+  <dt>Comparación entre branches</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git difftool origin/master origin/branch1</code></pre></div>
+  </dd>
+</dl>
+
+<h3 id="comparacin-entre-commits">Comparación entre commits</h3>
+
+<dl>
+  <dt>Ver todos los commits del repositorio actual</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git log <span class="o">[</span>-p<span class="o">]</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>El parámetro <code>-p</code> (patch) muestra los cambios del commit</p>
+</blockquote>
+
+<dl>
+  <dt>Ver todos los commits de un fichero específico</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git log <span class="o">[</span>--follow<span class="o">]</span> <span class="o">[</span>-p<span class="o">]</span> &lt;fichero&gt;</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>El parámetro <code>--follow</code> hace seguimiento de los cambios de un fichero incluso cuando este es renombrado</p>
+</blockquote>
+
+<dl>
+  <dt>Comparar entre el <code>Working Tree</code> y un commit anterior</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git difftool &lt;hash_commit_anterior&gt;</code></pre></div>
+  </dd>
+  <dt>Comparación entre 2 commits</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git difftool &lt;hash_commit1&gt; &lt;hash_commit2&gt;</code></pre></div>
+  </dd>
+</dl>
+
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-5-7">Stash</h2>
+
+<h3 id="save-stash">Save stash</h3>
+<dl>
+  <dt>Save stash restoring <code>Working Tree</code> with last commit</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git stash save <span class="o">[</span>&lt;message&gt;<span class="o">]</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Same as git stash (if you want to provide message <code>save</code> is mandatory)</p>
+</blockquote>
+
+<blockquote>
+  <p>Saving stash implies <code>git reset --hard</code></p>
+</blockquote>
+
+<dl>
+  <dt>Save stash but keep <code>Index</code> intact</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git stash save --keep-index</code></pre></div>
+  </dd>
+  <dt>Save stash including untracked files</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git stash save --include-untracked</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>When stashing untracked files <code>git clean</code> is executed removing untracked files from <code>Working Tree</code></p>
+</blockquote>
+
+<blockquote>
+  <p>Use <code>--all</code> to stash and remove also ignored files</p>
+</blockquote>
+
+<h3 id="restore-stash-on-working-tree">Restore stash on Working Tree</h3>
+<dl>
+  <dt>Restore stash but don’t drop stashed state</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git stash apply <span class="o">[</span>--index<span class="o">]</span> <span class="o">[</span>&lt;stashref&gt;<span class="o">]</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Use <code>git stash list</code> to show stashes refs than can be applied and <code>git stash show</code> to see the changes</p>
+</blockquote>
+
+<blockquote>
+  <p>Restore also <code>Index</code> (if possible) with the <code>--index</code> option</p>
+</blockquote>
+
+<dl>
+  <dt>Restore stash and drop stashed state</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git stash pop <span class="o">[</span>--index<span class="o">]</span> <span class="o">[</span>&lt;stashref&gt;<span class="o">]</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>If there are conflicts stash is not removed. Resolve and remove manually (see below)</p>
+</blockquote>
+
+<h3 id="removing-stashes">Removing stashes</h3>
+<dl>
+  <dt>Remove last stash (or the stash specified)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git stash drop <span class="o">[</span>&lt;stashref&gt;<span class="o">]</span></code></pre></div>
+  </dd>
+  <dt>Remove all stashes</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git clear</code></pre></div>
+  </dd>
+</dl>
+
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-5-8">Tags</h2>
+
+<dl>
+  <dt>Creating annotated tag (with extra info that lightweight tags don’t have)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git tag -a &lt;tagname&gt; -m <span class="s2">"my tag message"</span></code></pre></div>
+  </dd>
+  <dt>Tagging a specific commit</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git tag -a &lt;tagname&gt; <span class="o">[</span>&lt;commit_hash&gt;<span class="o">]</span></code></pre></div>
+  </dd>
+  <dt>Publishing tags</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># publishing specific tag</span>
+<span class="nv">$ </span>git push origin <span class="o">[</span>tagname<span class="o">]</span>
+<span class="c"># publishing all tags</span>
+<span class="nv">$ </span>git push origin --tags</code></pre></div>
+  </dd>
+  <dt>Obtaining remote tags</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git fetch --tags</code></pre></div>
+  </dd>
+  <dt>Deleting tag</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># deleting tag from local repo</span>
+git tag -d &lt;tagname&gt;
+<span class="c"># deleting tag from remote</span>
+git push origin :refs/tags/&lt;tagname&gt;</code></pre></div>
+  </dd>
+  <dt>Creating branch at a specific tag</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh">git checkout -b &lt;branchname&gt; &lt;tagname&gt;</code></pre></div>
+  </dd>
+  <dt>Creating archive from tag</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh">git archive -o &lt;filename&gt;.tar.gz &lt;tagname&gt;
+<span class="c"># creating archive from last commit on current branch</span>
+git archive -o latest.zip HEAD</code></pre></div>
+  </dd>
+</dl>
+
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-5-9">Submodules</h2>
+
+<dl>
+  <dt>Add submodule</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git submodule add &lt;repo_url&gt;</code></pre></div>
+  </dd>
+  <dt>Remove Submodule</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># delete the relevant section from the .gitmodules file at the root of the parent project</span>
+<span class="nv">$ </span>git add .gitmodules
+<span class="c"># delete the relevant section from the config file located in the .git directory at the root of the project</span>
+<span class="nv">$ </span>git rm --cached path/to/submodule
+<span class="nv">$ </span>rm -rf .git/modules/submodule_name
+<span class="nv">$ </span>git commit -m <span class="s2">"Removed &lt;vendor&gt; submodule."</span> <span class="c"># only necessary if submodule was comitted</span>
+<span class="nv">$ </span>rm -rf path/to/submodule</code></pre></div>
+  </dd>
+  <dt>Update to fixed commit (on main repo) of submodules</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># update submodules</span>
+<span class="nv">$ </span>git submodule update --init --recursive</code></pre></div>
+  </dd>
+  <dt>Pull in the changes from main repo and submodules</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git pull --recurse-submodules</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>This is the same as: <code>git pull</code> + <code>submodule update</code></p>
+</blockquote>
+
+<dl>
+  <dt>Upgrade specific submodule to last commit</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span><span class="nb">cd </span>bundle/&lt;plugin&gt;
+<span class="nv">$ </span>git pull origin master</code></pre></div>
+  </dd>
+  <dt>Upgrade all submodules of the current repo to their last commit</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git submodule foreach git pull origin master</code></pre></div>
+  </dd>
+</dl>
+
+<p>
+   <br />
+</p>
+
+<h2 id="tocAnchor-1-5-10">Ignorar ficheros</h2>
+
+<dl>
+  <dt>Ficheros <code>.gitignore</code> con los ficheros a ignorar (ver sintáxis en p.44)</dt>
+  <dd>Se pueden colocar en todo el <code>Working Tree</code> (si se comitean se comparten ficheros ignorados)</dd>
+  <dt>Ignorar ficheros por repositorio (no se comparten ignores con nadie)</dt>
+  <dd>Fichero <code>.git/info/exclude</code></dd>
+  <dt>Fichero de configuración con ignores (se puede compartir fichero entre varios repositorios de la misma máquina)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git config --global core.excludesfile ~/.gitignore</code></pre></div>
+  </dd>
+  <dt>Ignorar cambios en ficheros tracked (todos los anteriores son para ficheros untracked)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git update-index --assume-unchanged</code></pre></div>
+  </dd>
+</dl>
+
+
+  <br />
+  <blockquote>
+      <p><strong>Last updated: <time datetime="2016-09-14T12:12:38+00:00" class="page-date">14 Sep 2016</time></strong></p>
+  </blockquote>
+</article>
+
+<aside class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+         
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/apps">
+                            Packages
+                            <small><time datetime="2016-10-08T14:13:58+00:00">08 Oct 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/repos">
+                            Repositories
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/linuxcommands">
+                            Desktop/general commands
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/shellscripting">
+                            Shell-scripting snippets
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/zsh">
+                            Zsh setup
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/tmux">
+                            Tmux basics
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/my scripts">
+                            Useful scripts
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/gitconfig">
+                            My Git configuration
+                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+            
+        
+        
+
+        
+            
+                
+                <li>
+                    <h3>
+                        <a href="/bash commands">
+                            Bash/UNIX commands
+                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                        </a>
+                    </h3>
+                </li>
+                
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+
+        
+            
+        
+        
+        
+        
+  </ul>
+</aside>
+
+
+      </main>
+     <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+          <!-- <h2 class="footer-heading"> <a href="https://github.com/johgh/johgh.io-source"> <i class="fa fa-github"></i> Cheat-Sheets</a></h2> -->
+        <ul class="contact-list">
+          <li><a href="mailto:"></a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<a href="#0" class="cd-top">Top</a>
+<script src="/scripts/backtotop.js"></script>
+
+<script>
+$(function() {
+  $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+
+  /*
+  $(document).on('click', '.back', function(e){
+    e.preventDefault()
+  });
+  */
+});
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66389589-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+
+  </body>
+</html>
