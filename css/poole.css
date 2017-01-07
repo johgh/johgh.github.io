@@ -53,10 +53,24 @@ html {
   font-size: 16px;
   line-height: 1.5;
 }
+
+
 @media (min-width: 38em) {
-  html {
-    font-size: 20px;
-  }
+    .cols {
+        width: 80%;
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+        -webkit-column-gap: 0px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 0px; /* Firefox */
+        column-gap: 0px;
+        -webkit-column-rule: 1px dashed #afafaf; /* Chrome, Safari, Opera */
+        -moz-column-rule: 1px dashed #afafaf; /* Firefox */
+        column-rule: 1px dashed #afafaf;
+        margin-bottom:2.5em;
+    }
+
+
 }
 
 body {
@@ -340,6 +354,7 @@ tbody tr:nth-child(odd) th {
 .page,
 .post {
   margin-bottom: 4em;
+  font-size: 13pt;
 }
 
 /* Blog post or page title */

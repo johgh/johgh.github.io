@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    Javascript <> GeekStuff.gq — My cheat sheets site
+    
+  </title>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="canonical" href="http://cheat-sheets.tk/javascript">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400|Montserrat:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" media="screen" href="/css/toc.css">
+    <link rel="stylesheet" media="screen" href="/css/select2.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.grey.min.css">
+
+    <script src="/scripts/jquery-2.1.4.min.js"></script>
+    
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet"> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script> -->
+    
+    <script src="/scripts/jquery.tablesorter.min.js"></script>
+    <script src="/scripts/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/widget-filter-formatter-select2.min.js"></script>
+    <script src="/scripts/jquery.tocLight.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+          $.toc.clickHideButton();
+        });
+  </script>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="GeekStuff.gq — My cheat sheets site" href="atom.xml">
+</head>
+
+
+
+  <body>
+    <div class="container content">
+        <header class="site-header">
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/"> 
+          <span class="main-title">
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat" style="font-weight: bold;">Geek</span><span style="font-weight: 200">Stuff</span><i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fab fa-pied-piper-hat"></i><span style="font-size: 30px; "><span style="font-weight:100; color: #5d5d5d">gq</span></span>
+                    
+          </span>
+      </a>
+
+      <!-- <a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a> -->
+      <!-- <a style="float:right; margin-top: 10px;"  href="/bookmarks"><i class="fas fa-bookmark"></i></a>&nbsp;&nbsp; -->
+      <!-- <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a> -->
+
+  </div>
+    <!-- <style> -->
+    <!--     /* The default background color is #c00 */ -->
+    <!--     .right-bottom .github-fork-ribbon { -->
+    <!--         background-color: #2A7AE2; -->
+    <!--     } -->
+
+    <!--     .right .github-fork-ribbon { -->
+    <!--         background-color: #f80; -->
+    <!--     } -->
+
+    <!--     .left-bottom .github-fork-ribbon { -->
+    <!--         background-color: #333; -->
+    <!--     } -->
+    <!-- </style> -->
+    
+    <!-- <div class="github-fork-ribbon-wrapper right-bottom"> -->
+    <!--     <div class="github-fork-ribbon"> -->
+    <!--         <a href="https://github.com/johgh/johgh.io-source">Fork me on GitHub</a> -->
+    <!--     </div> -->
+    <!-- </div> -->
+</header>
+
+      <header class="masthead">
+      </header>
+      <main>
+        <div class="post">
+
+<br />
+<article class="post">
+  <h1 class="post-title"><a href="/webdev" class="back"><i class="fa fa-arrow-left"></i></a> Javascript</h1>
+  <br />
+  <div id="toc-container">
+   <table class="toc" id="toc">
+      <tbody>
+         <tr>
+            <td>
+               <div id="toctitle">
+                  <h2>Contents</h2>
+                  <span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">hide</a>]</span>
+               </div>
+               <ul>
+                  <li class="toc_level-1 toc_section-1">
+                     <a href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">Basic</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-2">
+                     <a href="#tocAnchor-1-2"><span class="tocnumber">2</span> <span class="toctext">DOM</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-3">
+                     <a href="#tocAnchor-1-3"><span class="tocnumber">3</span> <span class="toctext">Events</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-4">
+                     <a href="#tocAnchor-1-4"><span class="tocnumber">4</span> <span class="toctext">Ajax and JSON</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-5">
+                     <a href="#tocAnchor-1-5"><span class="tocnumber">5</span> <span class="toctext">LocalStorage and sessionStorage</span></a>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div><blockquote>
+  <p>For a full javascript reference, see: <a href="https://www.w3schools.com/jsref/">w3schools.com/jsref</a></p>
+</blockquote>
+
+<h1 id="tocAnchor-1-1">Basic</h1>
+
+<dl>
+  <dt>Declaration / initialization / assignment</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// declaration</span>
+<span class="kd">var</span> <span class="nx">surname</span><span class="p">;</span>
+<span class="c1">// declaration and assignment</span>
+<span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">"Tom"</span><span class="p">;</span>
+<span class="c1">// assignment</span>
+<span class="nx">name</span> <span class="o">=</span> <span class="s2">"Andy"</span><span class="p">;</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Note: undeclared variables are available globally</p>
+</blockquote>
+
+<dl>
+  <dt>Logic</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="mf">15.234</span> <span class="o">===</span> <span class="mf">15.234</span> <span class="c1">// true</span>
+<span class="s1">'10'</span> <span class="o">===</span> <span class="mi">10</span> <span class="c1">// false</span></code></pre></div>
+  </dd>
+  <dt>Loops</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span class="kd">var</span> <span class="nx">object1</span> <span class="o">=</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">};</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">property1</span> <span class="k">in</span> <span class="nx">object1</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">object1</span><span class="p">[</span><span class="nx">property1</span><span class="p">]);</span> <span class="p">}</span></code></pre></div>
+  </dd>
+  <dt>Creating function</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span> <span class="p">};</span></code></pre></div>
+  </dd>
+  <dt>Closures (function that returns function)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span> <span class="c1">// inner function has access to outer function variables (scoping rules)</span>
+    <span class="p">};</span>
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">addFive</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">addFive</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span></code></pre></div>
+  </dd>
+  <dt>Creating object</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">jedi</span> <span class="o">=</span> <span class="p">{</span>
+<span class="nx">name</span><span class="o">:</span> <span class="s2">"Yoda"</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">899</span><span class="p">,</span>
+    <span class="nx">talk</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">"another... Sky... walk..."</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="c1">// modifying object after creation</span>
+<span class="kd">var</span> <span class="nx">dog</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="nx">dog</span><span class="p">.</span><span class="nx">bark</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">"Woof!"</span><span class="p">);</span> <span class="p">};</span></code></pre></div>
+  </dd>
+  <dt>Arrays</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kd">var</span> <span class="nx">shoppingList</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Milk'</span><span class="p">,</span> <span class="s1">'Bread'</span><span class="p">,</span> <span class="s1">'Beans'</span><span class="p">];</span>
+<span class="nx">shoppingList</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="nx">shoppingList</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="nx">shoppingList</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">'A new car'</span><span class="p">);</span> <span class="nx">shoppingList</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span></code></pre></div>
+  </dd>
+  <dt>Defining complex data structures mixing objects and arrays</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">scales</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'Ionian'</span><span class="o">:</span> <span class="p">{</span><span class="s1">'form'</span><span class="o">:</span> <span class="p">[</span><span class="s1">'1'</span><span class="p">,</span><span class="s1">'2'</span><span class="p">,</span><span class="s1">'3'</span><span class="p">,</span><span class="s1">'4'</span><span class="p">,</span><span class="s1">'5'</span><span class="p">,</span><span class="s1">'6'</span><span class="p">,</span><span class="s1">'7'</span><span class="p">],</span> <span class="s1">'quality'</span><span class="o">:</span> <span class="s1">'major'</span><span class="p">},</span>
+    <span class="s1">'Dorian'</span><span class="o">:</span> <span class="p">{</span><span class="s1">'form'</span><span class="o">:</span> <span class="p">[</span><span class="s1">'1'</span><span class="p">,</span><span class="s1">'2'</span><span class="p">,</span><span class="s1">'♭3'</span><span class="p">,</span><span class="s1">'4'</span><span class="p">,</span><span class="s1">'5'</span><span class="p">,</span><span class="s1">'6'</span><span class="p">,</span><span class="s1">'♭7'</span><span class="p">],</span> <span class="s1">'quality'</span><span class="o">:</span> <span class="s1">'minor'</span><span class="p">},</span>
+    <span class="s1">'Phyrgian'</span><span class="o">:</span> <span class="p">{</span><span class="s1">'form'</span><span class="o">:</span> <span class="p">[</span><span class="s1">'1'</span><span class="p">,</span><span class="s1">'♭2'</span><span class="p">,</span><span class="s1">'♭3'</span><span class="p">,</span><span class="s1">'4'</span><span class="p">,</span><span class="s1">'5'</span><span class="p">,</span><span class="s1">'♭6'</span><span class="p">,</span><span class="s1">'♭7'</span><span class="p">],</span> <span class="s1">'quality'</span><span class="o">:</span> <span class="s1">'minor'</span><span class="p">},</span>
+    <span class="s1">'Lydian'</span><span class="o">:</span> <span class="p">{</span><span class="s1">'form'</span><span class="o">:</span> <span class="p">[</span><span class="s1">'1'</span><span class="p">,</span><span class="s1">'2'</span><span class="p">,</span><span class="s1">'3'</span><span class="p">,</span><span class="s1">'♯4'</span><span class="p">,</span><span class="s1">'5'</span><span class="p">,</span><span class="s1">'6'</span><span class="p">,</span><span class="s1">'7'</span><span class="p">],</span> <span class="s1">'quality'</span><span class="o">:</span> <span class="s1">'major'</span><span class="p">},</span>
+    <span class="s1">'Mixolydian'</span><span class="o">:</span> <span class="p">{</span><span class="s1">'form'</span><span class="o">:</span> <span class="p">[</span><span class="s1">'1'</span><span class="p">,</span><span class="s1">'2'</span><span class="p">,</span><span class="s1">'3'</span><span class="p">,</span><span class="s1">'4'</span><span class="p">,</span><span class="s1">'5'</span><span class="p">,</span><span class="s1">'6'</span><span class="p">,</span><span class="s1">'♭7'</span><span class="p">],</span> <span class="s1">'quality'</span><span class="o">:</span> <span class="s1">'dominant'</span><span class="p">},</span>
+    <span class="s1">'Aeolian'</span><span class="o">:</span> <span class="p">{</span><span class="s1">'form'</span><span class="o">:</span> <span class="p">[</span><span class="s1">'1'</span><span class="p">,</span><span class="s1">'2'</span><span class="p">,</span><span class="s1">'♭3'</span><span class="p">,</span><span class="s1">'4'</span><span class="p">,</span><span class="s1">'5'</span><span class="p">,</span><span class="s1">'♭6'</span><span class="p">,</span><span class="s1">'♭7'</span><span class="p">],</span> <span class="s1">'quality'</span><span class="o">:</span> <span class="s1">'minor'</span><span class="p">},</span>
+    <span class="s1">'Locrian'</span><span class="o">:</span> <span class="p">{</span><span class="s1">'form'</span><span class="o">:</span> <span class="p">[</span><span class="s1">'1'</span><span class="p">,</span><span class="s1">'♭2'</span><span class="p">,</span><span class="s1">'♭3'</span><span class="p">,</span><span class="s1">'4'</span><span class="p">,</span><span class="s1">'♭5'</span><span class="p">,</span><span class="s1">'♭6'</span><span class="p">,</span><span class="s1">'♭7'</span><span class="p">],</span> <span class="s1">'quality'</span><span class="o">:</span> <span class="s1">'diminished'</span><span class="p">}</span>
+    <span class="p">}</span></code></pre></div>
+  </dd>
+  <dt>Altering object</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">arrchordsurl</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="nx">arrchordsurl</span><span class="p">[</span><span class="nx">id</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="nx">arrchordsurl</span><span class="p">[</span><span class="nx">id</span><span class="p">].</span><span class="nx">key</span> <span class="o">=</span> <span class="nx">key</span><span class="p">;</span></code></pre></div>
+  </dd>
+  <dt>Check if some variable is set</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="kd">var</span> <span class="o">!=</span> <span class="s1">'undefined'</span><span class="p">)</span> <span class="p">{</span></code></pre></div>
+  </dd>
+  <dt>String/array manipulation</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// replace function converts text to "something and something"</span>
+<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">"Everything and nothing."</span><span class="p">;</span>
+<span class="nx">text</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/(every|no)thing/gi</span><span class="p">,</span> <span class="s2">"something"</span><span class="p">);</span>
+<span class="c1">// split function</span>
+<span class="kd">var</span> <span class="nx">arrFingers</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">fing</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/[ ,]+/</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">currentPage</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">"."</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">"/"</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1">// join array into string</span>
+<span class="kd">var</span> <span class="nx">tonesJoin</span> <span class="o">=</span> <span class="nx">extraData</span><span class="p">.</span><span class="nx">fretTones</span><span class="p">.</span><span class="nx">join</span><span class="p">();</span>
+<span class="c1">// normalize string (no accents, etc)</span>
+<span class="nx">str</span><span class="p">.</span><span class="nx">normalize</span><span class="p">(</span><span class="s1">'NFD'</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[\u0300-\u036f]/g</span><span class="p">,</span> <span class="s2">""</span><span class="p">).</span><span class="nx">toLowerCase</span><span class="p">();</span></code></pre></div>
+  </dd>
+  <dt>Math</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// convert string to int and perform modulus</span>
+<span class="kd">var</span> <span class="nx">tonesvalue</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">tones</span><span class="p">[</span><span class="nx">value</span><span class="p">])</span><span class="o">%</span><span class="mi">12</span><span class="p">;</span></code></pre></div>
+  </dd>
+  <dt>isNumber</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">isNumber</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="o">!</span><span class="nb">isNaN</span><span class="p">(</span><span class="o">+</span><span class="nx">n</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nb">isFinite</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">}</span></code></pre></div>
+  </dd>
+  <dt>Pass server side var to javascript (php)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="o">&lt;?</span><span class="nx">php</span> <span class="nx">echo</span> <span class="nx">json_encode</span><span class="p">(</span><span class="nx">$php_variable</span><span class="p">);</span> <span class="o">?&gt;</span><span class="p">;</span></code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="tocAnchor-1-2">DOM</h1>
+
+<dl>
+  <dt>Retrieve element</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">pageHeader</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'page-header'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">pageHeader</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#header'</span><span class="p">);</span> <span class="c1">// returns only one element, if multiple match selector, only the first will be returned</span></code></pre></div>
+  </dd>
+  <dt>Retrieve NodeList (array of DOM elements)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span>
+<span class="kd">var</span> <span class="nx">buttons</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(.</span><span class="nx">btn</span><span class="p">);</span></code></pre></div>
+  </dd>
+  <dt>DOM manipulation</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'div'</span><span class="p">);</span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">"Sup, y'all?"</span><span class="p">;</span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'class'</span><span class="p">,</span> <span class="s1">'note'</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">div</span><span class="p">);</span>
+
+<span class="nx">div</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">div</span><span class="p">);</span></code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="tocAnchor-1-3">Events</h1>
+
+<dl>
+  <dt>Click event</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">handleClick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// do something! };</span>
+<span class="kd">var</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#big-button'</span><span class="p">);</span>
+<span class="nx">button</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="nx">handleClick</span><span class="p">);</span></code></pre></div>
+  </dd>
+  <dt>Submit event (one-liner)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"addtask_form"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"submit"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">jobName</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"form_name"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+    <span class="cm">/* do something; */</span>
+    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="p">});</span></code></pre></div>
+  </dd>
+  <dt>DOM loaded and ready (jQuery $(function() {…}))</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'DOMContentLoaded'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<span class="c1">// do something</span>
+<span class="p">};);</span></code></pre></div>
+  </dd>
+  <dt>Page fully loaded (jQuery $(window).load(function() {…})</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span> <span class="nx">doSomething</span><span class="p">);</span></code></pre></div>
+  </dd>
+  <dt>Copy text to clipboard</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// &lt;input type="text" value="Hello World" id="myInput"&gt;</span>
+<span class="c1">// &lt;button onclick="copyToClipboard()"&gt;Copy text&lt;/button&gt;</span>
+<span class="kd">function</span> <span class="nx">copyToClipboard</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">copyText</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"myInput"</span><span class="p">);</span>
+  <span class="nx">copyText</span><span class="p">.</span><span class="nx">select</span><span class="p">();</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">execCommand</span><span class="p">(</span><span class="s2">"copy"</span><span class="p">);</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s2">"Copied the text: "</span> <span class="o">+</span> <span class="nx">copyText</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="tocAnchor-1-4">Ajax and JSON</h1>
+
+<dl>
+  <dt>Ajax call</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">xhttp</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="nx">xhttp</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+<span class="nx">xhttp</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="s2">"file.txt"</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+<span class="nx">xhttp</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span></code></pre></div>
+  </dd>
+  <dt>Convert js object into JSON</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">jsonString</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+    <span class="nx">make</span><span class="o">:</span> <span class="s2">"McLaren"</span><span class="p">,</span>
+    <span class="nx">model</span><span class="o">:</span> <span class="s2">"MP4-12C"</span><span class="p">,</span>
+    <span class="nx">miles</span><span class="o">:</span> <span class="mi">5023</span>
+<span class="p">});</span></code></pre></div>
+  </dd>
+  <dt>Convert string into js object </dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">car</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">jsonString</span><span class="p">);</span>
+<span class="c1">// and set property</span>
+<span class="nx">car</span><span class="p">.</span><span class="nx">model</span> <span class="o">=</span> <span class="s2">"P1"</span><span class="p">;</span></code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="tocAnchor-1-5">LocalStorage and sessionStorage</h1>
+
+<dl>
+  <dt>Store and retrieve data from sessionStorage and localStorage</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">'key'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">'key'</span><span class="p">);</span></code></pre></div>
+  </dd>
+  <dt>LocalStorage and SessionStorage only saves string, use json to save objects</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">'user'</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+    <span class="nx">username</span><span class="o">:</span> <span class="s1">'htmldog'</span><span class="p">,</span>
+    <span class="nx">api_key</span><span class="o">:</span> <span class="s1">'abc123xyz789'</span>
+<span class="p">}));</span>
+
+<span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">'user'</span><span class="p">));</span></code></pre></div>
+  </dd>
+  <dt>Clear and removeItem from localStorage and sessionStorage</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">localStorage</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s1">'user'</span><span class="p">);</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Note: LocalStorage data doesn’t expire like SessionStorage data, that only lasts while browser is open</p>
+</blockquote>
+
+  <br />
+  <blockquote>
+      <p><strong>Last updated: <time datetime="2018-09-10T21:52:16+00:00" class="page-date">10 Sep 2018</time></strong></p>
+  </blockquote>
+</article>
+
+
+
+<aside class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+        
+
+        
+
+            
+                
+            
+        
+
+            
+        
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/bdchanges">
+                                        Scripts de actualización de cambios de Base de Datos
+                                        <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
+        
+
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/jquery">
+                                        Jquery
+                                        <small><time datetime="2018-09-10T21:52:16+00:00">10 Sep 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
+        
+
+            
+                
+                    
+                    
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/bower">
+                                        Bower
+                                        <small><time datetime="2017-02-17T22:41:24+00:00">17 Feb 2017</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
+        
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/bootstrap">
+                                        Bootstrap
+                                        <small><time datetime="2017-11-26T18:19:11+00:00">26 Nov 2017</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
+        
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/apache">
+                                        Apache
+                                        <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/mysql">
+                                        Mysql
+                                        <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/php">
+                                        PHP
+                                        <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/apuntesphp">
+                                        PHP. Apuntes
+                                        <small><time datetime="2018-11-24T16:24:46+00:00">24 Nov 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+        
+        
+        
+  </ul>
+</aside>
+
+
+
+      </main>
+     <footer class="site-footer">
+
+  <div class="wrapper">
+
+    
+      <div style="float: left; margin-left: 25px">
+          <a href="/bookmarks"><i class="fas fa-bookmark"></i> bookmarks</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/sitemap"><i class="fas fa-sitemap"></i> sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/about"><i class="fas fa-user-astronaut"></i> about</a>
+          <!-- <div><a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a></div><br /> -->
+      </div>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+          <!-- <h2 class="footer-heading"> <a href="https://github.com/johgh/johgh.io-source"> <i class="fa fa-github"></i> Cheat-Sheets</a></h2> -->
+        <ul class="contact-list">
+          <li><a href="mailto:"></a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span class="ccby">jordihv at gmail.com</span><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<a href="#0" class="cd-top">Top</a>
+<script src="/scripts/backtotop.js"></script>
+
+<script>
+$(function() {
+  $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+
+  /*
+  $(document).on('click', '.back', function(e){
+    e.preventDefault()
+  });
+  */
+});
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66389589-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+
+  </body>
+</html>

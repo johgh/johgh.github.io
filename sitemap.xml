@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://cheat-sheets.tk/phps</loc>
+    <lastmod>2018-11-24T16:42:57+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://cheat-sheets.tk/krypto</loc>
+    <lastmod>2018-09-20T20:57:06+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://cheat-sheets.tk/bdchanges</loc>
     <lastmod>2016-09-14T11:05:53+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://cheat-sheets.tk/software-libre-q&a</loc>
-    <lastmod>2016-09-14T11:05:53+00:00</lastmod>
+    <loc>http://cheat-sheets.tk/software-libre</loc>
+    <lastmod>2018-09-16T20:39:26+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/symfony</loc>
-    <lastmod>2016-09-01T21:34:33+00:00</lastmod>
+    <lastmod>2018-09-16T20:39:26+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/apps</loc>
-    <lastmod>2016-10-08T14:13:58+00:00</lastmod>
+    <lastmod>2018-09-10T21:52:16+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/repos</loc>
-    <lastmod>2016-09-01T21:34:33+00:00</lastmod>
+    <lastmod>2018-09-10T21:52:16+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -31,18 +41,33 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>http://cheat-sheets.tk/laravel</loc>
+    <lastmod>2018-09-16T20:39:26+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://cheat-sheets.tk/jquery</loc>
-    <lastmod>2016-09-01T21:34:33+00:00</lastmod>
+    <lastmod>2018-09-10T21:52:16+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://cheat-sheets.tk/javascript</loc>
+    <lastmod>2018-09-10T21:52:16+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/linuxcommands</loc>
-    <lastmod>2016-09-01T21:34:33+00:00</lastmod>
+    <lastmod>2018-11-24T15:43:30+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://cheat-sheets.tk/bower</loc>
+    <lastmod>2017-02-17T22:41:24+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/bootstrap</loc>
-    <lastmod>2016-09-01T21:34:33+00:00</lastmod>
+    <lastmod>2017-11-26T18:19:11+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -52,22 +77,27 @@
   </url>
   <url>
     <loc>http://cheat-sheets.tk/vimrc</loc>
-    <lastmod>2016-09-01T21:34:33+00:00</lastmod>
+    <lastmod>2018-10-05T17:18:32+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/vim</loc>
-    <lastmod>2016-09-01T21:34:33+00:00</lastmod>
+    <lastmod>2018-09-16T20:39:26+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/git</loc>
-    <lastmod>2016-09-14T12:12:38+00:00</lastmod>
+    <lastmod>2018-10-05T17:10:25+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://cheat-sheets.tk/git-workflows</loc>
+    <lastmod>2018-09-16T09:09:37+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/twig</loc>
-    <lastmod>2016-09-01T21:34:33+00:00</lastmod>
+    <lastmod>2018-09-16T20:39:26+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -76,8 +106,13 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>http://cheat-sheets.tk/eloquent-orm</loc>
+    <lastmod>2018-09-16T20:39:26+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://cheat-sheets.tk/doctrinedbal</loc>
-    <lastmod>2016-09-01T21:34:33+00:00</lastmod>
+    <lastmod>2018-09-16T20:39:26+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -102,22 +137,22 @@
   </url>
   <url>
     <loc>http://cheat-sheets.tk/apuntesphp</loc>
-    <lastmod>2016-09-14T11:05:53+00:00</lastmod>
+    <lastmod>2018-11-24T16:24:46+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/my scripts</loc>
-    <lastmod>2016-09-14T11:05:53+00:00</lastmod>
+    <lastmod>2018-09-16T20:39:26+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/gitconfig</loc>
-    <lastmod>2016-09-14T11:05:53+00:00</lastmod>
+    <lastmod>2018-09-16T20:39:26+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/bash commands</loc>
-    <lastmod>2016-09-01T21:34:33+00:00</lastmod>
+    <lastmod>2018-11-24T15:52:45+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -186,6 +221,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>http://cheat-sheets.tk/musicranking.html</loc>
+    <lastmod>2017-01-31T16:01:21+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://cheat-sheets.tk/tabs/metallica-nothingelsematters.html</loc>
     <lastmod>2016-09-01T21:34:33+00:00</lastmod>
     <priority>0.8</priority>
@@ -251,11 +291,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://cheat-sheets.tk/chordbook/chords.html</loc>
-    <lastmod>2016-09-01T21:34:33+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>http://cheat-sheets.tk/tabs2/cash-i-walk-the-line.html</loc>
     <lastmod>2016-09-01T21:34:33+00:00</lastmod>
     <priority>0.8</priority>
@@ -281,68 +316,67 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>http://cheat-sheets.tk/about</loc>
+    <lastmod>2018-10-05T16:11:32+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://cheat-sheets.tk/</loc>
-    <lastmod>2016-10-08T14:21:45+00:00</lastmod>
+    <lastmod>2018-11-24T16:53:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://cheat-sheets.tk/tags/</loc>
-    <lastmod>2016-10-08T14:21:45+00:00</lastmod>
+    <loc>http://cheat-sheets.tk/sitemap/</loc>
+    <lastmod>2018-11-24T16:53:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/bookmarks/</loc>
-    <lastmod>2016-10-08T14:21:45+00:00</lastmod>
+    <lastmod>2018-11-24T16:53:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/tabs/</loc>
-    <lastmod>2016-10-08T14:21:45+00:00</lastmod>
+    <lastmod>2018-11-24T16:53:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/tabs2/</loc>
-    <lastmod>2016-10-08T14:21:45+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://cheat-sheets.tk/chordbook/</loc>
-    <lastmod>2016-10-08T14:21:45+00:00</lastmod>
+    <lastmod>2018-11-24T16:53:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/terminal/</loc>
-    <lastmod>2016-10-08T14:21:45+00:00</lastmod>
+    <lastmod>2018-11-24T16:53:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/blog/</loc>
-    <lastmod>2016-10-08T14:21:45+00:00</lastmod>
+    <lastmod>2018-11-24T16:53:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/webdev/</loc>
-    <lastmod>2016-10-08T14:21:45+00:00</lastmod>
+    <lastmod>2018-11-24T16:53:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/quick guides/</loc>
-    <lastmod>2016-10-08T14:21:45+00:00</lastmod>
+    <lastmod>2018-11-24T16:53:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://cheat-sheets.tk/gnu/linux/</loc>
-    <lastmod>2016-10-08T14:21:45+00:00</lastmod>
+    <lastmod>2018-11-24T16:53:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -10,7 +10,7 @@
 
   <title>
     
-    Git (Quick Guide) <> Cheat-sheets.tk
+    Git quick guide <> GeekStuff.gq — My cheat sheets site
     
   </title>
 
@@ -21,8 +21,10 @@
     <link rel="stylesheet" href="/css/backtotop.css">
     <link rel="canonical" href="http://cheat-sheets.tk/git">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400|Montserrat:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
     <link rel="stylesheet" media="screen" href="/css/toc.css">
     <link rel="stylesheet" media="screen" href="/css/select2.css">
@@ -50,7 +52,7 @@
   <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS -->
-  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="GeekStuff.gq — My cheat sheets site" href="atom.xml">
 </head>
 
 
@@ -63,13 +65,14 @@
 
       <a class="site-title" href="/"> 
           <span class="main-title">
-              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
-                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat" style="font-weight: bold;">Geek</span><span style="font-weight: 200">Stuff</span><i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fab fa-pied-piper-hat"></i><span style="font-size: 30px; "><span style="font-weight:100; color: #5d5d5d">gq</span></span>
                     
           </span>
       </a>
 
-      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+      <!-- <a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a> -->
+      <!-- <a style="float:right; margin-top: 10px;"  href="/bookmarks"><i class="fas fa-bookmark"></i></a>&nbsp;&nbsp; -->
+      <!-- <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a> -->
 
   </div>
     <!-- <style> -->
@@ -101,7 +104,7 @@
 
 <br />
 <article class="post">
-  <h1 class="post-title"><a href="/quick guides" class="back"><i class="fa fa-arrow-left"></i></a> Git (Quick Guide)</h1>
+  <h1 class="post-title"><a href="/quick guides" class="back"><i class="fa fa-arrow-left"></i></a> Git quick guide</h1>
   <br />
   <div id="toc-container">
    <table class="toc" id="toc">
@@ -117,48 +120,37 @@
                      <a href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">Terminología</span></a>
                   </li>
                   <li class="toc_level-1 toc_section-2">
-                     <a href="#tocAnchor-1-2"><span class="tocnumber">2</span> <span class="toctext">Workflows</span></a>
+                     <a href="#tocAnchor-1-2"><span class="tocnumber">2</span> <span class="toctext">Guía rápida</span></a>
                      <ul>
                         <li class="toc_level-2 toc_section-3">
-                           <a href="#tocAnchor-1-2-1"><span class="tocnumber">2.1</span> <span class="toctext">Workflow centralizado</span></a>
+                           <a href="#tocAnchor-1-2-1"><span class="tocnumber">2.1</span> <span class="toctext">Configuración</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-4">
-                           <a href="#tocAnchor-1-2-2"><span class="tocnumber">2.2</span> <span class="toctext">Feature Branch Workflow</span></a>
+                           <a href="#tocAnchor-1-2-2"><span class="tocnumber">2.2</span> <span class="toctext">Creación de un repositorio</span></a>
                         </li>
-                     </ul>
-                  </li>
-                  <li class="toc_level-1 toc_section-5">
-                     <a href="#tocAnchor-1-5"><span class="tocnumber">3</span> <span class="toctext">Guía rápida</span></a>
-                     <ul>
+                        <li class="toc_level-2 toc_section-5">
+                           <a href="#tocAnchor-1-2-3"><span class="tocnumber">2.3</span> <span class="toctext">Operaciones con Index</span></a>
+                        </li>
                         <li class="toc_level-2 toc_section-6">
-                           <a href="#tocAnchor-1-5-1"><span class="tocnumber">3.1</span> <span class="toctext">Configuración</span></a>
+                           <a href="#tocAnchor-1-2-4"><span class="tocnumber">2.4</span> <span class="toctext">Operaciones con HEAD</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-7">
-                           <a href="#tocAnchor-1-5-2"><span class="tocnumber">3.2</span> <span class="toctext">Creación de un repositorio</span></a>
+                           <a href="#tocAnchor-1-2-5"><span class="tocnumber">2.5</span> <span class="toctext">Ramas</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-8">
-                           <a href="#tocAnchor-1-5-3"><span class="tocnumber">3.3</span> <span class="toctext">Operaciones con Index</span></a>
+                           <a href="#tocAnchor-1-2-6"><span class="tocnumber">2.6</span> <span class="toctext">Comparación de ficheros</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-9">
-                           <a href="#tocAnchor-1-5-4"><span class="tocnumber">3.4</span> <span class="toctext">Operaciones con HEAD</span></a>
+                           <a href="#tocAnchor-1-2-7"><span class="tocnumber">2.7</span> <span class="toctext">Stash</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-10">
-                           <a href="#tocAnchor-1-5-5"><span class="tocnumber">3.5</span> <span class="toctext">Ramas</span></a>
+                           <a href="#tocAnchor-1-2-8"><span class="tocnumber">2.8</span> <span class="toctext">Tags</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-11">
-                           <a href="#tocAnchor-1-5-6"><span class="tocnumber">3.6</span> <span class="toctext">Comparación de ficheros</span></a>
+                           <a href="#tocAnchor-1-2-9"><span class="tocnumber">2.9</span> <span class="toctext">Submodules</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-12">
-                           <a href="#tocAnchor-1-5-7"><span class="tocnumber">3.7</span> <span class="toctext">Stash</span></a>
-                        </li>
-                        <li class="toc_level-2 toc_section-13">
-                           <a href="#tocAnchor-1-5-8"><span class="tocnumber">3.8</span> <span class="toctext">Tags</span></a>
-                        </li>
-                        <li class="toc_level-2 toc_section-14">
-                           <a href="#tocAnchor-1-5-9"><span class="tocnumber">3.9</span> <span class="toctext">Submodules</span></a>
-                        </li>
-                        <li class="toc_level-2 toc_section-15">
-                           <a href="#tocAnchor-1-5-10"><span class="tocnumber">3.10</span> <span class="toctext">Ignorar ficheros</span></a>
+                           <a href="#tocAnchor-1-2-10"><span class="tocnumber">2.10</span> <span class="toctext">Ignorar ficheros</span></a>
                         </li>
                      </ul>
                   </li>
@@ -204,242 +196,9 @@
 
 <hr />
 
-<h1 id="tocAnchor-1-2">Workflows</h1>
+<h1 id="tocAnchor-1-2">Guía rápida</h1>
 
-<h2 id="tocAnchor-1-2-1">Workflow centralizado</h2>
-
-<blockquote>
-  <p>El workflow centralizado utiliza una única rama, <code>master</code>, para trabajar en local. El código se actualizará sobre nuestra propia rama de trabajo mediante <code>git pull</code>.</p>
-</blockquote>
-
-<p>Al hacer <code>git pull</code> sobre <code>master</code> nos encontraremos con 3 posibles casos:</p>
-
-<h3 id="se-realiza-pull-sin-problemas">1. Se realiza <code>pull</code> sin problemas</h3>
-
-<blockquote>
-  <p>Esto sucede cuando no existen nuevos commits en remoto o no hay commits sin publicar en local. En ese último caso <code>git pull</code> hará <code>fast-forward</code> sin problemas siempre que los cambios del <code>Working Tree</code> no coincidan con los cambios de remoto.</p>
-</blockquote>
-
-<p>Para publicar nuestros commits locales solo hay que hacer:</p>
-
-<dl>
-  <dt>1) Añadir ficheros al <code>Index</code> para poder hacer commit:</dt>
-  <dd><code>git add . [--all]</code> o <code>git add file1 [file2] [file3] [...]</code></dd>
-  <dt>2) Hacer commit de los ficheros que hayamos añadido al <code>Index</code>:</dt>
-  <dd><code>git commit</code></dd>
-  <dt>3) Publicar los cambios en remoto:</dt>
-  <dd><code>git push</code></dd>
-</dl>
-
-<h3 id="no-es-posible-realizar-pull">2. No es posible realizar <code>pull</code></h3>
-
-<blockquote>
-  <p>Esto puede ocurrir bien porque hay commits tanto en local como en remoto o bien porque hay cambios en los ficheros del <code>Working Tree</code> que coinciden con los nuevos commits de remoto.</p>
-</blockquote>
-
-<p>En ambos casos para poder hacer <code>pull</code> deberemos limpiar primero el <code>Index</code> y el <code>Working Tree</code> mediante una de estas opciones:</p>
-
-<dl>
-  <dt>a) Realizar <code>commit</code> para luego mergearlo con el remoto, al hacer <code>git pull</code> (ver <a href="#caso-3-se-ejecuta-merge-o-rebase-para-mezclar-los-cambios-de-remoto-con-los-de-nuestra-rama-local">punto 3</a>)</dt>
-  <dd><code>git add . --all</code> + <code>git commit</code></dd>
-  <dt>b) Realizar <code>stash</code> para apartar nuestros cambios de local y que <code>git pull</code> continúe sin problemas (ver <a href="#caso-1-se-realiza-pull-sin-problemas">punto 1</a>)</dt>
-  <dd><code>git stash</code></dd>
-</dl>
-
-<p>En este último caso, después de hacer <code>git pull</code> podremos volver a aplicar nuestros cambios locales con <code>git stash apply</code></p>
-
-<p>Si no queremos todos los cambios del stash podremos hacer <code>checkout</code> o <code>diff</code> de los ficheros que queramos posteriormente (<code>stash apply</code> solo actúa sobre el <code>Working Tree</code>)</p>
-
-<h3 id="se-ejecuta-merge-o-rebase-para-mezclar-los-cambios-de-remoto-con-los-de-nuestra-rama-local">3. Se ejecuta merge (o rebase) para mezclar los cambios de remoto con los de nuestra rama local</h3>
-
-<p>En este punto nos encontramos con 2 posibles casos:</p>
-
-<dl>
-  <dt>No hay conflicto</dt>
-  <dd>Se produce un automerge commit (o si utilizamos el parámetro <code>--rebase</code> los nuevos commits quedan simplemente añadidos al final)</dd>
-  <dt>Hay conflicto </dt>
-  <dd>Resolvemos con <code>git mergetool</code> y ejecutamos <code>git commit</code> (o <code>git rebase --continue</code>, de haber realizado <code>pull</code> con <code>rebase</code>)</dd>
-</dl>
-
-<blockquote>
-  <p>Al ejecutar <code>git rebase --continue</code> es posible que siga existiendo conflicto debido a que rebase soluciona los conflictos por etapas (ya que nuestro commit local debe ser desplazado paso a paso hasta el último commit de remoto). En tal caso deberemos volver al paso anterior para solucionar los sucesivos conflictos con <code>git mergetool</code> + <code>git rebase --continue</code></p>
-</blockquote>
-
-<p>Finalmente, comprobaremos que los conflictos estén resueltos y publicaremos los cambios:</p>
-
-<dl>
-  <dt>Miramos que los conflictos estén marcados como resueltos:</dt>
-  <dd><code>git status</code></dd>
-</dl>
-
-<blockquote>
-  <p>Si continúan apareciendo ficheros como ‘unmerged’, habiendo ya resuelto los conflictos, los podemos añadir con <code>git add</code> para marcarlos como resueltos manualmente</p>
-</blockquote>
-
-<dl>
-  <dt>Publicamos los cambios:</dt>
-  <dd><code>git push</code></dd>
-</dl>
-
-<blockquote>
-  <p>Si no se permite esta operación, deberemos volver a obtener los cambios de remoto y resolver los posibles conflictos: <code>git pull</code> + [resolución de conflictos] + <code>git push</code></p>
-</blockquote>
-
-<h3 id="abortando-git-pull">Abortando git pull</h3>
-
-<p>Es posible volver al estado anterior antes de ejecutar <code>git pull</code> siempre y cuando no hayamos realizado todavía el merge commit o ejecutado <code>rebase --continue</code>:</p>
-
-<dl>
-  <dt>Para abortar git pull con merge</dt>
-  <dd><code>git merge --abort</code></dd>
-  <dt>Para abortar git pull con rebase</dt>
-  <dd><code>git rebase --abort</code></dd>
-  <dt>Si ya hemos finalizado el pull, deberemos volver atrás mirando nuestro log local (git log -g):</dt>
-  <dd><code>git reset &lt;commit_local&gt;</code></dd>
-</dl>
-
-<blockquote>
-  <p>Sin la opción <code>--hard</code>, <code>git reset</code> vuelve hasta el commit indicado dejando los cambios propios del commit en el <code>Working Tree</code></p>
-</blockquote>
-
-<p>
-   <br />
-</p>
-
-<h2 id="tocAnchor-1-2-2">Feature Branch Workflow</h2>
-
-<p>El objetivo de este workflow es que la rama <code>master</code> siempre esté a punto para obtener o publicar código.</p>
-
-<p>La rama <code>master</code> nunca debe tener código “inestable”. El código en estado de desarrollo se encontrará en ramas <em>feature</em> con nombres descriptivos, que serán validadas antes de subirse a la rama pública <code>master</code>, tras realizarse un <em>pull request</em>.</p>
-
-<h3 id="configuracin-inicial-pull-con-rebase">Configuración inicial (pull con rebase)</h3>
-
-<dl>
-  <dt>Configurar git para hacer rebase en lugar de merge al hacer <code>pull</code></dt>
-  <dd>
-    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git config --global branch.master.rebase yes
-<span class="c"># también podemos configurarlo para todas las ramas</span>
-<span class="nv">$ </span>git config --global branch.autosetuprebase always</code></pre></div>
-  </dd>
-</dl>
-
-<blockquote>
-  <p>Este paso es opcional pero nos permite mantener limpio el historial de commits al hacer pull, de forma que solo veamos <code>merge commit</code> en los puntos donde se realice la integración de la rama <code>feature</code> con <code>master</code></p>
-</blockquote>
-
-<h3 id="fases-del-workflow">Fases del workflow</h3>
-
-<blockquote>
-  <ul>
-    <li>Creación de la rama <code>feature</code>, correspondiente a 1 <em>historia</em></li>
-    <li>Trabajar con rama privada <code>feature</code>, 1 commit corresponde a 1 <em>tarea</em></li>
-    <li>Hacer pública la rama <code>feature</code></li>
-    <li>Trabajar en equipo con la rama pública</li>
-    <li>Petición de code review (<em>pull request</em>)</li>
-    <li>Deploy en <code>master</code> cuando se acepte el código como válido finalmente</li>
-  </ul>
-</blockquote>
-
-<dl>
-  <dt>Crear rama <code>feature</code> y publicarla en remoto</dt>
-  <dd>
-    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout -b feature master
-<span class="nv">$ </span>git push -u origin feature</code></pre></div>
-  </dd>
-  <dt>Comitear (opcionalmente, editar el historial de commits de la rama con <code>rebase -i</code>)</dt>
-  <dd>
-    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git add .<span class="p">;</span> git commit -m <span class="s1">'primer commit'</span><span class="p">;</span> <span class="c"># ...</span>
-<span class="c"># podemos hacer rebase -i hasta la base de la rama</span>
-<span class="nv">$ </span>git rebase -i <span class="sb">`</span>git merge-base feature master<span class="sb">`</span></code></pre></div>
-  </dd>
-</dl>
-
-<blockquote>
-  <p><strong><em>Únicamente se debe hacer <code>rebase -i</code> de commits que no hayan sido publicados.</em></strong> </p>
-</blockquote>
-
-<dl>
-  <dt><em>Pull request</em> (petición de code review antes de integrar la rama en <code>master</code>)</dt>
-  <dd>
-    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
-<span class="nv">$ </span>git push origin feature
-<span class="c"># se puede crear hook que envíe mail con el nombre del feature a validar</span></code></pre></div>
-  </dd>
-  <dt>Code review: ver cambios introducidos en la rama <code>feature</code> respecto a <code>master</code></dt>
-  <dd>
-    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
-<span class="nv">$ </span>git difftool <span class="sb">`</span>git merge-base feature master<span class="sb">`</span></code></pre></div>
-  </dd>
-  <dt>Deploy de la rama <code>feature</code> a <code>master</code> (<em>merge commit</em> forzado para no perder la trazabilidad de la rama)</dt>
-  <dd>
-    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout master
-<span class="nv">$ </span>git pull
-<span class="c"># el parámetro --no-ff fuerza a que se cree un merge commit en master</span>
-<span class="nv">$ </span>git merge --no-ff feature
-<span class="nv">$ </span>git branch -d feature
-<span class="nv">$ </span>git push</code></pre></div>
-  </dd>
-</dl>
-
-<blockquote>
-  <p>Es posible forzar que ningún merge haga <code>fast-forward</code> (evitando tener que pasar el parámetro –no-ff) mediante la siguiente configuración: <code>git config --global --bool merge.ff false</code></p>
-</blockquote>
-
-<blockquote>
-  <p>En ese caso para forzar un merge con <code>fast-forward</code> se puede usar <code>git merge</code> con el parámetro <code>--ff-only</code></p>
-</blockquote>
-
-<h3 id="propagacin-de-cambios-entre-ramas">Propagación de cambios entre ramas</h3>
-
-<dl>
-  <dt>Propagar último commit de una rama a otra</dt>
-  <dd>
-    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># después de hacer commit en master (por ejemplo)</span>
-<span class="nv">$ </span>git checkout feature
-<span class="nv">$ </span>git cherry-pick master</code></pre></div>
-  </dd>
-  <dt>Propagar commit mediante hash de una rama a otra</dt>
-  <dd>
-    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
-<span class="nv">$ </span>git cherry-pick &lt;hash_commit&gt;</code></pre></div>
-  </dd>
-  <dt>Propagar cambios de <code>master</code> a <code>feature</code> (rebase)</dt>
-  <dd>
-    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># primero actualizamos la rama master</span>
-<span class="nv">$ </span>git checkout master
-<span class="nv">$ </span>git pull
-<span class="c"># propagamos los cambios a feature</span>
-<span class="nv">$ </span>git checkout feature
-<span class="nv">$ </span>git rebase master
-<span class="c"># opcional: podemos elegir que cambios de master queremos en nuestra rama </span>
-<span class="nv">$ </span>git rebase -i</code></pre></div>
-  </dd>
-  <dt>Obtener directamente cambios desde origin/master (remoto)</dt>
-  <dd>
-    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
-<span class="nv">$ </span>git pull origin master</code></pre></div>
-  </dd>
-  <dt>Reintegrar en <code>master</code> los cambios de una rama (ver advertencia abajo)</dt>
-  <dd>
-    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># obtenemos en feature los cambios de master</span>
-<span class="nv">$ </span>git checkout feature
-<span class="nv">$ </span>git rebase master
-<span class="c"># obtenemos en master todos los cambios de feature</span>
-<span class="nv">$ </span>git checkout master
-<span class="nv">$ </span>git merge --ff-only feature <span class="c"># fast-forward merge</span>
-<span class="nv">$ </span>git branch -d feature</code></pre></div>
-  </dd>
-</dl>
-
-<blockquote>
-  <p><strong><em>Al realizar el merge <code>fast-forward</code> se pierde la trazabilidad de la rama que se ha integrado: <code>master</code> absorbe todos los commits que pertenecían a la rama y no se añade ningún merge commit que indique fusión de ramas</em></strong> </p>
-</blockquote>
-
-<hr />
-
-<h1 id="tocAnchor-1-5">Guía rápida</h1>
-
-<h2 id="tocAnchor-1-5-1">Configuración</h2>
+<h2 id="tocAnchor-1-2-1">Configuración</h2>
 
 <dl>
   <dt>Ver configuración global (o del repositorio actual)</dt>
@@ -464,11 +223,18 @@ git config --global credential.helper <span class="s2">"`dirname $(locate git-cr
   <p><a href="/gitconfig">Ejemplo de configuración completa (alias incluídos)</a></p>
 </blockquote>
 
+<dl>
+  <dt>Guardar password (en plano, sin encriptar)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git config credential.helper store</code></pre></div>
+  </dd>
+</dl>
+
 <p>
    <br />
 </p>
 
-<h2 id="tocAnchor-1-5-2">Creación de un repositorio</h2>
+<h2 id="tocAnchor-1-2-2">Creación de un repositorio</h2>
 
 <dl>
   <dt>Crear repositorio <code>origin</code> (<code>--bare</code>), sin <code>Working Tree</code></dt>
@@ -490,6 +256,14 @@ Initialized empty Git repository in /u/ares/foo/.git</code></pre></div>
 <span class="nv">$ </span>git commit -m <span class="s1">'initial commit'</span>
 <span class="nv">$ </span>git push -u origin master</code></pre></div>
   </dd>
+</dl>
+
+<blockquote>
+  <p>Para cambiar el repositorio remoto (o el usuario):
+<code>git remote set-url origin https://&lt;user&gt;@&lt;repo&gt;</code></p>
+</blockquote>
+
+<dl>
   <dt>A partir de ahí se puede hacer simplemente</dt>
   <dd>
     <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git push</code></pre></div>
@@ -506,7 +280,7 @@ Initialized empty Git repository in /u/ares/foo/.git</code></pre></div>
    <br />
 </p>
 
-<h2 id="tocAnchor-1-5-3">Operaciones con Index</h2>
+<h2 id="tocAnchor-1-2-3">Operaciones con Index</h2>
 
 <dl>
   <dt>Añadir al <code>Index</code> cambios parciales de ficheros (se eligen de forma interactiva)</dt>
@@ -557,7 +331,7 @@ Initialized empty Git repository in /u/ares/foo/.git</code></pre></div>
    <br />
 </p>
 
-<h2 id="tocAnchor-1-5-4">Operaciones con HEAD</h2>
+<h2 id="tocAnchor-1-2-4">Operaciones con HEAD</h2>
 
 <h3 id="commits">Commits</h3>
 
@@ -628,13 +402,11 @@ Workaround: subir un directorio con un único fichero <code>.gitignore</code> en
   <dd>
     <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git fetch <span class="o">[</span>origin master<span class="o">]</span>
 <span class="nv">$ </span>git reset --hard FETCH_HEAD
-<span class="nv">$ </span><span class="o">[</span>git clean -df<span class="o">]</span></code></pre></div>
+<span class="nv">$ </span><span class="o">[</span>git clean -df<span class="o">]</span>
+<span class="c"># alternatively:</span>
+git checkout -B master origin/master</code></pre></div>
   </dd>
 </dl>
-
-<blockquote>
-  <p>Obtenemos la referencia del último commit en remoto <code>FETCH_HEAD</code> para luego descartar los cambios mediante <code>get reset --hard</code></p>
-</blockquote>
 
 <blockquote>
   <p><code>git clean -df</code> elimina los ficheros untracked, para obtener un repositorio limpio tal y como lo encontraríamos tras hacer <code>git clone</code></p>
@@ -800,6 +572,14 @@ Workaround: subir un directorio con un único fichero <code>.gitignore</code> en
     <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git log -g
 <span class="nv">$ </span>git reset HEAD~<span class="o">[</span>n<span class="o">]</span></code></pre></div>
   </dd>
+</dl>
+
+<blockquote>
+
+  <p>La notación <code>HEAD^[n]</code> nos permite seleccionar una de las ramas padre de nuestro commit (si es que hay más de una). Además si se combina con <code>HEAD~[m]</code>, se pueden formar expresiones como: <code>HEAD~3^2</code>, con lo que obtendríamos la tercera generación de commits anterior al nuestro, seleccionando el segundo progenitor (de existir este).</p>
+</blockquote>
+
+<dl>
   <dt>Deshacer commit añadiendo un nuevo commit, para que quede constancia en la historia (p.62)</dt>
   <dd>
     <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git revert &lt;hash_commit&gt;</code></pre></div>
@@ -818,7 +598,7 @@ Workaround: subir un directorio con un único fichero <code>.gitignore</code> en
    <br />
 </p>
 
-<h2 id="tocAnchor-1-5-5">Ramas</h2>
+<h2 id="tocAnchor-1-2-5">Ramas</h2>
 
 <dl>
   <dt>Crear una nueva rama que apunta al commit actual y cambiar a esta</dt>
@@ -886,7 +666,7 @@ Workaround: subir un directorio con un único fichero <code>.gitignore</code> en
    <br />
 </p>
 
-<h2 id="tocAnchor-1-5-6">Comparación de ficheros</h2>
+<h2 id="tocAnchor-1-2-6">Comparación de ficheros</h2>
 
 <h3 id="comparacin-entre-ramas">Comparación entre “ramas”</h3>
 
@@ -952,7 +732,7 @@ Workaround: subir un directorio con un único fichero <code>.gitignore</code> en
    <br />
 </p>
 
-<h2 id="tocAnchor-1-5-7">Stash</h2>
+<h2 id="tocAnchor-1-2-7">Stash</h2>
 
 <h3 id="save-stash">Save stash</h3>
 <dl>
@@ -1032,7 +812,7 @@ Workaround: subir un directorio con un único fichero <code>.gitignore</code> en
    <br />
 </p>
 
-<h2 id="tocAnchor-1-5-8">Tags</h2>
+<h2 id="tocAnchor-1-2-8">Tags</h2>
 
 <dl>
   <dt>Creating annotated tag (with extra info that lightweight tags don’t have)</dt>
@@ -1077,7 +857,7 @@ git archive -o latest.zip HEAD</code></pre></div>
    <br />
 </p>
 
-<h2 id="tocAnchor-1-5-9">Submodules</h2>
+<h2 id="tocAnchor-1-2-9">Submodules</h2>
 
 <dl>
   <dt>Add submodule</dt>
@@ -1125,7 +905,7 @@ git archive -o latest.zip HEAD</code></pre></div>
    <br />
 </p>
 
-<h2 id="tocAnchor-1-5-10">Ignorar ficheros</h2>
+<h2 id="tocAnchor-1-2-10">Ignorar ficheros</h2>
 
 <dl>
   <dt>Ficheros <code>.gitignore</code> con los ficheros a ignorar (ver sintáxis en p.44)</dt>
@@ -1145,399 +925,360 @@ git archive -o latest.zip HEAD</code></pre></div>
 
   <br />
   <blockquote>
-      <p><strong>Last updated: <time datetime="2016-09-14T12:12:38+00:00" class="page-date">14 Sep 2016</time></strong></p>
+      <p><strong>Last updated: <time datetime="2018-10-05T17:10:25+00:00" class="page-date">05 Oct 2018</time></strong></p>
   </blockquote>
 </article>
+
+
 
 <aside class="related">
     <h2>Related Posts</h2>
     <ul class="related-posts">
         
-         
-
-        
-            
-        
         
 
         
-            
-        
-        
 
-        
-            
-        
-        
-
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/apps">
-                            Packages
-                            <small><time datetime="2016-10-08T14:13:58+00:00">08 Oct 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
-                
-            
-        
-        
-
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/repos">
-                            Repositories
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
-                
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/linuxcommands">
-                            Desktop/general commands
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
-                
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
             
                 
             
         
-        
 
-        
             
         
-        
 
-        
             
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/shellscripting">
-                            Shell-scripting snippets
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
+
+            
         
 
-        
             
-                
-                <li>
-                    <h3>
-                        <a href="/zsh">
-                            Zsh setup
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
-        
 
-        
             
-        
-        
-
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/tmux">
-                            Tmux basics
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
-        
 
-        
             
-        
-        
-
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/my scripts">
-                            Useful scripts
-                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
-            
-        
-        
 
-        
             
-                
-                <li>
-                    <h3>
-                        <a href="/gitconfig">
-                            My Git configuration
-                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
-            
-        
-        
 
-        
             
-                
-                <li>
-                    <h3>
-                        <a href="/bash commands">
-                            Bash/UNIX commands
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
+                    
+                    
             
         
-        
 
-        
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/git-workflows">
+                                        Git workflows
+                                        <small><time datetime="2018-09-16T09:09:37+00:00">16 Sep 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/gitconfig">
+                                        My Git configuration
+                                        <small><time datetime="2018-09-16T20:39:26+00:00">16 Sep 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
-        
 
-        
+            
+                
             
         
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
         
         
         
@@ -1545,11 +1286,19 @@ git archive -o latest.zip HEAD</code></pre></div>
 </aside>
 
 
+
       </main>
      <footer class="site-footer">
 
   <div class="wrapper">
 
+    
+      <div style="float: left; margin-left: 25px">
+          <a href="/bookmarks"><i class="fas fa-bookmark"></i> bookmarks</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/sitemap"><i class="fas fa-sitemap"></i> sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/about"><i class="fas fa-user-astronaut"></i> about</a>
+          <!-- <div><a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a></div><br /> -->
+      </div>
 
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
@@ -1565,7 +1314,7 @@ git archive -o latest.zip HEAD</code></pre></div>
       </div>
 
       <div class="footer-col  footer-col-2">
-        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span class="ccby">jordihv at gmail.com</span><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
       </div>
     </div>
 

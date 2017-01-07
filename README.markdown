@@ -2,7 +2,23 @@ This is the source for my [Github Pages site](http://johgh.github.io/). It's a [
 
 It's on github so you can make pull requests. The posts are inside the _posts folder. It's markdown so probably there is no need to preview the site before making a request.
 
-If you need to preview your changes, you'll need to install some things before (Debian-like systems):
+Now, if you need to preview your changes, you'll need some way of viewing the changes locally. There are 2 ways.
+
+# The "Vagrant" way
+
+```
+# 0. Install vagrant and virtualbox
+cd ~
+git clone --recursive https://github.com/johgh/johgh.io-source.git
+git clone https://github.com/johgh/scripts.git
+cd johgh.io-source
+~/scripts/jkup
+# 1. modify the files you need inside _posts folder
+# 2. preview changes on localhost:8000
+~/scripts/jkdeploy 'my deploy comment'
+```
+
+# The "Debian" way
 
 ```
 sudo apt-get install ruby-full nodejs

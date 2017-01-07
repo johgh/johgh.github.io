@@ -10,7 +10,7 @@
 
   <title>
     
-    My Vim setup <> Cheat-sheets.tk
+    My Vim/Neovim setup <> GeekStuff.gq — My cheat sheets site
     
   </title>
 
@@ -21,8 +21,10 @@
     <link rel="stylesheet" href="/css/backtotop.css">
     <link rel="canonical" href="http://cheat-sheets.tk/vimrc">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400|Montserrat:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
     <link rel="stylesheet" media="screen" href="/css/toc.css">
     <link rel="stylesheet" media="screen" href="/css/select2.css">
@@ -50,7 +52,7 @@
   <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS -->
-  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="GeekStuff.gq — My cheat sheets site" href="atom.xml">
 </head>
 
 
@@ -63,13 +65,14 @@
 
       <a class="site-title" href="/"> 
           <span class="main-title">
-              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
-                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat" style="font-weight: bold;">Geek</span><span style="font-weight: 200">Stuff</span><i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fab fa-pied-piper-hat"></i><span style="font-size: 30px; "><span style="font-weight:100; color: #5d5d5d">gq</span></span>
                     
           </span>
       </a>
 
-      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+      <!-- <a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a> -->
+      <!-- <a style="float:right; margin-top: 10px;"  href="/bookmarks"><i class="fas fa-bookmark"></i></a>&nbsp;&nbsp; -->
+      <!-- <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a> -->
 
   </div>
     <!-- <style> -->
@@ -101,7 +104,7 @@
 
 <br />
 <article class="post">
-  <h1 class="post-title"><a href="/terminal" class="back"><i class="fa fa-arrow-left"></i></a> My Vim setup</h1>
+  <h1 class="post-title"><a href="/terminal" class="back"><i class="fa fa-arrow-left"></i></a> My Vim/Neovim setup</h1>
   <br />
   <div id="toc-container">
    <table class="toc" id="toc">
@@ -133,7 +136,62 @@
 </div><h1 id="tocAnchor-1-1">Installation script</h1>
 
 <blockquote>
-  <p>I use this script to install <a href="https://github.com/johgh/vim">my Vim setup</a>. I recommend to use Gvim instead of a terminal.</p>
+  <p>I use this script to install <a href="https://github.com/johgh/vim">my Neovim setup</a>. I use neovim on command line interface.</p>
+</blockquote>
+
+<div class="github-sample-reference">
+  <div class="author-info">
+    <a href="https://github.com/johgh/scripts/blob/master/nvim_setup.sh">This Github Sample</a> is by <a href="https://github.com/johgh">johgh</a>
+  </div>
+  <div class="meta-info">
+    nvim_setup.sh <a href="https://github.com/johgh/scripts/blob/master/nvim_setup.sh">view</a> <a href="https://raw.githubusercontent.com/johgh/scripts/master/nvim_setup.sh">raw</a>
+  </div>
+</div>
+<div> <button class="selectButton" data-id="#selectText3" type="button">Select text </button> </div>
+<div id="selectText3">
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
+<span class="c"># this script is now cross-platform (Debian/Arch), so we don't install packages</span>
+<span class="c"># install packages before executing, please see notes below:</span>
+<span class="c">#</span>
+<span class="c"># ubuntu/debian valid package names: "neovim exuberant-ctags wmctrl build-essential cmake python-dev php-codesniffer silversearcher-ag xsel"</span>
+<span class="c"># some distros require xclip/xsel package for clipboard support</span>
+<span class="c"># exuberant-ctags is ctags in Arch</span>
+<span class="c"># ag is the_silver_searcher in Arch</span>
+
+<span class="c"># install fzf</span>
+git clone --depth <span class="m">1</span> https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+<span class="c"># clean Vim files</span>
+<span class="nb">cd</span> ~
+rm -Rf .vim*
+
+<span class="c"># get .vim dir and install plugins</span>
+git clone --recursive https://github.com/johgh/vim .vim
+ln -s ~/.vim ~/.config/nvim
+nvim +PlugClean! +qall
+nvim +PlugInstall +qall
+
+<span class="c"># install some fonts</span>
+cp -R <span class="nv">$HOME</span>/.vim/fonts/* <span class="nv">$HOME</span>/.local/share/fonts
+<span class="nb">fc</span>-cache -f <span class="nv">$HOME</span>/.local/share/fonts
+
+<span class="c"># configuring PSR (codesniffer)</span>
+<span class="nv">content</span><span class="o">=</span><span class="s2">"&lt;?php</span>
+<span class="s2">$phpCodeSnifferConfig = array (</span>
+<span class="s2">        'default_standard' =&gt; 'PSR2',</span>
+<span class="s2">        )</span>
+<span class="s2">?&gt;"</span>
+<span class="nb">echo</span> <span class="s2">"$content"</span> <span class="p">|</span> sudo tee /etc/php-codesniffer/CodeSniffer.conf &gt; /dev/null
+
+<span class="c"># symlink .vimrc to $HOME</span>
+ln -fs <span class="nv">$HOME</span>/.vim/vimrc <span class="nv">$HOME</span>/.vimrc</code></pre></div>
+
+</div>
+
+<blockquote>
+  <p>(Obsolete script: now I use Neovim) I use this script to install <a href="https://github.com/johgh/vim">my Vim setup</a>. I recommend to use Gvim instead of a terminal.</p>
 </blockquote>
 
 <div class="github-sample-reference">
@@ -148,7 +206,7 @@
 <div id="selectText3">
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
-<span class="nv">dependencies</span><span class="o">=</span><span class="s2">"exuberant-ctags wmctrl build-essential cmake python-dev php-codesniffer silversearcher-ag"</span>
+<span class="nv">dependencies</span><span class="o">=</span><span class="s2">"exuberant-ctags wmctrl build-essential cmake python-dev php-codesniffer silversearcher-ag xsel"</span>
 <span class="nv">dists</span><span class="o">=</span><span class="s2">"trusty utopic vivid wily xenial yakkety"</span>
 
 <span class="nv">CHECK_DEPS</span><span class="o">=</span><span class="nv">$HOME</span>/bin/check_deps
@@ -185,6 +243,7 @@ array<span class="o">[</span>0<span class="o">]=</span><span class="s2">"Don't i
     <span class="nb">echo</span> <span class="s2">"deb http://ppa.launchpad.net/pi-rho/dev/ubuntu ${array[${option}]} main"</span> <span class="p">|</span> sudo tee -a  /etc/apt/sources.list
 
     <span class="c"># update and install gvim</span>
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 779C27D7
     sudo apt update
     sudo apt install vim vim-gnome
 <span class="k">fi</span>
@@ -195,12 +254,13 @@ rm -Rf .vim*
 
 <span class="c"># get .vim dir and install plugins</span>
 git clone --recursive https://github.com/johgh/vim .vim
-vim -E -u NONE -S ~/.vim/bundles.vim +PluginInstall +qall
+nvim +PlugClean +qall
+nvim +PlugInstall +qall
 
-<span class="k">if</span> <span class="o">[</span> -f <span class="nv">$HOME</span>/.vim/bundle/YouCompleteMe/install.sh <span class="o">]</span>
-<span class="k">then</span>
-    <span class="nv">$HOME</span>/.vim/bundle/YouCompleteMe/install.sh
-<span class="k">fi</span>
+<span class="c"># if [ -f $HOME/.vim/bundle/YouCompleteMe/install.sh ]</span>
+<span class="c"># then</span>
+<span class="c">#     $HOME/.vim/bundle/YouCompleteMe/install.sh</span>
+<span class="c"># fi</span>
 
 <span class="c"># if [ ! -d $HOME/fonts ]</span>
 <span class="c"># then</span>
@@ -227,121 +287,111 @@ ln -fs <span class="nv">$HOME</span>/.vim/vimrc <span class="nv">$HOME</span>/.v
 <h1 id="tocAnchor-1-2">My plugins</h1>
 
 <blockquote>
-  <p>The plugins I am using right now (I use Vundle as the plugin system)</p>
+  <p>The plugins I am using right now (I use vim-plug as the plugin system)</p>
 </blockquote>
 
 <script src="/scripts/selecttext.js"></script>
 
 <div class="github-sample-reference">
   <div class="author-info">
-    <a href="https://github.com/johgh/vim/blob/master/bundles.vim">This Github Sample</a> is by <a href="https://github.com/johgh">johgh</a>
+    <a href="https://github.com/johgh/vim/blob/master/plug.vim">This Github Sample</a> is by <a href="https://github.com/johgh">johgh</a>
   </div>
   <div class="meta-info">
-    bundles.vim <a href="https://github.com/johgh/vim/blob/master/bundles.vim">view</a> <a href="https://raw.githubusercontent.com/johgh/vim/master/bundles.vim">raw</a>
+    plug.vim <a href="https://github.com/johgh/vim/blob/master/plug.vim">view</a> <a href="https://raw.githubusercontent.com/johgh/vim/master/plug.vim">raw</a>
   </div>
 </div>
 
 <div> <button class="selectButton" data-id="#selectText3" type="button">Select text </button> </div>
 <div id="selectText3">
 
-<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="c">" VUNDLE {</span>
-<span class="k">set</span> <span class="nb">nocompatible</span>
-<span class="k">filetype</span> off
+<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="k">call</span> plug#begin<span class="p">(</span><span class="s1">'~/.vim/plugged'</span><span class="p">)</span>
 
-<span class="k">set</span> <span class="nb">rtp</span><span class="p">+=~</span><span class="sr">/.vim/</span>bundle/Vundle.<span class="k">vim</span>
-<span class="k">call</span> vundle#begin<span class="p">()</span>
+Plug <span class="s1">'bkad/CamelCaseMotion'</span>
+Plug <span class="s1">'evidens/vim-twig'</span>
+Plug <span class="s1">'MarcWeber/vim-addon-mw-utils'</span>
+Plug <span class="s1">'scrooloose/nerdtree'</span>
+Plug <span class="s1">'tpope/vim-surround'</span>
+Plug <span class="s1">'nathanaelkane/vim-indent-guides'</span>
+Plug <span class="s1">'scrooloose/syntastic'</span>
+Plug <span class="s1">'tpope/vim-fugitive'</span>
+Plug <span class="s1">'altercation/vim-colors-solarized'</span>
+Plug <span class="s1">'morhetz/gruvbox'</span>
+<span class="c">" Plug 'Valloric/YouCompleteMe'</span>
+Plug <span class="s1">'majutsushi/tagbar'</span>
+Plug <span class="s1">'glts/vim-textobj-comment'</span>
+Plug <span class="s1">'Julian/vim-textobj-variable-segment'</span>
+Plug <span class="s1">'tpope/vim-commentary'</span>
+Plug <span class="s1">'tommcdo/vim-exchange'</span>
+Plug <span class="s1">'whatyouhide/vim-textobj-xmlattr'</span>
+Plug <span class="s1">'airblade/vim-gitgutter'</span>
+Plug <span class="s1">'tpope/vim-repeat'</span>
+<span class="c">" Plug 'SirVer/ultisnips'</span>
+<span class="c">" Plug 'honza/vim-snippets'</span>
+Plug <span class="s1">'shawncplus/phpcomplete.vim'</span>
+Plug <span class="s1">'StanAngeloff/php.vim'</span>
+Plug <span class="s1">'scottmcginness/vim-jquery'</span>
+Plug <span class="s1">'thinca/vim-textobj-between'</span>
+Plug <span class="s1">'kana/vim-textobj-entire'</span>
+Plug <span class="s1">'kana/vim-textobj-fold'</span>
+Plug <span class="s1">'kana/vim-textobj-function'</span>
+Plug <span class="s1">'kana/vim-textobj-indent'</span>
+Plug <span class="s1">'beloglazov/vim-textobj-quotes'</span>
+Plug <span class="s1">'kana/vim-textobj-user'</span>
+Plug <span class="s1">'kana/vim-textobj-line'</span>
+Plug <span class="s1">'kana/vim-niceblock'</span>
+Plug <span class="s1">'kana/vim-textobj-underscore'</span>
+Plug <span class="s1">'kana/vim-smartword'</span>
+Plug <span class="s1">'Julian/vim-textobj-brace'</span>
+Plug <span class="s1">'Raimondi/delimitMate'</span>
+Plug <span class="s1">'tobyS/vmustache'</span>
+Plug <span class="s1">'tobyS/pdv'</span>
+Plug <span class="s1">'danro/rename.vim'</span>
+Plug <span class="s1">'alvan/vim-php-manual'</span>
+Plug <span class="s1">'airblade/vim-rooter'</span>
+Plug <span class="s1">'sjl/gundo.vim'</span>
+Plug <span class="s1">'bronson/vim-visual-star-search'</span>
+Plug <span class="s1">'AndrewRadev/splitjoin.vim'</span>
+Plug <span class="s1">'kana/vim-textobj-lastpat'</span>
+Plug <span class="s1">'tpope/vim-abolish'</span>
+Plug <span class="s1">'tpope/vim-capslock'</span>
+Plug <span class="s1">'tpope/vim-unimpaired'</span>
+Plug <span class="s1">'ap/vim-css-color'</span>
+<span class="c">" Plug 'xolox/vim-easytags'</span>
+<span class="c">" Plug 'xolox/vim-misc'</span>
+Plug <span class="s1">'junegunn/vim-easy-align'</span>
+Plug <span class="s1">'rking/ag.vim'</span>
+Plug <span class="s1">'sickill/vim-pasta'</span>
+<span class="c">" Plug 'c0r73x/neotags.nvim'</span>
 
-Plugin <span class="s1">'VundleVim/Vundle.vim'</span>
-Plugin <span class="s1">'bkad/CamelCaseMotion'</span>
-Plugin <span class="s1">'evidens/vim-twig'</span>
-Plugin <span class="s1">'MarcWeber/vim-addon-mw-utils'</span>
-Plugin <span class="s1">'scrooloose/nerdtree'</span>
-Plugin <span class="s1">'tpope/vim-surround'</span>
-Plugin <span class="s1">'nathanaelkane/vim-indent-guides'</span>
-Plugin <span class="s1">'scrooloose/syntastic'</span>
-Plugin <span class="s1">'tpope/vim-fugitive'</span>
-Plugin <span class="s1">'altercation/vim-colors-solarized'</span>
-Plugin <span class="s1">'morhetz/gruvbox'</span>
-<span class="c">" Plugin 'Valloric/YouCompleteMe'</span>
-Plugin <span class="s1">'majutsushi/tagbar'</span>
-Plugin <span class="s1">'glts/vim-textobj-comment'</span>
-Plugin <span class="s1">'Julian/vim-textobj-variable-segment'</span>
-Plugin <span class="s1">'tpope/vim-commentary'</span>
-Plugin <span class="s1">'tommcdo/vim-exchange'</span>
-Plugin <span class="s1">'whatyouhide/vim-textobj-xmlattr'</span>
-Plugin <span class="s1">'airblade/vim-gitgutter'</span>
-Plugin <span class="s1">'tpope/vim-repeat'</span>
-Plugin <span class="s1">'SirVer/ultisnips'</span>
-Plugin <span class="s1">'honza/vim-snippets'</span>
-Plugin <span class="s1">'shawncplus/phpcomplete.vim'</span>
-Plugin <span class="s1">'StanAngeloff/php.vim'</span>
-Plugin <span class="s1">'scottmcginness/vim-jquery'</span>
-Plugin <span class="s1">'thinca/vim-textobj-between'</span>
-Plugin <span class="s1">'kana/vim-textobj-entire'</span>
-Plugin <span class="s1">'kana/vim-textobj-fold'</span>
-Plugin <span class="s1">'kana/vim-textobj-function'</span>
-Plugin <span class="s1">'kana/vim-textobj-indent'</span>
-Plugin <span class="s1">'beloglazov/vim-textobj-quotes'</span>
-Plugin <span class="s1">'kana/vim-textobj-user'</span>
-Plugin <span class="s1">'kana/vim-textobj-line'</span>
-Plugin <span class="s1">'kana/vim-niceblock'</span>
-Plugin <span class="s1">'kana/vim-textobj-underscore'</span>
-Plugin <span class="s1">'kana/vim-smartword'</span>
-Plugin <span class="s1">'Julian/vim-textobj-brace'</span>
-Plugin <span class="s1">'Raimondi/delimitMate'</span>
-Plugin <span class="s1">'tobyS/vmustache'</span>
-Plugin <span class="s1">'tobyS/pdv'</span>
-Plugin <span class="s1">'danro/rename.vim'</span>
-Plugin <span class="s1">'alvan/vim-php-manual'</span>
-Plugin <span class="s1">'airblade/vim-rooter'</span>
-Plugin <span class="s1">'sjl/gundo.vim.git'</span>
-Plugin <span class="s1">'bronson/vim-visual-star-search'</span>
-Plugin <span class="s1">'AndrewRadev/splitjoin.vim'</span>
-Plugin <span class="s1">'kana/vim-textobj-lastpat'</span>
-Plugin <span class="s1">'tpope/vim-abolish'</span>
-Plugin <span class="s1">'tpope/vim-capslock'</span>
-Plugin <span class="s1">'tpope/vim-unimpaired'</span>
-Plugin <span class="s1">'ap/vim-css-color'</span>
-<span class="c">" Plugin 'xolox/vim-easytags'</span>
-<span class="c">" Plugin 'xolox/vim-misc'</span>
-Plugin <span class="s1">'junegunn/vim-easy-align'</span>
-Plugin <span class="s1">'rking/ag.vim'</span>
-Plugin <span class="s1">'sickill/vim-pasta'</span>
-Plugin <span class="s1">'vim-scripts/indexer.tar.gz.git'</span>
-Plugin <span class="s1">'vim-scripts/DfrankUtil'</span>
-Plugin <span class="s1">'vim-scripts/vimprj'</span>
-Plugin <span class="s1">'szw/vim-ctrlspace'</span>
-Plugin <span class="s1">'vim-scripts/mru.vim'</span>
-Plugin <span class="s1">'bling/vim-airline'</span>
-Plugin <span class="s1">'Shougo/vimproc.vim.git'</span>
-<span class="c">" Plugin 'm2mdas/phpcomplete-extended'</span>
-<span class="c">" Plugin 'm2mdas/phpcomplete-extended-symfony'</span>
-Plugin <span class="s1">'ctrlpvim/ctrlp.vim'</span>
-Plugin <span class="s1">'idanarye/vim-merginal.git'</span>
-Plugin <span class="s1">'terryma/vim-expand-region'</span>
-Plugin <span class="s1">'terryma/vim-multiple-cursors.git'</span>
-Plugin <span class="s1">'terryma/vim-smooth-scroll'</span>
-Plugin <span class="s1">'vim-scripts/YankRing.vim'</span>
-Plugin <span class="s1">'Xuyuanp/nerdtree-git-plugin'</span>
-Plugin <span class="s1">'ryanoasis/vim-devicons.git'</span>
-Plugin <span class="s1">'rhysd/clever-f.vim.git'</span>
-Plugin <span class="s1">'rhysd/vim-textobj-conflict'</span>
+Plug <span class="s1">'vim-scripts/indexer.tar.gz'</span>
+Plug <span class="s1">'vim-scripts/DfrankUtil'</span>
+Plug <span class="s1">'vim-scripts/vimprj'</span>
 
-<span class="k">call</span> vundle#<span class="k">end</span><span class="p">()</span>
-<span class="k">filetype</span> plugin indent <span class="k">on</span>
-<span class="c">" }</span>
+<span class="c">" Plug 'szw/vim-ctrlspace'</span>
+<span class="c">" Plug 'vim-scripts/mru.vim'</span>
+Plug <span class="s1">'bling/vim-airline'</span>
+Plug <span class="s1">'Shougo/vimproc.vim'</span><span class="p">,</span> {<span class="s1">'do'</span> : <span class="s1">'make'</span>}
+<span class="c">" Plug 'm2mdas/phpcomplete-extended'</span>
+<span class="c">" Plug 'm2mdas/phpcomplete-extended-symfony'</span>
+<span class="c">" Plug 'ctrlpvim/ctrlp.vim'</span>
+<span class="c">" Plug 'idanarye/vim-merginal'</span>
+Plug <span class="s1">'terryma/vim-expand-region'</span>
+Plug <span class="s1">'terryma/vim-multiple-cursors'</span>
+Plug <span class="s1">'terryma/vim-smooth-scroll'</span>
+<span class="c">" Plug 'vim-scripts/YankRing.vim'</span>
+Plug <span class="s1">'Xuyuanp/nerdtree-git-plugin'</span>
+Plug <span class="s1">'ryanoasis/vim-devicons'</span>
+Plug <span class="s1">'rhysd/clever-f.vim'</span>
+Plug <span class="s1">'rhysd/vim-textobj-conflict'</span>
+Plug <span class="s1">'junegunn/fzf'</span><span class="p">,</span> { <span class="s1">'dir'</span>: <span class="s1">'~/.fzf'</span><span class="p">,</span> <span class="s1">'do'</span>: <span class="s1">'./install --all'</span> }
+Plug <span class="s1">'junegunn/fzf.vim'</span>
+Plug <span class="s1">'bfredl/nvim-miniyank'</span>
+Plug <span class="s1">'junegunn/vim-peekaboo'</span>
+Plug <span class="s1">'jlanzarotta/bufexplorer'</span>
 
-<span class="c">" ENABLE PLUGINS {</span>
-    <span class="k">let</span> <span class="k">g</span>:phpcomplete <span class="p">=</span> <span class="m">1</span>
-<span class="c">    " let g:phpcomplete_extended = 1</span>
-<span class="c">    " let g:eclim = 1</span>
+<span class="c">" Initialize plugin system</span>
+<span class="k">call</span> plug#<span class="k">end</span><span class="p">()</span>
 
-    <span class="k">if</span> <span class="p">!</span>exists<span class="p">(</span><span class="s1">'g:eclim'</span><span class="p">)</span>
-<span class="c">        " disabled by default, so syntastic can work</span>
-        <span class="k">let</span> <span class="k">g</span>:EclimFileTypeValidate <span class="p">=</span> <span class="m">0</span>
-<span class="c">        " disable Eclim</span>
-        exec <span class="s2">":EclimDisable"</span>
-    <span class="k">endif</span>
 <span class="c">" }</span></code></pre></div>
 
 </div>
@@ -364,47 +414,66 @@ Plugin <span class="s1">'rhysd/vim-textobj-conflict'</span>
 <div> <button class="selectButton" data-id="#selectText2" type="button">Select text </button> </div>
 <div id="selectText2">
 
-<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="k">set</span> <span class="nb">nocompatible</span>
-
-<span class="c">" load plugins</span>
-<span class="k">silent</span><span class="p">!</span> runtime bundles.<span class="k">vim</span>
+<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="c">" load plugins</span>
+source <span class="p">~</span><span class="sr">/.vim/</span>plug.<span class="k">vim</span>
 
 <span class="c">" core stuff</span>
 source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
 
-<span class="c">" COLORSCHEME/LAYOUT {</span>
-<span class="c">    " GVIM {</span>
-        <span class="k">set</span> <span class="nb">guioptions</span><span class="p">-=</span>T
-        <span class="k">set</span> <span class="nb">guioptions</span><span class="p">-=</span><span class="k">m</span>
-<span class="c">        " set guioptions+=l</span>
-<span class="c">        " set guioptions-=r</span>
-<span class="c">    " }</span>
+<span class="c">" highlight cursor line</span>
+<span class="k">set</span> <span class="nb">cursorline</span>
 
-<span class="c">    " highlight cursor line</span>
-    <span class="k">set</span> <span class="nb">cursorline</span>
+<span class="k">let</span> $NVIM_TUI_ENABLE_CURSOR_SHAPE<span class="p">=</span><span class="m">1</span>
 
-    <span class="k">if</span> has<span class="p">(</span><span class="s1">'gui_running'</span><span class="p">)</span>
-        <span class="k">colorscheme</span> gruvbox
-        <span class="k">let</span> hour <span class="p">=</span> strftime<span class="p">(</span><span class="s2">"%H"</span><span class="p">)</span>
-        <span class="k">if</span> hour <span class="p">&gt;=</span> <span class="m">8</span> &amp;&amp; hour <span class="p">&lt;</span> <span class="m">19</span>
-<span class="c">            " set background=light</span>
-            <span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">dark</span>
-        <span class="k">else</span>
-            <span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">dark</span>
-        <span class="k">endif</span>
-<span class="c">        " set guifont=Sauce\ Code\ Pro\ 10.5</span>
-        <span class="k">set</span> <span class="nb">guifont</span><span class="p">=</span>SauceCodePro\ Nerd\ Font\ Medium\ <span class="m">10</span>.<span class="m">5</span>
-<span class="c">        " set less linespace is a must for source code pro font</span>
-        <span class="k">set</span> <span class="nb">lsp</span><span class="p">=</span><span class="m">-2</span>
-<span class="c">        " hide mouse when typing</span>
-        <span class="k">set</span> <span class="nb">mousehide</span>
+<span class="nb">inoremap</span> <span class="p">-</span> <span class="p">--</span>
+imap <span class="p">&lt;</span><span class="k">a</span><span class="p">-</span><span class="k">n</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">q</span><span class="p">&gt;</span>ñ
+imap <span class="p">&lt;</span><span class="k">a</span><span class="m">-2</span><span class="p">&gt;</span> «
+imap <span class="p">&lt;</span><span class="k">a</span><span class="m">-3</span><span class="p">&gt;</span> »
+nmap <span class="p">&lt;</span>F5<span class="p">&gt;</span> ]<span class="k">s</span>
+
+<span class="c">" cursor line disappears in insert mode</span>
+<span class="k">autocmd</span> <span class="nb">InsertEnter</span><span class="p">,</span><span class="nb">InsertLeave</span> * <span class="k">set</span> <span class="nb">cul</span><span class="p">!</span>
+
+<span class="k">if</span> has<span class="p">(</span><span class="s1">'gui_running'</span><span class="p">)</span>
+    <span class="k">set</span> <span class="nb">guioptions</span><span class="p">-=</span>T
+    <span class="k">set</span> <span class="nb">guioptions</span><span class="p">-=</span><span class="k">m</span>
+    <span class="k">colorscheme</span> gruvbox
+    <span class="k">let</span> hour <span class="p">=</span> strftime<span class="p">(</span><span class="s2">"%H"</span><span class="p">)</span>
+    <span class="k">if</span> hour <span class="p">&gt;=</span> <span class="m">8</span> &amp;&amp; hour <span class="p">&lt;</span> <span class="m">19</span>
+<span class="c">        " set background=light</span>
+        <span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">dark</span>
     <span class="k">else</span>
-        <span class="k">se</span> <span class="nb">t_Co</span><span class="p">=</span><span class="m">256</span>
-        <span class="k">colorscheme</span> gruvbox
         <span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">dark</span>
     <span class="k">endif</span>
+<span class="c">    " set guifont=Sauce\ Code\ Pro\ 10.5</span>
+    <span class="k">set</span> <span class="nb">guifont</span><span class="p">=</span>SauceCodePro\ Nerd\ Font\ Medium\ <span class="m">10</span>.<span class="m">5</span>
+<span class="c">    " set less linespace is a must for source code pro font</span>
+    <span class="k">set</span> <span class="nb">lsp</span><span class="p">=</span><span class="m">-2</span>
+<span class="c">    " hide mouse when typing</span>
+    <span class="k">set</span> <span class="nb">mousehide</span>
+
+<span class="k">else</span>
+    <span class="k">se</span> <span class="nb">t_Co</span><span class="p">=</span><span class="m">256</span>
+    <span class="k">colorscheme</span> gruvbox
+    <span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">dark</span>
+<span class="k">endif</span>
 
 <span class="c">" }</span>
+
+
+<span class="c">" ENABLE PLUGINS {</span>
+    <span class="k">let</span> <span class="k">g</span>:phpcomplete <span class="p">=</span> <span class="m">1</span>
+<span class="c">    " let g:phpcomplete_extended = 1</span>
+<span class="c">    " let g:eclim = 1</span>
+
+<span class="c">    " if !exists('g:eclim')</span>
+<span class="c">    "     " disabled by default, so syntastic can work</span>
+<span class="c">    "     let g:EclimFileTypeValidate = 0</span>
+<span class="c">    "     " disable Eclim</span>
+<span class="c">    "     exec ":EclimDisable"</span>
+<span class="c">    " endif</span>
+<span class="c">" }</span>
+
 
 <span class="c">" GENERAL SETTINGS {</span>
     <span class="k">set</span> <span class="nb">title</span>
@@ -415,11 +484,10 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
 
     <span class="nb">syntax</span> enable
     <span class="k">set</span> <span class="nb">sessionoptions</span><span class="p">=</span>blank<span class="p">,</span><span class="k">buffers</span><span class="p">,</span>curdir<span class="p">,</span>folds<span class="p">,</span>tabpages<span class="p">,</span>winsize
-    nmap <span class="p">&lt;</span>RightMouse<span class="p">&gt;</span> <span class="p">&lt;</span>LeftMouse<span class="p">&gt;</span>"uyiwh/<span class="k">u</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
-    vmap <span class="p">&lt;</span>RightMouse<span class="p">&gt;</span> *<span class="k">N</span>
+    nmap <span class="p">&lt;</span>MiddleMouse<span class="p">&gt;</span> <span class="p">&lt;</span>LeftMouse<span class="p">&gt;</span>yiwh/<span class="m">0</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+    vmap <span class="p">&lt;</span>MiddleMouse<span class="p">&gt;</span> *<span class="k">N</span>
     nmap <span class="p">&lt;</span>LeftMouse<span class="p">&gt;</span> <span class="p">&lt;</span>LeftMouse<span class="p">&gt;&lt;</span>C<span class="p">-</span><span class="k">l</span><span class="p">&gt;</span>
     vmap <span class="p">&lt;</span>LeftMouse<span class="p">&gt;</span> <span class="p">&lt;</span>LeftMouse<span class="p">&gt;&lt;</span>C<span class="p">-</span><span class="k">l</span><span class="p">&gt;</span>
-<span class="c">    " vmap &lt;MiddleMouse&gt; &lt;C-n&gt;</span>
 
 <span class="c">    " add motions with a counter to the jump list</span>
     <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="k">k</span> :<span class="p">&lt;</span>C<span class="p">-</span>U<span class="p">&gt;</span>execute <span class="s1">'normal!'</span> <span class="p">(</span><span class="k">v</span>:<span class="k">count</span> <span class="p">&gt;</span> <span class="m">1</span> ? <span class="s2">"m'"</span> . <span class="k">v</span>:<span class="k">count</span> : <span class="s1">''</span><span class="p">)</span> . <span class="s1">'k'</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
@@ -433,15 +501,13 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
 <span class="c">        " :Gstatus uses the preview window</span>
         <span class="k">set</span> <span class="nb">previewheight</span><span class="p">=</span><span class="m">20</span>
 
-<span class="c">        " paste yanked text multiple times in visual mode (trick lost -&gt; exchange) problem with yankring, replaced by YRRunAfterMaps function</span>
-<span class="c">        " vnoremap p pgvy</span>
-
 <span class="c">        " paste correctly indented on same line</span>
-        map <span class="p">&lt;</span><span class="k">a</span><span class="p">-</span><span class="k">P</span><span class="p">&gt;</span> V<span class="p">&lt;</span><span class="k">a</span><span class="p">-</span><span class="k">p</span><span class="p">&gt;</span>
+        map <span class="p">&lt;</span><span class="k">a</span><span class="p">-</span><span class="k">s</span><span class="p">-</span><span class="k">p</span><span class="p">&gt;</span> V<span class="p">&lt;</span><span class="k">a</span><span class="p">-</span><span class="k">p</span><span class="p">&gt;</span>
 
-<span class="c">        " don't save in default register when executing a 'c' command</span>
-        <span class="nb">nnoremap</span> <span class="k">c</span> <span class="c">"_c</span>
-        <span class="nb">nnoremap</span> C <span class="c">"_C</span>
+<span class="c">        " don't save in default register when executing an auto yank command</span>
+<span class="c">        "nnoremap c "_c</span>
+<span class="c">        "nnoremap C "_C</span>
+<span class="c">        "nnoremap x "_x</span>
 
 <span class="c">        " paste default register in insert mode and command mode</span>
         <span class="nb">inoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">v</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">r</span><span class="p">&gt;+</span>
@@ -458,18 +524,6 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
 <span class="c">" }</span>
 
 <span class="c">" MAPPINGS {</span>
-<span class="c">    " INIT</span>
-<span class="c">    " fix gnome terminal problem with alt keys (a-z only)</span>
-    <span class="k">set</span> <span class="nb">esckeys</span>
-    <span class="k">let</span> <span class="k">c</span><span class="p">=</span><span class="s1">'a'</span>
-    <span class="k">while</span> <span class="k">c</span> <span class="p">&lt;=</span> <span class="s1">'z'</span>
-        exec <span class="s2">"set &lt;A-"</span>.<span class="k">c</span>.<span class="s2">"&gt;=\e"</span>.<span class="k">c</span>
-        exec <span class="s2">"imap \e"</span>.<span class="k">c</span>.<span class="s2">" &lt;A-"</span>.<span class="k">c</span>.<span class="s2">"&gt;"</span>
-        <span class="k">let</span> <span class="k">c</span> <span class="p">=</span> nr2char<span class="p">(</span><span class="m">1</span><span class="p">+</span>char2nr<span class="p">(</span><span class="k">c</span><span class="p">))</span>
-    <span class="k">endw</span>
-    <span class="k">set</span> <span class="nb">ttimeout</span> <span class="nb">ttimeoutlen</span><span class="p">=</span><span class="m">50</span>
-
-
 <span class="c">    " NORMAL MODE COMMANDS</span>
 <span class="c">    " set uppercase word (insert/visual/normal)</span>
     <span class="nb">inoremap</span> <span class="p">&lt;</span>A<span class="p">-</span><span class="k">u</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span>O<span class="p">&gt;</span><span class="k">b</span><span class="p">&lt;</span>C<span class="p">-</span>O<span class="p">&gt;</span>gUiw<span class="p">&lt;</span>C<span class="p">-</span>O<span class="p">&gt;</span><span class="k">e</span><span class="p">&lt;</span>C<span class="p">-</span>O<span class="p">&gt;</span><span class="k">a</span>
@@ -507,7 +561,7 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
 <span class="c">    " Close all other windows</span>
     nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">o</span> :<span class="k">only</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="c">    " Close all other windows keeping panes open (eclim util)</span>
-    nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span>O :Only<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="c">    " nmap &lt;silent&gt; &lt;leader&gt;O :Only&lt;CR&gt;</span>
 <span class="c">    " Close tip window</span>
 
 <span class="c">    " Restart Vim</span>
@@ -527,16 +581,12 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
     <span class="nb">nnoremap</span> <span class="k">cc</span> <span class="k">cc</span><span class="p">&lt;</span>space<span class="p">&gt;&lt;</span>BS<span class="p">&gt;</span>
     <span class="nb">nnoremap</span> C C<span class="p">&lt;</span>space<span class="p">&gt;&lt;</span>BS<span class="p">&gt;</span>
 
-<span class="c">    " delete in insert mode (only works in gvim)</span>
-    <span class="nb">inoremap</span> <span class="p">&lt;</span>C<span class="p">-</span>BS<span class="p">&gt;</span> <span class="p">&lt;</span>delete<span class="p">&gt;</span>
-
 <span class="c">    " smartwords mappings</span>
-<span class="c">    " noremap ÷ w</span>
-    map ÷ <span class="p">&lt;</span>Plug<span class="p">&gt;(</span>smartword<span class="p">-</span><span class="k">w</span><span class="p">)</span>
+    map <span class="p">&lt;</span><span class="k">s</span><span class="p">-</span><span class="k">a</span><span class="p">-</span><span class="k">w</span><span class="p">&gt;</span> <span class="p">&lt;</span>Plug<span class="p">&gt;(</span>smartword<span class="p">-</span><span class="k">w</span><span class="p">)</span>
 <span class="c">    " noremap â b</span>
-    map â <span class="p">&lt;</span>Plug<span class="p">&gt;(</span>smartword<span class="p">-</span><span class="k">b</span><span class="p">)</span>
-    map <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> × <span class="p">&lt;</span>Plug<span class="p">&gt;</span>CamelCaseMotion_w
-    map <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> Â <span class="p">&lt;</span>Plug<span class="p">&gt;</span>CamelCaseMotion_b
+    map <span class="p">&lt;</span><span class="k">s</span><span class="p">-</span><span class="k">a</span><span class="p">-</span><span class="k">b</span><span class="p">&gt;</span> <span class="p">&lt;</span>Plug<span class="p">&gt;(</span>smartword<span class="p">-</span><span class="k">b</span><span class="p">)</span>
+    map <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">a</span><span class="p">-</span><span class="k">w</span><span class="p">&gt;</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>CamelCaseMotion_w
+    map <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">a</span><span class="p">-</span><span class="k">b</span><span class="p">&gt;</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>CamelCaseMotion_b
 <span class="c">    " map &lt;Leader&gt;&lt;Leader&gt;e &lt;Plug&gt;(smartword-e)</span>
 <span class="c">    " map &lt;Leader&gt;&lt;Leader&gt;ge &lt;Plug&gt;(smartword-ge)</span>
 
@@ -554,17 +604,14 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
 <span class="c">    " inoremap &lt;C-p&gt; &lt;C-X&gt;&lt;C-O&gt;</span>
     imap <span class="p">&lt;</span>C<span class="p">-</span>CR<span class="p">&gt;</span> <span class="p">-&gt;</span>
 
-<span class="c">    " writing</span>
-    imap î <span class="p">&lt;</span>C<span class="p">-</span><span class="k">q</span><span class="p">&gt;</span>ñ
-    imap ² «
-    imap ³ »
+
 <span class="c">" }</span>
 
 <span class="c">" AUTOCOMMANDS {</span>
     augroup my_group
         <span class="k">autocmd</span><span class="p">!</span>
 <span class="c">        " maximize at startup</span>
-        <span class="k">autocmd</span> <span class="nb">GUIEnter</span> * <span class="k">call</span> system<span class="p">(</span><span class="s2">"wmctrl -ir "</span> . <span class="k">v</span>:windowid . <span class="s2">" -b add,maximized_vert,maximized_horz"</span><span class="p">)</span>
+<span class="c">        " autocmd GUIEnter * call system("wmctrl -ir " . v:windowid . " -b add,maximized_vert,maximized_horz")</span>
 <span class="c">        " hybrid numbers normal mode / no relative insert mode</span>
         <span class="k">autocmd</span> <span class="nb">InsertEnter</span> * <span class="k">set</span> <span class="k">number</span><span class="p">|</span><span class="k">set</span> <span class="nb">norelativenumber</span>
         <span class="k">autocmd</span> <span class="nb">InsertLeave</span> * <span class="k">set</span> <span class="nb">relativenumber</span>
@@ -584,7 +631,7 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
         <span class="k">autocmd</span> <span class="nb">BufEnter</span><span class="p">,</span><span class="nb">BufRead</span><span class="p">,</span><span class="nb">BufNewFile</span> * <span class="k">setlocal</span> <span class="nb">nowrap</span> <span class="nb">textwidth</span><span class="p">=</span><span class="m">120</span> <span class="nb">list</span> <span class="nb">formatoptions</span><span class="p">=</span><span class="k">l</span> <span class="k">number</span> <span class="nb">relativenumber</span> <span class="nb">guifont</span><span class="p">=</span>SauceCodePro\ Nerd\ Font\ Medium\ <span class="m">10</span>.<span class="m">5</span>
 <span class="c">        " wrap lines only on space (linebreak), don't auto break and don't show margin</span>
         <span class="k">autocmd</span> <span class="nb">BufEnter</span><span class="p">,</span><span class="nb">BufRead</span><span class="p">,</span><span class="nb">BufNewFile</span> *.markdown <span class="k">setlocal</span> <span class="nb">wrap</span> <span class="nb">linebreak</span> <span class="nb">nolist</span> <span class="nb">textwidth</span><span class="p">=</span><span class="m">0</span> <span class="nb">nonumber</span> <span class="nb">norelativenumber</span> <span class="nb">guifont</span><span class="p">=</span>SauceCodePro\ Nerd\ Font\ Medium\ <span class="m">10</span>.<span class="m">5</span>
-        <span class="k">autocmd</span> <span class="nb">BufEnter</span><span class="p">,</span><span class="nb">BufRead</span><span class="p">,</span><span class="nb">BufNewFile</span> *.md <span class="k">setlocal</span> <span class="nb">wrap</span> <span class="nb">linebreak</span> <span class="nb">nolist</span> <span class="nb">textwidth</span><span class="p">=</span><span class="m">0</span> <span class="nb">nonumber</span> <span class="nb">norelativenumber</span> <span class="nb">guifont</span><span class="p">=</span>Courier\ <span class="m">10</span>\ Pitch\ <span class="m">14</span> <span class="k">spell</span> <span class="nb">spelllang</span><span class="p">=</span>es_es
+        <span class="k">autocmd</span> <span class="nb">BufEnter</span><span class="p">,</span><span class="nb">BufRead</span><span class="p">,</span><span class="nb">BufNewFile</span> *.md <span class="k">setlocal</span> <span class="nb">wrap</span> <span class="nb">linebreak</span> <span class="nb">nolist</span> <span class="nb">textwidth</span><span class="p">=</span><span class="m">0</span> <span class="nb">nonumber</span> <span class="nb">norelativenumber</span> <span class="nb">guifont</span><span class="p">=</span>Courier\ <span class="m">10</span>\ Pitch\ <span class="m">14</span> <span class="k">spell</span> <span class="nb">spelllang</span><span class="p">=</span>es_es<span class="p">|</span>GitGutterDisable
         <span class="k">autocmd</span> <span class="nb">BufEnter</span><span class="p">,</span><span class="nb">BufRead</span><span class="p">,</span><span class="nb">BufNewFile</span> *.txt <span class="k">setlocal</span> <span class="nb">wrap</span> <span class="nb">linebreak</span> <span class="nb">nolist</span> <span class="nb">textwidth</span><span class="p">=</span><span class="m">0</span> <span class="nb">nonumber</span> <span class="nb">norelativenumber</span> <span class="nb">guifont</span><span class="p">=</span>SauceCodePro\ Nerd\ Font\ Medium\ <span class="m">10</span>.<span class="m">5</span>
 
 <span class="c">        " For your list of filetypes where you want Eclim semantic completion </span>
@@ -605,20 +652,6 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
             <span class="k">silent</span> execute <span class="s1">'bwipeout'</span> <span class="k">buf</span>
         <span class="k">endfor</span>
     <span class="k">endfunction</span>
-
-<span class="c">    " function! GrepProject(...)</span>
-<span class="c">    "     if a:0 &gt; 0</span>
-<span class="c">    "         let @/= '\V' . a:1</span>
-<span class="c">    "     end</span>
-<span class="c">    "     execute 'vimgrep /' . @/ . '/ **'</span>
-<span class="c">    " endfunction</span>
-
-<span class="c">    " function! AgProject(...)</span>
-<span class="c">    "     if a:0 &gt; 0</span>
-<span class="c">    "         let @/= '\V' . a:1</span>
-<span class="c">    "     end</span>
-<span class="c">    "     execute 'AgFromSearch'</span>
-<span class="c">    " endfunction</span>
 
 <span class="c">    " Strip whitespace</span>
     <span class="k">function</span><span class="p">!</span> StripWhitespace<span class="p">(</span>strip_whitespace_mode<span class="p">)</span>
@@ -783,7 +816,9 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
 <span class="c">        " let g:airline#extensions#eclim#enabled = 1</span>
 <span class="c">        " let g:airline#extensions#tmuxline#enabled = 1</span>
         <span class="k">let</span> <span class="k">g</span>:airline#extensions#tagbar#enabled <span class="p">=</span> <span class="m">1</span>
-        <span class="k">let</span> <span class="k">g</span>:airline#extensions#<span class="nb">tabline</span>#show_buffers <span class="p">=</span> <span class="m">0</span>
+        <span class="k">let</span> <span class="k">g</span>:airline#extensions#<span class="nb">tabline</span>#buffer_min_count <span class="p">=</span><span class="m">2</span>
+        <span class="k">let</span> <span class="k">g</span>:airline#extensions#<span class="nb">tabline</span>#show_tabs <span class="p">=</span> <span class="m">0</span>
+<span class="c">        " let g:airline#extensions#tabline#show_buffers = 1</span>
         <span class="k">let</span> <span class="k">g</span>:airline_exclude_preview <span class="p">=</span> <span class="m">1</span>
         <span class="k">let</span> <span class="k">g</span>:airline#extensions#whitespace#checks <span class="p">=</span> [<span class="s1">''</span>]
         <span class="k">let</span> <span class="k">g</span>:airline#extensions#whitespace#enabled <span class="p">=</span> <span class="m">0</span>
@@ -791,15 +826,15 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
         <span class="k">let</span> <span class="k">g</span>:airline#extensions#<span class="nb">tabline</span>#show_tab_nr <span class="p">=</span> <span class="m">1</span>
         <span class="k">let</span> <span class="k">g</span>:airline#extensions#<span class="nb">tabline</span>#buffer_idx_mode <span class="p">=</span> <span class="m">1</span>
         <span class="k">let</span> <span class="k">g</span>:airline#extensions#hunks#enabled <span class="p">=</span> <span class="m">1</span>
-<span class="c">        " map &lt;leader&gt;1 &lt;Plug&gt;AirlineSelectTab1</span>
-<span class="c">        " map &lt;leader&gt;2 &lt;Plug&gt;AirlineSelectTab2</span>
-<span class="c">        " map &lt;leader&gt;3 &lt;Plug&gt;AirlineSelectTab3</span>
-<span class="c">        " map &lt;leader&gt;4 &lt;Plug&gt;AirlineSelectTab4</span>
-<span class="c">        " map &lt;leader&gt;5 &lt;Plug&gt;AirlineSelectTab5</span>
-<span class="c">        " map &lt;leader&gt;6 &lt;Plug&gt;AirlineSelectTab6</span>
-<span class="c">        " map &lt;leader&gt;7 &lt;Plug&gt;AirlineSelectTab7</span>
-<span class="c">        " map &lt;leader&gt;8 &lt;Plug&gt;AirlineSelectTab8</span>
-<span class="c">        " map &lt;leader&gt;9 &lt;Plug&gt;AirlineSelectTab9</span>
+        map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="m">1</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>AirlineSelectTab1
+        map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="m">2</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>AirlineSelectTab2
+        map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="m">3</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>AirlineSelectTab3
+        map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="m">4</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>AirlineSelectTab4
+        map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="m">5</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>AirlineSelectTab5
+        map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="m">6</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>AirlineSelectTab6
+        map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="m">7</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>AirlineSelectTab7
+        map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="m">8</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>AirlineSelectTab8
+        map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="m">9</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>AirlineSelectTab9
 <span class="c">    " }</span>
 
 <span class="c">    " NERDTREE {</span>
@@ -828,7 +863,7 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
 
 <span class="c">    " TAGBAR {</span>
 <span class="c">        " nmap &lt;C-t&gt; :TagbarOpenAutoClose&lt;CR&gt;</span>
-        nmap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">t</span><span class="p">&gt;</span> :TagbarOpen fj<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+        nmap <span class="p">&lt;</span>A<span class="p">-</span><span class="k">s</span><span class="p">-</span><span class="k">t</span><span class="p">&gt;</span> :TagbarOpen fj<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="c">        " go to previous tag on tagbar</span>
         nmap <span class="p">&lt;</span>A<span class="p">-</span>T<span class="p">&gt;</span> :TagbarOpen fj<span class="p">&lt;</span>CR<span class="p">&gt;</span><span class="k">k</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="c">        " go to next tag on tagbar</span>
@@ -870,36 +905,35 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
 <span class="c">        " let g:syntastic_php_checkers = ["php", "phpcs", "phpmd"]</span>
 <span class="c">        " }</span>
 
-<span class="c">    " CTRLP {</span>
-        <span class="k">let</span> <span class="k">g</span>:ctrlp_map <span class="p">=</span> <span class="s1">'&lt;c-s-tab&gt;'</span>
-        <span class="k">let</span> <span class="k">g</span>:ctrlp_by_filename <span class="p">=</span> <span class="m">1</span>
-        map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">tab</span><span class="p">&gt;</span> :CtrlPMRU<span class="p">&lt;</span>CR<span class="p">&gt;</span>
-        <span class="k">let</span> <span class="k">g</span>:ctrlp_match_window <span class="p">=</span> <span class="s1">'max:30,results:30'</span>
-
-<span class="c">        " let g:ctrlp_open_multiple_files = 'i'</span>
-<span class="c">        " let g:ctrlp_extensions = ['buffertag', 'changes']</span>
-
-
-<span class="c">        " let g:ctrlp_buffer_func = { 'enter': 'MyCtrlPMappings' }</span>
-
-<span class="c">        " func! MyCtrlPMappings()</span>
-<span class="c">        "     nnoremap &lt;buffer&gt; &lt;silent&gt; &lt;c-_&gt; :call &lt;sid&gt;DeleteBuffer()&lt;cr&gt;</span>
-<span class="c">        " endfunc</span>
-
-<span class="c">        " func! s:DeleteBuffer()</span>
-<span class="c">        "     let line = getline('.')</span>
-<span class="c">        "     let bufid = line =~ '\[\d\+\*No Name\]$' ? str2nr(matchstr(line, '\d\+'))</span>
-<span class="c">        "                 \ : fnamemodify(line[2:], ':p')</span>
-<span class="c">        "     exec "bd" bufid</span>
-<span class="c">        "     exec "norm \&lt;F5&gt;"</span>
-<span class="c">        " endfunc</span>
+<span class="c">    " BUFFEXPLORER {</span>
+<span class="c">        " useful maps: T (show buffers from all tabs), u (show hidden buffers), s/S (sort buffers), d (delete buffer), ? (help), q (quit)</span>
+        map <span class="p">&lt;</span>leader<span class="p">&gt;</span>? <span class="p">&lt;</span>f1<span class="p">&gt;</span>
+<span class="c">        " nnoremap &lt;silent&gt; &lt;leader&gt;b :BufExplorerHorizontalSplit&lt;CR&gt;</span>
+        <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">b</span> :BufExplorer<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+        <span class="k">let</span> <span class="k">g</span>:bufExplorerShowTabBuffer<span class="p">=</span><span class="m">1</span>       <span class="c">" Yes.</span>
+<span class="c">        " let g:bufExplorerDefaultHelp=1       " Show default help.</span>
+<span class="c">        " let g:bufExplorerDetailedHelp=1      " Show detailed help.</span>
+        <span class="k">let</span> <span class="k">g</span>:bufExplorerShowNoName<span class="p">=</span><span class="m">1</span>          <span class="c">" Do not show No Name buffers.</span>
+<span class="c">        " let g:bufExplorerSortBy='fullpath'   " Sort by full file path name.</span>
+        <span class="k">let</span> <span class="k">g</span>:bufExplorerDisableDefaultKeyMapping<span class="p">=</span><span class="m">1</span>    <span class="c">" Disable mapping.</span>
+         <span class="k">let</span> <span class="k">g</span>:bufExplorerSplitBelow<span class="p">=</span><span class="m">1</span>        <span class="c">" Split new window below current.</span>
+        <span class="k">let</span> <span class="k">g</span>:bufExplorerSplitOutPathName<span class="p">=</span><span class="m">0</span>  <span class="c">" Don't split the path and file</span>
+        <span class="k">let</span> <span class="k">g</span>:bufExplorerFindActive<span class="p">=</span><span class="m">0</span>        <span class="c">" Do not go to active window.</span>
+        <span class="k">let</span> <span class="k">g</span>:bufExplorerShowRelativePath<span class="p">=</span><span class="m">1</span>  <span class="c">" Show relative paths.</span>
+<span class="c">        " let g:bufExplorerChgWin=1  " Show relative paths.</span>
+<span class="c">        " Move to the next buffer</span>
+        <span class="nb">noremap</span> <span class="p">&lt;</span>A<span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> :<span class="k">bnext</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="c">        " Move to the previous buffer</span>
+        <span class="nb">noremap</span> <span class="p">&lt;</span>A<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> :<span class="k">bprev</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="c">    " }</span>
+
 
 <span class="c">    " FUGITIVE {</span>
         <span class="k">set</span> <span class="nb">diffopt</span><span class="p">+=</span><span class="k">vertical</span>
         <span class="nb">nnoremap</span> <span class="p">&lt;</span>F7<span class="p">&gt;</span> :<span class="k">only</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>:Gstatus<span class="p">&lt;</span>CR<span class="p">&gt;</span>
         <span class="nb">nnoremap</span> <span class="p">&lt;</span>F8<span class="p">&gt;</span> :<span class="k">only</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>:Gdiff<span class="p">&lt;</span>CR<span class="p">&gt;</span>
         <span class="nb">nnoremap</span> <span class="p">&lt;</span>F9<span class="p">&gt;</span> :<span class="k">only</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>:Gedit HEAD<span class="p">~</span><span class="m">0</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+        <span class="nb">nnoremap</span> <span class="p">&lt;</span>F10<span class="p">&gt;</span> :<span class="k">only</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>:Glog <span class="p">--</span> %<span class="p">&lt;</span>CR<span class="p">&gt;</span>
         <span class="k">autocmd</span> <span class="nb">BufReadPost</span> fugitive:<span class="sr">//</span>* <span class="k">set</span> <span class="nb">bufhidden</span><span class="p">=</span>delete
         <span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span>F7<span class="p">&gt;</span> :<span class="p">!~</span><span class="sr">/bin/</span>ansbot <span class="s1">'*?assword*'</span> <span class="s2">"$GIT_PASS"</span> <span class="s1">''</span><span class="sr">/usr/</span><span class="nb">bin</span>/git <span class="k">r</span><span class="s1">''</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
         <span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span>F8<span class="p">&gt;</span> :<span class="p">!~</span><span class="sr">/bin/</span>ansbot <span class="s1">'*?assword*'</span> <span class="s2">"$GIT_PASS"</span> <span class="s1">''</span><span class="sr">/usr/</span><span class="nb">bin</span>/git <span class="k">p</span><span class="s1">''</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
@@ -913,7 +947,7 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
 <span class="c">    " }</span>
 
 <span class="c">    " GUNDO {</span>
-        <span class="nb">nnoremap</span> <span class="p">&lt;</span>F5<span class="p">&gt;</span> :GundoToggle<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="c">        " nnoremap &lt;F5&gt; :GundoToggle&lt;CR&gt;</span>
 <span class="c">    " }</span>
 
 <span class="c">    " TEXTOBJ_FUNC {</span>
@@ -940,7 +974,8 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
 <span class="c">    " }</span>
 
 <span class="c">    " INDEXER/TAGS {</span>
-        <span class="k">let</span> <span class="k">g</span>:indexer_disableCtagsWarning<span class="p">=</span><span class="m">1</span>
+<span class="c">        " let g:indexer_disableCtagsWarning=1</span>
+        <span class="k">let</span> <span class="k">g</span>:indexer_indexerListFilename<span class="p">=</span> $HOME .<span class="s2">"/.vim/indexer/.indexer_files"</span>
 <span class="c">    " }</span>
 
 
@@ -988,8 +1023,9 @@ source <span class="p">~</span><span class="sr">/.vim/</span>vimrc_core
 <span class="c">    " }</span>
 
 <span class="c">    " VIMPASTA {</span>
-<span class="c">        " let g:pasta_paste_before_mapping = '&lt;a-P&gt;'</span>
+        <span class="k">let</span> <span class="k">g</span>:pasta_paste_before_mapping <span class="p">=</span> <span class="s1">'&lt;nop&gt;'</span>
         <span class="k">let</span> <span class="k">g</span>:pasta_paste_after_mapping <span class="p">=</span> <span class="s1">'&lt;a-p&gt;'</span>
+<span class="c">        " let g:pasta_paste_after_mapping = '&lt;nop&gt;'</span>
 <span class="c">    " }</span>
 
 <span class="c">    " PHPMANUAL</span>
@@ -1050,8 +1086,8 @@ viI<span class="p">=</span>
     <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;&lt;</span><span class="k">up</span><span class="p">&gt;</span> :<span class="k">resize</span> <span class="m">-5</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
     <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;&lt;</span><span class="k">right</span><span class="p">&gt;</span> :<span class="k">vertical</span> <span class="k">resize</span> <span class="p">+</span><span class="m">10</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
 
-    map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">h</span><span class="p">&gt;</span> :AgFromSearch<span class="p">&lt;</span>CR<span class="p">&gt;</span>
-    vmap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">h</span><span class="p">&gt;</span> *:AgFromSearch<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+    map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">h</span><span class="p">&gt;</span> yw<span class="p">&lt;</span>esc<span class="p">&gt;</span>:Ag <span class="m">0</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+    vmap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">h</span><span class="p">&gt;</span> <span class="k">y</span><span class="p">&lt;</span>esc<span class="p">&gt;</span>:Ag <span class="m">0</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
 <span class="c">    " nmap &lt;leader&gt;X :CloseSession&lt;CR&gt;:SaveSession&lt;CR&gt;</span>
 
@@ -1066,10 +1102,10 @@ viI<span class="p">=</span>
     map <span class="p">&lt;</span>Leader<span class="p">&gt;&lt;</span>F8<span class="p">&gt;</span> :<span class="k">silent</span> %<span class="p">!</span>xmllint <span class="p">--</span>encode UTF<span class="m">-8</span> <span class="p">--</span>format <span class="p">-</span> <span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
 <span class="c">    " opens .vimrc and sets pwd to .vim</span>
-    map <span class="p">&lt;</span>C<span class="p">-</span>F12<span class="p">&gt;</span> :<span class="k">e</span> <span class="p">~</span><span class="sr">/.vim/</span>vimrc<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+    map <span class="p">&lt;</span><span class="k">a</span><span class="p">-</span>F12<span class="p">&gt;</span> :<span class="k">e</span> <span class="p">~</span><span class="sr">/.vim/</span>vimrc<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
 <span class="c">    " save and reload firefox current tab</span>
-    map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">f</span> :<span class="k">w</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>:<span class="k">silent</span> <span class="p">!</span>WID<span class="p">=</span>`xdotool search <span class="p">--</span>name <span class="s2">"Mozilla Firefox"</span> \<span class="p">|</span> head <span class="m">-1</span>`; xdotool windowactivate $WID <span class="p">&gt;</span> <span class="sr">/dev/</span>null <span class="m">2</span><span class="p">&gt;</span>&amp;<span class="m">1</span> ; xdotool <span class="nb">key</span> F5 <span class="p">&gt;</span> <span class="sr">/dev/</span>null <span class="m">2</span><span class="p">&gt;</span>&amp;<span class="m">1</span><span class="p">&lt;</span>CR<span class="p">&gt;</span> \ <span class="p">|</span> execute <span class="s1">':redraw!'</span>
+<span class="c">    " map &lt;leader&gt;f :w&lt;CR&gt;:silent !WID=`xdotool search --name "Mozilla Firefox" \| head -1`; xdotool windowactivate $WID &gt; /dev/null 2&gt;&amp;1 ; xdotool key F5 &gt; /dev/null 2&gt;&amp;1&lt;CR&gt; \ | execute ':redraw!'</span>
 
 <span class="c">    " ignore swap files (backup)</span>
     map <span class="p">&lt;</span>C<span class="p">-</span>S<span class="p">-</span>Del<span class="p">&gt;</span> :<span class="p">!</span> <span class="k">mv</span> <span class="p">~</span><span class="sr">/.vimswap/</span>* <span class="p">~</span><span class="sr">/.vimswap/</span>kk <span class="p">&gt;</span> <span class="sr">/dev/</span>null <span class="m">2</span><span class="p">&gt;</span>&amp;<span class="m">1</span> &amp;<span class="p">&lt;</span>CR<span class="p">&gt;</span>
@@ -1086,30 +1122,33 @@ viI<span class="p">=</span>
 <span class="c">    " imap -_ -&gt;</span>
 <span class="c">" }</span>
 
-<span class="c">" CTRL-SPACE</span>
-    <span class="k">if</span> executable<span class="p">(</span><span class="s2">"ag"</span><span class="p">)</span> 
-        <span class="k">let</span> <span class="k">g</span>:ctrlspace_glob_command <span class="p">=</span> <span class="s1">'ag -l --nocolor -g ""'</span>
-    <span class="k">endif</span>
+<span class="c">" " CTRL-SPACE</span>
+<span class="c">" if executable("ag") </span>
+<span class="c">"     let g:ctrlspace_glob_command = 'ag -l --nocolor -g ""'</span>
+<span class="c">" endif</span>
 
-    <span class="k">let</span> <span class="k">g</span>:ctrlspace_save_workspace_on_exit <span class="p">=</span> <span class="m">1</span>
+<span class="c">" let g:ctrlspace_save_workspace_on_exit = 1</span>
 
-<span class="c">    " nmap &lt;C-space&gt; :CtrlSpace /&lt;CR&gt;</span>
-    nmap <span class="p">&lt;</span>C<span class="p">-</span>S<span class="p">-</span>space<span class="p">&gt;</span> :CtrlSpace <span class="k">a</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
-    nmap <span class="p">&lt;</span>S<span class="p">-</span>space<span class="p">&gt;</span> :CtrlSpace *<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="c">" " nmap &lt;C-space&gt; :CtrlSpace /&lt;CR&gt;</span>
+<span class="c">" nmap &lt;C-S-space&gt; :CtrlSpace a&lt;CR&gt;</span>
+<span class="c">" nmap &lt;S-space&gt; :CtrlSpace *&lt;CR&gt;</span>
 
-<span class="c">    " Move to the next buffer (alphabetically) on current tab</span>
-    <span class="nb">noremap</span> <span class="p">&lt;</span>A<span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> :CtrlSpaceGoDown<span class="p">&lt;</span>CR<span class="p">&gt;</span>
-<span class="c">    " Move to the previous buffer (alphabetically) on current tab</span>
-    <span class="nb">noremap</span> <span class="p">&lt;</span>A<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> :CtrlSpaceGoUp<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="c">" " Move to the next buffer (alphabetically) on current tab</span>
+<span class="c">" noremap &lt;A-j&gt; :CtrlSpaceGoDown&lt;CR&gt;</span>
+<span class="c">" " Move to the previous buffer (alphabetically) on current tab</span>
+<span class="c">" noremap &lt;A-k&gt; :CtrlSpaceGoUp&lt;CR&gt;</span>
 
-    nmap <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">s</span> :CtrlSpaceSaveWorkspace default<span class="p">&lt;</span>CR<span class="p">&gt;</span>
-    nmap <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">l</span> :CtrlSpaceLoadWorkspace<span class="p">!</span> default<span class="p">&lt;</span>CR<span class="p">&gt;&lt;</span>C<span class="p">-</span>space<span class="p">&gt;</span>C<span class="p">&lt;</span>CR<span class="p">&gt;&lt;</span>C<span class="p">-</span>F11<span class="p">&gt;</span>
-    nmap <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">N</span> :CtrlSpaceNewWorkspace<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="c">" nmap &lt;leader&gt;s :CtrlSpaceSaveWorkspace default&lt;CR&gt;</span>
+<span class="c">" " nmap &lt;leader&gt;l :call system("wmctrl -ir " . v:windowid . " -b add,maximized_vert,maximized_horz")&lt;CR&gt;:CtrlSpaceLoadWorkspace! default&lt;CR&gt;&lt;C-space&gt;C&lt;CR&gt;&lt;C-F11&gt;</span>
+<span class="c">" nmap &lt;leader&gt;l &lt;c-w&gt;v&lt;c-w&gt;v&lt;C-F11&gt;&lt;a-right&gt;:e ~/b/BL.md&lt;CR&gt;&lt;C-F11&gt;&lt;C-F11&gt;&lt;c-w&gt;=</span>
+<span class="c">" nmap &lt;F5&gt; ]s</span>
+<span class="c">"     nmap &lt;leader&gt;N :CtrlSpaceNewWorkspace&lt;CR&gt;</span>
 
-<span class="c">" }</span>
+
+<span class="c">" " }</span>
 
 <span class="c">" VIM-ROOTER</span>
-    <span class="k">let</span> <span class="k">g</span>:rooter_manual_only <span class="p">=</span> <span class="m">1</span>
+<span class="c">    " let g:rooter_manual_only = 1</span>
 <span class="c">    " let g:rooter_use_lcd = 1</span>
 <span class="c">" }</span>
 
@@ -1137,8 +1176,6 @@ map <span class="p">&lt;</span>A<span class="p">-+&gt;</span> <span class="p">&l
       \ <span class="s1">'aq'</span> :<span class="m">1</span><span class="p">,</span>
       \ <span class="s1">'im'</span> :<span class="m">1</span><span class="p">,</span>
       \ <span class="s1">'am'</span> :<span class="m">1</span><span class="p">,</span>
-      \ <span class="s1">'ix'</span> :<span class="m">1</span><span class="p">,</span>
-      \ <span class="s1">'ax'</span> :<span class="m">1</span><span class="p">,</span>
       \ <span class="s1">'i]'</span> :<span class="m">1</span><span class="p">,</span>
       \ <span class="s1">'ib'</span> :<span class="m">1</span><span class="p">,</span>
       \ <span class="s1">'iB'</span> :<span class="m">1</span><span class="p">,</span>
@@ -1152,6 +1189,10 @@ map <span class="p">&lt;</span>A<span class="p">-+&gt;</span> <span class="p">&l
       \ <span class="s1">'ie'</span> :<span class="m">0</span><span class="p">,</span>
       \ }
 
+<span class="c">" select xml attribute also select words so cannot be used with expand_region_text_objects:</span>
+<span class="c">      " \ 'ix' :1,</span>
+<span class="c">      " \ 'ax' :1,</span>
+
 <span class="c">" VIM-MULTIPLE-CURSORS</span>
     <span class="k">set</span> <span class="nb">selection</span><span class="p">=</span>inclusive
 <span class="c">" }</span>
@@ -1163,19 +1204,112 @@ map <span class="p">&lt;</span>A<span class="p">-+&gt;</span> <span class="p">&l
     <span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">f</span><span class="p">&gt;</span> :<span class="k">call</span> smooth_scroll#down<span class="p">(</span>&amp;<span class="nb">scroll</span>*<span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">6</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
 <span class="c">" }</span>
 
-<span class="c">" YANK-RING</span>
-    <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>f2<span class="p">&gt;</span> :YRShow<span class="p">&lt;</span>CR<span class="p">&gt;</span>
-    <span class="k">let</span> <span class="k">g</span>:yankring_replace_n_nkey <span class="p">=</span> <span class="s1">'&lt;C-Y&gt;'</span>
-<span class="c">    " to allow nnoremap Y y$ mapping</span>
-    <span class="k">let</span> <span class="k">g</span>:yankring_n_keys <span class="p">=</span> <span class="s1">'D x X'</span>
 
-    <span class="k">function</span><span class="p">!</span> YRRunAfterMaps<span class="p">()</span>
-<span class="c">        " Make Y yank to end of line.</span>
-        <span class="nb">nnoremap</span> Y :<span class="p">&lt;</span>C<span class="p">-</span>U<span class="p">&gt;</span>YRYankCount <span class="s1">'y$'</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="c">" GITGUTTER</span>
+    <span class="k">let</span> <span class="k">g</span>:gitgutter_map_keys <span class="p">=</span> <span class="m">0</span>
+<span class="c">" }</span>
 
-<span class="c">        " Don't clobber the yank register when pasting over text in visual mode.</span>
-        <span class="nb">vnoremap</span> <span class="k">p</span> :<span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">u</span><span class="p">&gt;</span>YRPaste <span class="s1">'p'</span><span class="p">,</span> <span class="s1">'v'</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>gv:YRYankRange <span class="s1">'v'</span><span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
-    <span class="k">endfunction</span>
+
+<span class="c">" MINIYANK</span>
+<span class="c">    " use g-</span>
+<span class="c">    " map &lt;leader&gt;p &lt;Plug&gt;(miniyank-startput)</span>
+<span class="c">    " map &lt;leader&gt;P &lt;Plug&gt;(miniyank-startPut)</span>
+    map <span class="k">p</span> <span class="p">&lt;</span>Plug<span class="p">&gt;(</span>miniyank<span class="p">-</span>autoput<span class="p">)</span>
+    map <span class="k">P</span> <span class="p">&lt;</span>Plug<span class="p">&gt;(</span>miniyank<span class="p">-</span>autoPut<span class="p">)</span>
+
+<span class="c">    " paste yanked text multiple times in visual mode (this should be JUST here to override map p)</span>
+<span class="c">    " NOTE!!: to do the 'replace trick' or to use miniyank, use 'P' instead of 'p'</span>
+    vmap <span class="k">p</span> pgvy
+
+<span class="c">    " cycle through history:</span>
+    map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">p</span><span class="p">&gt;</span> <span class="p">&lt;</span>Plug<span class="p">&gt;(</span>miniyank<span class="p">-</span>cycle<span class="p">)</span>
+
+<span class="c">    " paste type</span>
+<span class="c">    " map &lt;Leader&gt;c &lt;Plug&gt;(miniyank-tochar)</span>
+<span class="c">    " map &lt;Leader&gt;l &lt;Plug&gt;(miniyank-toline)</span>
+<span class="c">    " map &lt;Leader&gt;b &lt;Plug&gt;(miniyank-toblock)</span>
+
+<span class="c">    " cycle backwards (g-)</span>
+
+<span class="c">    " persist:</span>
+<span class="c">    " let g:miniyank_filename = $HOME."/.miniyank.mpack"</span>
+
+<span class="c">" }</span>
+
+<span class="c">" " YANK-RING</span>
+<span class="c">"     nnoremap &lt;silent&gt; &lt;f2&gt; :YRShow&lt;CR&gt;</span>
+<span class="c">"     let g:yankring_replace_n_nkey = '&lt;C-Y&gt;'</span>
+<span class="c">"     " to allow nnoremap Y y$ mapping</span>
+<span class="c">"     let g:yankring_n_keys = 'D x X'</span>
+
+<span class="c">"     function! YRRunAfterMaps()</span>
+<span class="c">"         " Make Y yank to end of line.</span>
+<span class="c">"         nnoremap Y :&lt;C-U&gt;YRYankCount 'y$'&lt;CR&gt;</span>
+
+<span class="c">"         " Don't clobber the yank register when pasting over text in visual mode.</span>
+<span class="c">"         vnoremap p :&lt;c-u&gt;YRPaste 'p', 'v'&lt;cr&gt;gv:YRYankRange 'v'&lt;cr&gt;</span>
+<span class="c">"     endfunction</span>
+<span class="c">" " }</span>
+
+<span class="c">" FZF {</span>
+    map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">f</span> :FZF<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+    map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">h</span> :History<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="c">    " map &lt;leader&gt;b :Buffers&lt;CR&gt;</span>
+    map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">l</span> :BLines<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+    map <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">c</span> :BCommits<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+
+<span class="c">    " This is the default extra key bindings</span>
+    <span class="k">let</span> <span class="k">g</span>:fzf_action <span class="p">=</span> {
+    \ <span class="s1">'ctrl-t'</span>: <span class="s1">'tab split'</span><span class="p">,</span>
+    \ <span class="s1">'ctrl-x'</span>: <span class="s1">'split'</span><span class="p">,</span>
+    \ <span class="s1">'ctrl-v'</span>: <span class="s1">'vsplit'</span> }
+
+<span class="c">    " Default fzf layout</span>
+<span class="c">    " - down / up / left / right</span>
+    <span class="k">let</span> <span class="k">g</span>:fzf_layout <span class="p">=</span> { <span class="s1">'down'</span>: <span class="s1">'~40%'</span> }
+
+<span class="c">    " In Neovim, you can set up fzf window using a Vim command</span>
+    <span class="k">let</span> <span class="k">g</span>:fzf_layout <span class="p">=</span> { <span class="s1">'window'</span>: <span class="s1">'enew'</span> }
+    <span class="k">let</span> <span class="k">g</span>:fzf_layout <span class="p">=</span> { <span class="s1">'window'</span>: <span class="s1">'-tabnew'</span> }
+
+<span class="c">    " Customize fzf colors to match your color scheme</span>
+    <span class="k">let</span> <span class="k">g</span>:fzf_colors <span class="p">=</span>
+    \ { <span class="s1">'fg'</span>:      [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Normal'</span>]<span class="p">,</span>
+    \ <span class="s1">'bg'</span>:      [<span class="s1">'bg'</span><span class="p">,</span> <span class="s1">'Normal'</span>]<span class="p">,</span>
+    \ <span class="s1">'hl'</span>:      [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Comment'</span>]<span class="p">,</span>
+    \ <span class="s1">'fg+'</span>:     [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'CursorLine'</span><span class="p">,</span> <span class="s1">'CursorColumn'</span><span class="p">,</span> <span class="s1">'Normal'</span>]<span class="p">,</span>
+    \ <span class="s1">'bg+'</span>:     [<span class="s1">'bg'</span><span class="p">,</span> <span class="s1">'CursorLine'</span><span class="p">,</span> <span class="s1">'CursorColumn'</span>]<span class="p">,</span>
+    \ <span class="s1">'hl+'</span>:     [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Statement'</span>]<span class="p">,</span>
+    \ <span class="s1">'info'</span>:    [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'PreProc'</span>]<span class="p">,</span>
+    \ <span class="s1">'prompt'</span>:  [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Conditional'</span>]<span class="p">,</span>
+    \ <span class="s1">'pointer'</span>: [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Exception'</span>]<span class="p">,</span>
+    \ <span class="s1">'marker'</span>:  [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Keyword'</span>]<span class="p">,</span>
+    \ <span class="s1">'spinner'</span>: [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Label'</span>]<span class="p">,</span>
+    \ <span class="s1">'header'</span>:  [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Comment'</span>] }
+
+<span class="c">    " Enable per-command history.</span>
+<span class="c">    " CTRL-N and CTRL-P will be automatically bound to next-history and</span>
+<span class="c">    " previous-history instead of down and up. If you don't like the change,</span>
+<span class="c">    " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.</span>
+    <span class="k">let</span> <span class="k">g</span>:fzf_history_dir <span class="p">=</span> <span class="s1">'~/.local/share/fzf-history'</span>
+
+<span class="c">    " [Files] Extra options for fzf</span>
+<span class="c">    "   e.g. File preview using Highlight</span>
+<span class="c">    "        (http://www.andre-simon.de/doku/highlight/en/highlight.html)</span>
+    <span class="k">let</span> <span class="k">g</span>:fzf_files_options <span class="p">=</span>
+    \ <span class="s1">'--preview "(highlight -O ansi {} || cat {}) 2&gt; /dev/null | head -'</span>.&amp;<span class="nb">lines</span>.<span class="s1">'"'</span>
+
+<span class="c">    " [Buffers] Jump to the existing window if possible</span>
+    <span class="k">let</span> <span class="k">g</span>:fzf_buffers_jump <span class="p">=</span> <span class="m">1</span>
+
+<span class="c">    " [[B]Commits] Customize the options used by 'git log':</span>
+    <span class="k">let</span> <span class="k">g</span>:fzf_commits_log_options <span class="p">=</span> <span class="s1">'--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'</span>
+
+<span class="c">    " [Tags] Command to generate tags file</span>
+    <span class="k">let</span> <span class="k">g</span>:fzf_tags_command <span class="p">=</span> <span class="s1">'ctags -R'</span>
+
+<span class="c">    " [Commands] --expect expression for directly executing the command</span>
+    <span class="k">let</span> <span class="k">g</span>:fzf_commands_expect <span class="p">=</span> <span class="s1">'ctrl-x'</span>
 <span class="c">" }</span>
 
 <span class="k">call</span> textobj#user#plugin<span class="p">(</span><span class="s1">'twig'</span><span class="p">,</span> {
@@ -1193,6 +1327,10 @@ map <span class="p">&lt;</span>A<span class="p">-+&gt;</span> <span class="p">&l
 \     <span class="s1">'select-i'</span>: <span class="s1">'im'</span><span class="p">,</span>
 \   }<span class="p">,</span>
 \ }<span class="p">)</span>
+
+<span class="c">" use this for mapping debug purposes!!!!!!!!!!!!!!</span>
+<span class="c">" :verbose noremap &lt;leader&gt;b</span>
+
 
 <span class="c">" enable debug mode</span>
 <span class="c">" set vbs=1</span></code></pre></div>
@@ -1419,12 +1557,20 @@ map <span class="p">&lt;</span>A<span class="p">-+&gt;</span> <span class="p">&l
 <span class="c">    " NORMAL MODE NAVIGATION</span>
     <span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> <span class="m">4</span>j
     <span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> <span class="m">4</span>k
+    <span class="nb">vnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> <span class="m">4</span>j
+    <span class="nb">vnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> <span class="m">4</span>k
+
 <span class="c">    " down, up remapped to next/prev line in wrapped line</span>
-    <span class="nb">nnoremap</span> <span class="p">&lt;</span>down<span class="p">&gt;</span> <span class="k">g</span><span class="p">&lt;</span>down<span class="p">&gt;</span>
-    <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">up</span><span class="p">&gt;</span> <span class="k">g</span><span class="p">&lt;</span><span class="k">up</span><span class="p">&gt;</span>
-<span class="c">    " insert mode</span>
-    <span class="nb">inoremap</span> <span class="p">&lt;</span>down<span class="p">&gt;</span> <span class="p">&lt;</span>esc<span class="p">&gt;</span><span class="k">g</span><span class="p">&lt;</span>down<span class="p">&gt;</span><span class="k">a</span>
-    <span class="nb">inoremap</span> <span class="p">&lt;</span><span class="k">up</span><span class="p">&gt;</span> <span class="p">&lt;</span>esc<span class="p">&gt;</span><span class="k">g</span><span class="p">&lt;</span><span class="k">up</span><span class="p">&gt;</span><span class="k">a</span>
+    map <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Up<span class="p">&gt;</span> gk
+    imap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Up<span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">o</span><span class="p">&gt;</span>gk
+    map <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Down<span class="p">&gt;</span> gj
+    imap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Down<span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">o</span><span class="p">&gt;</span>gj
+<span class="c">    " home, end remapped to start/end in wrapped line</span>
+    map <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>home<span class="p">&gt;</span> <span class="k">g</span><span class="p">&lt;</span>home<span class="p">&gt;</span>
+    imap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>home<span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">o</span><span class="p">&gt;</span><span class="k">g</span><span class="p">&lt;</span>home<span class="p">&gt;</span>
+    map <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>End<span class="p">&gt;</span> <span class="k">g</span><span class="p">&lt;</span>End<span class="p">&gt;</span>
+    imap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>End<span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">o</span><span class="p">&gt;</span><span class="k">g</span><span class="p">&lt;</span>End<span class="p">&gt;</span>
+
 <span class="c">    " go to last change in file</span>
     nmap <span class="p">-</span> `.
 
@@ -1434,7 +1580,7 @@ map <span class="p">&lt;</span>A<span class="p">-+&gt;</span> <span class="p">&l
 <span class="c">    " yank till EOL (not included)</span>
     <span class="nb">noremap</span> Y <span class="k">y</span>$
 <span class="c">    " indent current paragraph (instead of ex mode)</span>
-<span class="c">    " nnoremap Q =ip</span>
+    <span class="nb">nnoremap</span> Q <span class="p">=</span>ip
 
 <span class="c">    " repeat last substitution with same flags</span>
     <span class="nb">nnoremap</span> &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</span>
@@ -1449,7 +1595,9 @@ map <span class="p">&lt;</span>A<span class="p">-+&gt;</span> <span class="p">&l
     cnoremap <span class="p">&lt;</span>expr<span class="p">&gt;</span> <span class="p">~</span> getcmdtype<span class="p">()</span> <span class="p">==</span> <span class="s1">':'</span> ? expand<span class="p">(</span><span class="s1">'~'</span><span class="p">)</span>.<span class="s1">'/'</span> : <span class="s1">'~'</span>
 
 <span class="c">    " COMMAND LINE DISPLAY</span>
-    <span class="k">set</span> <span class="nb">shortmess</span><span class="p">=</span>aItA
+<span class="c">    " set shortmess=aItA</span>
+<span class="c">    " see :help shortmess to know message prompts that are supressed</span>
+    <span class="k">set</span> <span class="nb">shortmess</span><span class="p">=</span>aoOtIA
 <span class="c">" }</span>
 
 <span class="c">" AUTOCOMMANDS {</span>
@@ -1468,333 +1616,374 @@ map <span class="p">&lt;</span>A<span class="p">-+&gt;</span> <span class="p">&l
 
   <br />
   <blockquote>
-      <p><strong>Last updated: <time datetime="2016-09-01T21:34:33+00:00" class="page-date">01 Sep 2016</time></strong></p>
+      <p><strong>Last updated: <time datetime="2018-10-05T17:18:32+00:00" class="page-date">05 Oct 2018</time></strong></p>
   </blockquote>
 </article>
+
+
 
 <aside class="related">
     <h2>Related Posts</h2>
     <ul class="related-posts">
         
-         
-
-        
-            
-        
         
 
         
-            
-        
-        
 
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
             
                 
-                <li>
-                    <h3>
-                        <a href="/Vim-incomprendido">
-                            El editor incomprendido
-                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
-                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/phps">
+                                        Phpstorm shortcuts vs Vim
+                                        <small><time datetime="2018-11-24T16:42:57+00:00">24 Nov 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
             
         
-        
 
-        
             
         
-        
 
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
             
                 
             
         
+
+            
         
 
-        
             
-                
-                <li>
-                    <h3>
-                        <a href="/vim">
-                            Vim (Quick Reference)
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
-        
 
-        
             
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/my scripts">
-                            Useful scripts
-                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
+
+            
+                
+            
         
 
-        
             
-        
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/Vim-incomprendido">
+                                        El editor incomprendido
+                                        <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
             
-        
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+                    
+                    
+            
         
 
-        
             
-        
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/vim">
+                                        Vim quick reference
+                                        <small><time datetime="2018-09-16T20:39:26+00:00">16 Sep 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
+            
+                
             
         
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
         
         
         
@@ -1802,11 +1991,19 @@ map <span class="p">&lt;</span>A<span class="p">-+&gt;</span> <span class="p">&l
 </aside>
 
 
+
       </main>
      <footer class="site-footer">
 
   <div class="wrapper">
 
+    
+      <div style="float: left; margin-left: 25px">
+          <a href="/bookmarks"><i class="fas fa-bookmark"></i> bookmarks</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/sitemap"><i class="fas fa-sitemap"></i> sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/about"><i class="fas fa-user-astronaut"></i> about</a>
+          <!-- <div><a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a></div><br /> -->
+      </div>
 
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
@@ -1822,7 +2019,7 @@ map <span class="p">&lt;</span>A<span class="p">-+&gt;</span> <span class="p">&l
       </div>
 
       <div class="footer-col  footer-col-2">
-        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span class="ccby">jordihv at gmail.com</span><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
       </div>
     </div>
 

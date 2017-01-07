@@ -1,14 +1,755 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cheat-sheets.tk</title>
+    <title>GeekStuff.gq — My cheat sheets site</title>
     <description>My notes on Web development, Vim, Git, Linux.
 </description>
     <link>http://cheat-sheets.tk/</link>
     <atom:link href="http://cheat-sheets.tk/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 08 Oct 2016 14:21:45 +0000</pubDate>
-    <lastBuildDate>Sat, 08 Oct 2016 14:21:45 +0000</lastBuildDate>
+    <pubDate>Sat, 24 Nov 2018 16:52:55 +0000</pubDate>
+    <lastBuildDate>Sat, 24 Nov 2018 16:52:55 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Phpstorm shortcuts vs Vim</title>
+        <description>&lt;p&gt;These are my favourite shortcuts for Phpstorm on Mac. Right column displays its vim counterpart (heavily &lt;a href=&quot;/vimrc/#tocAnchor-1-3&quot;&gt;customized&lt;/a&gt;)&lt;/p&gt;
+
+&lt;table id=&quot;pkgTable&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Phpstorm shortcut description&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Phpstorm custom shortcut  (Mac)&lt;/th&gt;
+      &lt;th&gt;Vim command&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;Duplicate current line or selected block&lt;/em&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ ⇧ d&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;yy&lt;/code&gt;/&lt;code&gt;y&lt;/code&gt; + &lt;code&gt;p&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Line join&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌃ ⇧ j&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;J&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;Comment/uncomment with line comment&lt;/em&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ 7&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;gcc&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Delete line at caret&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ ⌫&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;dd&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;Select line at Caret&lt;/em&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ ⇧ s&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;V&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;Select increasing code blocks&lt;/em&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ w&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;+&lt;/code&gt; (expand region)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;Decrease current selection to prev state&lt;/em&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ ⇧ w&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;&amp;lt;a-+&amp;gt;&lt;/code&gt; (exp region)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Auto-indent line(s)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌥ ⌃ i&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;==&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Surround selection&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;Smart Keys: Surround...&lt;/code&gt; enabled&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;ysiw'&lt;/code&gt; / select + &lt;code&gt;S&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Toggle uppercase&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ ⇧ u&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;~&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;Add Selection for Next Occurence&lt;/em&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ d&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;*&lt;/code&gt; (visual star search)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Previous Occurence / Next occurence&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⇧ ↩ / ↩&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;N&lt;/code&gt; / &lt;code&gt;n&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Find/Replace&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ r&lt;/td&gt;
+      &lt;td&gt;:%s / :%S[ubvert]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Find/Replace in path&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ ⇧ r&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;c-h&lt;/code&gt; / :Ag (silversearch)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Add/remove caret&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌥ + click&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;&amp;lt;c-n&amp;gt;&lt;/code&gt; (mult. cursors)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Clone Caret Above/Below&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌃ ⌘ ↑/↓&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;&amp;lt;c-v&amp;gt;&lt;/code&gt; + I&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;Go to file&lt;/em&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ n&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;,f&lt;/code&gt; (fzf files)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Recent files popup&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ e&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;,h&lt;/code&gt; (fzf history)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Navigate back/forward&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ ⌥ ←/→&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;&amp;lt;a-j&amp;gt;&lt;/code&gt; / &lt;code&gt;&amp;lt;a-k&amp;gt;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;Previous file&lt;/em&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌃ ⇥  (alt-tab behaviour)&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;,&amp;lt;space&amp;gt;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;History paste&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;⌘ ⇧ v&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;&amp;lt;c-p&amp;gt;&lt;/code&gt; (miniyank)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;Customized phpstorm shortcuts displayed in italics&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Tue, 11 Sep 2018 16:30:15 +0000</pubDate>
+        <link>http://cheat-sheets.tk/phps</link>
+        <guid isPermaLink="true">http://cheat-sheets.tk/phps</guid>
+        
+        <category>Vim</category>
+        
+        
+        <category>webdev</category>
+        
+      </item>
+    
+      <item>
+        <title>Principios de criptografía</title>
+        <description>&lt;h1 id=&quot;introduccin&quot;&gt;Introducción&lt;/h1&gt;
+
+&lt;p&gt;El propósito de este documento es la introducción de los conceptos criptográficos sobre los que está basada la seguridad en la transmisión de información a través de una red. El alcance de este documento incluye:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Los problemas básicos en la transmisión de datos y los esquemas (mecanismos) criptográficos que pueden solucionarlos.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;El funcionamiento detallado de dichos esquemas, haciendo un análisis de sus puntos fuertes y débiles.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Un vistazo general de la implementación de los dos sistemas criptográficos más extendidos, &lt;em&gt;HTTPS&lt;/em&gt; (&lt;em&gt;SSL&lt;/em&gt;/&lt;em&gt;TLS&lt;/em&gt;) y &lt;em&gt;Open PGP&lt;/em&gt;, que implementan los sistemas criptográficos vistos a lo largo del documento.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;los-4-problemas-en-la-transmisin-de-informacin&quot;&gt;Los 4 problemas en la transmisión de información&lt;/h1&gt;
+
+&lt;p&gt;Se conocen 4 problemas básicos en el envío de datos, o de un &lt;em&gt;mensaje&lt;/em&gt;, a través de una red &lt;em&gt;no confiable&lt;/em&gt; (una red &lt;em&gt;no confiable&lt;/em&gt; es aquella a través de cuyos nodos es posible &lt;a href=&quot;https://es.wikipedia.org/wiki/Modo_promiscuo&quot;&gt; capturar información ajena &lt;/a&gt;, como por ejemplo internet).&lt;/p&gt;
+
+&lt;p&gt;Los 4 problemas básicos son:&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;&lt;code&gt;Interceptación&lt;/code&gt;&lt;/dt&gt;
+  &lt;dd&gt;&lt;code&gt;A&lt;/code&gt; envía a &lt;code&gt;B&lt;/code&gt; un mensaje. Este mensaje puede ser interceptado por &lt;code&gt;X&lt;/code&gt; mediante la captura de paquetes de datos (mediante técnicas de &lt;a href=&quot;*https://es.wikipedia.org/wiki/Analizador_de_paquetes*&quot;&gt;sniffing&lt;/a&gt;)&lt;/dd&gt;
+  &lt;dt&gt;&lt;code&gt;Suplantación&lt;/code&gt;&lt;/dt&gt;
+  &lt;dd&gt;&lt;code&gt;X&lt;/code&gt; envía un mensaje a &lt;code&gt;B&lt;/code&gt; haciéndose pasar por &lt;code&gt;A&lt;/code&gt;&lt;/dd&gt;
+  &lt;dt&gt;&lt;code&gt;Falsificación o corrupción del mensaje&lt;/code&gt;&lt;/dt&gt;
+  &lt;dd&gt;&lt;code&gt;A&lt;/code&gt;  envía un mensaje a &lt;code&gt;B&lt;/code&gt;. &lt;code&gt;X&lt;/code&gt; intercepta el mensaje lo modifica y lo reenvía a &lt;code&gt;B&lt;/code&gt; haciéndose pasar por &lt;code&gt;A&lt;/code&gt;. Otra posibilidad es que el mensaje llegue a &lt;code&gt;B&lt;/code&gt; ligeramente alterado, sin la intervención de &lt;code&gt;X&lt;/code&gt;, debido a un problema en la transmisión física de los datos (&lt;em&gt;corrupción&lt;/em&gt; de los datos).&lt;/dd&gt;
+  &lt;dt&gt;&lt;code&gt;Repudio de un mensaje&lt;/code&gt;&lt;/dt&gt;
+  &lt;dd&gt;&lt;code&gt;A&lt;/code&gt;  envía un mensaje a &lt;code&gt;B&lt;/code&gt;. Posteriormente niega haberlo enviado. &lt;code&gt;B&lt;/code&gt; no tiene forma de saber si realmente ha sido así.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h1 id=&quot;los-esquemas-de-la-criptografa-moderna&quot;&gt;Los esquemas de la criptografía moderna&lt;/h1&gt;
+
+&lt;p&gt;La criptografía moderna define diferentes clases de mecanismos para resolver los problemas anteriores:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Esquemas de &lt;code&gt;criptografía simétrica&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Esquemas de &lt;code&gt;criptográfia asimétrica&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Codigos de autorización&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Firmas digitales&lt;/code&gt; y &lt;code&gt;certificados digitales&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;En el siguiente cuadro podemos ver que problemas resuelven cada uno de los mecanismos mencionados:&lt;/p&gt;
+
+&lt;table id=&quot;pkgTable&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Tipo de esquema&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Problemas que resuelve&lt;/th&gt;
+      &lt;th&gt;Problemas por resolver&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;/krypto/#tocAnchor-1-5&quot;&gt;&lt;em&gt;Encriptación simétrica&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Interceptación&lt;/td&gt;
+      &lt;td&gt;Envío inseguro de la clave&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;/krypto/#tocAnchor-1-11-1&quot;&gt;&lt;em&gt;Encriptación asimétrica&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Interceptación&lt;/td&gt;
+      &lt;td&gt;Ataque &lt;em&gt;man-in-the-middle&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;/krypto/#tocAnchor-1-6-4&quot;&gt;&lt;em&gt;Códigos de autenticación&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Suplantación/falsificación/corrupción&lt;/td&gt;
+      &lt;td&gt;Repudio de un mensaje&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;/krypto/#tocAnchor-1-11-2&quot;&gt;&lt;em&gt;Firma digital&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Repudio de un mensaje&lt;/td&gt;
+      &lt;td&gt;Certificación del propietario de la clave pública&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;/krypto/#tocAnchor-1-11-3&quot;&gt;&lt;em&gt;Certificado digital&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Certificación del propietario de la clave pública&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;el-sistema--de-encriptacin-y-desencriptacin-de-datos&quot;&gt;El sistema  de encriptación y desencriptación de datos&lt;/h1&gt;
+
+&lt;p&gt;El cifrado de los datos permite solucionar el problema de la &lt;em&gt;interceptación&lt;/em&gt; por parte de un tercero.&lt;/p&gt;
+
+&lt;p&gt;Todo esquema de encriptación (ya sea de clase simétrica, asimétrica o híbrida), cumple las siguientes condiciones:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;El mensaje es encriptado por parte del emisor mediante el uso de una clave (un código) que transforma el mensaje original en un mensaje “ilegible”.&lt;/li&gt;
+  &lt;li&gt;Este mensaje no “legible” solo puede ser desencriptado mediante el uso de una clave que el destinatario debe mantener protegida.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;El principio de Kerckhoffs&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;blockquote&gt;
+
+      &lt;p&gt;«La seguridad del sistema debe recaer en la seguridad de la clave, debiéndose suponer conocidos el resto de los parámetros del sistema criptográfico»&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Si en criptografía clásica es el propio proceso de manipulación de los datos el que codifica el mensaje que debe mantenerse en secreto (una especie de caso pionero de &lt;a href=&quot;https://es.wikipedia.org/wiki/Seguridad_por_oscuridad&quot;&gt;seguridad por oscuridad&lt;/a&gt;); en criptografía moderna la implementación de los algoritmos es absolutamente transparente, siendo la clave de encriptación (concretamente su longitud), quien otorga mayor o menor seguridad a todo el sistema.&lt;/p&gt;
+
+&lt;p&gt;Esto explica la existencia de gran cantidad de algoritmos criptográficos publicados bajo licencias abiertas. De hecho, la publicación del código de estos sistemas mediante licencias abiertas confiere de una interoperabilidad esencial a los mismos, ya que su “campo de acción” se encuentra en la transmisión de datos entre partes heterogéneas (diferentes aplicaciones, plataformas…).&lt;/p&gt;
+
+&lt;p&gt;Además, y aunque pueda parecer paradójico, el modelo de licencia libre proporciona un &lt;a href=&quot;https://es.wikipedia.org/wiki/Ley_de_Linus&quot;&gt;ecosistema ideal para la corrección de posibles agujeros de seguridad&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;encriptacin-simtrica&quot;&gt;Encriptación simétrica&lt;/h1&gt;
+
+&lt;p&gt;En la encriptación simétrica o de clave compartida se utiliza la misma clave tanto en la encriptación como en la desencriptación del mensaje.&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Las partes &lt;code&gt;A&lt;/code&gt; y &lt;code&gt;B&lt;/code&gt; acuerdan utilizar una determinada clave y mantenerla en secreto&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;A&lt;/code&gt; encripta un mensaje con su clave y lo envía a &lt;code&gt;B&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;B&lt;/code&gt; lo recibe y lo desencripta con la misma clave&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Mediante este sencillo mecanismo el problema de &lt;em&gt;interceptación&lt;/em&gt; de datos queda resuelto. En el caso de que un agente no autorizado &lt;code&gt;X&lt;/code&gt; interceptara el mensaje en un nodo intermedio de la red solo obtendría un texto ilegible.&lt;/p&gt;
+
+&lt;h3 id=&quot;problemas-por-resolver&quot;&gt;Problemas por resolver&lt;/h3&gt;
+&lt;p&gt;Este tipo de encriptación presenta aún un problema pendiente, el conocido como &lt;em&gt;problema de transmisión de las claves&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Dicho problema consiste en que las partes no pueden enviar la clave secreta por la misma red insegura, normalmente internet, por la que pretenden comenzar a comunicarse con seguridad. De hacerlo la clave podría ser interceptada por un agente externo &lt;code&gt;X&lt;/code&gt;, neutralizando por completo el sistema de encriptación.&lt;/p&gt;
+
+&lt;p&gt;Aunque se podría pensar en la posibilidad de encriptar el mismo mensaje que contiene la clave, el problema no dejaría de reproducirse hasta el infinito: al mensaje de la clave encriptada correspondería una nueva clave que tampoco podría ser transmitida de forma segura por la red.&lt;/p&gt;
+
+&lt;p&gt;Para solucionar de forma definitiva este problema se conocen dos alternativas:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;La utilización de un protocolo de intercambio de claves (como el basado en el algoritmo de &lt;a href=&quot;https://es.wikipedia.org/wiki/Diffie-Hellman&quot;&gt;&lt;em&gt;Diffie-Hellman&lt;/em&gt;&lt;/a&gt;) de forma que no sea necesario el envío físico de una clave.&lt;/li&gt;
+  &lt;li&gt;La utilización de &lt;a href=&quot;/krypto/#tocAnchor-1-11-1&quot;&gt;&lt;em&gt;encriptación asimétrica&lt;/em&gt;&lt;/a&gt;, también conocida como &lt;em&gt;encriptación de clave pública y clave privada&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;funciones-criptogrficas-de-hash&quot;&gt;Funciones criptográficas de hash&lt;/h1&gt;
+
+&lt;p&gt;Las &lt;em&gt;funciones criptográficas de hash&lt;/em&gt; no son realmente una clase de encriptación, aunque se suelen conocer como funciones de &lt;em&gt;encriptación en un solo sentido&lt;/em&gt;. Estas funciones tienen multitud de aplicaciones criptográficas:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Permiten verificar la &lt;em&gt;integridad&lt;/em&gt; de un mensaje, certificando si los datos se mantienen intactos desde su origen (es decir, no han sido &lt;em&gt;corrompidos&lt;/em&gt; en su transmisión por el medio físico o han sido manipulados &lt;em&gt;maliciosamente&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;Intervienen en la creación de &lt;a href=&quot;/krypto/#tocAnchor-1-6-4&quot;&gt;&lt;em&gt;códigos de autenticación&lt;/em&gt;&lt;/a&gt; y de &lt;a href=&quot;/krypto/#tocAnchor-1-11-2&quot;&gt;&lt;em&gt;firma digital&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Son el fundamento básico de cualquier sistema de autenticación&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;el-cdigo-hash&quot;&gt;El código hash&lt;/h2&gt;
+
+&lt;p&gt;Las &lt;em&gt;funciones hash&lt;/em&gt; toman una entrada de datos de cualquier longitud y la transforman en una salida de longitud fija, el &lt;em&gt;código hash&lt;/em&gt;, el cual hace la función de “firma” de los datos originales. &lt;/p&gt;
+
+&lt;p&gt;Las &lt;em&gt;funciones hash&lt;/em&gt; en criptografía tienen idealmente las siguientes propiedades:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Calculan de forma extraordinariamente eficiente el valor de un código &lt;em&gt;hash&lt;/em&gt; para cualquier clase de entrada&lt;/li&gt;
+  &lt;li&gt;Hacen imposible calcular la entrada que originó el &lt;em&gt;código hash&lt;/em&gt; (varias entradas pueden tener como resultado el mismo código, lo que se conoce como &lt;em&gt;colisión hash&lt;/em&gt;, haciendo inútil el cálculo inverso)&lt;/li&gt;
+  &lt;li&gt;El cálculo de una de las posibles entradas para un determinado &lt;em&gt;código hash&lt;/em&gt; tiene un costo computacional extremadamente alto&lt;/li&gt;
+  &lt;li&gt;Dos mensajes ligeramente diferentes no pueden generar un mismo código, ni siquiera deberían generar uno parecido&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;el-cdigo-hash-y-los-sistemas-de-autenticacin&quot;&gt;El código hash y los sistemas de autenticación&lt;/h2&gt;
+
+&lt;p&gt;Las anteriores propiedades hacen de las &lt;em&gt;funciones hash&lt;/em&gt; una herramienta ideal para un sistema de autenticación mediante contraseña como el siguiente:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Se genera un código &lt;em&gt;hash&lt;/em&gt; a partir de la contraseña suministrada por el usuario en su proceso de registro a nuestro sistema&lt;/li&gt;
+    &lt;li&gt;Se persiste (almacena) dicho código a modo de “firma” y se desecha el password original suministrado por el usuario&lt;/li&gt;
+    &lt;li&gt;Cuando el usuario inicia el proceso de identificación en nuestro sistema se vuelve a calcular el código &lt;em&gt;hash&lt;/em&gt; de la contraseña nuevamente introducida y se compara con el valor &lt;em&gt;hash&lt;/em&gt; anteriormente almacenado&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;El hecho de almacenar un valor &lt;em&gt;hash&lt;/em&gt; en lugar de la contraseña original (ya sea en plano o mediante algun tipo de encriptación) aporta los siguientes beneficios en el caso de que nuestra plataforma se vea comprometida por el acceso no autorizado de un agente externo:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;El intruso nunca podrá calcular el valor original de las contraseñas a partir de su código &lt;em&gt;hash&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Tampoco podrá sacar conclusiones en base a los valores &lt;em&gt;hash&lt;/em&gt; almacenados, puesto que:
+    &lt;ul&gt;
+      &lt;li&gt;Valores casi idénticos generarán valores &lt;em&gt;hash&lt;/em&gt; completamente distintos según las propiedades de las funciones &lt;em&gt;hash&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;No podrá determinar la longitud de las contraseñas originales ya que todos los valores &lt;em&gt;hash&lt;/em&gt; tienen la misma longitud&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;verificacin-de-integridad&quot;&gt;Verificación de integridad&lt;/h2&gt;
+&lt;p&gt;Para verificar la integridad de un mensaje deberemos contar previamente con un valor &lt;em&gt;hash&lt;/em&gt; de referencia asociado a dicho mensaje. El procedimiento de verificación consta de dos simples pasos:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Se calcula la función &lt;em&gt;hash&lt;/em&gt; del mensaje con la misma implementación que se caculó la del valor de referencia (ya sea &lt;em&gt;MD5&lt;/em&gt;, &lt;em&gt;SHA-1&lt;/em&gt;…)&lt;/li&gt;
+    &lt;li&gt;Se verifica que el resultado sea el mismo que el del valor de referencia precalculado en el origen de la transmisión&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;cdigos-de-autenticacin-mac&quot;&gt;Códigos de autenticación (MAC)&lt;/h2&gt;
+
+&lt;p&gt;Los &lt;em&gt;códigos de autenticación&lt;/em&gt; permiten la autenticación de un mensaje y la detección de falsificaciones.&lt;/p&gt;
+
+&lt;p&gt;Partamos del escenario de un sistema de clave compartida:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;La parte &lt;code&gt;A&lt;/code&gt; envía un mensaje a &lt;code&gt;B&lt;/code&gt; con un “código de producto” debidamente encriptado&lt;/li&gt;
+    &lt;li&gt;Un agente malicioso &lt;code&gt;X&lt;/code&gt; interviene y altera dicho mensaje&lt;/li&gt;
+    &lt;li&gt;Cuando &lt;code&gt;B&lt;/code&gt; desencripta el mensaje obtiene, por azar, un código de producto válido y que nada tiene que ver con el enviado por &lt;code&gt;A&lt;/code&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Para evitar tal escenario debemos hacer uso de un &lt;em&gt;código de autenticación&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;La parte &lt;code&gt;A&lt;/code&gt; crea un valor &lt;em&gt;hash&lt;/em&gt; de la combinación del mensaje encriptado y la clave compartida con &lt;code&gt;B&lt;/code&gt;. Este valor se conoce como &lt;em&gt;MAC&lt;/em&gt; (Código de Autenticación del mensaje).&lt;/li&gt;
+    &lt;li&gt;La parte &lt;code&gt;A&lt;/code&gt; envía el valor &lt;em&gt;MAC&lt;/em&gt; junto con el mensaje cifrado a la parte &lt;code&gt;B&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;La parte &lt;code&gt;B&lt;/code&gt; comprueba que el mensaje no sea una falsificación al crear de nuevo, por su parte, un valor &lt;em&gt;hash&lt;/em&gt; a partir de la combinación del mensaje cifrado y la clave compartida.&lt;/li&gt;
+    &lt;li&gt;Al comprobar que el código calculado por él mismo coincide con el &lt;em&gt;MAC&lt;/em&gt; enviado por &lt;code&gt;A&lt;/code&gt;, procede a descifrar el mensaje enviado por &lt;code&gt;B&lt;/code&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;El receptor del mensaje tiene ahora la seguridad de que el mensaje no ha sido falsificado. Además puede estar seguro de que ha sido enviado por &lt;code&gt;A&lt;/code&gt;, el otro único conocedor de la clave.&lt;/p&gt;
+
+&lt;h3 id=&quot;problemas-por-resolver-1&quot;&gt;Problemas por resolver&lt;/h3&gt;
+
+&lt;p&gt;El hecho de que la clave sea conocida tanto por &lt;code&gt;A&lt;/code&gt; como por &lt;code&gt;B&lt;/code&gt;, hace que &lt;code&gt;A&lt;/code&gt; pueda acusar a &lt;code&gt;B&lt;/code&gt; de haber fabricado el mensaje y &lt;em&gt;repudiarlo&lt;/em&gt;. &lt;/p&gt;
+
+&lt;p&gt;Para poder asociar un mensaje de forma unívoca con su creador, se necesita el uso de un sistema de &lt;a href=&quot;/krypto/#tocAnchor-1-11-2&quot;&gt;&lt;em&gt;firma digital&lt;/em&gt;&lt;/a&gt;, basado en criptografía asimétrica.&lt;/p&gt;
+
+&lt;h1 id=&quot;criptografa-asimtrica&quot;&gt;Criptografía asimétrica&lt;/h1&gt;
+
+&lt;p&gt;La criptografía asimétrica se basa en la generación de un par de claves mediante un algoritmo como por ejemplo &lt;em&gt;RSA&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Este par de claves especiales tienen la siguiente particularidad: lo que es encriptado con una de ellas solo se puede desencriptar con la otra.&lt;/p&gt;
+
+&lt;p&gt;El esquema de clave pública/clave privada tiene varias aplicaciones: la &lt;a href=&quot;/krypto/#tocAnchor-1-11-1&quot;&gt;&lt;em&gt;encriptación asimétrica&lt;/em&gt;&lt;/a&gt;, la &lt;a href=&quot;/krypto/#tocAnchor-1-11-2&quot;&gt;&lt;em&gt;firma digital&lt;/em&gt;&lt;/a&gt; y el &lt;a href=&quot;/krypto/#tocAnchor-1-11-3&quot;&gt;&lt;em&gt;certificado digital&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;En el siguiente cuadro se encuentran las principales características de cada uno de estos mecanismos:&lt;/p&gt;
+
+&lt;table id=&quot;pkgTable&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Tipo de esquema&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Generador de las claves&lt;/th&gt;
+      &lt;th&gt;Encriptación con…&lt;/th&gt;
+      &lt;th&gt;Características&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;/krypto/#tocAnchor-1-11-1&quot;&gt;&lt;em&gt;Encriptación asimétrica&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Emisor&lt;/td&gt;
+      &lt;td&gt;Clave pública&lt;/td&gt;
+      &lt;td&gt;Múltiples emisores encriptan con la clave pública del receptor&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;/krypto/#tocAnchor-1-11-2&quot;&gt;&lt;em&gt;Firma digital&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Receptor&lt;/td&gt;
+      &lt;td&gt;Clave privada&lt;/td&gt;
+      &lt;td&gt;Comprobación de la identidad mediante la propia clave pública del firmante&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;/krypto/#tocAnchor-1-11-3&quot;&gt;&lt;em&gt;Certificado digital&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Autoridad certificadora&lt;/td&gt;
+      &lt;td&gt;Clave privada&lt;/td&gt;
+      &lt;td&gt;Sustituye clave pública por certificado verificable mediante clave publica de la autoridad&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;encriptacin-asimtrica&quot;&gt;Encriptación asimétrica&lt;/h2&gt;
+
+&lt;p&gt;El funcionamiento del sistema es sencillo:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;La parte &lt;code&gt;B&lt;/code&gt; genera un par de claves pública/privada&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;B&lt;/code&gt;  pone la clave pública a disposición de la parte &lt;code&gt;A&lt;/code&gt; y guarda en un lugar seguro su clave privada&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;A&lt;/code&gt; encripta un mensaje mediante la clave pública de la parte &lt;code&gt;B&lt;/code&gt; y se lo envía&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;B&lt;/code&gt; desencripta el mensaje enviado por &lt;code&gt;A&lt;/code&gt; mediante su propia clave privada&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;La principal característica de este esquema es que la clave que desencripta el mensaje se encuentra tan solo en posesión de una de las partes. Esto elimina el &lt;code&gt;problema de transmisión de claves&lt;/code&gt; del sistema de clave compartida.&lt;/p&gt;
+
+&lt;p&gt;Por otra parte, la clave pública puede ser compartida con total libertad, facilitando el envío de mensajes cifrados al poseedor de la misma.&lt;/p&gt;
+
+&lt;h3 id=&quot;problemas-por-resolver-2&quot;&gt;Problemas por resolver&lt;/h3&gt;
+
+&lt;p&gt;La encriptación de un mensaje con este sistema es mucho más costosa (lenta) que con la de un sistema de clave compartida.&lt;/p&gt;
+
+&lt;p&gt;Para solucionar este problema es posible utilizar un sistema híbrido simétrico/asimétrico:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;code&gt;A&lt;/code&gt; envía una nueva clave cifrada con la clave privada de &lt;code&gt;B&lt;/code&gt; mediante el sistema de cifrado asimétrico (de esta forma evita el problema de ‘transmisión de claves’ propio del sistema de clave compartida)&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;B&lt;/code&gt; descifra dicho mensaje mediante su clave privada y obtiene la clave que también posee &lt;code&gt;A&lt;/code&gt;.&lt;/li&gt;
+    &lt;li&gt;A partir de ahí &lt;code&gt;A&lt;/code&gt; y &lt;code&gt;B&lt;/code&gt; se comunican exclusivamente mediante un sistema de clave compartida, evitando el problema de lentitud del sistema asimétrico.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Otro problema aún más importante del cifrado asimétrico es que no puede impedir, por si mismo, un ataque del tipo &lt;em&gt;man-in-the-middle&lt;/em&gt; como el siguiente:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;El agente suplantador &lt;code&gt;X&lt;/code&gt; se hace pasar por &lt;code&gt;B&lt;/code&gt; y entrega su propia clave pública a la parte &lt;code&gt;A&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;A&lt;/code&gt; envía un mensaje cifrado a &lt;code&gt;B&lt;/code&gt;, pero este es interceptado y retirado de la red por &lt;code&gt;X&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;X&lt;/code&gt; desencripta tranquilamente el mensaje mediante su propia clave privada&lt;/li&gt;
+    &lt;li&gt;Más tarde, para no romper la cadena de comunicación con &lt;code&gt;B&lt;/code&gt;, &lt;code&gt;X&lt;/code&gt; reenvía a &lt;code&gt;B&lt;/code&gt; la información recibida de &lt;code&gt;A&lt;/code&gt; volviéndola a encriptar con su clave pública.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;La conclusión es que el agente &lt;code&gt;X&lt;/code&gt; podría llegar a actuar como “intermediario” (&lt;em&gt;man in the middle&lt;/em&gt;) de las comunicaciones entre &lt;code&gt;A&lt;/code&gt; y &lt;code&gt;B&lt;/code&gt;, haciéndose con todas sus comunicaciones sin que ninguna de las partes afectadas llegara a sospechar nada.&lt;/p&gt;
+
+&lt;h2 id=&quot;firma-digital&quot;&gt;Firma digital&lt;/h2&gt;
+&lt;p&gt;La &lt;a href=&quot;/krypto/#tocAnchor-1-11-2&quot;&gt;&lt;em&gt;firma digital&lt;/em&gt;&lt;/a&gt; aporta el beneficio de la no &lt;em&gt;repudiación&lt;/em&gt; de los mensajes sobre el esquema de &lt;em&gt;códigos de autorización&lt;/em&gt; visto anteriormente.&lt;/p&gt;
+
+&lt;p&gt;En el siguiente cuadro podemos ver las diferencias entre estos dos sistemas:&lt;/p&gt;
+
+&lt;table id=&quot;pkgTable&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Tipo de esquema&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Uso de la clave&lt;/th&gt;
+      &lt;th&gt;Repudiación de los datos&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;/krypto/#tocAnchor-1-6-4&quot;&gt;&lt;em&gt;Código de autenticación&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;1 clave para cada comunicación&lt;/td&gt;
+      &lt;td&gt;No se puede garantizar la autoría del mensaje&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Firma digital&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Mismo mensaje para múltiples destinatarios&lt;/td&gt;
+      &lt;td&gt;El emisor puede firmar de forma exclusiva sus propios mensajes&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Recordemos ahora las diferencias entre la &lt;a href=&quot;/krypto/#tocAnchor-1-11-1&quot;&gt;&lt;em&gt;encriptación asimétrica&lt;/em&gt;&lt;/a&gt; y la &lt;a href=&quot;/krypto/#tocAnchor-1-11-2&quot;&gt;&lt;em&gt;firma digital&lt;/em&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;table id=&quot;pkgTable&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Tipo de esquema&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Generador de las claves&lt;/th&gt;
+      &lt;th&gt;Encriptación con…&lt;/th&gt;
+      &lt;th&gt;Características&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;/krypto/#tocAnchor-1-11-1&quot;&gt;&lt;em&gt;Encriptación asimétrica&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Emisor&lt;/td&gt;
+      &lt;td&gt;Clave pública&lt;/td&gt;
+      &lt;td&gt;Múltiples emisores encriptan con la clave pública del receptor&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Firma digital&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Receptor&lt;/td&gt;
+      &lt;td&gt;Clave privada&lt;/td&gt;
+      &lt;td&gt;Comprobación de la identidad mediante la clave pública del firmante&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;La característica fundamental del mecanismo de &lt;a href=&quot;/krypto/#tocAnchor-1-11-2&quot;&gt;&lt;em&gt;firma digital&lt;/em&gt;&lt;/a&gt; es la utilización de la clave privada en la encriptación del mensaje, esto tiene dos implicaciones directas:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;La utilización de la clave privada para el cifrado de un mensaje hace que solamente el emisor pueda ser identificado como creador de su propio mensaje&lt;/li&gt;
+  &lt;li&gt;El sistema de firmado no se diseña como un medio de encriptación, sino de autenticación (puesto que cualquier poseedor de la clave pública podrá desencriptar dicho mensaje y leer el contenido original)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;El flujo de un esquema de firma digital es el que sigue:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;code&gt;A&lt;/code&gt; obtiene en primer lugar un código &lt;em&gt;hash&lt;/em&gt; del mensaje que pretende enviar a &lt;code&gt;B&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;A&lt;/code&gt; encripta el código &lt;em&gt;hash&lt;/em&gt; con su clave privada obteniendo la “firma” del mensaje&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;A&lt;/code&gt; envía el código &lt;em&gt;hash&lt;/em&gt; junto con el mensaje a &lt;code&gt;B&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;B&lt;/code&gt; calcula por su parte el código &lt;em&gt;hash&lt;/em&gt; del mensaje recibido y desencripta la firma con la clave pública de &lt;code&gt;A&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;Si los dos valores coinciden se puede garantizar que se han generado con la clave privada de &lt;code&gt;A&lt;/code&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;De hecho el proceso podría simplificarse reduciéndolo exactamente al mismo esquema de la encriptación de datos asimétricos:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;code&gt;A&lt;/code&gt; encripta el mensaje con su clave privada y lo manda a &lt;code&gt;B&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;B&lt;/code&gt; desencripta el mensaje con la clave pública de &lt;code&gt;A&lt;/code&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;De esta forma el mensaje y la firma forman un todo. Sabemos sin embargo que el proceso de encriptación asimétrico es costoso, por lo que la generación de un código &lt;em&gt;hash&lt;/em&gt; y la encriptación de este reduce dicho coste de forma exponencial.&lt;/p&gt;
+
+&lt;p&gt;Enviando el código encriptado y el mensaje original por separado, dejamos al destinatario la tarea (mucho menos costosa) de comprobar que el código enviado corresponde con el mensaje recibido.&lt;/p&gt;
+
+&lt;h3 id=&quot;problemas-por-resolver-3&quot;&gt;Problemas por resolver&lt;/h3&gt;
+
+&lt;p&gt;Si en la &lt;a href=&quot;/krypto/#tocAnchor-1-11-1&quot;&gt;&lt;em&gt;encriptación asimétrica&lt;/em&gt;&lt;/a&gt; nos encontrábamos con el problema de un posible ataque &lt;em&gt;man-in-the-middle&lt;/em&gt;, en la &lt;a href=&quot;/krypto/#tocAnchor-1-11-2&quot;&gt;&lt;em&gt;firma digital&lt;/em&gt;&lt;/a&gt; encontramos un problema análogo.&lt;/p&gt;
+
+&lt;p&gt;Aunque podemos asegurar que un mensaje ha sido creado por una clave privada asociada a la clave pública que hemos utilizado para desencriptarlo, no podemos asegurar que dicha clave pertenezca a “quien dice ser” su propietario.&lt;/p&gt;
+
+&lt;p&gt;Este problema solo puede ser solucionado mediante el uso de &lt;a href=&quot;/krypto/#tocAnchor-1-11-3&quot;&gt;&lt;em&gt;certificados digitales&lt;/em&gt;&lt;/a&gt; que nos garanticen la identidad del propietario de la clave.&lt;/p&gt;
+
+&lt;h2 id=&quot;certificado-digital&quot;&gt;Certificado digital&lt;/h2&gt;
+
+&lt;p&gt;El &lt;em&gt;certificado digital&lt;/em&gt; identifica unívocamente al creador de una determinada clave pública gracias a:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;La asociación a dicha clave de algunos de sus datos&lt;/li&gt;
+  &lt;li&gt;La intervención de una autoridad de certificación en la generación de un certificado&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Los datos que se suelen incorporar a dicho certificado son:&lt;/p&gt;
+
+&lt;p&gt;a. Una dirección de correo electrónico: en tal caso el certificado digital nos garantizaría la identidad de la persona asociada a dicha cuenta de correo
+b. Una dirección de dominio, que garantiza la legitimidad de un sitio web, es decir, que no se trate de una suplantación&lt;/p&gt;
+
+&lt;p&gt;El procedimiento de expedición de un certificado es el que sigue:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;code&gt;A&lt;/code&gt; entrega a la autoridad de certificación su clave pública junto con sus datos asociados (email, dominio…)&lt;/li&gt;
+    &lt;li&gt;La &lt;em&gt;CA&lt;/em&gt; comprueba que dicho email, dominio…, sea realmente propiedad de &lt;code&gt;A&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;En tal caso la autoridad de certificación genera un certificado, firmando con su propia clave privada los datos y la clave de la parte &lt;code&gt;A&lt;/code&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;El certificado de &lt;code&gt;A&lt;/code&gt; ha sido expedido, así que a partir de ahora ya puede empezar a utilizarlo:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;code&gt;A&lt;/code&gt; entrega su certificado (que a partir de ahora empleará en lugar de su clave pública sin identificación) a &lt;code&gt;B&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;B&lt;/code&gt; desencripta el certificado de &lt;code&gt;A&lt;/code&gt; mediante la clave pública de la &lt;em&gt;CA&lt;/em&gt;&lt;/li&gt;
+    &lt;li&gt;Al desencriptar el certificado &lt;code&gt;B&lt;/code&gt; obtiene tanto la clave pública de &lt;code&gt;A&lt;/code&gt; como sus datos (dominio, mail…) certificados&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;El hecho de haber empleado con éxito la clave pública de la &lt;em&gt;CA&lt;/em&gt; en el proceso de desencriptación del certificado hace que &lt;code&gt;B&lt;/code&gt; pueda confiar plenamente en que esta ha intervenido en el proceso de generación del certificado&lt;/p&gt;
+
+&lt;h3 id=&quot;la-cadena-de-confianza&quot;&gt;La cadena de confianza&lt;/h3&gt;
+
+&lt;p&gt;La autoridad certificadora también requiere de un certificado que la haga confiable. El sistema que determina la confianza en una CA se puede encontrar en esta descripción del &lt;a href=&quot;krypto/#tocAnchor-1-15-3&quot;&gt;certificado SSL/TLS&lt;/a&gt;. &lt;/p&gt;
+
+&lt;h1 id=&quot;https-ssltls&quot;&gt;HTTPS (SSL/TLS)&lt;/h1&gt;
+
+&lt;h2 id=&quot;el-protocolo-ssltls&quot;&gt;El protocolo SSL/TLS&lt;/h2&gt;
+
+&lt;p&gt;El protocolo &lt;em&gt;SSL&lt;/em&gt;/&lt;em&gt;TLS&lt;/em&gt; proporciona autenticación y privacidad de datos entre los dos extremos de una red.&lt;/p&gt;
+
+&lt;p&gt;El protocolo se ejecuta sobre la capa de transporte &lt;em&gt;TCP&lt;/em&gt; y por debajo de la capa de aplicación, lo cual permite que pueda proporcionar seguridad a protocolos de aplicación como &lt;em&gt;HTTPS&lt;/em&gt; (web) o SMTP (correo electrónico) entre otros.&lt;/p&gt;
+
+&lt;p&gt;El protocolo SSL/TLS consta de las siguientes fases:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Negociación entre las partes para determinar el algoritmo a usar en la comunicación&lt;/li&gt;
+    &lt;li&gt;Realización del intercambio de claves públicas y autenticación basada en certificados digitales&lt;/li&gt;
+    &lt;li&gt;Cifrado del tráfico basado en cifrado simétrico&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;algoritmos-utilizados-por-ssltls&quot;&gt;Algoritmos utilizados por &lt;em&gt;SSL&lt;/em&gt;/&lt;em&gt;TLS&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Los siguientes algoritmos podrán ser utilizados por el protocolo &lt;em&gt;TLS&lt;/em&gt; en su actual versión (1.3):&lt;/p&gt;
+
+&lt;table id=&quot;pkgTable&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Clase de algoritmo&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Implementaciones válidas&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Criptografía de clave pública&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;RSA&lt;/em&gt;, &lt;em&gt;Diffie-Hellman&lt;/em&gt;, &lt;em&gt;DSA&lt;/em&gt; (&lt;em&gt;Digital Signature Algorithm&lt;/em&gt;) o &lt;em&gt;Fortezza&lt;/em&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Cifrado simétrico&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;RC2&lt;/em&gt;, &lt;em&gt;RC4&lt;/em&gt;, &lt;em&gt;IDEA&lt;/em&gt; (&lt;em&gt;International Data Encryption Algorithm&lt;/em&gt;), &lt;em&gt;DES&lt;/em&gt; (&lt;em&gt;Data Encryption Standard&lt;/em&gt;), &lt;em&gt;Triple DES&lt;/em&gt; y &lt;em&gt;AES&lt;/em&gt; (&lt;em&gt;Advanced Encryption Standard&lt;/em&gt;).&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Funciones &lt;em&gt;hash&lt;/em&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;MD5&lt;/em&gt; o familia &lt;em&gt;SHA&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Para la verificación de la integridad de los datos se utiliza un sistema de &lt;a href=&quot;/krypto/#tocAnchor-1-6-4&quot;&gt;&lt;em&gt;código de autenticación&lt;/em&gt;&lt;/a&gt; de mensaje (&lt;em&gt;MAC&lt;/em&gt;). Concretamente se utilizan dos implementaciones distintas según la fase de autenticación/verificación, &lt;em&gt;HMAC&lt;/em&gt; y &lt;em&gt;AEAD&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;el-certificado-ssltls-https&quot;&gt;El certificado SSL/TLS (HTTPS)&lt;/h2&gt;
+
+&lt;p&gt;En el caso del protocolo &lt;em&gt;HTTPS&lt;/em&gt; solamente el servidor es autenticado (se garantiza su identidad mediante un certificado), mientras que el cliente se mantiene sin autenticar. El certificado sigue el estándar &lt;em&gt;X.509&lt;/em&gt; y utiliza un modelo conocido como cadena de confianza (&lt;em&gt;chain of trust&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;El procedimiento de verificación de un certificado consta de los siguientes pasos:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;El navegador (o el sistema operativo) recupera un listado de &lt;em&gt;CAs&lt;/em&gt;.&lt;/li&gt;
+    &lt;li&gt;Cuando un usuario navega por una web segura, el navegador verifica que su certificado ha sido emitido por una &lt;em&gt;CA&lt;/em&gt; de dicho listado.&lt;/li&gt;
+    &lt;li&gt;Si la &lt;em&gt;CA&lt;/em&gt; en cuestión no es reconocida, el navegador verifica nuevamente si el certificado de dicha &lt;em&gt;CA&lt;/em&gt; fue emitido por una &lt;em&gt;CA&lt;/em&gt; conocida, y así sucesivamente.&lt;/li&gt;
+    &lt;li&gt;Al final de dicha cadena de certificados se encontrará un certificado raíz (root), autofirmado por la propia &lt;em&gt;CA&lt;/em&gt;, si el navegador requiere llegar hasta este último paso deberá verificar también que dicha &lt;em&gt;CA&lt;/em&gt; se encuentra en el listado de &lt;em&gt;CAs&lt;/em&gt;&lt;/li&gt;
+    &lt;li&gt;En el caso de que el certificado del sitio web no sea válido se advertirá al usuario de la posibilidad de que el sitio web esté suplantando a otro sitio legítimo (ataque &lt;em&gt;man-in-the-middle&lt;/em&gt;)&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;La conexión HTTPS, en cualquier caso, seguirá siendo segura en cuanto a la &lt;em&gt;interceptación&lt;/em&gt; de datos.&lt;/p&gt;
+
+&lt;p&gt;A pesar de la advertencia del navegador, el usuario podría decidir continuar con la conexión si sabe que no se trata de una suplantación (por ejemplo, si es el administrador del sitio), o incluso instalar un certificado (autofirmado o no) no avalado por una &lt;em&gt;CA&lt;/em&gt;.&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Certificados autofirmados&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;blockquote&gt;
+
+      &lt;p&gt;La generación de certificados autofirmados, es una práctica común en entornos de desarrollo o integración no publicados en internet. Para evitar una advertencia del navegador se puede optar por la instalación de un certificado siguiendo el modelo propio de una “red de confianza”. En tal caso somos nosotros quien otorgamos confianza al certificado al margen de una &lt;em&gt;CA&lt;/em&gt;.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h2 id=&quot;la-aceptacin-de-https&quot;&gt;La aceptación de HTTPS&lt;/h2&gt;
+
+&lt;p&gt;La complejidad de la generación de los certificados &lt;em&gt;SSL&lt;/em&gt; ha sido la responsable, históricamente, de que únicamente aquellos sitios webs que manejan datos sensibles (como e-commerce) se hayan decantado por conexiones seguras HTTPS.&lt;/p&gt;
+
+&lt;p&gt;Actualmente, sin embargo, servicios como &lt;a href=&quot;https://es.wikipedia.org/wiki/Let%27s_encrypt&quot;&gt;&lt;em&gt;Let’s encrypt&lt;/em&gt;&lt;/a&gt; han reducido drásticamente la complejidad en la instalación de certificados cambiando esta situación.&lt;/p&gt;
+
+&lt;h1 id=&quot;pgpgpg-open-pgp&quot;&gt;PGP/GPG (Open PGP)&lt;/h1&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Un poco de historia…&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;blockquote&gt;
+
+      &lt;p&gt;En 1991 Phil Zimmermann, empleado de Symantec, crea la suite criptográfica &lt;em&gt;PGP&lt;/em&gt;. En 1997 se crea con el beneplácito del creador de &lt;em&gt;PGP&lt;/em&gt; el estándar &lt;em&gt;Open PGP&lt;/em&gt; garantizando la interoperabilidad de la comunidad criptográfica. Dicho estándar permite la creación de &lt;em&gt;GPG&lt;/em&gt;, el reemplazo libre de GNU para la suite &lt;em&gt;PGP&lt;/em&gt;.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h2 id=&quot;diferencias-entre-open-pgp-y-ssltls&quot;&gt;Diferencias entre Open PGP y SSL/TLS&lt;/h2&gt;
+
+&lt;p&gt;Mientras que &lt;em&gt;SSL&lt;/em&gt;/&lt;em&gt;TLS&lt;/em&gt; asegura la confidencialidad de los datos que son transmitidos por la red, las suites criptográficas &lt;em&gt;PGP&lt;/em&gt; y &lt;em&gt;GPG&lt;/em&gt; proporcionan una implementación de los algoritmos criptográficos necesarios para proteger los datos de forma persistente (al ser almacenados en disco).&lt;/p&gt;
+
+&lt;p&gt;Las primeras versiones de &lt;em&gt;PGP&lt;/em&gt; eran conocidas por ofrecer un esquema descentralizado de &lt;em&gt;red de confianza&lt;/em&gt;, en contraste con el sistema centralizado &lt;em&gt;PKI&lt;/em&gt; (estándar &lt;em&gt;X.509&lt;/em&gt;) de &lt;em&gt;SSL&lt;/em&gt;/&lt;em&gt;TLS&lt;/em&gt;. Actualmente tanto &lt;em&gt;PGP&lt;/em&gt; como &lt;em&gt;GPG&lt;/em&gt; incorporan el modelo &lt;em&gt;PKI&lt;/em&gt; de forma adicional.&lt;/p&gt;
+
+&lt;h2 id=&quot;esquema-de-red-de-confianza&quot;&gt;Esquema de red de confianza&lt;/h2&gt;
+
+&lt;p&gt;Este sistema permite que cualquier integrante perteneciente a una red de confianza pueda incorporar a un nuevo integrante, al firmar su clave pública con su propia clave privada. En este esquema no existe autoridad central sino que son los propios “nodos” de la red los que se encargan de verificar la identidad de cada nuevo integrante.&lt;/p&gt;
+
+&lt;p&gt;El estándar &lt;em&gt;Open PGP&lt;/em&gt; incluye además un sistema de recuento de votos, configurable por el usuario, que permite decidir que certificados son considerados como válidos de forma ponderada.&lt;/p&gt;
+
+&lt;h2 id=&quot;privacidad-en-el-e-mail&quot;&gt;Privacidad en el e-mail&lt;/h2&gt;
+
+&lt;p&gt;Si bien servicios como Gmail ya incorporan soporte &lt;em&gt;TLS&lt;/em&gt; (sobre IMAP), esto no significa que tales servicio almacenen los datos transmitidos de forma encriptada en el servidor. Para encriptar y firmar nuestros correos se pueden utilizar clientes de correo con soporte para &lt;em&gt;PGP&lt;/em&gt;/&lt;em&gt;GPG&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;En la actualidad ya existen extensiones de encriptación &lt;em&gt;PGP&lt;/em&gt;/&lt;em&gt;GPG&lt;/em&gt; para navegadores como Google Chrome. Estos plugins son capaces de encriptar y desencriptar los correos de forma local mediante código javascript desde la propia web de Gmail.&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;S/MIME&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;blockquote&gt;
+
+      &lt;p&gt;Otra forma de encriptar y firmar e-mails es mediante S/MIME. Este estándar permite el uso de criptografía de clave pública mediante certificados firmados por una autoridad certificadora (del estilo de los certificados SSL). La obtención de estos certificados es el mayor inconveniente frente al sistema de esquema de red de confianza, siendo usado sobretodo en entornos corporativos.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h2 id=&quot;la-suite-gpg&quot;&gt;La suite GPG&lt;/h2&gt;
+
+&lt;p&gt;La suite &lt;em&gt;GPG&lt;/em&gt; (&lt;em&gt;GnuPG&lt;/em&gt;) es libre, multiplataforma, e interoperable con &lt;em&gt;PGP&lt;/em&gt; en versiones recientes.&lt;/p&gt;
+
+&lt;p&gt;La interfaz principal de GnuPG es la línea de comandos, aunque hay varios programas que permiten su uso en modo gráfico (para el escritorio Gnome, por ejemplo, existe una aplicación llamada Seahorse).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;GnuPG&lt;/em&gt;, además, está integrado en programas como Evolution y KMail (Linux), también existe una extensión llamada Enigmail para varios programas de la suite de Mozilla (multiplataforma).&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 11 Sep 2018 16:30:15 +0000</pubDate>
+        <link>http://cheat-sheets.tk/krypto</link>
+        <guid isPermaLink="true">http://cheat-sheets.tk/krypto</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
     
       <item>
         <title>Scripts de actualización de cambios de Base de Datos</title>
@@ -94,7 +835,7 @@
       </item>
     
       <item>
-        <title>Los 10 puntos clave para entender el software libre</title>
+        <title>Comprendiendo el software libre</title>
         <description>&lt;h1 id=&quot;qu-requisitos-debe-reunir-un-software-para-ser-considerado-libre&quot;&gt;¿Qué requisitos debe reunir un software para ser considerado libre?&lt;/h1&gt;
 
 &lt;p&gt;Para que un software sea considerado &lt;em&gt;libre&lt;/em&gt; debe preservar los derechos de uso, estudio, modificación y distribución del mismo, o lo que es lo mismo que cumpla con las &lt;a href=&quot;http://www.gnu.org/philosophy/free-sw.es.html&quot;&gt;&lt;em&gt;4 libertades esenciales del software libre&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
@@ -264,10 +1005,8 @@
 
 </description>
         <pubDate>Tue, 22 Sep 2015 00:00:01 +0000</pubDate>
-        <link>http://cheat-sheets.tk/software-libre-q&a</link>
-        <guid isPermaLink="true">http://cheat-sheets.tk/software-libre-q&a</guid>
-        
-        <category>Free_Software</category>
+        <link>http://cheat-sheets.tk/software-libre</link>
+        <guid isPermaLink="true">http://cheat-sheets.tk/software-libre</guid>
         
         
         <category>blog</category>
@@ -275,7 +1014,7 @@
       </item>
     
       <item>
-        <title>Symfony 2 (Quick Reference)</title>
+        <title>Symfony 2 quick reference</title>
         <description>&lt;h1 id=&quot;installation&quot;&gt;Installation&lt;/h1&gt;
 
 &lt;blockquote&gt;
@@ -1216,7 +1955,7 @@ xdebug.max_nesting_level&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;250
         <link>http://cheat-sheets.tk/symfony</link>
         <guid isPermaLink="true">http://cheat-sheets.tk/symfony</guid>
         
-        <category>Web</category>
+        <category>Symfony</category>
         
         
         <category>quick guides</category>
@@ -1312,6 +2051,11 @@ xdebug.max_nesting_level&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;250
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;cheese&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Distro&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Desktop&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;chrome-gnome-shell&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Distro&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Desktop&lt;/td&gt;
     &lt;/tr&gt;
@@ -1541,6 +2285,11 @@ xdebug.max_nesting_level&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;250
       &lt;td style=&quot;text-align: center&quot;&gt;System&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;gstreamer0.10-ffmpeg&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ppa:mc3man/gstffmpeg-keep&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;System&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;gtk-recordmydesktop&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Distro&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Extra&lt;/td&gt;
@@ -1598,6 +2347,11 @@ xdebug.max_nesting_level&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;250
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;libreoffice-common&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Distro&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Desktop&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;lollypop&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ppa:gnumdk/lollypop&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Desktop&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -1671,6 +2425,11 @@ xdebug.max_nesting_level&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;250
       &lt;td style=&quot;text-align: center&quot;&gt;System&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ncdu&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Distro&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CLI&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;nmap&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Distro&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;CLI&lt;/td&gt;
@@ -1678,6 +2437,11 @@ xdebug.max_nesting_level&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;250
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;noip-2.1.9&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Distro&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Desktop&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;noise&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ppa:elementary-os/daily&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Desktop&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -1931,6 +2695,11 @@ xdebug.max_nesting_level&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;250
       &lt;td style=&quot;text-align: center&quot;&gt;System&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;trash-cli&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Distro&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CLI&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;tuxguitar&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Distro&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Extra&lt;/td&gt;
@@ -2021,6 +2790,11 @@ xdebug.max_nesting_level&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;250
       &lt;td style=&quot;text-align: center&quot;&gt;CLI&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;xsel&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Distro&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CLI&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;y-ppa-manager&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;ppa:webupd8team/y-ppa-manager&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;System&lt;/td&gt;
@@ -2067,9 +2841,10 @@ xdebug.max_nesting_level&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;250
 &lt;h2 id=&quot;direct-download-software&quot;&gt;Direct download software&lt;/h2&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sourceforge.net/projects/boot-repair-cd/&quot;&gt;Boot-repair-disk&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sites.google.com/site/bibfilex/download/bibfilex-gtk_1.2.8.0_amd64.deb?attredirects=0&amp;amp;d=1&quot;&gt;Bibfilex&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://dbeaver.jkiss.org/download/&quot;&gt;Dbeaver&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://brackets.io/&quot;&gt;Brackets&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://thomas101.github.io/wmail/download&quot;&gt;Wmail&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://download.virtualbox.org/virtualbox/&quot;&gt;Virtual Box + extension pack&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -2091,7 +2866,30 @@ xdebug.max_nesting_level&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;250
     
       <item>
         <title>Repositories</title>
-        <description>&lt;h1 id=&quot;ubuntu&quot;&gt;Ubuntu&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;cross-platform&quot;&gt;Cross-platform&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;Flatpak app store&lt;/dt&gt;
+    &lt;dd&gt;&lt;a href=&quot;https://flathub.org/apps&quot;&gt; https://flathub.org/apps &lt;/a&gt;&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;Snaps app store&lt;/dt&gt;
+    &lt;dd&gt;&lt;a href=&quot;https://snapcraft.io/store&quot;&gt; https://snapcraft.io/store &lt;/a&gt;&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;AppImage app store&lt;/dt&gt;
+    &lt;dd&gt;&lt;a href=&quot;https://appimage.github.io/apps/&quot;&gt; https://appimage.github.io/apps/ &lt;/a&gt;&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;ubuntu&quot;&gt;Ubuntu&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;dl&gt;
@@ -2607,8 +3405,123 @@ sería de extrañar que &lt;a href=&quot;http://neovim.io/&quot;&gt;otro editor&
       </item>
     
       <item>
+        <title>Laravel</title>
+        <description>&lt;h1 id=&quot;setting-up-homestead-environment&quot;&gt;Setting up Homestead environment&lt;/h1&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Install Vagrant and Virtualbox&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install vagrant virtualbox&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;or download and install &lt;a href=&quot;https://www.vagrantup.com/downloads.html&quot;&gt;vagrant package&lt;/a&gt; manually&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Install Vagrant box&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant box add laravel/homestead&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;Install vagrant environment&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
+git clone https://github.com/laravel/homestead.git Homestead
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;Homestead
+bash init.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;Set domain on /etc/hosts according to Homestead.yaml&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;192.168.10.10  homestead.test&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;Generate ssh key&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Generate a ssh key&lt;/span&gt;
+ssh-keygen -t rsa -b &lt;span class=&quot;m&quot;&gt;4096&lt;/span&gt; -C &lt;span class=&quot;s2&quot;&gt;&amp;quot;your_email@example.com&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Start ssh agent&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$(ssh-agent -s)&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Add your SSH private key to the ssh-agent&lt;/span&gt;
+ssh-add -k ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;Share your code with vagrant&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# creating folder on your machine&lt;/span&gt;
+mkdir -p ~/code/public
+&lt;span class=&quot;c&quot;&gt;# or modifing &amp;#39;folders&amp;#39; and &amp;#39;sites&amp;#39; on Homestead.yaml as you like&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;Run and log in to Homestead machine&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vagrant up
+vagrant ssh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;Create Laravel project on Homestead machine&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;composer create-project --prefer-dist laravel/laravel blog
+&lt;span class=&quot;c&quot;&gt;# Now you can access site on host machine on homestead.test&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;connect to database&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# frome Homestead machine&lt;/span&gt;
+mysql -h localhost -p -u homestead &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;password: &lt;span class=&quot;s1&quot;&gt;&amp;#39;secret&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# from host machine connect to localhost:33060&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h1 id=&quot;laravel&quot;&gt;Laravel&lt;/h1&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Config Laravel environment variables&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;vi project/.env&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;List Laravel console make methods available&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;php artisan list make&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;Apply migrations (create/drop tables)&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;php artisan migrate&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;Load table with seeder&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;php artisan db:seed --class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;UsersTableSeeder&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;Regenerate the list of classes of autoload_classmap.php&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;composer dump-autoload&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;
+
+</description>
+        <pubDate>Sat, 25 Jul 2015 16:30:15 +0000</pubDate>
+        <link>http://cheat-sheets.tk/laravel</link>
+        <guid isPermaLink="true">http://cheat-sheets.tk/laravel</guid>
+        
+        <category>Laravel</category>
+        
+        
+        <category>webdev</category>
+        
+      </item>
+    
+      <item>
         <title>Jquery</title>
         <description>&lt;dl&gt;
+  &lt;dt&gt;Ajax call&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/save&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;tom&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Uh oh, something went wrong&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
   &lt;dt&gt;Trigger + stop propagation&lt;/dt&gt;
   &lt;dd&gt;
     &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;click&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;tr&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -2707,206 +3620,86 @@ sería de extrañar que &lt;a href=&quot;http://neovim.io/&quot;&gt;otro editor&
 &lt;span class=&quot;c1&quot;&gt;// decode&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;decodeURIComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;escape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;/dd&gt;
+  &lt;dt&gt;Scroll to id&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;html,body&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollTop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;#myId&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;Select population&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;#mySelect&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;option&amp;gt;&amp;lt;/option&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;value&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;selected&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
+  &lt;dt&gt;Prototyped function that inits datepicker and sets mask (and validation)&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;myDatePicker&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extraParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;datepicker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;regional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;es&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;closeText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Cerrar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;prevText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;amp;#x3C;Ant&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;nextText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Sig&amp;amp;#x3E;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;currentText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Hoy&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;monthNames&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Enero&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Febrero&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Marzo&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Abril&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Mayo&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Junio&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;Julio&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Agosto&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Septiembre&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Octubre&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Noviembre&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Diciembre&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;monthNamesShort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Ene&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Feb&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Mar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Abr&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;May&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Jun&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;Jul&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Ago&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Sep&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Oct&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Nov&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Dic&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;dayNames&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Domingo&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Lunes&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Martes&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Miércoles&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Jueves&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Viernes&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Sábado&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;dayNamesShort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Dom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Lun&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Mar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Mié&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Juv&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Vie&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Sáb&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;dayNamesMin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Do&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Lu&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Ma&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Mi&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Ju&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Vi&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Sa&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;weekHeader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Sm&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;dateFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;dd/mm/yy&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;firstDay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;isRTL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;showMonthAfterYear&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;yearSuffix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;datepicker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setDefaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;datepicker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;regional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;es&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;datepicker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setDefaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extraParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mydate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;mydate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;datepicker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;dateFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;dd/mm/yy&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;changeMonth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;changeYear&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;00/00/0000&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;onComplete&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;checkDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mydate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;mydate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;mydate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;focusout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;checkDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mydate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;mydate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;checkDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;er&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^(((0[1-9]|[12][0-9]|3[01])([-.\/])(0[13578]|10|12)([-.\/])(\d{4}))|(([0][1-9]|[12][0-9]|30)([-.\/])(0[469]|11)([-.\/])(\d{4}))|((0[1-9]|1[0-9]|2[0-8])([-.\/])(02)([-.\/])(\d{4}))|((29)(\.|-|\/)(02)([-.\/])([02468][048]00))|((29)([-.\/])(02)([-.\/])([13579][26]00))|((29)([-.\/])(02)([-.\/])([0-9][0-9][0][48]))|((29)([-.\/])(02)([-.\/])([0-9][0-9][2468][048]))|((29)([-.\/])(02)([-.\/])([0-9][0-9][13579][26])))$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;er&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/dd&gt;
 &lt;/dl&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://jqueryui.com/datepicker/&quot;&gt;datepicker&lt;/a&gt; and &lt;a href=&quot;https://igorescobar.github.io/jQuery-Mask-Plugin/&quot;&gt;mask plugin&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
         <pubDate>Sat, 25 Jul 2015 16:30:15 +0000</pubDate>
         <link>http://cheat-sheets.tk/jquery</link>
         <guid isPermaLink="true">http://cheat-sheets.tk/jquery</guid>
-        
-        <category>Web</category>
-        
-        
-        <category>webdev</category>
-        
-      </item>
-    
-      <item>
-        <title>Desktop/general commands</title>
-        <description>&lt;dl&gt;
-  &lt;dt&gt;Create .desktop (gnome app launcher)&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gnome-desktop-item-edit ~/.local/share/applications --create-new&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Associate vlc app to some extensions&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;xdg-mime default vlc.desktop video/x-ogg video/x-ogm video/x-ogm+ogg video/x-real-video video/x-sgi-movie video/x-theora video/x-theora+ogg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Create mkv file (without changing codec)&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkvmerge -o &lt;span class=&quot;s2&quot;&gt;&amp;quot;/media/bla/output.mkv&amp;quot;&lt;/span&gt; --title &lt;span class=&quot;s2&quot;&gt;&amp;quot;videotitle&amp;quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;input.mp4&amp;quot;&lt;/span&gt; --default-track &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;  --sub-charset 0:ISO-8859-1 --language 0:spa &lt;span class=&quot;s2&quot;&gt;&amp;quot;./subtitles.spa.srt&amp;quot;&lt;/span&gt; --language 1:en &lt;span class=&quot;s2&quot;&gt;&amp;quot;./subtitles.eng.srt&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Change default app&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mimeopen -d file.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Disable disk automount (don’t ask to mount)&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gsettings &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;org.gnome.desktop.media-handling automount &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gsettings &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;org.gnome.desktop.media-handling automount-open &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Notify opening guake when phplog changes (showing “tailed” log on guake)&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; inotifywait -e close_write /var/log/phplog&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; guake -s 0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; guake -t&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; &amp;gt; /dev/null 2&amp;gt;&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Ask password for decrypt drive in gui popup&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;encfs --extpass&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/bin/ssh-askpass /src/.cryptk_encfs/ ~/dest &amp;gt; /dev/null 2&amp;gt;&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Graphical rotation&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;xrandr -x / xrandr -y / xrandr -x -y / xrandr -o normal / xrandr -o inverted&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Add app to startup&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cp /usr/share/applications/guake.desktop ~/.config/autostart/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Move app to workspace at startup&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gsettings &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;org.gnome.shell.extensions.auto-move-windows application-list &lt;span class=&quot;s2&quot;&gt;&amp;quot;[&amp;#39;banshee-media-player.desktop:2&amp;#39;, &amp;#39;deluge.desktop:2&amp;#39;, &amp;#39;rhythmbox.desktop:2&amp;#39;, &amp;#39;google-chrome.desktop:1&amp;#39;, &amp;#39;firefox.desktop:1&amp;#39;]&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Configure default java version&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;update-alternatives --config java&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-&lt;/dl&gt;
-
-</description>
-        <pubDate>Sat, 25 Jul 2015 16:30:15 +0000</pubDate>
-        <link>http://cheat-sheets.tk/linuxcommands</link>
-        <guid isPermaLink="true">http://cheat-sheets.tk/linuxcommands</guid>
-        
-        <category>Sysadmin</category>
-        
-        
-        <category>gnu/linux</category>
-        
-      </item>
-    
-      <item>
-        <title>Bootstrap</title>
-        <description>&lt;h2 id=&quot;how-to-install-bootstrap-sass-compass&quot;&gt;How to install Bootstrap-sass (compass)&lt;/h2&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;Install ruby gems&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get install ruby1.9.1-full nodejs
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo gem install bootstrap-sass
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo gem install sass
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo gem install compass&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Install bootstrap in your project&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# generate files&lt;/span&gt;
-compass create project-files -r bootstrap-sass --using bootstrap
-&lt;span class=&quot;c&quot;&gt;# install files&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/project-files/
-mv stylesheets css
-mv javascripts js
-mv * &amp;lt;your_public_dir&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Configure bootstrap sass compiler&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;css_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;css&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;javascripts_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;js&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;relative_assets&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Add assets to your layout&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-jinja&quot; data-lang=&quot;jinja&quot;&gt;&lt;span class=&quot;x&quot;&gt;&amp;lt;link href=&amp;quot;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;asset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;css/styles.css&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&amp;quot; rel=&amp;quot;stylesheet&amp;quot; /&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;    &amp;lt;script src=&amp;quot;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;asset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;js/bootstrap.min.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Compile on demmand&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# change any .scss files like sass/_bootstrap-variables.scss&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &amp;lt;root_of_sass_project&amp;gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;compass compile&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Autocompile&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;compass watch &amp;lt;root_of_sass_project&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;blockquote&gt;
-  &lt;dl&gt;
-    &lt;dt&gt;More info&lt;/dt&gt;
-    &lt;dd&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;https://github.com/twbs/bootstrap-sass&quot;&gt;Bootstrap-sass documentation&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;http://alexandre-salome.fr/blog/Sass-Compass-Assetic-In-Ten-Minutes&quot;&gt;Compass with assetic&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;http://sass-lang.com/documentation/file.SASS_REFERENCE.html&quot;&gt;Sass reference&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/dd&gt;
-  &lt;/dl&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Sat, 25 Jul 2015 16:30:15 +0000</pubDate>
-        <link>http://cheat-sheets.tk/bootstrap</link>
-        <guid isPermaLink="true">http://cheat-sheets.tk/bootstrap</guid>
-        
-        <category>Web</category>
-        
-        
-        <category>webdev</category>
-        
-      </item>
-    
-      <item>
-        <title>Apache</title>
-        <description>&lt;dl&gt;
-  &lt;dt&gt;Install Php Apache modules&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get install php5-sybase php5-xdebug php5-sqlite php5-pgsql php5-mysql php5-mcrypt php5-ldap php5-intl php5-gd php5-apcu&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Enable mod_rewrite &lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Enable module&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo a2enmod rewrite
-&lt;span class=&quot;c&quot;&gt;# Edit /etc/apache2/sites-available/000-default.conf and /etc/apache2/sites-available/default-ssl.conf to allow overwrite from .htaccess&lt;/span&gt;
-&amp;lt;Directory &lt;span class=&quot;s2&quot;&gt;&amp;quot;/var/www/html&amp;quot;&lt;/span&gt;&amp;gt;
-    AllowOverride All
-&amp;lt;/Directory&amp;gt;
-&lt;span class=&quot;c&quot;&gt;# Restart apache&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo service apache2 restart&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Enable ssl module&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo a2enmod ssl&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Enable https site&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo a2ensite default-ssl&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-  &lt;dt&gt;Enable mcrypt &lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get install php5-mcrypt
-&lt;span class=&quot;c&quot;&gt;# Next line only necessary in Ubuntu 13.10&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo mv -i /etc/php5/conf.d/mcrypt.ini /etc/php5/mods-available/
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo php5enmod mcrypt
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo service apache2 restart&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Tested in Ubuntu 13.10 &amp;amp; 14.04&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;Configure file uploads in .htaccess&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;.htaccess: php_value  upload_max_filesize  5M
-.htaccess: php_value  post_max_size  15M&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-  &lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is also configurable in php.ini&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Sat, 25 Jul 2015 16:30:15 +0000</pubDate>
-        <link>http://cheat-sheets.tk/apache</link>
-        <guid isPermaLink="true">http://cheat-sheets.tk/apache</guid>
         
         <category>Web</category>
         

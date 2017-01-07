@@ -2,12 +2,15 @@
   text-align: center !important;
   font-style: italic; }
 
-.blog {
+.blog, .about {
   font-family: 'Roboto', sans-serif !important;
   font-size: 13.5pt;
   text-align: justify;
   width: 90%;
   margin: auto; }
+
+.about {
+  font-size: 12.5pt; }
 
 .note, .shortnote {
   font-family: 'Roboto', sans-serif !important;
@@ -19,6 +22,31 @@
   color: #555;
   font-size: 12pt;
   text-align: center; }
+
+.note_yellow {
+  border: 3px solid #aaaaaa;
+  border-radius: 15px;
+  box-shadow: 15px 13px 8px #aaaaaa;
+  margin: 0 auto; }
+
+.note_yellow:hover {
+  border: 3px solid #aaaaaa; }
+
+.pd_book {
+  font-weight: bold !important; }
+
+.ccby {
+  font-size: 95%; }
+
+.title_pd {
+  font-family: Montserrat;
+  font-size: 15pt !important;
+  color: #ffbd4a !important; }
+
+.subtitle_pd {
+  font-family: Montserrat;
+  font-size: 14pt !important;
+  font-weight: 300 !important; }
 
 h1, h2, h3, h4, h5, h6 {
   position: relative;
@@ -53,25 +81,6 @@ h4:hover .header-link,
 h5:hover .header-link,
 h6:hover .header-link {
   opacity: 1; }
-
-.cols {
-  width: 80%;
-  -webkit-column-count: 2;
-  /* Chrome, Safari, Opera */
-  -moz-column-count: 2;
-  /* Firefox */
-  column-count: 2;
-  -webkit-column-gap: 0px;
-  /* Chrome, Safari, Opera */
-  -moz-column-gap: 0px;
-  /* Firefox */
-  column-gap: 0px;
-  -webkit-column-rule: 1px dashed #afafaf;
-  /* Chrome, Safari, Opera */
-  -moz-column-rule: 1px dashed #afafaf;
-  /* Firefox */
-  column-rule: 1px dashed #afafaf;
-  margin-bottom: 2.5em; }
 
 .back {
   font-size: 70%;
@@ -115,7 +124,7 @@ h6:hover .header-link {
   float: left;
   padding: 0 5px;
   margin-bottom: 30px;
-  font-size: 14pt; }
+  font-size: 12pt; }
 
 .main-title {
   color: #424242 !important;
@@ -130,7 +139,9 @@ h6:hover .header-link {
 
 .tag-link {
   color: #999 !important;
-  font-size: 1.25rem !important; }
+  font-size: 1.25rem !important;
+  font-weight: 100 !important;
+  font-style: italic !important; }
 
 .artist-link {
   color: #999 !important; }

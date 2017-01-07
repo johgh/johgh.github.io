@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    Eloquent ORM <> GeekStuff.gq — My cheat sheets site
+    
+  </title>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="canonical" href="http://cheat-sheets.tk/eloquent-orm">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400|Montserrat:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" media="screen" href="/css/toc.css">
+    <link rel="stylesheet" media="screen" href="/css/select2.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.grey.min.css">
+
+    <script src="/scripts/jquery-2.1.4.min.js"></script>
+    
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet"> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script> -->
+    
+    <script src="/scripts/jquery.tablesorter.min.js"></script>
+    <script src="/scripts/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/widget-filter-formatter-select2.min.js"></script>
+    <script src="/scripts/jquery.tocLight.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+          $.toc.clickHideButton();
+        });
+  </script>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="GeekStuff.gq — My cheat sheets site" href="atom.xml">
+</head>
+
+
+
+  <body>
+    <div class="container content">
+        <header class="site-header">
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/"> 
+          <span class="main-title">
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat" style="font-weight: bold;">Geek</span><span style="font-weight: 200">Stuff</span><i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fab fa-pied-piper-hat"></i><span style="font-size: 30px; "><span style="font-weight:100; color: #5d5d5d">gq</span></span>
+                    
+          </span>
+      </a>
+
+      <!-- <a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a> -->
+      <!-- <a style="float:right; margin-top: 10px;"  href="/bookmarks"><i class="fas fa-bookmark"></i></a>&nbsp;&nbsp; -->
+      <!-- <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a> -->
+
+  </div>
+    <!-- <style> -->
+    <!--     /* The default background color is #c00 */ -->
+    <!--     .right-bottom .github-fork-ribbon { -->
+    <!--         background-color: #2A7AE2; -->
+    <!--     } -->
+
+    <!--     .right .github-fork-ribbon { -->
+    <!--         background-color: #f80; -->
+    <!--     } -->
+
+    <!--     .left-bottom .github-fork-ribbon { -->
+    <!--         background-color: #333; -->
+    <!--     } -->
+    <!-- </style> -->
+    
+    <!-- <div class="github-fork-ribbon-wrapper right-bottom"> -->
+    <!--     <div class="github-fork-ribbon"> -->
+    <!--         <a href="https://github.com/johgh/johgh.io-source">Fork me on GitHub</a> -->
+    <!--     </div> -->
+    <!-- </div> -->
+</header>
+
+      <header class="masthead">
+      </header>
+      <main>
+        <div class="post">
+
+<br />
+<article class="post">
+  <h1 class="post-title"><a href="/webdev" class="back"><i class="fa fa-arrow-left"></i></a> Eloquent ORM</h1>
+  <br />
+  <div id="toc-container">
+   <table class="toc" id="toc">
+      <tbody>
+         <tr>
+            <td>
+               <div id="toctitle">
+                  <h2>Contents</h2>
+                  <span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">hide</a>]</span>
+               </div>
+               <ul>
+                  <li class="toc_level-1 toc_section-1">
+                     <a href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">Artisan</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-2">
+                     <a href="#tocAnchor-1-2"><span class="tocnumber">2</span> <span class="toctext">Collection</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-3">
+                     <a href="#tocAnchor-1-3"><span class="tocnumber">3</span> <span class="toctext">Reducing memory usage</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-4">
+                     <a href="#tocAnchor-1-4"><span class="tocnumber">4</span> <span class="toctext">Fetching results</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-5">
+                     <a href="#tocAnchor-1-5"><span class="tocnumber">5</span> <span class="toctext">Inserting data</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-6">
+                     <a href="#tocAnchor-1-6"><span class="tocnumber">6</span> <span class="toctext">Updating data</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-7">
+                     <a href="#tocAnchor-1-7"><span class="tocnumber">7</span> <span class="toctext">Deleting data</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-8">
+                     <a href="#tocAnchor-1-8"><span class="tocnumber">8</span> <span class="toctext">Debugging</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-9">
+                     <a href="#tocAnchor-1-9"><span class="tocnumber">9</span> <span class="toctext">External resources</span></a>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div><h1 id="tocAnchor-1-1">Artisan</h1>
+
+<dl>
+  <dt>Create model and generate migrations</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">php</span> <span class="nx">artisan</span> <span class="nx">make</span><span class="o">:</span><span class="nx">model</span> <span class="nx">User</span> <span class="o">-</span><span class="nx">m</span></code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="tocAnchor-1-2">Collection</h1>
+
+<dl>
+  <dt>Collection methods</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="c1">// get() returns eloquent collection that extends the base collection </span>
+<span class="nv">$users</span> <span class="o">=</span> <span class="nx">App\User</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">'active'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+
+<span class="c1">// collection methods are chainable</span>
+<span class="nv">$names</span> <span class="o">=</span> <span class="nv">$users</span><span class="o">-&gt;</span><span class="na">reject</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">active</span> <span class="o">===</span> <span class="k">false</span><span class="p">;</span>
+<span class="p">})</span>
+<span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+<span class="p">});</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p><a href="https://laravel.com/docs/5.5/collections">Base collection</a> (Illuminate\Support\Collection)</p>
+</blockquote>
+
+<blockquote>
+  <p><a href="https://laravel.com/docs/5.5/eloquent-collections">Eloquent collection</a> (Illuminate\Database\Eloquent\Collection)</p>
+</blockquote>
+
+<blockquote>
+  <p>Collection <a href="https://laravel.com/docs/5.5/collections#available-methods">available methods</a></p>
+</blockquote>
+
+<h1 id="tocAnchor-1-3">Reducing memory usage</h1>
+
+<dl>
+  <dt>Chunk, reduces memory usage executing multiple querys (one for each chunk)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">Flight</span><span class="o">::</span><span class="na">chunk</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$flights</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$flights</span> <span class="k">as</span> <span class="nv">$flight</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//</span>
+<span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+  </dd>
+  <dt>Cursor, reduces memory usage executing a single query</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">foreach</span> <span class="p">(</span><span class="nx">Flight</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">cursor</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$flight</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//</span>
+<span class="p">}</span></code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="tocAnchor-1-4">Fetching results</h1>
+
+<dl>
+  <dt>Find and first methods, no need to call get()</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="c1">// Retrieve a model by its primary key...</span>
+<span class="nv">$flight</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nv">$flights</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">find</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span>
+
+<span class="c1">// Retrieve the first model matching the query constraints...</span>
+<span class="nv">$flight</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">'active'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">first</span><span class="p">();</span></code></pre></div>
+  </dd>
+  <dt>Getting exceptions or scalar values, not collections</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="c1">// return 404 exception instead of null</span>
+<span class="nv">$model</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">findOrFail</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nv">$model</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">'legs'</span><span class="p">,</span> <span class="s1">'&gt;'</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">firstOrFail</span><span class="p">();</span>
+
+<span class="c1">// retrieve scalar value</span>
+<span class="nv">$count</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">'active'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span>
+<span class="nv">$max</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">'active'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">max</span><span class="p">(</span><span class="s1">'price'</span><span class="p">);</span></code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="tocAnchor-1-5">Inserting data</h1>
+
+<dl>
+  <dt>Inserting single register</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$flight</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Flight</span><span class="p">;</span>
+<span class="nv">$flight</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+<span class="nv">$flight</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span></code></pre></div>
+  </dd>
+  <dt>Preparing for mass assignment</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="c1">// First we need to set the fillable OR guarded attributes (exclusive OR)</span>
+<span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'name'</span><span class="p">];</span>
+<span class="k">protected</span> <span class="nv">$guarded</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'price'</span><span class="p">];</span>
+<span class="c1">// OR set all attributes mass asignable</span>
+<span class="k">protected</span> <span class="nv">$guarded</span> <span class="o">=</span> <span class="p">[];</span></code></pre></div>
+  </dd>
+  <dt>Static creation</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$flight</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">create</span><span class="p">([</span><span class="s1">'name'</span> <span class="o">=&gt;</span> <span class="s1">'Flight 10'</span><span class="p">]);</span></code></pre></div>
+  </dd>
+  <dt>Creating with existing model </dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$flight</span><span class="o">-&gt;</span><span class="na">fill</span><span class="p">([</span><span class="s1">'name'</span> <span class="o">=&gt;</span> <span class="s1">'Flight 22'</span><span class="p">]);</span></code></pre></div>
+  </dd>
+  <dt>Insert / update</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="c1">// Retrieve flight by name, or create it if it doesn't exist...</span>
+<span class="nv">$flight</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">firstOrCreate</span><span class="p">([</span><span class="s1">'name'</span> <span class="o">=&gt;</span> <span class="s1">'Flight 10'</span><span class="p">]);</span>
+
+<span class="c1">// Retrieve flight by name, or create it with the name and delayed attributes...</span>
+<span class="nv">$flight</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">firstOrCreate</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">'name'</span> <span class="o">=&gt;</span> <span class="s1">'Flight 10'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'delayed'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">);</span>
+
+<span class="c1">// If there's a flight from Oakland to San Diego, set the price to $99.</span>
+<span class="c1">// If no matching model exists, create one.</span>
+<span class="nv">$flight</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">updateOrCreate</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">'departure'</span> <span class="o">=&gt;</span> <span class="s1">'Oakland'</span><span class="p">,</span> <span class="s1">'destination'</span> <span class="o">=&gt;</span> <span class="s1">'San Diego'</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">'price'</span> <span class="o">=&gt;</span> <span class="mi">99</span><span class="p">]</span>
+
+<span class="c1">// Retrieve by name, or instantiate...</span>
+<span class="nv">$flight</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">firstOrNew</span><span class="p">([</span><span class="s1">'name'</span> <span class="o">=&gt;</span> <span class="s1">'Flight 10'</span><span class="p">]);</span>
+
+<span class="c1">// Retrieve by name, or instantiate with the name and delayed attributes...</span>
+<span class="nv">$flight</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">firstOrNew</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">'name'</span> <span class="o">=&gt;</span> <span class="s1">'Flight 10'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'delayed'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">);</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>firstOrNew() requires to call save() to persist</p>
+</blockquote>
+
+<h1 id="tocAnchor-1-6">Updating data</h1>
+
+<dl>
+  <dt>Update single register</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$flight</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nv">$flight</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="s1">'New Flight Name'</span><span class="p">;</span>
+<span class="nv">$flight</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span></code></pre></div>
+  </dd>
+  <dt>Mass update</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">App\Flight</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">'active'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">'destination'</span><span class="p">,</span> <span class="s1">'San Diego'</span><span class="p">)</span>
+<span class="o">-&gt;</span><span class="na">update</span><span class="p">([</span><span class="s1">'delayed'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">]);</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>On a mass update models are not retrieved and the saved and updated model events will not be fired</p>
+</blockquote>
+
+<h1 id="tocAnchor-1-7">Deleting data</h1>
+
+<dl>
+  <dt>Retrieving the model</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$flight</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nv">$flight</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span></code></pre></div>
+  </dd>
+  <dt>Static call (without retrieving model)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">App\Flight</span><span class="o">::</span><span class="na">destroy</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nx">App\Flight</span><span class="o">::</span><span class="na">destroy</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span>
+<span class="nx">App\Flight</span><span class="o">::</span><span class="na">destroy</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span></code></pre></div>
+  </dd>
+  <dt>Delete query</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$deletedRows</span> <span class="o">=</span> <span class="nx">App\Flight</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">'active'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>On delete query models are not retrieved and the saved and updated model events will not be fired</p>
+</blockquote>
+
+<h1 id="tocAnchor-1-8">Debugging</h1>
+
+<dl>
+  <dt>Save log with generated sql code</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">\Log</span><span class="o">::</span><span class="na">info</span><span class="p">(</span><span class="nx">\DB</span><span class="o">::</span><span class="na">getQueryLog</span><span class="p">());</span></code></pre></div>
+  </dd>
+</dl>
+
+<h1 id="tocAnchor-1-9">External resources</h1>
+
+<p>
+   <a href="http://desarrollowebtutorial.com/laravel-eloquent-orm-query-builder-consultas-sql/"><i class="fas fa-external-link-alt"></i> Laravel ORM/builder quick guide</a>
+</p>
+
+<p>
+   <a href="https://laraveldaily.com/10-less-known-but-awesome-laravel-collections-methods/"><i class="fas fa-external-link-alt"></i> Laravel collection methods</a>
+</p>
+
+<p>
+   <a href="http://www.laravelsd.com/"><i class="fas fa-external-link-alt"></i> Laravel schema generator</a>
+</p>
+
+
+  <br />
+  <blockquote>
+      <p><strong>Last updated: <time datetime="2018-09-16T20:39:26+00:00" class="page-date">16 Sep 2018</time></strong></p>
+  </blockquote>
+</article>
+
+
+
+<aside class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+        
+
+        
+
+            
+                
+            
+        
+
+            
+        
+
+            
+                
+            
+        
+
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/laravel">
+                                        Laravel
+                                        <small><time datetime="2018-09-16T20:39:26+00:00">16 Sep 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+                    
+                    
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+        
+        
+        
+  </ul>
+</aside>
+
+
+
+      </main>
+     <footer class="site-footer">
+
+  <div class="wrapper">
+
+    
+      <div style="float: left; margin-left: 25px">
+          <a href="/bookmarks"><i class="fas fa-bookmark"></i> bookmarks</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/sitemap"><i class="fas fa-sitemap"></i> sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/about"><i class="fas fa-user-astronaut"></i> about</a>
+          <!-- <div><a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a></div><br /> -->
+      </div>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+          <!-- <h2 class="footer-heading"> <a href="https://github.com/johgh/johgh.io-source"> <i class="fa fa-github"></i> Cheat-Sheets</a></h2> -->
+        <ul class="contact-list">
+          <li><a href="mailto:"></a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span class="ccby">jordihv at gmail.com</span><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<a href="#0" class="cd-top">Top</a>
+<script src="/scripts/backtotop.js"></script>
+
+<script>
+$(function() {
+  $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+
+  /*
+  $(document).on('click', '.back', function(e){
+    e.preventDefault()
+  });
+  */
+});
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66389589-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+
+  </body>
+</html>

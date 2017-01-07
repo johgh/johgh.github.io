@@ -10,7 +10,7 @@
 
   <title>
     
-    Vim (Quick Reference) <> Cheat-sheets.tk
+    Vim quick reference <> GeekStuff.gq — My cheat sheets site
     
   </title>
 
@@ -21,8 +21,10 @@
     <link rel="stylesheet" href="/css/backtotop.css">
     <link rel="canonical" href="http://cheat-sheets.tk/vim">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400|Montserrat:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
     <link rel="stylesheet" media="screen" href="/css/toc.css">
     <link rel="stylesheet" media="screen" href="/css/select2.css">
@@ -50,7 +52,7 @@
   <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS -->
-  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="GeekStuff.gq — My cheat sheets site" href="atom.xml">
 </head>
 
 
@@ -63,13 +65,14 @@
 
       <a class="site-title" href="/"> 
           <span class="main-title">
-              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
-                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat" style="font-weight: bold;">Geek</span><span style="font-weight: 200">Stuff</span><i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fab fa-pied-piper-hat"></i><span style="font-size: 30px; "><span style="font-weight:100; color: #5d5d5d">gq</span></span>
                     
           </span>
       </a>
 
-      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+      <!-- <a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a> -->
+      <!-- <a style="float:right; margin-top: 10px;"  href="/bookmarks"><i class="fas fa-bookmark"></i></a>&nbsp;&nbsp; -->
+      <!-- <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a> -->
 
   </div>
     <!-- <style> -->
@@ -101,7 +104,7 @@
 
 <br />
 <article class="post">
-  <h1 class="post-title"><a href="/quick guides" class="back"><i class="fa fa-arrow-left"></i></a> Vim (Quick Reference)</h1>
+  <h1 class="post-title"><a href="/quick guides" class="back"><i class="fa fa-arrow-left"></i></a> Vim quick reference</h1>
   <br />
   <div id="toc-container">
    <table class="toc" id="toc">
@@ -174,109 +177,112 @@
                         <li class="toc_level-2 toc_section-19">
                            <a href="#tocAnchor-1-15-4"><span class="tocnumber">3.4</span> <span class="toctext">Repeat last command</span></a>
                         </li>
-                     </ul>
-                  </li>
-                  <li class="toc_level-1 toc_section-20">
-                     <a href="#tocAnchor-1-20"><span class="tocnumber">4</span> <span class="toctext">Vimdiff</span></a>
-                     <ul>
-                        <li class="toc_level-2 toc_section-21">
-                           <a href="#tocAnchor-1-20-1"><span class="tocnumber">4.1</span> <span class="toctext">2-way diff</span></a>
+                        <li class="toc_level-2 toc_section-20">
+                           <a href="#tocAnchor-1-15-5"><span class="tocnumber">3.5</span> <span class="toctext">Useful commands</span></a>
                         </li>
                      </ul>
                   </li>
-                  <li class="toc_level-1 toc_section-22">
-                     <a href="#tocAnchor-1-22"><span class="tocnumber">5</span> <span class="toctext">Fugitive (plugin)</span></a>
+                  <li class="toc_level-1 toc_section-21">
+                     <a href="#tocAnchor-1-21"><span class="tocnumber">4</span> <span class="toctext">Vimdiff</span></a>
                      <ul>
-                        <li class="toc_level-2 toc_section-23">
-                           <a href="#tocAnchor-1-22-1"><span class="tocnumber">5.1</span> <span class="toctext">Commiting changes</span></a>
+                        <li class="toc_level-2 toc_section-22">
+                           <a href="#tocAnchor-1-21-1"><span class="tocnumber">4.1</span> <span class="toctext">2-way diff</span></a>
                         </li>
+                     </ul>
+                  </li>
+                  <li class="toc_level-1 toc_section-23">
+                     <a href="#tocAnchor-1-23"><span class="tocnumber">5</span> <span class="toctext">Fugitive (plugin)</span></a>
+                     <ul>
                         <li class="toc_level-2 toc_section-24">
-                           <a href="#tocAnchor-1-22-2"><span class="tocnumber">5.2</span> <span class="toctext">Reviewing changes</span></a>
+                           <a href="#tocAnchor-1-23-1"><span class="tocnumber">5.1</span> <span class="toctext">Commiting changes</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-25">
-                           <a href="#tocAnchor-1-22-3"><span class="tocnumber">5.3</span> <span class="toctext">Resolving conflicts</span></a>
+                           <a href="#tocAnchor-1-23-2"><span class="tocnumber">5.2</span> <span class="toctext">Reviewing changes</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-26">
-                           <a href="#tocAnchor-1-22-4"><span class="tocnumber">5.4</span> <span class="toctext">Fugitive diffs</span></a>
+                           <a href="#tocAnchor-1-23-3"><span class="tocnumber">5.3</span> <span class="toctext">Resolving conflicts</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-27">
+                           <a href="#tocAnchor-1-23-4"><span class="tocnumber">5.4</span> <span class="toctext">Fugitive diffs</span></a>
                         </li>
                      </ul>
                   </li>
-                  <li class="toc_level-1 toc_section-27">
-                     <a href="#tocAnchor-1-27"><span class="tocnumber">6</span> <span class="toctext">Buffer and window management</span></a>
+                  <li class="toc_level-1 toc_section-28">
+                     <a href="#tocAnchor-1-28"><span class="tocnumber">6</span> <span class="toctext">Buffer and window management</span></a>
                      <ul>
-                        <li class="toc_level-2 toc_section-28">
-                           <a href="#tocAnchor-1-27-1"><span class="tocnumber">6.1</span> <span class="toctext">Buffers</span></a>
-                        </li>
                         <li class="toc_level-2 toc_section-29">
-                           <a href="#tocAnchor-1-27-2"><span class="tocnumber">6.2</span> <span class="toctext">Windows</span></a>
+                           <a href="#tocAnchor-1-28-1"><span class="tocnumber">6.1</span> <span class="toctext">Buffers</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-30">
-                           <a href="#tocAnchor-1-27-3"><span class="tocnumber">6.3</span> <span class="toctext">Ctrl-space (plugin)</span></a>
+                           <a href="#tocAnchor-1-28-2"><span class="tocnumber">6.2</span> <span class="toctext">Windows</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-31">
+                           <a href="#tocAnchor-1-28-3"><span class="tocnumber">6.3</span> <span class="toctext">Ctrl-space (plugin)</span></a>
                         </li>
                      </ul>
                   </li>
-                  <li class="toc_level-1 toc_section-31">
-                     <a href="#tocAnchor-1-31"><span class="tocnumber">7</span> <span class="toctext">VIM quick reference</span></a>
+                  <li class="toc_level-1 toc_section-32">
+                     <a href="#tocAnchor-1-32"><span class="tocnumber">7</span> <span class="toctext">VIM quick reference</span></a>
                      <ul>
-                        <li class="toc_level-2 toc_section-32">
-                           <a href="#tocAnchor-1-31-1"><span class="tocnumber">7.1</span> <span class="toctext">Basic movement</span></a>
-                        </li>
                         <li class="toc_level-2 toc_section-33">
-                           <a href="#tocAnchor-1-31-2"><span class="tocnumber">7.2</span> <span class="toctext">Insertion &amp; replace → insert mode</span></a>
+                           <a href="#tocAnchor-1-32-1"><span class="tocnumber">7.1</span> <span class="toctext">Basic movement</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-34">
-                           <a href="#tocAnchor-1-31-3"><span class="tocnumber">7.3</span> <span class="toctext">Deletion</span></a>
+                           <a href="#tocAnchor-1-32-2"><span class="tocnumber">7.2</span> <span class="toctext">Insertion &amp; replace → insert mode</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-35">
-                           <a href="#tocAnchor-1-31-4"><span class="tocnumber">7.4</span> <span class="toctext">Insert mode</span></a>
+                           <a href="#tocAnchor-1-32-3"><span class="tocnumber">7.3</span> <span class="toctext">Deletion</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-36">
-                           <a href="#tocAnchor-1-31-5"><span class="tocnumber">7.5</span> <span class="toctext">Copying</span></a>
+                           <a href="#tocAnchor-1-32-4"><span class="tocnumber">7.4</span> <span class="toctext">Insert mode</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-37">
-                           <a href="#tocAnchor-1-31-6"><span class="tocnumber">7.6</span> <span class="toctext">Advanced insertion</span></a>
+                           <a href="#tocAnchor-1-32-5"><span class="tocnumber">7.5</span> <span class="toctext">Copying</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-38">
-                           <a href="#tocAnchor-1-31-7"><span class="tocnumber">7.7</span> <span class="toctext">Visual mode</span></a>
+                           <a href="#tocAnchor-1-32-6"><span class="tocnumber">7.6</span> <span class="toctext">Advanced insertion</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-39">
-                           <a href="#tocAnchor-1-31-8"><span class="tocnumber">7.8</span> <span class="toctext">Undoing, repeating &amp; registers</span></a>
+                           <a href="#tocAnchor-1-32-7"><span class="tocnumber">7.7</span> <span class="toctext">Visual mode</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-40">
-                           <a href="#tocAnchor-1-31-9"><span class="tocnumber">7.9</span> <span class="toctext">Complex movement</span></a>
+                           <a href="#tocAnchor-1-32-8"><span class="tocnumber">7.8</span> <span class="toctext">Undoing, repeating &amp; registers</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-41">
-                           <a href="#tocAnchor-1-31-10"><span class="tocnumber">7.10</span> <span class="toctext">Search &amp; substitution</span></a>
+                           <a href="#tocAnchor-1-32-9"><span class="tocnumber">7.9</span> <span class="toctext">Complex movement</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-42">
-                           <a href="#tocAnchor-1-31-11"><span class="tocnumber">7.11</span> <span class="toctext">Special characters in search patterns</span></a>
+                           <a href="#tocAnchor-1-32-10"><span class="tocnumber">7.10</span> <span class="toctext">Search &amp; substitution</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-43">
-                           <a href="#tocAnchor-1-31-12"><span class="tocnumber">7.12</span> <span class="toctext">Offsets in search commands</span></a>
+                           <a href="#tocAnchor-1-32-11"><span class="tocnumber">7.11</span> <span class="toctext">Special characters in search patterns</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-44">
-                           <a href="#tocAnchor-1-31-13"><span class="tocnumber">7.13</span> <span class="toctext">Marks and motions</span></a>
+                           <a href="#tocAnchor-1-32-12"><span class="tocnumber">7.12</span> <span class="toctext">Offsets in search commands</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-45">
-                           <a href="#tocAnchor-1-31-14"><span class="tocnumber">7.14</span> <span class="toctext">Key mapping &amp; abbreviations</span></a>
+                           <a href="#tocAnchor-1-32-13"><span class="tocnumber">7.13</span> <span class="toctext">Marks and motions</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-46">
-                           <a href="#tocAnchor-1-31-15"><span class="tocnumber">7.15</span> <span class="toctext">Tags</span></a>
+                           <a href="#tocAnchor-1-32-14"><span class="tocnumber">7.14</span> <span class="toctext">Key mapping &amp; abbreviations</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-47">
-                           <a href="#tocAnchor-1-31-16"><span class="tocnumber">7.16</span> <span class="toctext">Scrolling &amp; multi-windowing</span></a>
+                           <a href="#tocAnchor-1-32-15"><span class="tocnumber">7.15</span> <span class="toctext">Tags</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-48">
-                           <a href="#tocAnchor-1-31-17"><span class="tocnumber">7.17</span> <span class="toctext">Ex commands (↵)</span></a>
+                           <a href="#tocAnchor-1-32-16"><span class="tocnumber">7.16</span> <span class="toctext">Scrolling &amp; multi-windowing</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-49">
-                           <a href="#tocAnchor-1-31-18"><span class="tocnumber">7.18</span> <span class="toctext">Ex ranges</span></a>
+                           <a href="#tocAnchor-1-32-17"><span class="tocnumber">7.17</span> <span class="toctext">Ex commands (↵)</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-50">
-                           <a href="#tocAnchor-1-31-19"><span class="tocnumber">7.19</span> <span class="toctext">Folding</span></a>
+                           <a href="#tocAnchor-1-32-18"><span class="tocnumber">7.18</span> <span class="toctext">Ex ranges</span></a>
                         </li>
                         <li class="toc_level-2 toc_section-51">
-                           <a href="#tocAnchor-1-31-20"><span class="tocnumber">7.20</span> <span class="toctext">Miscellaneous</span></a>
+                           <a href="#tocAnchor-1-32-19"><span class="tocnumber">7.19</span> <span class="toctext">Folding</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-52">
+                           <a href="#tocAnchor-1-32-20"><span class="tocnumber">7.20</span> <span class="toctext">Miscellaneous</span></a>
                         </li>
                      </ul>
                   </li>
@@ -474,7 +480,7 @@ map <code>key_to_map</code> &lt;Plug&gt;(smartword-ge)<br /></dd>
 
 <h2 id="tocAnchor-1-5-1">Surround</h2>
 <blockquote>
-  <p><a href="https://github.com/tpope/vim-surround"><i class="fa fa-external-link"></i> Github project</a></p>
+  <p><a href="https://github.com/tpope/vim-surround"><i class="fas fa-external-link-alt"></i> Github project</a></p>
 </blockquote>
 
 <dl>
@@ -494,7 +500,7 @@ map <code>key_to_map</code> &lt;Plug&gt;(smartword-ge)<br /></dd>
 
 <h2 id="tocAnchor-1-5-2">Multiple cursors</h2>
 <blockquote>
-  <p><a href="https://github.com/terryma/vim-multiple-cursors"><i class="fa fa-external-link"></i> Github project</a></p>
+  <p><a href="https://github.com/terryma/vim-multiple-cursors"><i class="fas fa-external-link-alt"></i> Github project</a></p>
 </blockquote>
 
 <dl>
@@ -537,7 +543,7 @@ map <code>key_to_map</code> &lt;Plug&gt;(smartword-ge)<br /></dd>
 
 <h2 id="tocAnchor-1-5-3">Expand Region</h2>
 <blockquote>
-  <p><a href="https://github.com/terryma/vim-expand-region"><i class="fa fa-external-link"></i> Github project</a></p>
+  <p><a href="https://github.com/terryma/vim-expand-region"><i class="fas fa-external-link-alt"></i> Github project</a></p>
 </blockquote>
 
 <dl>
@@ -549,7 +555,7 @@ map <code>key_to_map</code> &lt;Plug&gt;(smartword-ge)<br /></dd>
 
 <h2 id="tocAnchor-1-5-4">Commentary</h2>
 <blockquote>
-  <p><a href="https://github.com/tpope/vim-commentary"><i class="fa fa-external-link"></i> Github project</a></p>
+  <p><a href="https://github.com/tpope/vim-commentary"><i class="fas fa-external-link-alt"></i> Github project</a></p>
 </blockquote>
 
 <dl>
@@ -565,7 +571,7 @@ map <code>key_to_map</code> &lt;Plug&gt;(smartword-ge)<br /></dd>
 
 <h2 id="tocAnchor-1-5-5">Exchange</h2>
 <blockquote>
-  <p><a href="https://github.com/tommcdo/vim-exchange"><i class="fa fa-external-link"></i> Github project</a></p>
+  <p><a href="https://github.com/tommcdo/vim-exchange"><i class="fas fa-external-link-alt"></i> Github project</a></p>
 </blockquote>
 
 <dl>
@@ -579,7 +585,7 @@ map <code>key_to_map</code> &lt;Plug&gt;(smartword-ge)<br /></dd>
 
 <h2 id="tocAnchor-1-5-6">DelimitMate</h2>
 <blockquote>
-  <p><a href="https://github.com/Raimondi/delimitMate"><i class="fa fa-external-link"></i> Github project</a></p>
+  <p><a href="https://github.com/Raimondi/delimitMate"><i class="fas fa-external-link-alt"></i> Github project</a></p>
 </blockquote>
 
 <dl>
@@ -591,7 +597,7 @@ map <code>key_to_map</code> &lt;Plug&gt;(smartword-ge)<br /></dd>
 
 <h2 id="tocAnchor-1-5-7">Utilsnips</h2>
 <blockquote>
-  <p><a href="https://github.com/SirVer/ultisnips"><i class="fa fa-external-link"></i> Github project</a></p>
+  <p><a href="https://github.com/SirVer/ultisnips"><i class="fas fa-external-link-alt"></i> Github project</a></p>
 </blockquote>
 
 <dl>
@@ -605,7 +611,7 @@ map <code>key_to_map</code> &lt;Plug&gt;(smartword-ge)<br /></dd>
 
 <h2 id="tocAnchor-1-5-8">PhpDocumentor (PDV)</h2>
 <blockquote>
-  <p><a href="https://github.com/tobyS/pdv"><i class="fa fa-external-link"></i> Github project</a></p>
+  <p><a href="https://github.com/tobyS/pdv"><i class="fas fa-external-link-alt"></i> Github project</a></p>
 </blockquote>
 
 <dl>
@@ -615,7 +621,7 @@ map <code>key_to_map</code> &lt;Plug&gt;(smartword-ge)<br /></dd>
 
 <h2 id="tocAnchor-1-5-9">Abolish</h2>
 <blockquote>
-  <p><a href="https://github.com/tpope/vim-abolish"><i class="fa fa-external-link"></i> Github project</a></p>
+  <p><a href="https://github.com/tpope/vim-abolish"><i class="fas fa-external-link-alt"></i> Github project</a></p>
 </blockquote>
 
 <dl>
@@ -816,9 +822,28 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
   <dd><code>g&amp;</code></dd>
 </dl>
 
-<h1 id="tocAnchor-1-20">Vimdiff</h1>
+<h2 id="tocAnchor-1-15-5">Useful commands</h2>
+<dl>
+  <dt>Copy current file to clipboard (Linux)</dt>
+  <dd><code>:%w !xsel -b</code></dd>
+  <dt>Copy current file to clipboard (Mac)</dt>
+  <dd><code>:%w !pbcopy</code></dd>
+</dl>
 
-<h2 id="tocAnchor-1-20-1">2-way diff</h2>
+<blockquote>
+  <p>Useful when no clipboard support is pre-compiled</p>
+</blockquote>
+
+<dl>
+  <dt>Save with sudo from a not sudoed file</dt>
+  <dd><code>:w !sudo tee % &gt;/dev/null</code></dd>
+  <dt>Replace all occurences with confirmation</dt>
+  <dd><code>:%s/&lt;search&gt;/&lt;replace&gt;/gc</code></dd>
+</dl>
+
+<h1 id="tocAnchor-1-21">Vimdiff</h1>
+
+<h2 id="tocAnchor-1-21-1">2-way diff</h2>
 <dl>
   <dt>]c</dt>
   <dd>next difference</dd>
@@ -836,13 +861,13 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
   <dd>re-scan the files for differences</dd>
 </dl>
 
-<h1 id="tocAnchor-1-22">Fugitive (plugin)</h1>
+<h1 id="tocAnchor-1-23">Fugitive (plugin)</h1>
 
 <blockquote>
   <p>Fugitive plugin integrates Git into Vim, allowing committing and resolving conflicts within Vim</p>
 </blockquote>
 
-<h2 id="tocAnchor-1-22-1">Commiting changes</h2>
+<h2 id="tocAnchor-1-23-1">Commiting changes</h2>
 
 <dl>
   <dt>Add files to stage</dt>
@@ -853,7 +878,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
   <dd><code>:Gdiff</code> and put selected changes to the left pane (<code>index</code>) and save, see 2-way diff <a href="/vim/#tocAnchor-1-18">above</a></dd>
 </dl>
 
-<h2 id="tocAnchor-1-22-2">Reviewing changes</h2>
+<h2 id="tocAnchor-1-23-2">Reviewing changes</h2>
 <dl>
   <dt>Review changes from staged/unstaged files</dt>
   <dd><code>:Gstatus</code> and press <code>D</code> over the files to see changes </dd>
@@ -861,7 +886,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
   <dd><code>:Gedit &lt;commit_hash&gt;</code>, or <code>:Gedit HEAD~0</code> to see current commited files. Press enter on a file to see changes from last commit on a 2-way diff</dd>
 </dl>
 
-<h2 id="tocAnchor-1-22-3">Resolving conflicts</h2>
+<h2 id="tocAnchor-1-23-3">Resolving conflicts</h2>
 
 <dl>
   <dt>1) Retrieve conflicting files</dt>
@@ -876,7 +901,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
   <dd>Execute <code>git commit</code> or <code>rebase --continue</code> (or do neither if you were resolving a stash conflict)</dd>
 </dl>
 
-<h2 id="tocAnchor-1-22-4">Fugitive diffs</h2>
+<h2 id="tocAnchor-1-23-4">Fugitive diffs</h2>
 
 <h3 id="way-diff-1">2-way diff</h3>
 
@@ -919,9 +944,9 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
   <dd>write the entire current file (right or left) to the <code>working tree</code> (center)</dd>
 </dl>
 
-<h1 id="tocAnchor-1-27">Buffer and window management</h1>
+<h1 id="tocAnchor-1-28">Buffer and window management</h1>
 
-<h2 id="tocAnchor-1-27-1">Buffers</h2>
+<h2 id="tocAnchor-1-28-1">Buffers</h2>
 
 <dl>
   <dt>Edit buffer in the buffer list</dt>
@@ -954,7 +979,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
   <dd><code>:wa</code></dd>
 </dl>
 
-<h2 id="tocAnchor-1-27-2">Windows</h2>
+<h2 id="tocAnchor-1-28-2">Windows</h2>
 
 <dl>
   <dt>Create vertical window</dt>
@@ -969,7 +994,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
   <dd><code>:qa</code></dd>
 </dl>
 
-<h2 id="tocAnchor-1-27-3">Ctrl-space (plugin)</h2>
+<h2 id="tocAnchor-1-28-3">Ctrl-space (plugin)</h2>
 
 <h3 id="buffers--files">Buffers / Files</h3>
 
@@ -1098,13 +1123,13 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
   </dl>
 </blockquote>
 
-<h1 id="tocAnchor-1-31">VIM quick reference</h1>
+<h1 id="tocAnchor-1-32">VIM quick reference</h1>
 
 <blockquote>
   <p>This was copied from <a href="http://tnerual.eriogerg.free.fr/vim.html">here</a>. Go there for pdf format and more!</p>
 </blockquote>
 
-<h2 id="tocAnchor-1-31-1">Basic movement</h2>
+<h2 id="tocAnchor-1-32-1">Basic movement</h2>
 
 <table>
 <tr><td><code>h l k j</code></td><td>character left, right; line up, down</td></tr>
@@ -1125,7 +1150,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-2">Insertion &amp; replace <font color="red"><i><font color="black">→</font></i></font> insert mode</h2>
+<h2 id="tocAnchor-1-32-2">Insertion &amp; replace <font color="red"><i><font color="black">→</font></i></font> insert mode</h2>
 
 <table>
 <tr><td><code>i a</code></td><td>insert before, after cursor</td></tr>
@@ -1150,7 +1175,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-3">Deletion</h2>
+<h2 id="tocAnchor-1-32-3">Deletion</h2>
 
 <table>
 <tr><td><code>x X</code></td><td>delete character under, before cursor</td></tr>
@@ -1164,7 +1189,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-4">Insert mode</h2>
+<h2 id="tocAnchor-1-32-4">Insert mode</h2>
 
 <table>
 <tr><td><code>^V<font color="red"><i>c</i></font> ^V<font color="red"><i>n</i></font></code></td><td>insert char <font color="red"><i>c</i></font> literally, decimal value <font color="red"><i>n</i></font></td></tr>
@@ -1184,7 +1209,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-5">Copying</h2>
+<h2 id="tocAnchor-1-32-5">Copying</h2>
 
 <table>
 <tr><td><code>"<font color="red"><i>x</i></font></code></td><td>use register <font color="red"><i>x</i></font> for next delete, yank, put</td></tr>
@@ -1200,7 +1225,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-6">Advanced insertion</h2>
+<h2 id="tocAnchor-1-32-6">Advanced insertion</h2>
 
 <table>
 <tr><td><code>g?<font color="red"><i>m</i></font></code></td><td>perform rot13 encoding on movement <font color="red"><i>m</i></font></td></tr>
@@ -1217,7 +1242,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-7">Visual mode</h2>
+<h2 id="tocAnchor-1-32-7">Visual mode</h2>
 
 <table>
 <tr><td><code>v V ^V</code></td><td>start/stop highlighting characters, lines, block</td></tr>
@@ -1230,7 +1255,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-8">Undoing, repeating &amp; registers</h2>
+<h2 id="tocAnchor-1-32-8">Undoing, repeating &amp; registers</h2>
 
 <table>
 <tr><td><code>u U</code></td><td>undo last command, restore last changed line</td></tr>
@@ -1248,7 +1273,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-9">Complex movement</h2>
+<h2 id="tocAnchor-1-32-9">Complex movement</h2>
 
 <table>
 <tr><td><code>- +</code></td><td>line up, down on first non-blank character</td></tr>
@@ -1273,7 +1298,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-10">Search &amp; substitution</h2>
+<h2 id="tocAnchor-1-32-10">Search &amp; substitution</h2>
 
 <table>
 <tr><td><code>/<font color="red"><i>s</i></font><font size="+1">↵</font>  ?<font color="red"><i>s</i></font><font size="+1">↵</font></code></td><td>search forward, backward for <font color="red"><i>s</i></font></td></tr>
@@ -1291,7 +1316,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-11">Special characters in search patterns</h2>
+<h2 id="tocAnchor-1-32-11">Special characters in search patterns</h2>
 
 <table>
 <tr><td><code>.   ^  $</code></td><td>any single character, start, end of line</td></tr>
@@ -1313,7 +1338,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-12">Offsets in search commands</h2>
+<h2 id="tocAnchor-1-32-12">Offsets in search commands</h2>
 
 <table>
 <tr><td><code><font color="red"><i>n</i></font> <font size="-1">or</font> +<font color="red"><i>n</i></font></code></td><td><font color="red"><i>n</i></font> line downward in column 1</td></tr>
@@ -1326,7 +1351,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-13">Marks and motions</h2>
+<h2 id="tocAnchor-1-32-13">Marks and motions</h2>
 
 <table>
 <tr><td><code>m<font color="red"><i>c</i></font></code></td><td>mark current position with mark <font color="red"><i>c <font size="+1">∈</font>[a..Z]</i></font></td></tr>
@@ -1343,7 +1368,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-14">Key mapping &amp; abbreviations</h2>
+<h2 id="tocAnchor-1-32-14">Key mapping &amp; abbreviations</h2>
 
 <table>
 <tr><td><code>:map <font color="red"><i>c</i></font> <font color="red"><i>e</i></font><font size="+1">↵</font></code></td><td>map <font color="red"><i>c <font size="+1">↦</font> e</i></font> in normal &amp; visual mode</td></tr>
@@ -1358,7 +1383,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-15">Tags</h2>
+<h2 id="tocAnchor-1-32-15">Tags</h2>
 
 <table>
 <tr><td><code>:ta <font color="red"><i>t</i></font><font size="+1">↵</font></code></td><td>jump to tag <font color="red"><i>t</i></font></td></tr>
@@ -1377,7 +1402,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-16">Scrolling &amp; multi-windowing</h2>
+<h2 id="tocAnchor-1-32-16">Scrolling &amp; multi-windowing</h2>
 
 <table>
 <tr><td><code>^E ^Y</code></td><td>scroll line up, down</td></tr>
@@ -1398,7 +1423,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-17">Ex commands (<font size="+1">↵</font>)</h2>
+<h2 id="tocAnchor-1-32-17">Ex commands (<font size="+1">↵</font>)</h2>
 
 <table>
 <tr><td><code>:e <font color="red"><i>f</i></font></code></td><td>edit file <font color="red"><i>f</i></font>, unless changes have been made</td></tr>
@@ -1420,7 +1445,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-18">Ex ranges</h2>
+<h2 id="tocAnchor-1-32-18">Ex ranges</h2>
 
 <table>
 <tr><td><code>, ;  </code></td><td>separates two lines numbers, set to first line</td></tr>
@@ -1435,7 +1460,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-19">Folding</h2>
+<h2 id="tocAnchor-1-32-19">Folding</h2>
 
 <table>
 <tr><td><code>zf<font color="red"><i>m</i></font></code></td><td>create fold of movement <font color="red"><i>m</i></font></td></tr>
@@ -1449,7 +1474,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
    <br />
 </p>
 
-<h2 id="tocAnchor-1-31-20">Miscellaneous</h2>
+<h2 id="tocAnchor-1-32-20">Miscellaneous</h2>
 
 <table>
 <tr><td><code>:sh<font size="+1">↵</font>  :!<font color="red"><i>c</i></font><font size="+1">↵</font></code></td><td>start shell, execute command <font color="red"><i>c</i></font> in shell</td></tr>
@@ -1470,333 +1495,374 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
 
   <br />
   <blockquote>
-      <p><strong>Last updated: <time datetime="2016-09-01T21:34:33+00:00" class="page-date">01 Sep 2016</time></strong></p>
+      <p><strong>Last updated: <time datetime="2018-09-16T20:39:26+00:00" class="page-date">16 Sep 2018</time></strong></p>
   </blockquote>
 </article>
+
+
 
 <aside class="related">
     <h2>Related Posts</h2>
     <ul class="related-posts">
         
-         
-
-        
-            
-        
         
 
         
-            
-        
-        
 
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
             
                 
-                <li>
-                    <h3>
-                        <a href="/Vim-incomprendido">
-                            El editor incomprendido
-                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
-                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/phps">
+                                        Phpstorm shortcuts vs Vim
+                                        <small><time datetime="2018-11-24T16:42:57+00:00">24 Nov 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
             
-        
         
 
-        
             
-        
         
 
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/vimrc">
-                            My Vim setup
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
-                
-            
-        
-        
-
-        
             
                 
             
         
+
+            
         
 
-        
             
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/my scripts">
-                            Useful scripts
-                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
+
+            
+                
+            
         
 
-        
             
-        
+                
             
-        
         
 
-        
             
-        
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/Vim-incomprendido">
+                                        El editor incomprendido
+                                        <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/vimrc">
+                                        My Vim/Neovim setup
+                                        <small><time datetime="2018-10-05T17:18:32+00:00">05 Oct 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
         
 
-        
             
-        
+                
+                    
+                    
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
+            
+                
             
         
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
         
         
         
@@ -1804,11 +1870,19 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
 </aside>
 
 
+
       </main>
      <footer class="site-footer">
 
   <div class="wrapper">
 
+    
+      <div style="float: left; margin-left: 25px">
+          <a href="/bookmarks"><i class="fas fa-bookmark"></i> bookmarks</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/sitemap"><i class="fas fa-sitemap"></i> sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/about"><i class="fas fa-user-astronaut"></i> about</a>
+          <!-- <div><a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a></div><br /> -->
+      </div>
 
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
@@ -1824,7 +1898,7 @@ xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>CR<span class="p">&gt;</spa
       </div>
 
       <div class="footer-col  footer-col-2">
-        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span class="ccby">jordihv at gmail.com</span><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
       </div>
     </div>
 

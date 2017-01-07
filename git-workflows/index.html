@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    Git workflows <> GeekStuff.gq — My cheat sheets site
+    
+  </title>
+
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="canonical" href="http://cheat-sheets.tk/git-workflows">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400|Montserrat:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" media="screen" href="/css/toc.css">
+    <link rel="stylesheet" media="screen" href="/css/select2.css">
+    <link rel="stylesheet" media="screen" href="/css/theme.grey.min.css">
+
+    <script src="/scripts/jquery-2.1.4.min.js"></script>
+    
+    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.css" rel="stylesheet"> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.6/select2.min.js"></script> -->
+    
+    <script src="/scripts/jquery.tablesorter.min.js"></script>
+    <script src="/scripts/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/scripts/select2.js"></script>
+    <script src="/scripts/widget-filter-formatter-select2.min.js"></script>
+    <script src="/scripts/jquery.tocLight.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+          $.toc.clickHideButton();
+        });
+  </script>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/css/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="GeekStuff.gq — My cheat sheets site" href="atom.xml">
+</head>
+
+
+
+  <body>
+    <div class="container content">
+        <header class="site-header">
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/"> 
+          <span class="main-title">
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat" style="font-weight: bold;">Geek</span><span style="font-weight: 200">Stuff</span><i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fab fa-pied-piper-hat"></i><span style="font-size: 30px; "><span style="font-weight:100; color: #5d5d5d">gq</span></span>
+                    
+          </span>
+      </a>
+
+      <!-- <a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a> -->
+      <!-- <a style="float:right; margin-top: 10px;"  href="/bookmarks"><i class="fas fa-bookmark"></i></a>&nbsp;&nbsp; -->
+      <!-- <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a> -->
+
+  </div>
+    <!-- <style> -->
+    <!--     /* The default background color is #c00 */ -->
+    <!--     .right-bottom .github-fork-ribbon { -->
+    <!--         background-color: #2A7AE2; -->
+    <!--     } -->
+
+    <!--     .right .github-fork-ribbon { -->
+    <!--         background-color: #f80; -->
+    <!--     } -->
+
+    <!--     .left-bottom .github-fork-ribbon { -->
+    <!--         background-color: #333; -->
+    <!--     } -->
+    <!-- </style> -->
+    
+    <!-- <div class="github-fork-ribbon-wrapper right-bottom"> -->
+    <!--     <div class="github-fork-ribbon"> -->
+    <!--         <a href="https://github.com/johgh/johgh.io-source">Fork me on GitHub</a> -->
+    <!--     </div> -->
+    <!-- </div> -->
+</header>
+
+      <header class="masthead">
+      </header>
+      <main>
+        <h6 style="margin: 1rem 0 0 0"><a href="/" class="goback" ><i class="fa fa-arrow-left"></i>  Go back</a></h6>
+<div class="blog">
+
+<article class="blog">
+    <time datetime="2015-07-02T16:30:15+00:00" class="page-date">02 Jul 2015</time>
+    <h1 class="post-title">Git workflows</h1>
+        <div id="toc-container">
+   <table class="toc" id="toc">
+      <tbody>
+         <tr>
+            <td>
+               <div id="toctitle">
+                  <h2>Contents</h2>
+                  <span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">hide</a>]</span>
+               </div>
+               <ul>
+                  <li class="toc_level-1 toc_section-1">
+                     <a href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">Introducción</span></a>
+                  </li>
+                  <li class="toc_level-1 toc_section-2">
+                     <a href="#tocAnchor-1-2"><span class="tocnumber">2</span> <span class="toctext">Descripción</span></a>
+                     <ul>
+                        <li class="toc_level-2 toc_section-3">
+                           <a href="#tocAnchor-1-2-1"><span class="tocnumber">2.1</span> <span class="toctext">El workflow centralizado</span></a>
+                        </li>
+                        <li class="toc_level-2 toc_section-4">
+                           <a href="#tocAnchor-1-2-2"><span class="tocnumber">2.2</span> <span class="toctext">Feature Branch Workflow</span></a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div><h1 id="tocAnchor-1-1">Introducción</h1>
+
+<p>En este documento se explican las principales diferencias entre los dos principales workflows de trabajo de Git:</p>
+
+<ul>
+  <li>el worflow <code>centralizado</code>, que tiene lugar en única rama</li>
+  <li>el <code>descentralizado</code> (o <em>feature branch workflow</em>), en el que <em>cada desarrollo</em> tiene lugar en una rama distinta a master</li>
+</ul>
+
+<blockquote>
+  <p>La comprensión de estos flujos requiere un buen conocimiento de los comandos <code>git merge</code>, <code>git pull [--rebase]</code> y <code>git rebase</code>. Se recomienda la lectura previa del funcionamiento del mecanismo de <a href="/git/#merge">merge</a> y <a href="/git/#rebase-y-pull-con-rebase">rebase</a>.</p>
+</blockquote>
+
+<h1 id="tocAnchor-1-2">Descripción</h1>
+
+<h2 id="tocAnchor-1-2-1">El workflow centralizado</h2>
+
+<blockquote>
+  <p>El workflow centralizado utiliza una única rama, <code>master</code>, para trabajar en local. El código se actualizará sobre nuestra propia rama de trabajo mediante <code>git pull</code>.</p>
+</blockquote>
+
+<p>Al hacer <code>git pull</code> sobre <code>master</code> nos encontraremos con 3 posibles casos:</p>
+
+<h3 id="se-realiza-pull-sin-problemas">1. Se realiza <code>pull</code> sin problemas</h3>
+
+<blockquote>
+  <p>Esto sucede cuando no existen nuevos commits en remoto o no hay commits sin publicar en local. En ese último caso <code>git pull</code> hará <code>fast-forward</code> sin problemas siempre que los cambios del <code>Working Tree</code> no coincidan con los cambios de remoto.</p>
+</blockquote>
+
+<p>Para publicar nuestros commits locales solo hay que hacer:</p>
+
+<dl>
+  <dt>1) Añadir ficheros al <code>Index</code> para poder hacer commit:</dt>
+  <dd><code>git add . [--all]</code> o <code>git add file1 [file2] [file3] [...]</code></dd>
+  <dt>2) Hacer commit de los ficheros que hayamos añadido al <code>Index</code>:</dt>
+  <dd><code>git commit</code></dd>
+  <dt>3) Publicar los cambios en remoto:</dt>
+  <dd><code>git push</code></dd>
+</dl>
+
+<h3 id="no-es-posible-realizar-pull">2. No es posible realizar <code>pull</code></h3>
+
+<blockquote>
+  <p>Esto puede ocurrir bien porque hay commits tanto en local como en remoto o bien porque hay cambios en los ficheros del <code>Working Tree</code> que coinciden con los nuevos commits de remoto.</p>
+</blockquote>
+
+<p>En ambos casos para poder hacer <code>pull</code> deberemos limpiar primero el <code>Index</code> y el <code>Working Tree</code> mediante una de estas opciones:</p>
+
+<dl>
+  <dt>a) Realizar <code>commit</code> para luego mergearlo con el remoto, al hacer <code>git pull</code> (ver <a href="#caso-3-se-ejecuta-merge-o-rebase-para-mezclar-los-cambios-de-remoto-con-los-de-nuestra-rama-local">punto 3</a>)</dt>
+  <dd><code>git add . --all</code> + <code>git commit</code></dd>
+  <dt>b) Realizar <code>stash</code> para apartar nuestros cambios de local y que <code>git pull</code> continúe sin problemas (ver <a href="#caso-1-se-realiza-pull-sin-problemas">punto 1</a>)</dt>
+  <dd><code>git stash</code></dd>
+</dl>
+
+<p>En este último caso, después de hacer <code>git pull</code> podremos volver a aplicar nuestros cambios locales con <code>git stash apply</code></p>
+
+<p>Si no queremos todos los cambios del stash podremos hacer <code>checkout</code> o <code>diff</code> de los ficheros que queramos posteriormente (<code>stash apply</code> solo actúa sobre el <code>Working Tree</code>)</p>
+
+<h3 id="se-ejecuta-merge-o-rebase-para-mezclar-los-cambios-de-remoto-con-los-de-nuestra-rama-local">3. Se ejecuta merge (o rebase) para mezclar los cambios de remoto con los de nuestra rama local</h3>
+
+<p>En este punto nos encontramos con 2 posibles casos:</p>
+
+<dl>
+  <dt>No hay conflicto</dt>
+  <dd>Se produce un automerge commit (o si utilizamos el parámetro <code>--rebase</code> los nuevos commits quedan simplemente añadidos al final)</dd>
+  <dt>Hay conflicto </dt>
+  <dd>Resolvemos con <code>git mergetool</code> y ejecutamos <code>git commit</code> (o <code>git rebase --continue</code>, de haber realizado <code>pull</code> con <code>rebase</code>)</dd>
+</dl>
+
+<blockquote>
+  <p>Al ejecutar <code>git rebase --continue</code> es posible que siga existiendo conflicto debido a que rebase soluciona los conflictos por etapas (ya que nuestro commit local debe ser desplazado paso a paso hasta el último commit de remoto). En tal caso deberemos volver al paso anterior para solucionar los sucesivos conflictos con <code>git mergetool</code> + <code>git rebase --continue</code></p>
+</blockquote>
+
+<p>Finalmente, comprobaremos que los conflictos estén resueltos y publicaremos los cambios:</p>
+
+<dl>
+  <dt>Miramos que los conflictos estén marcados como resueltos:</dt>
+  <dd><code>git status</code></dd>
+</dl>
+
+<blockquote>
+  <p>Si continúan apareciendo ficheros como ‘unmerged’, habiendo ya resuelto los conflictos, los podemos añadir con <code>git add</code> para marcarlos como resueltos manualmente</p>
+</blockquote>
+
+<dl>
+  <dt>Publicamos los cambios:</dt>
+  <dd><code>git push</code></dd>
+</dl>
+
+<blockquote>
+  <p>Si no se permite esta operación, deberemos volver a obtener los cambios de remoto y resolver los posibles conflictos: <code>git pull</code> + [resolución de conflictos] + <code>git push</code></p>
+</blockquote>
+
+<h3 id="abortando-git-pull">Abortando git pull</h3>
+
+<p>Es posible volver al estado anterior antes de ejecutar <code>git pull</code> siempre y cuando no hayamos realizado todavía el merge commit o ejecutado <code>rebase --continue</code>:</p>
+
+<dl>
+  <dt>Para abortar git pull con merge</dt>
+  <dd><code>git merge --abort</code></dd>
+  <dt>Para abortar git pull con rebase</dt>
+  <dd><code>git rebase --abort</code></dd>
+  <dt>Si ya hemos finalizado el pull, deberemos volver atrás mirando nuestro log local (git log -g):</dt>
+  <dd><code>git reset &lt;commit_local&gt;</code></dd>
+</dl>
+
+<blockquote>
+  <p>Sin la opción <code>--hard</code>, <code>git reset</code> vuelve hasta el commit indicado dejando los cambios propios del commit en el <code>Working Tree</code></p>
+</blockquote>
+
+<p>
+   <br />
+</p>
+
+<hr />
+
+<h2 id="tocAnchor-1-2-2">Feature Branch Workflow</h2>
+
+<p>El objetivo de este workflow es que la rama <code>master</code> siempre esté a punto para obtener o publicar código.</p>
+
+<p>La rama <code>master</code> nunca debe tener código “inestable”. El código en estado de desarrollo se encontrará en ramas <em>feature</em> con nombres descriptivos, que serán validadas antes de subirse a la rama pública <code>master</code>, tras realizarse un <em>pull request</em>.</p>
+
+<h3 id="configuracin-inicial-pull-con-rebase">Configuración inicial (pull con rebase)</h3>
+
+<dl>
+  <dt>Configurar git para hacer rebase en lugar de merge al hacer <code>pull</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git config --global branch.master.rebase yes
+<span class="c"># también podemos configurarlo para todas las ramas</span>
+<span class="nv">$ </span>git config --global branch.autosetuprebase always</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Este paso es opcional pero nos permite mantener limpio el historial de commits al hacer pull, de forma que solo veamos <code>merge commit</code> en los puntos donde se realice la integración de la rama <code>feature</code> con <code>master</code></p>
+</blockquote>
+
+<h3 id="fases-del-workflow">Fases del workflow</h3>
+
+<blockquote>
+  <ul>
+    <li>Creación de la rama <code>feature</code>, correspondiente a 1 <em>historia</em></li>
+    <li>Trabajar con rama privada <code>feature</code>, 1 commit corresponde a 1 <em>tarea</em></li>
+    <li>Hacer pública la rama <code>feature</code></li>
+    <li>Trabajar en equipo con la rama pública</li>
+    <li>Petición de code review (<em>pull request</em>)</li>
+    <li>Deploy en <code>master</code> cuando se acepte el código como válido finalmente</li>
+  </ul>
+</blockquote>
+
+<dl>
+  <dt>Crear rama <code>feature</code> y publicarla en remoto</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout -b feature master
+<span class="nv">$ </span>git push -u origin feature</code></pre></div>
+  </dd>
+  <dt>Comitear (opcionalmente, editar el historial de commits de la rama con <code>rebase -i</code>)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git add .<span class="p">;</span> git commit -m <span class="s1">'primer commit'</span><span class="p">;</span> <span class="c"># ...</span>
+<span class="c"># podemos hacer rebase -i hasta la base de la rama</span>
+<span class="nv">$ </span>git rebase -i <span class="sb">`</span>git merge-base feature master<span class="sb">`</span></code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p><strong><em>Únicamente se debe hacer <code>rebase -i</code> de commits que no hayan sido publicados.</em></strong> </p>
+</blockquote>
+
+<dl>
+  <dt><em>Pull request</em> (petición de code review antes de integrar la rama en <code>master</code>)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git push origin feature
+<span class="c"># se puede crear hook que envíe mail con el nombre del feature a validar</span></code></pre></div>
+  </dd>
+  <dt>Code review: ver cambios introducidos en la rama <code>feature</code> respecto a <code>master</code></dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git difftool <span class="sb">`</span>git merge-base feature master<span class="sb">`</span></code></pre></div>
+  </dd>
+  <dt>Deploy de la rama <code>feature</code> a <code>master</code> (<em>merge commit</em> forzado para no perder la trazabilidad de la rama)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout master
+<span class="nv">$ </span>git pull
+<span class="c"># el parámetro --no-ff fuerza a que se cree un merge commit en master</span>
+<span class="nv">$ </span>git merge --no-ff feature
+<span class="nv">$ </span>git branch -d feature
+<span class="nv">$ </span>git push</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p>Es posible forzar que ningún merge haga <code>fast-forward</code> (evitando tener que pasar el parámetro –no-ff) mediante la siguiente configuración: <code>git config --global --bool merge.ff false</code></p>
+</blockquote>
+
+<blockquote>
+  <p>En ese caso para forzar un merge con <code>fast-forward</code> se puede usar <code>git merge</code> con el parámetro <code>--ff-only</code></p>
+</blockquote>
+
+<h3 id="propagacin-de-cambios-entre-ramas">Propagación de cambios entre ramas</h3>
+
+<dl>
+  <dt>Propagar último commit de una rama a otra</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># después de hacer commit en master (por ejemplo)</span>
+<span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git cherry-pick master</code></pre></div>
+  </dd>
+  <dt>Propagar commit mediante hash de una rama a otra</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git cherry-pick &lt;hash_commit&gt;</code></pre></div>
+  </dd>
+  <dt>Propagar cambios de <code>master</code> a <code>feature</code> (rebase)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># primero actualizamos la rama master</span>
+<span class="nv">$ </span>git checkout master
+<span class="nv">$ </span>git pull
+<span class="c"># propagamos los cambios a feature</span>
+<span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git rebase master
+<span class="c"># opcional: podemos elegir que cambios de master queremos en nuestra rama </span>
+<span class="nv">$ </span>git rebase -i</code></pre></div>
+  </dd>
+  <dt>Obtener directamente cambios desde origin/master (remoto)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git pull origin master</code></pre></div>
+  </dd>
+  <dt>Reintegrar en <code>master</code> los cambios de una rama (ver advertencia abajo)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># obtenemos en feature los cambios de master</span>
+<span class="nv">$ </span>git checkout feature
+<span class="nv">$ </span>git rebase master
+<span class="c"># obtenemos en master todos los cambios de feature</span>
+<span class="nv">$ </span>git checkout master
+<span class="nv">$ </span>git merge --ff-only feature <span class="c"># fast-forward merge</span>
+<span class="nv">$ </span>git branch -d feature</code></pre></div>
+  </dd>
+</dl>
+
+<blockquote>
+  <p><strong><em>Al realizar el merge <code>fast-forward</code> se pierde la trazabilidad de la rama que se ha integrado: <code>master</code> absorbe todos los commits que pertenecían a la rama y no se añade ningún merge commit que indique fusión de ramas</em></strong> </p>
+</blockquote>
+
+
+    </article>
+    
+    
+
+<aside class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+        
+
+        
+
+            
+                
+            
+        
+
+            
+        
+
+            
+                
+            
+        
+
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/git">
+                                        Git quick guide
+                                        <small><time datetime="2018-10-05T17:10:25+00:00">05 Oct 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
+        
+
+            
+                
+                    
+                    
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/gitconfig">
+                                        My Git configuration
+                                        <small><time datetime="2018-09-16T20:39:26+00:00">16 Sep 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+        
+        
+        
+  </ul>
+</aside>
+
+
+
+      </main>
+     <footer class="site-footer">
+
+  <div class="wrapper">
+
+    
+      <div style="float: left; margin-left: 25px">
+          <a href="/bookmarks"><i class="fas fa-bookmark"></i> bookmarks</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/sitemap"><i class="fas fa-sitemap"></i> sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/about"><i class="fas fa-user-astronaut"></i> about</a>
+          <!-- <div><a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a></div><br /> -->
+      </div>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+          <!-- <h2 class="footer-heading"> <a href="https://github.com/johgh/johgh.io-source"> <i class="fa fa-github"></i> Cheat-Sheets</a></h2> -->
+        <ul class="contact-list">
+          <li><a href="mailto:"></a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span class="ccby">jordihv at gmail.com</span><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<a href="#0" class="cd-top">Top</a>
+<script src="/scripts/backtotop.js"></script>
+
+<script>
+$(function() {
+  $("h1, h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+
+  /*
+  $(document).on('click', '.back', function(e){
+    e.preventDefault()
+  });
+  */
+});
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66389589-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </div>
+
+  </body>
+</html>

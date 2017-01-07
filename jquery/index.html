@@ -10,7 +10,7 @@
 
   <title>
     
-    Jquery <> Cheat-sheets.tk
+    Jquery <> GeekStuff.gq — My cheat sheets site
     
   </title>
 
@@ -21,8 +21,10 @@
     <link rel="stylesheet" href="/css/backtotop.css">
     <link rel="canonical" href="http://cheat-sheets.tk/jquery">
     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400|Roboto:300,400|Montserrat:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
     <link rel="stylesheet" media="screen" href="/css/toc.css">
     <link rel="stylesheet" media="screen" href="/css/select2.css">
@@ -50,7 +52,7 @@
   <link rel="icon" href="/css/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS -->
-  <link rel="alternate" type="application/atom+xml" title="Cheat-sheets.tk" href="atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="GeekStuff.gq — My cheat sheets site" href="atom.xml">
 </head>
 
 
@@ -63,13 +65,14 @@
 
       <a class="site-title" href="/"> 
           <span class="main-title">
-              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat"
-                      style="font-weight: bold;">Cheat</span>-sheets<i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fa fa-github"></i><span style="font-size: 30px; ">tk</span>
+              <i style="margin-right:4px; color: #424242 !important;" class="fa fa-code"></i><span class="main-cheat" style="font-weight: bold;">Geek</span><span style="font-weight: 200">Stuff</span><i style="color: #268BD2; margin: 0px 1px 0px 3px;" class="fab fa-pied-piper-hat"></i><span style="font-size: 30px; "><span style="font-weight:100; color: #5d5d5d">gq</span></span>
                     
           </span>
       </a>
 
-      <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a>
+      <!-- <a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a> -->
+      <!-- <a style="float:right; margin-top: 10px;"  href="/bookmarks"><i class="fas fa-bookmark"></i></a>&nbsp;&nbsp; -->
+      <!-- <a style="float:right; margin-top: 10px;" href="/tags"><i class="fa fa-tags"></i></a> -->
 
   </div>
     <!-- <style> -->
@@ -104,6 +107,20 @@
   <h1 class="post-title"><a href="/webdev" class="back"><i class="fa fa-arrow-left"></i></a> Jquery</h1>
   <br />
   <dl>
+  <dt>Ajax call</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+    <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;/save&#39;</span><span class="p">,</span>
+    <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+    <span class="nx">data</span><span class="o">:</span> <span class="p">{</span> <span class="nx">username</span><span class="o">:</span> <span class="s1">&#39;tom&#39;</span> <span class="p">},</span>
+    <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+    <span class="p">}),</span>
+    <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// Uh oh, something went wrong</span>
+<span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+  </dd>
   <dt>Trigger + stop propagation</dt>
   <dd>
     <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="s1">&#39;tr&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -202,404 +219,523 @@
 <span class="c1">// decode</span>
 <span class="nb">decodeURIComponent</span><span class="p">(</span><span class="nx">escape</span><span class="p">(</span><span class="nx">s</span><span class="p">));</span></code></pre></div>
   </dd>
+  <dt>Scroll to id</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;html,body&#39;</span><span class="p">).</span><span class="nx">scrollTop</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myId&#39;</span><span class="p">).</span><span class="nx">offset</span><span class="p">().</span><span class="nx">top</span><span class="p">);</span></code></pre></div>
+  </dd>
+  <dt>Select population</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#mySelect&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;&lt;option&gt;&lt;/option&gt;&quot;</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s2">&quot;selected&quot;</span><span class="p">,</span> <span class="nx">item</span><span class="p">.</span><span class="nx">selected</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">text</span><span class="p">));</span>
+<span class="p">});</span></code></pre></div>
+  </dd>
+  <dt>Prototyped function that inits datepicker and sets mask (and validation)</dt>
+  <dd>
+    <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">myDatePicker</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">extraParams</span><span class="p">){</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">datepicker</span><span class="p">.</span><span class="nx">regional</span><span class="p">[</span><span class="s1">&#39;es&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">closeText</span><span class="o">:</span> <span class="s1">&#39;Cerrar&#39;</span><span class="p">,</span>
+        <span class="nx">prevText</span><span class="o">:</span> <span class="s1">&#39;&amp;#x3C;Ant&#39;</span><span class="p">,</span>
+        <span class="nx">nextText</span><span class="o">:</span> <span class="s1">&#39;Sig&amp;#x3E;&#39;</span><span class="p">,</span>
+        <span class="nx">currentText</span><span class="o">:</span> <span class="s1">&#39;Hoy&#39;</span><span class="p">,</span>
+        <span class="nx">monthNames</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Enero&#39;</span><span class="p">,</span><span class="s1">&#39;Febrero&#39;</span><span class="p">,</span><span class="s1">&#39;Marzo&#39;</span><span class="p">,</span><span class="s1">&#39;Abril&#39;</span><span class="p">,</span><span class="s1">&#39;Mayo&#39;</span><span class="p">,</span><span class="s1">&#39;Junio&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Julio&#39;</span><span class="p">,</span><span class="s1">&#39;Agosto&#39;</span><span class="p">,</span><span class="s1">&#39;Septiembre&#39;</span><span class="p">,</span><span class="s1">&#39;Octubre&#39;</span><span class="p">,</span><span class="s1">&#39;Noviembre&#39;</span><span class="p">,</span><span class="s1">&#39;Diciembre&#39;</span><span class="p">],</span>
+        <span class="nx">monthNamesShort</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Ene&#39;</span><span class="p">,</span><span class="s1">&#39;Feb&#39;</span><span class="p">,</span><span class="s1">&#39;Mar&#39;</span><span class="p">,</span><span class="s1">&#39;Abr&#39;</span><span class="p">,</span><span class="s1">&#39;May&#39;</span><span class="p">,</span><span class="s1">&#39;Jun&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Jul&#39;</span><span class="p">,</span><span class="s1">&#39;Ago&#39;</span><span class="p">,</span><span class="s1">&#39;Sep&#39;</span><span class="p">,</span><span class="s1">&#39;Oct&#39;</span><span class="p">,</span><span class="s1">&#39;Nov&#39;</span><span class="p">,</span><span class="s1">&#39;Dic&#39;</span><span class="p">],</span>
+        <span class="nx">dayNames</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Domingo&#39;</span><span class="p">,</span><span class="s1">&#39;Lunes&#39;</span><span class="p">,</span><span class="s1">&#39;Martes&#39;</span><span class="p">,</span><span class="s1">&#39;Miércoles&#39;</span><span class="p">,</span><span class="s1">&#39;Jueves&#39;</span><span class="p">,</span><span class="s1">&#39;Viernes&#39;</span><span class="p">,</span><span class="s1">&#39;Sábado&#39;</span><span class="p">],</span>
+        <span class="nx">dayNamesShort</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Dom&#39;</span><span class="p">,</span><span class="s1">&#39;Lun&#39;</span><span class="p">,</span><span class="s1">&#39;Mar&#39;</span><span class="p">,</span><span class="s1">&#39;Mié&#39;</span><span class="p">,</span><span class="s1">&#39;Juv&#39;</span><span class="p">,</span><span class="s1">&#39;Vie&#39;</span><span class="p">,</span><span class="s1">&#39;Sáb&#39;</span><span class="p">],</span>
+        <span class="nx">dayNamesMin</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Do&#39;</span><span class="p">,</span><span class="s1">&#39;Lu&#39;</span><span class="p">,</span><span class="s1">&#39;Ma&#39;</span><span class="p">,</span><span class="s1">&#39;Mi&#39;</span><span class="p">,</span><span class="s1">&#39;Ju&#39;</span><span class="p">,</span><span class="s1">&#39;Vi&#39;</span><span class="p">,</span><span class="s1">&#39;Sa&#39;</span><span class="p">],</span>
+        <span class="nx">weekHeader</span><span class="o">:</span> <span class="s1">&#39;Sm&#39;</span><span class="p">,</span>
+        <span class="nx">dateFormat</span><span class="o">:</span> <span class="s1">&#39;dd/mm/yy&#39;</span><span class="p">,</span>
+        <span class="nx">firstDay</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nx">isRTL</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nx">showMonthAfterYear</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nx">yearSuffix</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">};</span>
+
+    <span class="nx">$</span><span class="p">.</span><span class="nx">datepicker</span><span class="p">.</span><span class="nx">setDefaults</span><span class="p">(</span><span class="nx">$</span><span class="p">.</span><span class="nx">datepicker</span><span class="p">.</span><span class="nx">regional</span><span class="p">[</span><span class="s1">&#39;es&#39;</span><span class="p">]);</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">datepicker</span><span class="p">.</span><span class="nx">setDefaults</span><span class="p">(</span><span class="nx">extraParams</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">mydate</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+
+    <span class="nx">mydate</span><span class="p">.</span><span class="nx">datepicker</span><span class="p">({</span>
+        <span class="nx">dateFormat</span><span class="o">:</span> <span class="s1">&#39;dd/mm/yy&#39;</span><span class="p">,</span>
+        <span class="nx">changeMonth</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">changeYear</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="p">}).</span><span class="nx">mask</span><span class="p">(</span><span class="s2">&quot;00/00/0000&quot;</span><span class="p">,{</span>
+        <span class="nx">onComplete</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="nx">checkDate</span><span class="p">(</span><span class="nx">mydate</span><span class="p">.</span><span class="nx">val</span><span class="p">())</span> <span class="p">){</span>
+                <span class="nx">mydate</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+
+    <span class="nx">mydate</span><span class="p">.</span><span class="nx">focusout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="nx">checkDate</span><span class="p">(</span><span class="nx">mydate</span><span class="p">.</span><span class="nx">val</span><span class="p">())</span> <span class="p">){</span>
+            <span class="nx">mydate</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">checkDate</span><span class="p">(</span><span class="nx">val</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">er</span> <span class="o">=</span> <span class="sr">/^(((0[1-9]|[12][0-9]|3[01])([-.\/])(0[13578]|10|12)([-.\/])(\d{4}))|(([0][1-9]|[12][0-9]|30)([-.\/])(0[469]|11)([-.\/])(\d{4}))|((0[1-9]|1[0-9]|2[0-8])([-.\/])(02)([-.\/])(\d{4}))|((29)(\.|-|\/)(02)([-.\/])([02468][048]00))|((29)([-.\/])(02)([-.\/])([13579][26]00))|((29)([-.\/])(02)([-.\/])([0-9][0-9][0][48]))|((29)([-.\/])(02)([-.\/])([0-9][0-9][2468][048]))|((29)([-.\/])(02)([-.\/])([0-9][0-9][13579][26])))$/</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">er</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">val</span><span class="p">))</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+  </dd>
 </dl>
+
+<blockquote>
+  <p><a href="https://jqueryui.com/datepicker/">datepicker</a> and <a href="https://igorescobar.github.io/jQuery-Mask-Plugin/">mask plugin</a></p>
+</blockquote>
 
 
   <br />
   <blockquote>
-      <p><strong>Last updated: <time datetime="2016-09-01T21:34:33+00:00" class="page-date">01 Sep 2016</time></strong></p>
+      <p><strong>Last updated: <time datetime="2018-09-10T21:52:16+00:00" class="page-date">10 Sep 2018</time></strong></p>
   </blockquote>
 </article>
+
+
 
 <aside class="related">
     <h2>Related Posts</h2>
     <ul class="related-posts">
         
-         
-
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/bdchanges">
-                            Scripts de actualización de cambios de Base de Datos
-                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
-                
-            
-        
         
 
         
-            
-        
-        
 
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/symfony">
-                            Symfony 2 (Quick Reference)
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
-                
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
             
                 
             
         
+
+            
         
 
-        
             
-        
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/bdchanges">
+                                        Scripts de actualización de cambios de Base de Datos
+                                        <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
         
 
-        
             
-                
-                <li>
-                    <h3>
-                        <a href="/bootstrap">
-                            Bootstrap
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
-                
-            
-        
         
 
-        
             
-                
-                <li>
-                    <h3>
-                        <a href="/apache">
-                            Apache
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
-        
 
-        
             
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/twig">
-                            Twig
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
-        
 
-        
             
-                
-                <li>
-                    <h3>
-                        <a href="/mysql">
-                            Mysql
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
-        
 
-        
             
-                
-                <li>
-                    <h3>
-                        <a href="/doctrinedbal">
-                            Doctrine DBAL
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
-        
 
-        
             
-        
-        
-
-        
-            
-        
-        
-
-        
-            
-                
-                <li>
-                    <h3>
-                        <a href="/php">
-                            PHP
-                            <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
                 
             
         
-        
 
-        
-            
-        
-        
-
-        
             
                 
-                <li>
-                    <h3>
-                        <a href="/apuntesphp">
-                            PHP. Apuntes
-                            <small><time datetime="2016-09-14T11:05:53+00:00">14 Sep 2016</time></small>
-                        </a>
-                    </h3>
-                </li>
+                    
+                    
+            
+        
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/javascript">
+                                        Javascript
+                                        <small><time datetime="2018-09-10T21:52:16+00:00">10 Sep 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
+        
+
+            
                 
             
         
+
+            
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/bower">
+                                        Bower
+                                        <small><time datetime="2017-02-17T22:41:24+00:00">17 Feb 2017</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
         
 
-        
             
-        
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/bootstrap">
+                                        Bootstrap
+                                        <small><time datetime="2017-11-26T18:19:11+00:00">26 Nov 2017</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
             
-        
         
 
-        
             
-        
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/apache">
+                                        Apache
+                                        <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
             
-        
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/mysql">
+                                        Mysql
+                                        <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/php">
+                                        PHP
+                                        <small><time datetime="2016-09-01T21:34:33+00:00">01 Sep 2016</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+                    
+                        
+                            <li>
+                                <h3>
+                                    <a href="/apuntesphp">
+                                        PHP. Apuntes
+                                        <small><time datetime="2018-11-24T16:24:46+00:00">24 Nov 2018</time></small>
+                                    </a>
+                                </h3>
+                            </li>
+                        
+                        
+                    
+                    
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
         
 
-        
             
-        
+                
+            
         
 
-        
             
-        
+                
+            
         
 
-        
+            
+                
             
         
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
+                
+            
+        
+
+            
         
         
         
@@ -607,11 +743,19 @@
 </aside>
 
 
+
       </main>
      <footer class="site-footer">
 
   <div class="wrapper">
 
+    
+      <div style="float: left; margin-left: 25px">
+          <a href="/bookmarks"><i class="fas fa-bookmark"></i> bookmarks</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/sitemap"><i class="fas fa-sitemap"></i> sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/about"><i class="fas fa-user-astronaut"></i> about</a>
+          <!-- <div><a class="post-link" href="http://guitarchords.ga"><i class="fa fa-music"></i><span class="post-link-title">  Guitarchords.ga</span></a></div><br /> -->
+      </div>
 
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
@@ -627,7 +771,7 @@
       </div>
 
       <div class="footer-col  footer-col-2">
-        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+        <p class="text" style="text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0; display:inline;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span class="ccby">jordihv at gmail.com</span><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
       </div>
     </div>
 
